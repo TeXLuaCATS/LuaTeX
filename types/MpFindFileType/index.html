@@ -1,0 +1,9057 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../MpFindFileFunc/">
+      
+      
+        <link rel="next" href="../MpMakeTextFunc/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>alias MpFindFileType - LuaTeX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#alias-mpfindfiletype" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="LuaTeX" class="md-header__button md-logo" aria-label="LuaTeX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LuaTeX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              alias MpFindFileType
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="LuaTeX" class="md-nav__button md-logo" aria-label="LuaTeX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LuaTeX
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Types
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Types
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AccentNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias AccentNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AdjustNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias AdjustNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AppendToVlistFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias AppendToVlistFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AppendToVlistFilterLocationcode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias AppendToVlistFilterLocationcode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LuaFileSystem.AttributeMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias AttributeMode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LuaFileSystem.AttributeName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias AttributeName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BoundaryNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias BoundaryNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BuildPageInsertCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias BuildPageInsertCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BuildpageFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias BuildpageFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BuildpageFilterExtrainfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias BuildpageFilterExtrainfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CallEditCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias CallEditCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CallbackName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias CallbackName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Capture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias Capture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContributeFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ContributeFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContributeFilterExtrainfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ContributeFilterExtrainfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Datagram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias Datagram
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DefineFontCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias DefineFontCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DelCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias DelCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DirectionParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias DirectionParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DirectionSpecifier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias DirectionSpecifier
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DirectionSpecifierId/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias DirectionSpecifierId
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DiscNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias DiscNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FenceNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FenceNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindDataFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindDataFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindEncFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindEncFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindFontFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindFontFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindFormatFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindFormatFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindImageFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindImageFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindMapFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindMapFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindOpentypeFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindOpentypeFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindOutputFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindOutputFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindPkFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindPkFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindReadFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindReadFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindTruetypeFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindTruetypeFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindType1FileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindType1FileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindVfFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindVfFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindWriteFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindWriteFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FinishPdffileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FinishPdffileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FinishPdfpageCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FinishPdfpageCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FinishSynctexCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FinishSynctexCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontCharacterCommands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontCharacterCommands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontDirection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontDirection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontEmbedding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontEmbedding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontFormat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontFormat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontParameterKey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontParameterKey
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontParameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontParameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderFontField/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontloaderFontField
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGlyphField/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontloaderGlyphField
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderMarkClasses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontloaderMarkClasses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderPrivate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontloaderPrivate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlueNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueOrder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlueOrder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlueParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueSet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlueSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueSign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlueSign
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlyphInfoCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlyphInfoCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlyphNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlyphNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlyphNotFoundCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlyphNotFoundCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HlistNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias HlistNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HpackFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias HpackFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HpackQualityCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias HpackQualityCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HyphenateCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias HyphenateCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ImgBox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ImgBox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ImgType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ImgType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InsertLocalParCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias InsertLocalParCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InternalParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias InternalParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KernNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias KernNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KerningCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias KerningCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KpseFtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias KpseFtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LigaturingCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias LigaturingCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinebreakFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias LinebreakFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MPTransform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MPTransform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MarginKernNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MarginKernNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MathCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MathNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathParamName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MathParamName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathStyleName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MathStyleName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MlistToHlistCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MlistToHlistCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpColor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpColor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpFileFileMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpFileFileMode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpFindFileFunc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpFindFileFunc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpFindFileType
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpMakeTextFunc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpMakeTextFunc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpPathPen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpPathPen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpResultStatus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpResultStatus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpRunScriptFunc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpRunScriptFunc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpScriptErrorFunc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpScriptErrorFunc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MuglueParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MuglueParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NoadNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias NoadNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NodeCallbackReturn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias NodeCallbackReturn
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NodeTypeId/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias NodeTypeId
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NodeTypeName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias NodeTypeName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenReadFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias OpenReadFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Operatorable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias Operatorable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PageOrderIndexCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PageOrderIndexCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfActionTypes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PdfActionTypes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfLiteralModes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PdfLiteralModes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfWindowTypes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PdfWindowTypes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PenaltyNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PenaltyNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PostLinebreakFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PostLinebreakFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PreDumpCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PreDumpCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PreLinebreakFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PreLinebreakFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PreLinebreakFilterGroupCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PreLinebreakFilterGroupCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PreOutputFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PreOutputFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PrintableInput/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PrintableInput
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProcessInputBufferCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ProcessInputBufferCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProcessJobnameCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ProcessJobnameCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProcessOutputBufferCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ProcessOutputBufferCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProcessPdfImageContentCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ProcessPdfImageContentCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProcessRuleCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ProcessRuleCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RadicalNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias RadicalNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadDataFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadDataFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadEncFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadEncFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadFontFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadFontFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadMapFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadMapFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadOnlyDimensionParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadOnlyDimensionParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadOnlyIntegerParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadOnlyIntegerParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadOpentypeFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadOpentypeFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadPkFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadPkFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadTruetypeFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadTruetypeFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadType1FileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadType1FileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadVfFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadVfFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadWriteDimensionParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadWriteDimensionParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadWriteIntegerParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadWriteIntegerParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReceivePatternMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReceivePatternMode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RuleNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias RuleNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ShowErrorHookCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ShowErrorHookCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ShowErrorMessageCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ShowErrorMessageCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ShowLuaErrorHookCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ShowLuaErrorHookCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SocketError/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias SocketError
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SocketFamily/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias SocketFamily
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SocketReturnError/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias SocketReturnError
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SocketReturnResult/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias SocketReturnResult
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StartFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StartFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StartFileCallbackCategory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StartFileCallbackCategory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StartPageNumberCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StartPageNumberCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StartRunCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StartRunCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StopFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StopFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StopPageNumberCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StopPageNumberCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StopRunCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StopRunCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SyntexMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias SyntexMode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCPOption/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias TCPOption
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCPShutdownMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias TCPShutdownMode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCPTimeoutMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias TCPTimeoutMode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TexEngine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias TexEngine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TokenCommandName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias TokenCommandName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TokenlistParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias TokenlistParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UDPOption/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias UDPOption
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VlistNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias VlistNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VpackFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias VpackFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VpackQualityCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias VpackQualityCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WhatsitTypeId/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias WhatsitTypeId
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WhatsitTypeName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias WhatsitTypeName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WrapupRunCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias WrapupRunCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WriteTarget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias WriteTarget
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AccentNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class AccentNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AdjustNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class AdjustNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AlignRecordNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class AlignRecordNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AlignStackNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class AlignStackNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AttributeListNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class AttributeListNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AttributeNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class AttributeNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LuaFileSystem.Attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Attributes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Blob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Blob
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BoundaryNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class BoundaryNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ChoiceNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ChoiceNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CloseWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class CloseWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DelimNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class DelimNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DeltaNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class DeltaNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DirNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class DirNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DiscNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class DiscNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ExprStackNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ExprStackNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FenceNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FenceNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Font/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Font
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontCharacter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontCharacter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontCharacterComponent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontCharacterComponent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontCharacterExtensible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontCharacterExtensible
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontCharacterLigature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontCharacterLigature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontExtens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontExtens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontInfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontInfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderAltuni/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderAltuni
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderAnchorClasses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderAnchorClasses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderAxismaps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderAxismaps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderCidinfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderCidinfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderEnc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderEnc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderFont/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderFont
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGlyph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGlyph
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGlyphKern/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGlyphKern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGpos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGpos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGposFeatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGposFeatures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGposFeaturesScripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGposFeaturesScripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGposFlags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGposFlags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGposSub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGposSub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGposSubtables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGposSubtables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGposSubtablesKernclass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGposSubtablesKernclass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGsub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGsub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderHorizVertBase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderHorizVertBase
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLang/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLang
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLangName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLangName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLockup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLockup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLockupClass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLockupClass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLockupGlyph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLockupGlyph
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLockupReverseCoverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLockupReverseCoverage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLockupRule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLockupRule
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLockupsCoverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLockupsCoverage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderMap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderMap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderMath/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderMath
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderMathkern/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderMathkern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderMathkernSubtable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderMathkernSubtable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderMm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderMm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderPanose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderPanose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderParts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderParts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderPfminfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderPfminfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderRemap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderRemap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderScripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderScripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderTexdata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderTexdata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderTrueTypeNames/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderTrueTypeNames
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderTtfTables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderTtfTables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderValidationState/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderValidationState
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderVertHorizVariants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderVertHorizVariants
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FractionNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FractionNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class GFile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class GlueNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueSpecNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class GlueSpecNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlyphExtens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class GlyphExtens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlyphNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class GlyphNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbBuffer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbBuffer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbColor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbColor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbDirection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbDirection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbFace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbFace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbFeature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbFeature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbFont/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbFont
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbGlyph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbGlyph
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbGlyphColor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbGlyphColor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbLanguage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbLanguage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbScript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbTag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbTag
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbVariation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbVariation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HlistNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HlistNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HyphenatedNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HyphenatedNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IfStackNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class IfStackNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Image
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ImageSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ImageSpec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InsNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class InsNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KernNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class KernNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KpseLookupOptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class KpseLookupOptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Language
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LateLuaWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class LateLuaWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinebreakParameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class LinebreakParameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ListNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ListNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LocalParNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class LocalParNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Locale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Locale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LuaFileSystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class LuaFileSystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LuaHarfBuzzOptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class LuaHarfBuzzOptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MarginKernNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MarginKernNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MarkNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MarkNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathCharNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MathCharNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MathNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathTextCharNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MathTextCharNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Message/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Message
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MovementStackNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MovementStackNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpArguments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpArguments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpDash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpDash
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpFig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpFig
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpFill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpFill
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpGraphicObject/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpGraphicObject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpInstance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpInstance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpKnot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpKnot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpOutline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpOutline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpResult/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpResult
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpSpecial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpSpecial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpStartBoundsClip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpStartBoundsClip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpStats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpStats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpText/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpText
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Nest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Nest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NestedListNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class NestedListNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NoadNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class NoadNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Node/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Node
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenReadFileEnv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class OpenReadFileEnv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class OpenWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PageInsertNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PageInsertNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PassiveNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PassiveNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pattern/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Pattern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfActionWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfActionWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfAnnotWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfAnnotWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfColorstackWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfColorstackWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfDestWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfDestWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfEndLinkWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfEndLinkWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfEndThreadWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfEndThreadWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfLiteralWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfLiteralWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfRefobjWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfRefobjWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfRestoreWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfRestoreWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfSaveWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfSaveWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfSetmatrixWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfSetmatrixWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfStartLinkWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfStartLinkWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfStartThreadWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfStartThreadWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfThreadWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfThreadWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfeArray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfeArray
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfeDictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfeDictionary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfeDocument/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfeDocument
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfeReference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfeReference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfeStream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfeStream
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PenInfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PenInfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PenaltyNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PenaltyNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PseudoFileNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PseudoFileNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PseudoLineNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PseudoLineNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RadicalNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class RadicalNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RuleNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class RuleNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SavePosWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class SavePosWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scanner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Scanner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ShapeNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ShapeNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Socket/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Socket
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SpanNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class SpanNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SpecialWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class SpecialWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SplitInsertNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class SplitInsertNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StatusInfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class StatusInfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StyleNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class StyleNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubBoxNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class SubBoxNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubMlistNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class SubMlistNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCPSocketClient/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class TCPSocketClient
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCPSocketMaster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class TCPSocketMaster
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCPSocketServer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class TCPSocketServer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TempNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class TempNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TfmFont/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class TfmFont
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Times/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Times
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Token
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UDPSocketConnected/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class UDPSocketConnected
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UDPSocketGeneric/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class UDPSocketGeneric
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UDPSocketUnconnected/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class UDPSocketUnconnected
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Uname/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Uname
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UnhyphenatedNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class UnhyphenatedNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UnsetNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class UnsetNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UserDefinedWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class UserDefinedWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VfFont/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class VfFont
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VlistNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class VlistNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class WhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WriteWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class WriteWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ZFile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZInternalFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ZInternalFile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZInternalFileInfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ZInternalFileInfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZStream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ZStream
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unicode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class unicode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Globals
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Globals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/callback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    callback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/fio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/font/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    font
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/fontloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fontloader
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/gzip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gzip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/img/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    img
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/kpse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    kpse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/lang/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    lang
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/lpeg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    lpeg
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/lua/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    lua
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/luaharfbuzz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    luaharfbuzz
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/mbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/md5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    md5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/mime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/mplib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mplib
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/node/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    node
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    os
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/pdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pdf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/pdfe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pdfe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/pdfscanner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pdfscanner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/sha2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sha2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/sio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    string
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/tex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/texconfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    texconfig
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/texio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    texio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    token
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/unicode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    unicode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/vf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    vf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/zlib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    zlib
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="alias-mpfindfiletype">alias MpFindFileType</h1>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">(</span><span class="nv">alias</span><span class="p">)</span><span class="w"> </span><span class="nv">MpFindFileType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">unknown</span>
+</span></code></pre></div>
+<p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/mplib.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
+<p>the kind of file</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["quick-links", "navigation", "search", "toc", "fullscreen", "bookmarks", "tabs", "code", "edit-on-github", "language-selector", "code", "cover", "footer", "social-share", "theme-switcher"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

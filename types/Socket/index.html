@@ -1,0 +1,10052 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ShapeNode/">
+      
+      
+        <link rel="next" href="../SpanNode/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>class Socket - LuaTeX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#class-socket" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="LuaTeX" class="md-header__button md-logo" aria-label="LuaTeX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LuaTeX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              class Socket
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="LuaTeX" class="md-nav__button md-logo" aria-label="LuaTeX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LuaTeX
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Types
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Types
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AccentNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias AccentNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AdjustNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias AdjustNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AppendToVlistFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias AppendToVlistFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AppendToVlistFilterLocationcode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias AppendToVlistFilterLocationcode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LuaFileSystem.AttributeMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias AttributeMode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LuaFileSystem.AttributeName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias AttributeName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BoundaryNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias BoundaryNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BuildPageInsertCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias BuildPageInsertCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BuildpageFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias BuildpageFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BuildpageFilterExtrainfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias BuildpageFilterExtrainfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CallEditCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias CallEditCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CallbackName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias CallbackName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Capture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias Capture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContributeFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ContributeFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContributeFilterExtrainfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ContributeFilterExtrainfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Datagram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias Datagram
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DefineFontCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias DefineFontCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DelCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias DelCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DirectionParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias DirectionParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DirectionSpecifier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias DirectionSpecifier
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DirectionSpecifierId/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias DirectionSpecifierId
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DiscNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias DiscNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FenceNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FenceNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindDataFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindDataFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindEncFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindEncFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindFontFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindFontFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindFormatFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindFormatFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindImageFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindImageFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindMapFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindMapFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindOpentypeFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindOpentypeFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindOutputFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindOutputFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindPkFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindPkFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindReadFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindReadFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindTruetypeFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindTruetypeFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindType1FileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindType1FileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindVfFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindVfFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FindWriteFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FindWriteFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FinishPdffileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FinishPdffileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FinishPdfpageCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FinishPdfpageCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FinishSynctexCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FinishSynctexCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontCharacterCommands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontCharacterCommands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontDirection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontDirection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontEmbedding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontEmbedding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontFormat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontFormat
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontParameterKey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontParameterKey
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontParameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontParameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderFontField/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontloaderFontField
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGlyphField/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontloaderGlyphField
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderMarkClasses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontloaderMarkClasses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderPrivate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias FontloaderPrivate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlueNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueOrder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlueOrder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlueParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueSet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlueSet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueSign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlueSign
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlyphInfoCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlyphInfoCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlyphNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlyphNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlyphNotFoundCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias GlyphNotFoundCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HlistNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias HlistNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HpackFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias HpackFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HpackQualityCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias HpackQualityCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HyphenateCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias HyphenateCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ImgBox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ImgBox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ImgType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ImgType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InsertLocalParCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias InsertLocalParCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InternalParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias InternalParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KernNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias KernNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KerningCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias KerningCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KpseFtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias KpseFtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LigaturingCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias LigaturingCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinebreakFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias LinebreakFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MPTransform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MPTransform
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MarginKernNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MarginKernNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MathCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MathNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathParamName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MathParamName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathStyleName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MathStyleName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MlistToHlistCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MlistToHlistCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpColor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpColor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpFileFileMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpFileFileMode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpFindFileFunc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpFindFileFunc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpFindFileType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpFindFileType
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpMakeTextFunc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpMakeTextFunc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpPathPen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpPathPen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpResultStatus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpResultStatus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpRunScriptFunc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpRunScriptFunc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpScriptErrorFunc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MpScriptErrorFunc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MuglueParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias MuglueParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NoadNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias NoadNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NodeCallbackReturn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias NodeCallbackReturn
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NodeTypeId/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias NodeTypeId
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NodeTypeName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias NodeTypeName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenReadFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias OpenReadFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Operatorable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias Operatorable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PageOrderIndexCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PageOrderIndexCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfActionTypes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PdfActionTypes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfLiteralModes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PdfLiteralModes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfWindowTypes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PdfWindowTypes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PenaltyNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PenaltyNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PostLinebreakFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PostLinebreakFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PreDumpCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PreDumpCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PreLinebreakFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PreLinebreakFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PreLinebreakFilterGroupCode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PreLinebreakFilterGroupCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PreOutputFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PreOutputFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PrintableInput/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias PrintableInput
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProcessInputBufferCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ProcessInputBufferCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProcessJobnameCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ProcessJobnameCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProcessOutputBufferCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ProcessOutputBufferCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProcessPdfImageContentCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ProcessPdfImageContentCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProcessRuleCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ProcessRuleCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RadicalNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias RadicalNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadDataFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadDataFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadEncFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadEncFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadFontFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadFontFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadMapFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadMapFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadOnlyDimensionParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadOnlyDimensionParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadOnlyIntegerParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadOnlyIntegerParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadOpentypeFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadOpentypeFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadPkFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadPkFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadTruetypeFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadTruetypeFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadType1FileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadType1FileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadVfFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadVfFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadWriteDimensionParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadWriteDimensionParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReadWriteIntegerParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReadWriteIntegerParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReceivePatternMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ReceivePatternMode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RuleNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias RuleNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ShowErrorHookCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ShowErrorHookCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ShowErrorMessageCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ShowErrorMessageCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ShowLuaErrorHookCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias ShowLuaErrorHookCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SocketError/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias SocketError
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SocketFamily/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias SocketFamily
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SocketReturnError/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias SocketReturnError
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SocketReturnResult/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias SocketReturnResult
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StartFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StartFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StartFileCallbackCategory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StartFileCallbackCategory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StartPageNumberCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StartPageNumberCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StartRunCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StartRunCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StopFileCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StopFileCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StopPageNumberCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StopPageNumberCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StopRunCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias StopRunCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SyntexMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias SyntexMode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCPOption/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias TCPOption
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCPShutdownMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias TCPShutdownMode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCPTimeoutMode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias TCPTimeoutMode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TexEngine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias TexEngine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TokenCommandName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias TokenCommandName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TokenlistParameter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias TokenlistParameter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UDPOption/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias UDPOption
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VlistNodeSubtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias VlistNodeSubtype
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VpackFilterCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias VpackFilterCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VpackQualityCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias VpackQualityCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WhatsitTypeId/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias WhatsitTypeId
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WhatsitTypeName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias WhatsitTypeName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WrapupRunCallback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias WrapupRunCallback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WriteTarget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    alias WriteTarget
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AccentNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class AccentNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AdjustNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class AdjustNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AlignRecordNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class AlignRecordNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AlignStackNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class AlignStackNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AttributeListNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class AttributeListNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AttributeNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class AttributeNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LuaFileSystem.Attributes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Attributes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Blob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Blob
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BoundaryNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class BoundaryNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ChoiceNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ChoiceNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CloseWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class CloseWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DelimNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class DelimNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DeltaNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class DeltaNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DirNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class DirNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DiscNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class DiscNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ExprStackNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ExprStackNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FenceNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FenceNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Font/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Font
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontCharacter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontCharacter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontCharacterComponent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontCharacterComponent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontCharacterExtensible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontCharacterExtensible
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontCharacterLigature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontCharacterLigature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontExtens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontExtens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontInfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontInfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderAltuni/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderAltuni
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderAnchorClasses/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderAnchorClasses
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderAxismaps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderAxismaps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderCidinfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderCidinfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderEnc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderEnc
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderFont/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderFont
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGlyph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGlyph
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGlyphKern/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGlyphKern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGpos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGpos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGposFeatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGposFeatures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGposFeaturesScripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGposFeaturesScripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGposFlags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGposFlags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGposSub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGposSub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGposSubtables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGposSubtables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGposSubtablesKernclass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGposSubtablesKernclass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderGsub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderGsub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderHorizVertBase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderHorizVertBase
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLang/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLang
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLangName/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLangName
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLockup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLockup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLockupClass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLockupClass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLockupGlyph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLockupGlyph
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLockupReverseCoverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLockupReverseCoverage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLockupRule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLockupRule
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderLockupsCoverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderLockupsCoverage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderMap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderMap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderMath/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderMath
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderMathkern/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderMathkern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderMathkernSubtable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderMathkernSubtable
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderMm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderMm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderPanose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderPanose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderParts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderParts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderPfminfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderPfminfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderRemap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderRemap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderScripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderScripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderTexdata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderTexdata
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderTrueTypeNames/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderTrueTypeNames
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderTtfTables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderTtfTables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderValidationState/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderValidationState
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FontloaderVertHorizVariants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FontloaderVertHorizVariants
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FractionNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class FractionNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class GFile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class GlueNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlueSpecNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class GlueSpecNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlyphExtens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class GlyphExtens
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GlyphNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class GlyphNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbBuffer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbBuffer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbColor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbColor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbDirection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbDirection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbFace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbFace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbFeature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbFeature
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbFont/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbFont
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbGlyph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbGlyph
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbGlyphColor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbGlyphColor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbLanguage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbLanguage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbScript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbTag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbTag
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HbVariation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HbVariation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HlistNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HlistNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HyphenatedNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class HyphenatedNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IfStackNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class IfStackNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Image
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ImageSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ImageSpec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InsNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class InsNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KernNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class KernNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KpseLookupOptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class KpseLookupOptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Language
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LateLuaWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class LateLuaWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinebreakParameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class LinebreakParameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ListNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ListNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LocalParNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class LocalParNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Locale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Locale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LuaFileSystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class LuaFileSystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LuaHarfBuzzOptions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class LuaHarfBuzzOptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MarginKernNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MarginKernNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MarkNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MarkNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathCharNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MathCharNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MathNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathTextCharNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MathTextCharNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Message/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Message
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MovementStackNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MovementStackNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpArguments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpArguments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpDash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpDash
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpFig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpFig
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpFill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpFill
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpGraphicObject/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpGraphicObject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpInstance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpInstance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpKnot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpKnot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpOutline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpOutline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpResult/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpResult
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpSpecial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpSpecial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpStartBoundsClip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpStartBoundsClip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpStats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpStats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MpText/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class MpText
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Nest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Nest
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NestedListNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class NestedListNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NoadNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class NoadNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Node/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Node
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenReadFileEnv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class OpenReadFileEnv
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class OpenWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PageInsertNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PageInsertNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PassiveNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PassiveNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pattern/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Pattern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfActionWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfActionWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfAnnotWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfAnnotWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfColorstackWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfColorstackWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfDestWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfDestWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfEndLinkWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfEndLinkWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfEndThreadWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfEndThreadWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfLiteralWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfLiteralWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfRefobjWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfRefobjWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfRestoreWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfRestoreWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfSaveWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfSaveWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfSetmatrixWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfSetmatrixWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfStartLinkWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfStartLinkWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfStartThreadWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfStartThreadWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfThreadWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfThreadWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfeArray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfeArray
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfeDictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfeDictionary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfeDocument/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfeDocument
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfeReference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfeReference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfeStream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfeStream
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PenInfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PenInfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PenaltyNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PenaltyNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PseudoFileNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PseudoFileNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PseudoLineNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PseudoLineNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RadicalNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class RadicalNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RuleNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class RuleNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SavePosWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class SavePosWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scanner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Scanner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ShapeNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ShapeNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    class Socket
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Socket
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socketgettime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.gettime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketnewtry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.newtry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketprotect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.protect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketselect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.select
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketsink" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.sink
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketskip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.skip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketsleep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.sleep
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketsource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sockettry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.try
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketbind" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.bind
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.connect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketconnect4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.connect4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketconnect6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.connect6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sockettcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.tcp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sockettcp4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.tcp4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sockettcp6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.tcp6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketudp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.udp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-mark-a-socket-as-connected-or-unconnected-use-cast-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      To mark a socket as connected or unconnected use ---@cast. Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketudp4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.udp4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-mark-a-socket-as-connected-or-unconnected-use-cast-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      To mark a socket as connected or unconnected use ---@cast. Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketudp6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.udp6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-mark-a-socket-as-connected-or-unconnected-use-cast-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      To mark a socket as connected or unconnected use ---@cast. Example:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      fields
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socketheaders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.headers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket_debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket._DEBUG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket_datagramsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket._DATAGRAMSIZE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket_setsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket._SETSIZE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket_socketinvalid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket._SOCKETINVALID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket._VERSION
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SpanNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class SpanNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SpecialWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class SpecialWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SplitInsertNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class SplitInsertNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StatusInfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class StatusInfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StyleNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class StyleNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubBoxNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class SubBoxNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubMlistNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class SubMlistNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCPSocketClient/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class TCPSocketClient
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCPSocketMaster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class TCPSocketMaster
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCPSocketServer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class TCPSocketServer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TempNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class TempNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TfmFont/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class TfmFont
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Times/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Times
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Token
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UDPSocketConnected/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class UDPSocketConnected
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UDPSocketGeneric/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class UDPSocketGeneric
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UDPSocketUnconnected/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class UDPSocketUnconnected
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Uname/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class Uname
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UnhyphenatedNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class UnhyphenatedNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UnsetNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class UnsetNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UserDefinedWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class UserDefinedWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VfFont/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class VfFont
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VlistNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class VlistNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class WhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WriteWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class WriteWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ZFile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZInternalFile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ZInternalFile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZInternalFileInfo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ZInternalFileInfo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZStream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ZStream
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class ot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unicode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class unicode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Globals
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Globals
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/callback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    callback
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/fio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/font/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    font
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/fontloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    fontloader
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/gzip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gzip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/img/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    img
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/kpse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    kpse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/lang/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    lang
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/lpeg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    lpeg
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/lua/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    lua
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/luaharfbuzz/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    luaharfbuzz
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/mbox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mbox
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/md5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    md5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/mime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/mplib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mplib
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/node/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    node
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    os
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/pdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pdf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/pdfe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pdfe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/pdfscanner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pdfscanner
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/sha2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sha2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/sio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    string
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/tex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/texconfig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    texconfig
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/texio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    texio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    token
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/unicode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    unicode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/vf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    vf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/zip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    zip
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../globals/zlib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    zlib
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socketgettime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.gettime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketnewtry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.newtry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketprotect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.protect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketselect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.select
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketsink" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.sink
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketskip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.skip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketsleep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.sleep
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketsource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sockettry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.try
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketbind" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.bind
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.connect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketconnect4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.connect4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketconnect6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.connect6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sockettcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.tcp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sockettcp4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.tcp4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sockettcp6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.tcp6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketudp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.udp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-mark-a-socket-as-connected-or-unconnected-use-cast-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      To mark a socket as connected or unconnected use ---@cast. Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketudp4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.udp4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-mark-a-socket-as-connected-or-unconnected-use-cast-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      To mark a socket as connected or unconnected use ---@cast. Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socketudp6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.udp6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-mark-a-socket-as-connected-or-unconnected-use-cast-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      To mark a socket as connected or unconnected use ---@cast. Example:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      fields
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socketheaders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket.headers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket_debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket._DEBUG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket_datagramsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket._DATAGRAMSIZE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket_setsize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket._SETSIZE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket_socketinvalid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket._SOCKETINVALID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#socket_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Socket._VERSION
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="class-socket">class Socket</h1>
+<p>https://lunarmodules.github.io/luasocket/socket.html</p>
+<p>The socket namespace</p>
+<p>The <code>socket</code> namespace contains the core functionality of LuaSocket.</p>
+<p>To obtain the <code>socket</code> namespace, run:</p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">-- loads the socket module</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;socket&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<hr />
+<h2 id="methods">methods</h2>
+<hr />
+<h3 id="socketgettime">Socket.gettime</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">gettime</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="nv">number</span>
+</span></code></pre></div>
+<p>@return <code>time</code> - for example <code>1683526723.1653</code></p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>Return the UNIX time in seconds.</p>
+<p>You should subtract the values returned by this function
+to get meaningful values.</p>
+<p><strong>Example:</strong></p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">socket</span><span class="p">.</span><span class="nf">gettime</span><span class="p">()</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">-- do stuff</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="nv">socket</span><span class="p">.</span><span class="nf">gettime</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">t</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="s2">&quot; seconds elapsed&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>Reference:</strong></p>
+<ul>
+<li>Corresponding C source code: <a href="https://github.com/lunarmodules/luasocket/blob/8c2ff7217e2a205eb107a6f48b04ff1b2b3090a1/src/timeout.c#L190-L194">timeout.c#L190-L194</a></li>
+</ul>
+<h3 id="socketnewtry">Socket.newtry</h3>
+<hr />
+<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">newtry</span><span class="p">(</span><span class="nv">finalizer</span><span class="p">:</span><span class="w"> </span><span class="py">function</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="kr">function</span>
+</span></code></pre></div>
+@param <code>finalizer</code> - -<code>Finalizer</code> is a function that will be called before <code>try</code> throws the exception.</p>
+<p>@return  - The function returns your customized <code>try</code> function.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>Creates and returns a clean
+<code>try</code>
+function that allows for cleanup before the exception
+is  raised.</p>
+<p>Note: This idea saved a lotof work with the
+implementation of protocols in LuaSocket:</p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">socket</span><span class="p">.</span><span class="nf">protect</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="c1">-- connect somewhere</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">socket</span><span class="p">.</span><span class="nf">try</span><span class="p">(</span><span class="nv">socket</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="s2">&quot;somewhere&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">))</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="c1">-- create a try function that closes &#39;c&#39; on error</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">try</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">socket</span><span class="p">.</span><span class="nf">newtry</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span><span class="w"> </span><span class="nv">c</span><span class="p">:</span><span class="nf">close</span><span class="p">()</span><span class="w"> </span><span class="kr">end</span><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="c1">-- do everything reassured c will be closed</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nf">try</span><span class="p">(</span><span class="nv">c</span><span class="p">:</span><span class="nf">send</span><span class="p">(</span><span class="s2">&quot;hello there?</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">))</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">answer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">try</span><span class="p">(</span><span class="nv">c</span><span class="p">:</span><span class="nf">receive</span><span class="p">())</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="nf">try</span><span class="p">(</span><span class="nv">c</span><span class="p">:</span><span class="nf">send</span><span class="p">(</span><span class="s2">&quot;good bye</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">))</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="nv">c</span><span class="p">:</span><span class="nf">close</span><span class="p">()</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="kr">end</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="socketprotect">Socket.protect</h3>
+<hr />
+<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">protect</span><span class="p">(</span><span class="nv">func</span><span class="p">:</span><span class="w"> </span><span class="py">function</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="kr">function</span>
+</span></code></pre></div>
+@param <code>func</code> - <code>func</code> is a function that calls <code>try</code> (or <code>assert</code>, or <code>error</code>) to throw exceptions.</p>
+<p>@return  - Returns an equivalent function that instead of throwing exceptions in case of a failed <code>try</code>call, returns <code>nil</code> followed by an error message.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>Converts a function that throws exceptions into a safe function. This
+function only catches exceptions thrown by the <code>try</code>
+and <code>newtry</code>functions. It does not catch normal
+Lua errors.</p>
+<h3 id="socketselect">Socket.select</h3>
+<hr />
+<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">select</span><span class="p">(</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nv">recvt</span><span class="p">:</span><span class="w"> </span><span class="py">table</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nv">sendt</span><span class="p">:</span><span class="w"> </span><span class="py">table</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nv">timeout</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="err">?</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">)</span>
+</span></code></pre></div>
+@param <code>recvt</code> - <code>recvt</code> is an array with the sockets to test for characters available for reading.</p>
+<p>@param <code>sendt</code> - Sockets in the <code>sendt</code> array are watched to see if it is OK to immediately write on them.</p>
+<p>@param <code>timeout</code> - <code>timeout</code> is the
+maximum amount of time (in seconds) to wait for a change in status.  A
+<code>nil</code>, negative or omitted <code>timeout</code> value allows the
+function to block indefinitely.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>Waits for a number of sockets to change status.</p>
+<p><code>Recvt</code> and <code>sendt</code> can also
+be empty tables or <code>nil</code>. Non-socket values (or values with
+non-numeric indices) in the arrays will be silently ignored.</p>
+<p>The function returns a list with the sockets ready for
+reading, a list with the sockets ready for writing and an error message.
+The error message is "<code>timeout</code>" if a timeout
+condition was met, "<code>select failed</code>" if the call
+to <code>select</code> failed, and
+<code>nil</code> otherwise. The returned tables are
+doubly keyed both by integers and also by the sockets
+themselves, to simplify the test if a specific socket has
+changed status.</p>
+<p>Note:<code>select</code> can monitor a limited number
+of sockets, as defined by the constant
+<code>socket._SETSIZE</code>. This
+number may be as high as 1024 or as low as 64 by default,
+depending on the system. It is usually possible to change this
+at compile time. Invoking <code>select</code> with a larger
+number of sockets will raise an error.</p>
+<p>Important note: a known bug in WinSock causes <code>select</code> to fail
+on non-blocking TCP sockets. The function may return a socket as
+writable even though the socket is notready for sending.</p>
+<p>Another important note: calling select with a server socket in the receive parameter before a call to accept does notguarantee
+<code>accept</code>will return immediately.
+Use the <code>settimeout</code>
+method or <code>accept</code> might block forever.</p>
+<p>Yet another note: If you close a socket and pass
+it to <code>select</code>, it will be ignored.</p>
+<p>Using select with non-socket objects: Any object that implements <code>getfd</code> and <code>dirty</code> can be used with <code>select</code>, allowing objects from other libraries to be used within a <code>socket.select</code> driven loop.</p>
+<h3 id="socketsink">Socket.sink</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">sink</span><span class="p">(</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nv">mode</span><span class="p">:</span><span class="w"> </span><span class="err">(&quot;</span><span class="py">http</span><span class="o">-</span><span class="nv">chunked</span><span class="s2">&quot;|&quot;</span><span class="nv">close</span><span class="o">-</span><span class="nv">when</span><span class="o">-</span><span class="nv">done</span><span class="s2">&quot;|&quot;</span><span class="nv">keep</span><span class="o">-</span><span class="nv">open</span><span class="s2">&quot;),</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="s2">  socket: any</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="s2">)</span>
+</span></code></pre></div>
+<p>Creates an
+LTN12
+sink from a stream socket object.</p>
+<p><code>Mode</code> defines the behavior of the sink. The following
+options are available:</p>
+<ul>
+<li><code>"http-chunked"</code>: sends data through socket after applying the
+chunked transfer coding, closing the socket when done;</li>
+<li><code>"close-when-done"</code>: sends all received data through the
+socket, closing the socket when done;</li>
+<li><code>"keep-open"</code>: sends all received data through the
+socket, leaving it open when done.</li>
+</ul>
+<p><code>Socket</code> is the stream socket object used to send the data.</p>
+<p>The function returns a sink with the appropriate behavior.</p>
+<h3 id="socketskip">Socket.skip</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">skip</span><span class="p">(</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nv">d</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="p">...:</span><span class="w"> </span><span class="nv">any</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>Drops a number of arguments and returns the remaining.</p>
+<p><code>D</code> is the number of arguments to drop. <code>Ret1</code> to
+<code>retN</code> are the arguments.</p>
+<p>The function returns <code>retd+1</code> to <code>retN</code>.</p>
+<p>Note: This function is useful to avoid creation of dummy variables:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>-- get the status code and separator from SMTP server reply
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>local code, sep = socket.skip(2, string.find(line, &quot;^(%d%d%d)(.?)&quot;))
+</span></code></pre></div>
+<h3 id="socketsleep">Socket.sleep</h3>
+<hr />
+<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="nv">time</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">)</span>
+</span></code></pre></div>
+@param <code>time</code> - <code>time</code> is the number of seconds to sleep for. If <code>time</code> is negative, the function returns immediately.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>Freeze the program execution during a given amount of time.</p>
+<p><strong>Reference:</strong></p>
+<ul>
+<li>Corresponding C source code: <a href="https://github.com/lunarmodules/luasocket/blob/8c2ff7217e2a205eb107a6f48b04ff1b2b3090a1/src/timeout.c#L196-L226">timeout.c#L196-L226</a></li>
+</ul>
+<h3 id="socketsource">Socket.source</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">source</span><span class="p">(</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nv">mode</span><span class="p">:</span><span class="w"> </span><span class="err">(&quot;</span><span class="py">http</span><span class="o">-</span><span class="nv">chunked</span><span class="s2">&quot;|&quot;</span><span class="nv">by</span><span class="o">-</span><span class="nv">length</span><span class="s2">&quot;|&quot;</span><span class="kr">until</span><span class="o">-</span><span class="nv">closed</span><span class="s2">&quot;),</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="s2">  socket: any,</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="s2">  timeout: integer</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="s2">)</span>
+</span></code></pre></div>
+<p>Creates an
+LTN12
+source from a stream socket object.</p>
+<p><code>Mode</code> defines the behavior of the source. The following
+options are available:</p>
+<ul>
+<li><code>"http-chunked"</code>: receives data from socket and removes the
+chunked transfer codingbefore returning the data;</li>
+<li><code>"by-length"</code>: receives a fixed number of bytes from the
+socket. This mode requires the extra argument <code>length</code>;</li>
+<li><code>"until-closed"</code>: receives data from a socket until the other
+side closes the connection.</li>
+</ul>
+<p><code>Socket</code> is the stream socket object used to receive the data.</p>
+<p>The function returns a source with the appropriate behavior.</p>
+<h3 id="sockettry">Socket.try</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">try</span><span class="p">(...:</span><span class="w"> </span><span class="nv">any</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Throws an exception in case <code>ret1</code> is falsy, using
+<code>ret2</code> as the error message. The exception is supposed to be caught
+by a <code>protect</code>ed function only.</p>
+<p><code>Ret1</code> to <code>retN</code> can be arbitrary
+arguments, but are usually the return values of a function call
+nested with <code>try</code>.</p>
+<p>The function returns <code>ret</code>1 to <code>ret</code>N if
+<code>ret</code>1 is not <code>nil</code> or <code>false</code>.
+Otherwise, it calls <code>error</code> passing <code>ret</code>2 wrapped
+in a table with metatable used by <code>protect</code>to
+distinguish exceptions from runtime errors.</p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">-- connects or throws an exception with the appropriate error message</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">socket</span><span class="p">.</span><span class="nf">try</span><span class="p">(</span><span class="nv">socket</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">))</span>
+</span></code></pre></div>
+<h3 id="socketbind">Socket.bind</h3>
+<hr />
+<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">bind</span><span class="p">(</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nv">address</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">,</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nv">port</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">  </span><span class="nv">backlog</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="err">?</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">TCPSocketServer</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="nv">accept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="err">,</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="nf">getoption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="err">,</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="nf">setoption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="err">,</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="err">}</span>
+</span></code></pre></div>
+@param <code>backlog</code> - Defaults to 32.</p>
+<p>This function is a shortcut that creates and returns a TCP server object bound to a local <code>address</code> and <code>port</code>, ready to accept client connections. Optionally, user can also specify the <code>backlog</code> argument to the <code>listen</code> method.</p>
+<p>Note: The server object returned will have the option <code>reuseaddr</code> set to <code>true</code>.</p>
+<h3 id="socketconnect">Socket.connect</h3>
+<hr />
+<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nv">address</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">,</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="nv">port</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span><span class="nv">locaddr</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">  </span><span class="nv">locport</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="nv">family</span><span class="p">:</span><span class="w"> </span><span class="err">(&quot;</span><span class="py">inet</span><span class="s2">&quot;|&quot;</span><span class="nv">inet6</span><span class="s2">&quot;)?</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="s2">)</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="s2"> -&gt;  TCPSocketClient?</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="s2"> -&gt;  string?</span>
+</span></code></pre></div>
+@param <code>locaddr</code> - The local address</p>
+<p>@param <code>locport</code> - The local port</p>
+<p>@param <code>family</code> - If not specified, the family depends on your system configuration.</p>
+<p>@return  - Returns the client on success, or <code>nil</code> and an error message on failure.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>@return  - Returns the client on success, or <code>nil</code> and an error message on failure.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>This function is a shortcut that creates and returns a TCP client object connected to a remote <code>address</code> at a given <code>port</code>. Optionally, the user can also specify the local address and port to bind (<code>locaddr</code> and <code>locport</code>), or restrict the socket family to "<code>inet</code>" or "<code>inet6</code>".</p>
+<p>Two variations of connect are defined as simple helper functions that restrict the <code>family</code>, <code>socket.connect4</code> and <code>socket.connect6</code>.</p>
+<h3 id="socketconnect4">Socket.connect4</h3>
+<hr />
+<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">connect4</span><span class="p">(</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="nv">address</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">,</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="nv">port</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="nv">locaddr</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="nv">locport</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="err">?</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">)</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">TCPSocketClient</span><span class="err">?</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">string</span><span class="err">?</span>
+</span></code></pre></div>
+@param <code>locaddr</code> - The local address</p>
+<p>@param <code>locport</code> - The local port</p>
+<p>@return  - Returns the client on success, or <code>nil</code> and an error message on failure.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>@return  - Returns the client on success, or <code>nil</code> and an error message on failure.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>This function is a shortcut that creates and returns an IPv4 TCP client object connected to a remote <code>address</code> at a given <code>port</code>. Optionally, the user can also specify the local address and port to bind (<code>locaddr</code> and <code>locport</code>)</p>
+<h3 id="socketconnect6">Socket.connect6</h3>
+<hr />
+<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">connect6</span><span class="p">(</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="nv">address</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">,</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span><span class="nv">port</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">  </span><span class="nv">locaddr</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">  </span><span class="nv">locport</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="err">?</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="p">)</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">TCPSocketClient</span><span class="err">?</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">string</span><span class="err">?</span>
+</span></code></pre></div>
+@param <code>locaddr</code> - The local address</p>
+<p>@param <code>locport</code> - The local port</p>
+<p>@return  - Returns the client on success, or <code>nil</code> and an error message on failure.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>@return  - Returns the client on success, or <code>nil</code> and an error message on failure.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>This function is a shortcut that creates and returns an IPv6 TCP client object connected to a remote <code>address</code> at a given <code>port</code>. Optionally, the user can also specify the local address and port to bind (<code>locaddr</code> and <code>locport</code>)</p>
+<h3 id="sockettcp">Socket.tcp</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">tcp</span><span class="p">()</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">TCPSocketMaster</span><span class="err">?</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">string</span><span class="err">?</span>
+</span></code></pre></div>
+<p>@return  - New master object if successful, otherwise <code>nil</code> followed by an error message.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>@return  - New master object if successful, otherwise <code>nil</code> followed by an error message.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>Creates and returns an TCP master object. A master object can be transformed into a server object with the method <code>listen</code> (after a call to <code>bind</code>) or into a client object with the method <code>connect</code>. The only other method supported by a master object is the close method.</p>
+<p>Note: The choice between IPv4 and IPv6 happens during a call to <code>bind</code> or <code>connect</code>, depending on the address family obtained from the resolver.</p>
+<p>Note: Before the choice between IPv4 and IPv6 happens, the internal socket object is invalid and therefore <code>setoption</code> will fail.</p>
+<h3 id="sockettcp4">Socket.tcp4</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">tcp4</span><span class="p">()</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">TCPSocketMaster</span><span class="err">?</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">string</span><span class="err">?</span>
+</span></code></pre></div>
+<p>@return  - New master object if successful, otherwise <code>nil</code> followed by an error message.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>@return  - New master object if successful, otherwise <code>nil</code> followed by an error message.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>Creates and returns an IPv4 TCP master object. A master object can be transformed into a server object with the method <code>listen</code> (after a call to <code>bind</code>) or into a client object with the method connect. The only other method supported by a master object is the <code>close</code> method.</p>
+<h3 id="sockettcp6">Socket.tcp6</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">tcp6</span><span class="p">()</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">TCPSocketMaster</span><span class="err">?</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">string</span><span class="err">?</span>
+</span></code></pre></div>
+<p>@return  - New master object if successful, otherwise <code>nil</code> followed by an error message.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>@return  - New master object if successful, otherwise <code>nil</code> followed by an error message.</p>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<p>Creates and returns an IPv6 TCP master object. A master object can be transformed into a server object with the method <code>listen</code> (after a call to <code>bind</code>) or into a client object with the method <code>connect</code>. The only other method supported by a master object is the <code>close</code> method.</p>
+<p>Note: The TCP object returned will have the option "ipv6-v6only" set to <code>true</code>.</p>
+<h3 id="socketudp">Socket.udp</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">udp</span><span class="p">()</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="p">(</span><span class="nv">UDPSocketConnected</span><span class="o">|</span><span class="nv">UDPSocketUnconnected</span><span class="p">)</span><span class="err">?</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">SocketReturnError</span>
+</span></code></pre></div>
+<p>Creates and returns an unconnected UDP object. Unconnected objects support the sendto, receive, receivefrom, getoption, getsockname, setoption, settimeout, setpeername, setsockname, and close. The setpeername is used to connect the object.</p>
+<p>In case of success, a new unconnected UDP object returned. In case of error, nil is returned, followed by an error message.</p>
+<p>Note: The choice between IPv4 and IPv6 happens during a call to sendto, setpeername, or sockname, depending on the address family obtained from the resolver.</p>
+<p>Note: Before the choice between IPv4 and IPv6 happens, the internal socket object is invalid and therefore setoption will fail.</p>
+<h3 id="to-mark-a-socket-as-connected-or-unconnected-use-cast-example">To mark a socket as connected or unconnected use <code>---@cast</code>. Example:</h3>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">server</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">socket</span><span class="p">.</span><span class="nf">udp</span><span class="p">()</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">client</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">socket</span><span class="p">.</span><span class="nf">udp</span><span class="p">()</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="c1">---@cast server UDPSocketUnconnected</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="nv">server</span><span class="p">:</span><span class="nf">setsockname</span><span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">12345</span><span class="p">)</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="c1">---@cast client UDPSocketConnected</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="nv">client</span><span class="p">:</span><span class="nf">setpeername</span><span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">12345</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="socketudp4">Socket.udp4</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">udp4</span><span class="p">()</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="p">(</span><span class="nv">UDPSocketConnected</span><span class="o">|</span><span class="nv">UDPSocketUnconnected</span><span class="p">)</span><span class="err">?</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">SocketReturnError</span>
+</span></code></pre></div>
+<p>Creates and returns an unconnected IPv4 UDP object. Unconnected objects support the sendto, receive, receivefrom, getoption, getsockname, setoption, settimeout, setpeername, setsockname, and close. The setpeername is used to connect the object.</p>
+<p>In case of success, a new unconnected UDP object returned. In case of error, nil is returned, followed by an error message.</p>
+<h3 id="to-mark-a-socket-as-connected-or-unconnected-use-cast-example_1">To mark a socket as connected or unconnected use <code>---@cast</code>. Example:</h3>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">server</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">socket</span><span class="p">.</span><span class="nf">udp4</span><span class="p">()</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">client</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">socket</span><span class="p">.</span><span class="nf">udp4</span><span class="p">()</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="c1">---@cast server UDPSocketUnconnected</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="nv">server</span><span class="p">:</span><span class="nf">setsockname</span><span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">12345</span><span class="p">)</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="c1">---@cast client UDPSocketConnected</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="nv">client</span><span class="p">:</span><span class="nf">setpeername</span><span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">12345</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="socketudp6">Socket.udp6</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">Socket</span><span class="p">.</span><span class="nf">udp6</span><span class="p">()</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="p">(</span><span class="nv">UDPSocketConnected</span><span class="o">|</span><span class="nv">UDPSocketUnconnected</span><span class="p">)</span><span class="err">?</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">SocketReturnError</span>
+</span></code></pre></div>
+<p>Creates and returns an unconnected IPv6 UDP object. Unconnected objects support the sendto,</p>
+<p>In case of success, a new unconnected UDP object returned. In case of error, nil is returned, followed by an error message.</p>
+<p>Note: The UDP object returned will have the option "ipv6-v6only" set to true.</p>
+<h3 id="to-mark-a-socket-as-connected-or-unconnected-use-cast-example_2">To mark a socket as connected or unconnected use <code>---@cast</code>. Example:</h3>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">server</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">socket</span><span class="p">.</span><span class="nf">udp6</span><span class="p">()</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">client</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">socket</span><span class="p">.</span><span class="nf">udp6</span><span class="p">()</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="c1">---@cast server UDPSocketUnconnected</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="nv">server</span><span class="p">:</span><span class="nf">setsockname</span><span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">12345</span><span class="p">)</span>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="c1">---@cast client UDPSocketConnected</span>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="nv">client</span><span class="p">:</span><span class="nf">setpeername</span><span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">12345</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="fields">fields</h2>
+<hr />
+<h3 id="socketheaders">Socket.headers</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nv">Socket</span><span class="p">.</span><span class="py">headers</span><span class="p">:</span><span class="w"> </span><span class="py">table</span>
+</span></code></pre></div>
+<p>😱 <a href="https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/LuaCATS/luasocket/pulls">Please contribute!</a></p>
+<h3 id="socket_debug">Socket._DEBUG</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nv">Socket</span><span class="p">.</span><span class="py">_DEBUG</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">boolean</span>
+</span></code></pre></div>
+<p>This constant is set to <code>true</code> if the library was compiled
+with debug support.</p>
+<h3 id="socket_datagramsize">Socket._DATAGRAMSIZE</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nv">Socket</span><span class="p">.</span><span class="py">_DATAGRAMSIZE</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
+</span></code></pre></div>
+<p>Default datagram size used by calls to
+<code>receive</code>and
+<code>receivefrom</code>.
+(Unless changed in compile time, the value is 8192.)</p>
+<h3 id="socket_setsize">Socket._SETSIZE</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nv">Socket</span><span class="p">.</span><span class="py">_SETSIZE</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
+</span></code></pre></div>
+<p>The maximum number of sockets that the select function can handle.</p>
+<h3 id="socket_socketinvalid">Socket._SOCKETINVALID</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nv">Socket</span><span class="p">.</span><span class="py">_SOCKETINVALID</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">any</span>
+</span></code></pre></div>
+<p>The OS value for an invalid socket. This can be used with
+<code>tcp:getfd</code>and <code>tcp:setfd</code>methods.</p>
+<h3 id="socket_version">Socket._VERSION</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nv">Socket</span><span class="p">.</span><span class="py">_VERSION</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
+</span></code></pre></div>
+<p>This constant has a string describing the current LuaSocket version.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["quick-links", "navigation", "search", "toc", "fullscreen", "bookmarks", "tabs", "code", "edit-on-github", "language-selector", "code", "cover", "footer", "social-share", "theme-switcher"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>
