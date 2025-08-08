@@ -7844,7 +7844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/Uname/" class="md-nav__link">
+      <a href="../../types/os.Uname/" class="md-nav__link">
         
   
   
@@ -9382,30 +9382,22 @@ that we will discuss here.</p>
 <p>Here
 <code>commandline</code> can be either a single string or a single table.</p>
 <ul>
-<li>
-<p>If the argument is a table <em>LuaTeX</em> first checks if there is a value at
+<li>If the argument is a table <em>LuaTeX</em> first checks if there is a value at
 integer index zero. If there is, this is the command to be executed.
 Otherwise, it will use the value at integer index one. If neither are
-present, nothing at all happens.</p>
-</li>
-<li>
-<p>The set of consecutive values starting at integer 1 in the table are the
+present, nothing at all happens.</li>
+<li>The set of consecutive values starting at integer 1 in the table are the
 arguments that are passed on to the command (the value at index 1 becomes
 <code>arg[0]</code>). The command is searched for in the execution path, so
-there is normally no need to pass on a fully qualified path name.</p>
-</li>
-<li>
-<p>If the argument is a string, then it is automatically converted into a
+there is normally no need to pass on a fully qualified path name.</li>
+<li>If the argument is a string, then it is automatically converted into a
 table by splitting on whitespace. In this case, it is impossible for the
-command and first argument to differ from each other.</p>
-</li>
-<li>
-<p>In the string argument format, whitespace can be protected by putting
+command and first argument to differ from each other.</li>
+<li>In the string argument format, whitespace can be protected by putting
 (part of) an argument inside single or double quotes. One layer of quotes
 is interpreted by <em>LuaTeX</em>, and all occurrences of <code>\"</code>, <code>\'</code>
 or <code>\\</code> within the quoted text are unescaped. In the table format,
-there is no string handling taking place.</p>
-</li>
+there is no string handling taking place.</li>
 </ul>
 <p>This function normally does not return control back to the <em>Lua</em> script: the
 command will replace the current process. However, it will return the two
@@ -9417,6 +9409,16 @@ where <em>TeXLua</em> scripts are run inside integrated <em>TeX</em> environment
 <p>The original reason for this command is that it cleans out the current
 process before starting the new one, making it especially useful for use in
 <em>TeX</em>LUA.</p>
+<p><strong>Example:</strong></p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">---@diagnostic disable-next-line</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">exit</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">exec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(</span><span class="nv">exit</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">err</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;invalid arguments passed&quot;</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nv">os</span><span class="p">.</span><span class="nf">exec</span><span class="p">(</span><span class="s2">&quot;/usr/bin/uname -a&quot;</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nv">os</span><span class="p">.</span><span class="nf">exec</span><span class="p">({</span><span class="w"> </span><span class="s2">&quot;/usr/bin/uname&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-a&quot;</span><span class="w"> </span><span class="p">})</span>
+</span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
 <li>Corresponding C source code: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/loslibext.c#L429-L501">loslibext.c#L429-L501</a></li>
@@ -9424,14 +9426,23 @@ process before starting the new one, making it especially useful for use in
 <p>@see os.execute</p>
 <h3 id="osspawn">os.spawn</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">spawn</span><span class="p">(</span><span class="nv">commandline</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">string</span><span class="o">|</span><span class="nv">table</span><span class="p">))</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">exit_status</span><span class="w"> </span><span class="nv">integer</span><span class="err">?</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb">error</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">spawn</span><span class="p">(</span><span class="nv">commandline</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">string</span><span class="o">|</span><span class="nv">table</span><span class="p">))</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">exit_status</span><span class="w"> </span><span class="nv">integer</span><span class="err">?</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb">error</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span>
 </span></code></pre></div>
 <p>A returning version of <code>os.exec</code>,
 with otherwise identical calling conventions.</p>
 <p>If the command ran ok, then the return value is the exit status of the
 command. Otherwise, it will return the two values <code>nil</code> and <code>error</code>.</p>
+<p><strong>Example:</strong></p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">---@diagnostic disable-next-line</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">exit</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">spawn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(</span><span class="nv">exit</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">err</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;invalid arguments passed&quot;</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nv">os</span><span class="p">.</span><span class="nf">spawn</span><span class="p">(</span><span class="s2">&quot;/usr/bin/uname -a&quot;</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="nv">os</span><span class="p">.</span><span class="nf">spawn</span><span class="p">({</span><span class="w"> </span><span class="s2">&quot;/usr/bin/uname&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-a&quot;</span><span class="w"> </span><span class="p">})</span>
+</span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
 <li>Corresponding C source code: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/loslibext.c#L510-L596">loslibext.c#L510-L596</a></li>
@@ -9439,12 +9450,12 @@ command. Otherwise, it will return the two values <code>nil</code> and <code>err
 <p>@see os.execute</p>
 <h3 id="oskpsepopen">os.kpsepopen</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">kpsepopen</span><span class="p">(</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nv">commandline</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">,</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nv">mode</span><span class="p">:</span><span class="w"> </span><span class="err">(&quot;</span><span class="py">r</span><span class="s2">&quot;|&quot;</span><span class="nv">w</span><span class="s2">&quot;)</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="s2">)</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="s2"> -&gt; exit_status integer?</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="s2"> -&gt; error string?</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">kpsepopen</span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nv">commandline</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nv">mode</span><span class="p">:</span><span class="w"> </span><span class="err">(&quot;</span><span class="py">r</span><span class="s2">&quot;|&quot;</span><span class="nv">w</span><span class="s2">&quot;)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="s2">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="s2"> -&gt; exit_status integer?</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="s2"> -&gt; error string?</span>
 </span></code></pre></div>
 <p>This function is similar to <code>io.popen</code>
 but with a preliminary check of the command by mean of <code>kpse.check_permission</code></p>
@@ -9458,10 +9469,10 @@ otherwise it will return the two values <code>nil</code> and <code>error</code>.
 kpse.check_permission</p>
 <h3 id="ossetenv">os.setenv</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">setenv</span><span class="p">(</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nv">key</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">,</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="err">?</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">setenv</span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nv">key</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nv">value</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="err">?</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">)</span>
 </span></code></pre></div>
 <p>Set a variable in the environment.</p>
 <p>Passing
@@ -9472,25 +9483,24 @@ kpse.check_permission</p>
 </ul>
 <h3 id="ossleep">os.sleep</h3>
 <hr />
-<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nv">interval</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">,</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nv">unit</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="err">?</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span>
+<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nv">interval</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nv">unit</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="err">?</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">)</span>
 </span></code></pre></div>
 @param <code>interval</code> - By default seconds.</p>
 <p>@param <code>unit</code> - Sleep <code>interval / unit</code> seconds.</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/lualibs/os.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
-<p>Suspend execution for second intervals.</p>
 <p><strong>Example:</strong></p>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">start_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">gettimeofday</span><span class="p">()</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nv">os</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kd">local</span><span class="w"> </span><span class="nv">end_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">gettimeofday</span><span class="p">()</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">assert</span><span class="p">(</span><span class="nv">end_time</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">start_time</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nv">os</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Sleep 1 second</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nv">os</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Sleep 1 decisecond</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nv">os</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Sleep 1 centisecond</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nv">os</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Sleep 1 millisecond</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">start_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">gettimeofday</span><span class="p">()</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nv">os</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kd">local</span><span class="w"> </span><span class="nv">end_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">gettimeofday</span><span class="p">()</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_true</span><span class="p">(</span><span class="nv">end_time</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">start_time</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nv">os</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">-- second</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nv">os</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="c1">-- decisecond</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="nv">os</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="c1">-- centisecond</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="nv">os</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"> </span><span class="c1">-- millisecond</span>
 </span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
@@ -9499,7 +9509,7 @@ kpse.check_permission</p>
 </ul>
 <h3 id="osgettimeofday">os.gettimeofday</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">gettimeofday</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">number</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">gettimeofday</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">number</span>
 </span></code></pre></div>
 <p>@return  - for example <code>1673390071.0893</code></p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/os.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
@@ -9508,8 +9518,8 @@ float.</p>
 <p>This function is not available on the <em>SunOS</em> platforms, so do not use
 this function for portable documents.</p>
 <p><strong>Example:</strong></p>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">gettimeofday</span><span class="p">()</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">assert</span><span class="p">(</span><span class="nv">time</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1682153121.3217</span><span class="p">,</span><span class="w"> </span><span class="nv">time</span><span class="p">)</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">gettimeofday</span><span class="p">()</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_true</span><span class="p">(</span><span class="nv">time</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1682153121.3217</span><span class="p">)</span>
 </span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
@@ -9517,31 +9527,31 @@ this function for portable documents.</p>
 </ul>
 <h3 id="ostimes">os.times</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">times</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">os</span><span class="p">.</span><span class="py">Times</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="nv">cstime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nv">cutime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nv">stime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="nv">utime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">times</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">os</span><span class="p">.</span><span class="py">Times</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="nv">cstime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nv">cutime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="nv">stime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="nv">utime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>Return the current process times according to the
 UNIX C library function “times”.</p>
 <p>This function is not available on
 the MS Windows and <em>SunOS</em> platforms, so do not use this function for
 portable documents.</p>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nv">cstime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nv">cutime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="nv">stime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="nv">utime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.12</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="p">}</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nv">cstime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nv">cutime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="nv">stime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="nv">utime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.12</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">}</span>
 </span></code></pre></div>
 <p><strong>Example:</strong></p>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">times</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">times</span><span class="p">()</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">times</span><span class="p">.</span><span class="py">cstime</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;number&#39;</span><span class="p">)</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">times</span><span class="p">.</span><span class="py">cutime</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;number&#39;</span><span class="p">)</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">times</span><span class="p">.</span><span class="py">stime</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;number&#39;</span><span class="p">)</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">times</span><span class="p">.</span><span class="py">utime</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;number&#39;</span><span class="p">)</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">times</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">times</span><span class="p">()</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nv">times</span><span class="p">.</span><span class="py">cstime</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">)</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nv">times</span><span class="p">.</span><span class="py">cutime</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">)</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nv">times</span><span class="p">.</span><span class="py">stime</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">)</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nv">times</span><span class="p">.</span><span class="py">utime</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
@@ -9549,9 +9559,9 @@ portable documents.</p>
 </ul>
 <h3 id="ostmpdir">os.tmpdir</h3>
 <hr />
-<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">tmpdir</span><span class="p">(</span><span class="nv">template</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="err">?</span><span class="p">)</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">string</span><span class="err">?</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb">error</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span>
+<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">tmpdir</span><span class="p">(</span><span class="nv">template</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="err">?</span><span class="p">)</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">string</span><span class="err">?</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb">error</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span>
 </span></code></pre></div>
 @param <code>template</code> - for example <code>luatex.XXXXXX</code></p>
 <p>Create a directory in the “current directory”
@@ -9561,22 +9571,22 @@ unique string.</p>
 The user is responsible for cleaning up at the end of the run, it does not
 happen automatically.</p>
 <p><strong>Example:</strong></p>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">lfs</span><span class="p">.</span><span class="nf">chdir</span><span class="p">(</span><span class="s1">&#39;/tmp&#39;</span><span class="p">)</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">dir</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">tmpdir</span><span class="p">()</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">dir</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="nb">assert</span><span class="p">(</span><span class="nv">lfs</span><span class="p">.</span><span class="nf">isdir</span><span class="p">(</span><span class="s1">&#39;/tmp/&#39;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">dir</span><span class="p">))</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="nv">dir</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">tmpdir</span><span class="p">(</span><span class="s1">&#39;tmp.XXXXXX&#39;</span><span class="p">)</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">dir</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="nb">assert</span><span class="p">(</span><span class="nv">lfs</span><span class="p">.</span><span class="nf">isdir</span><span class="p">(</span><span class="s1">&#39;/tmp/&#39;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">dir</span><span class="p">))</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="nv">dir</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">tmpdir</span><span class="p">(</span><span class="s1">&#39;tmp.X&#39;</span><span class="p">)</span>
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="nb">assert</span><span class="p">(</span><span class="nv">dir</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span>
-</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="nb">assert</span><span class="p">(</span><span class="nv">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Invalid argument to os.tmpdir()&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="p">)</span>
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
-</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="nv">dir</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">tmpdir</span><span class="p">(</span><span class="s1">&#39;tmp.XXXXXXX_suffix&#39;</span><span class="p">)</span>
-</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="nb">assert</span><span class="p">(</span><span class="nv">dir</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span>
-</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="nb">assert</span><span class="p">(</span><span class="nv">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;Invalid argument to os.tmpdir()&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="p">)</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nv">lfs</span><span class="p">.</span><span class="nf">chdir</span><span class="p">(</span><span class="s2">&quot;/tmp&quot;</span><span class="p">)</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">dir</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">tmpdir</span><span class="p">()</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nv">dir</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_true</span><span class="p">(</span><span class="nv">lfs</span><span class="p">.</span><span class="nf">isdir</span><span class="p">(</span><span class="s2">&quot;/tmp/&quot;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">dir</span><span class="p">))</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="nv">dir</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">tmpdir</span><span class="p">(</span><span class="s2">&quot;tmp.XXXXXX&quot;</span><span class="p">)</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nv">dir</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_true</span><span class="p">(</span><span class="nv">lfs</span><span class="p">.</span><span class="nf">isdir</span><span class="p">(</span><span class="s2">&quot;/tmp/&quot;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">dir</span><span class="p">))</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="nv">dir</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">tmpdir</span><span class="p">(</span><span class="s2">&quot;tmp.X&quot;</span><span class="p">)</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(</span><span class="nv">dir</span><span class="p">)</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">err</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Invalid argument to os.tmpdir()&quot;</span><span class="p">)</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="nv">dir</span><span class="p">,</span><span class="w"> </span><span class="nv">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">tmpdir</span><span class="p">(</span><span class="s2">&quot;tmp.XXXXXXX_suffix&quot;</span><span class="p">)</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(</span><span class="nv">dir</span><span class="p">)</span>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">err</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Invalid argument to os.tmpdir()&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
@@ -9585,41 +9595,41 @@ happen automatically.</p>
 </ul>
 <h3 id="osuname">os.uname</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">uname</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">Uname</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="nv">sysname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nv">machine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="nv">release</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="nv">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="nv">nodename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">}</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">uname</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">os</span><span class="p">.</span><span class="py">Uname</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="nv">sysname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="nv">machine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="nv">release</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="nv">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">    </span><span class="nv">nodename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>Return a table with specific operating system
 information acquired at runtime.</p>
-<p>The keys in the returned table are all
-string values, and their names are: <code>sysname</code>, <code>machine</code>, <code>release</code>, <code>version</code>, and <code>nodename</code>.</p>
 <p><strong>Example:</strong></p>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">uname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">uname</span><span class="p">()</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">uname</span><span class="p">.</span><span class="py">machine</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">uname</span><span class="p">.</span><span class="py">nodename</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">uname</span><span class="p">.</span><span class="py">release</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">uname</span><span class="p">.</span><span class="py">sysname</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="nb">assert</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">uname</span><span class="p">.</span><span class="py">version</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">uname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">uname</span><span class="p">()</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">uname</span><span class="p">.</span><span class="py">machine</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">uname</span><span class="p">.</span><span class="py">nodename</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">uname</span><span class="p">.</span><span class="py">release</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">uname</span><span class="p">.</span><span class="py">sysname</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nv">uname</span><span class="p">.</span><span class="py">version</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
 <li>Corresponding C source code: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/loslibext.c#L849-L868">loslibext.c#L849-L868</a></li>
 </ul>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">{</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nv">machine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;x86_64&quot;</span><span class="p">,</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="nv">nodename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;mypc&quot;</span><span class="p">,</span>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span><span class="nv">release</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;5.15.0-57-generic&quot;</span><span class="p">,</span>
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">  </span><span class="nv">sysname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Linux&quot;</span><span class="p">,</span>
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="nv">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;#63-Ubuntu SMP Thu Nov 24 13:43:17 UTC 2022&quot;</span>
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">}</span>
-</span></code></pre></div>
 <h3 id="ossocketsleep">os.socketsleep</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">socketsleep</span><span class="p">(</span><span class="nv">time</span><span class="p">:</span><span class="w"> </span><span class="py">number</span><span class="p">)</span>
+<p><div class="language-lua highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">socketsleep</span><span class="p">(</span><span class="nv">time</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">)</span>
+</span></code></pre></div>
+@param <code>time</code> - <code>time</code> is the number of seconds to sleep for. If <code>time</code> is negative, the function returns immediately.</p>
+<p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/os.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
+<p>Freeze the program execution during a given amount of time.</p>
+<p>This function is a duplicate of <code>socket.sleep()</code> and is always available.
+The socket library can be nil in some setups.</p>
+<p><strong>Example:</strong></p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">socketgettime</span><span class="p">()</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nv">os</span><span class="p">.</span><span class="nf">socketsleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_true</span><span class="p">(</span><span class="nv">os</span><span class="p">.</span><span class="nf">socketgettime</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
 </span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
@@ -9628,7 +9638,19 @@ string values, and their names are: <code>sysname</code>, <code>machine</code>, 
 <p>@see socket.sleep</p>
 <h3 id="ossocketgettime">os.socketgettime</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">socketgettime</span><span class="p">()</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">os</span><span class="p">.</span><span class="nf">socketgettime</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="nv">number</span>
+</span></code></pre></div>
+<p>@return <code>time</code> - for example <code>1683526723.1653</code></p>
+<p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/os.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
+<p>Return the UNIX time in seconds.</p>
+<p>You should subtract the values returned by this function
+to get meaningful values.</p>
+<p>This function is a duplicate of <code>socket.gettime()</code> and is always available.
+The socket library can be nil in some setups.</p>
+<p><strong>Example:</strong></p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">os</span><span class="p">.</span><span class="nf">socketgettime</span><span class="p">()</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="nv">os</span><span class="p">.</span><span class="nf">socketsleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_true</span><span class="p">(</span><span class="nv">os</span><span class="p">.</span><span class="nf">socketgettime</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">time</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
 </span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
@@ -9639,11 +9661,13 @@ string values, and their names are: <code>sysname</code>, <code>machine</code>, 
 <hr />
 <h3 id="osselfdir">os.selfdir</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nv">os</span><span class="p">.</span><span class="py">selfdir</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nv">os</span><span class="p">.</span><span class="py">selfdir</span><span class="p">:</span><span class="w"> </span><span class="py">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
 </span></code></pre></div>
 <p>A variable that holds the directory path of the
 actual executable.</p>
-<p>For example: <code>\directlua {tex.sprint(os.selfdir)</code>}.</p>
+<p><strong>Example:</strong></p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nv">os</span><span class="p">.</span><span class="py">selfdir</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
 <li>Corresponding C source code: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/luainit.c#L169-L186">luainit.c#L169-L186</a></li>
@@ -9652,7 +9676,7 @@ actual executable.</p>
 <p>@string </p>
 <h3 id="osenv">os.env</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nv">os</span><span class="p">.</span><span class="py">env</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">table</span><span class="o">&lt;</span><span class="nv">string</span><span class="p">,</span><span class="nv">string</span><span class="o">&gt;</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nv">os</span><span class="p">.</span><span class="py">env</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">table</span><span class="o">&lt;</span><span class="nv">string</span><span class="p">,</span><span class="nv">string</span><span class="o">&gt;</span>
 </span></code></pre></div>
 <p>A hash table containing a dump of the variables and
 values in the process environment at the start of the run.</p>
@@ -9662,31 +9686,31 @@ but the actual environment is <code>not</code> updated automatically.</p>
 <ul>
 <li>Corresponding C source code: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/loslibext.c#L630-L661">loslibext.c#L630-L661</a></li>
 </ul>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">{</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="nv">HOME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/home/user&quot;</span><span class="p">,</span>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">  </span><span class="nv">HOSTNAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;myhost&quot;</span><span class="p">,</span>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">  </span><span class="nv">INFOPATH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/usr/local/texlive/texmf-dist/doc/info&quot;</span><span class="p">,</span>
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">  </span><span class="nv">LANG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;en_US.UTF-8&quot;</span><span class="p">,</span>
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">  </span><span class="nv">LANGUAGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;en_US:en&quot;</span><span class="p">,</span>
-</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">  </span><span class="nv">OS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Linux&quot;</span><span class="p">,</span>
-</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">  </span><span class="nv">PAPERSIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;a4&quot;</span><span class="p">,</span>
-</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">  </span><span class="nv">PATH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/bin:/sbin&quot;</span><span class="p">,</span>
-</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">  </span><span class="nv">TERM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;xterm-256color&quot;</span><span class="p">,</span>
-</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">  </span><span class="nv">USER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
-</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">  </span><span class="nv">USERNAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
-</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">  </span><span class="p">...</span>
-</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="p">}</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">{</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span><span class="nv">HOME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/home/user&quot;</span><span class="p">,</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">  </span><span class="nv">HOSTNAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;myhost&quot;</span><span class="p">,</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">  </span><span class="nv">INFOPATH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/usr/local/texlive/texmf-dist/doc/info&quot;</span><span class="p">,</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">  </span><span class="nv">LANG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;en_US.UTF-8&quot;</span><span class="p">,</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">  </span><span class="nv">LANGUAGE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;en_US:en&quot;</span><span class="p">,</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="w">  </span><span class="nv">OS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Linux&quot;</span><span class="p">,</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="w">  </span><span class="nv">PAPERSIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;a4&quot;</span><span class="p">,</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="w">  </span><span class="nv">PATH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/bin:/sbin&quot;</span><span class="p">,</span>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="w">  </span><span class="nv">TERM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;xterm-256color&quot;</span><span class="p">,</span>
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="w">  </span><span class="nv">USER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="w">  </span><span class="nv">USERNAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a><span class="w">  </span><span class="p">...</span>
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="ostype">os.type</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nv">os</span><span class="p">.</span><span class="py">type</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nv">os</span><span class="p">.</span><span class="py">type</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
 </span></code></pre></div>
 <p>A string that gives a global indication of the class of
 operating system.</p>
 <p>The possible values are currently <code>windows</code>, <code>unix</code>, and <code>msdos</code> (you are unlikely to find this value “in the
 wild”).</p>
 <p><strong>Example:</strong></p>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">assert</span><span class="p">(</span><span class="nv">os</span><span class="p">.</span><span class="py">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;unix&#39;</span><span class="p">)</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nv">os</span><span class="p">.</span><span class="py">type</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
@@ -9694,7 +9718,7 @@ wild”).</p>
 </ul>
 <h3 id="osname">os.name</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nv">os</span><span class="p">.</span><span class="py">name</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nv">os</span><span class="p">.</span><span class="py">name</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
 </span></code></pre></div>
 <p>A string that gives a more precise indication of the
 operating system.</p>
@@ -9702,7 +9726,7 @@ operating system.</p>
 values are simply <code>windows</code> and <code>msdos</code></p>
 <p>The list for the type <code>unix</code> is more precise: <code>linux</code>, <code>freebsd</code>, <code>kfreebsd</code>, <code>cygwin</code>, <code>openbsd</code>, <code>solaris</code>, <code>sunos</code> (pre-solaris), <code>hpux</code>, <code>irix</code>, <code>macosx</code>, <code>gnu</code> (hurd), <code>bsd</code> (unknown, but BSD-like), <code>sysv</code> (unknown, but SYSV-like), <code>generic</code> (unknown).</p>
 <p><strong>Example:</strong></p>
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nb">assert</span><span class="p">(</span><span class="nv">os</span><span class="p">.</span><span class="py">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;linux&#39;</span><span class="p">)</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_type</span><span class="p">(</span><span class="nv">os</span><span class="p">.</span><span class="py">name</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
