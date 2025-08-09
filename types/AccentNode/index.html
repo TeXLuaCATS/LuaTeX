@@ -1705,7 +1705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ImgBox/" class="md-nav__link">
+      <a href="../luatex.img.ImgBox/" class="md-nav__link">
         
   
   
@@ -1728,7 +1728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ImgType/" class="md-nav__link">
+      <a href="../luatex.img.ImgType/" class="md-nav__link">
         
   
   
@@ -5969,7 +5969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Image/" class="md-nav__link">
+      <a href="../luatex.img.Image/" class="md-nav__link">
         
   
   
@@ -5992,7 +5992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ImageSpec/" class="md-nav__link">
+      <a href="../luatex.img.ImageSpec/" class="md-nav__link">
         
   
   
@@ -9247,6 +9247,32 @@
 <ul>
 <li>supers: Node</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">node_type</span><span class="p">(</span><span class="s2">&quot;accent&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nv">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;accent (21)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nv">subtypes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="s2">&quot;bothflexible (0)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="s2">&quot;fixedtop (1)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="s2">&quot;fixedbottom (2)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="s2">&quot;fixedboth (3)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nv">fields</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="s2">&quot;prev (-1)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="s2">&quot;next (0)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="s2">&quot;id (1)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="s2">&quot;subtype (2)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="s2">&quot;attr (3)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="s2">&quot;nucleus (4)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="s2">&quot;sub (5)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="s2">&quot;sup (6)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="s2">&quot;accent (7)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="s2">&quot;bot_accent (8)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="s2">&quot;top_accent (9)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="s2">&quot;overlay_accent (10)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="s2">&quot;fraction (11)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">})</span>
+</span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
 <li>Corresponding C source code: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/texnodes.c#L714-L723">texnodes.c#L714-L723</a></li>
@@ -9257,35 +9283,23 @@
 <hr />
 <h3 id="accentnodeattr">AccentNode.attr</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">attr</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nv">subtype</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nv">head</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">attr</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nv">subtype</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nv">head</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>A list of attributes.</p>
 <h3 id="accentnodesubtype">AccentNode.subtype</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">subtype</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">AccentNodeSubtype</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">subtype</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">AccentNodeSubtype</span>
 </span></code></pre></div>
 <h3 id="accentnodenucleus">AccentNode.nucleus</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">nucleus</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nv">subtype</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nv">head</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>base</p>
-<h3 id="accentnodesub">AccentNode.sub</h3>
-<hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">sub</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">nucleus</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
@@ -9294,10 +9308,10 @@
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>subscript</p>
-<h3 id="accentnodesup">AccentNode.sup</h3>
+<p>base</p>
+<h3 id="accentnodesub">AccentNode.sub</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">sup</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">sub</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
@@ -9306,10 +9320,10 @@
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>superscript</p>
-<h3 id="accentnodeaccent">AccentNode.accent</h3>
+<p>subscript</p>
+<h3 id="accentnodesup">AccentNode.sup</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">accent</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">sup</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
@@ -9318,10 +9332,10 @@
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>top accent</p>
-<h3 id="accentnodebot_accent">AccentNode.bot_accent</h3>
+<p>superscript</p>
+<h3 id="accentnodeaccent">AccentNode.accent</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">bot_accent</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">accent</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
@@ -9330,10 +9344,10 @@
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>bottom accent</p>
-<h3 id="accentnodetop_accent">AccentNode.top_accent</h3>
+<p>top accent</p>
+<h3 id="accentnodebot_accent">AccentNode.bot_accent</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">top_accent</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">bot_accent</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
@@ -9342,10 +9356,10 @@
 </span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>top_accent</p>
-<h3 id="accentnodeoverlay_accent">AccentNode.overlay_accent</h3>
+<p>bottom accent</p>
+<h3 id="accentnodetop_accent">AccentNode.top_accent</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">overlay_accent</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">top_accent</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
@@ -9354,10 +9368,22 @@
 </span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="p">}</span>
 </span></code></pre></div>
+<p>top_accent</p>
+<h3 id="accentnodeoverlay_accent">AccentNode.overlay_accent</h3>
+<hr />
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">overlay_accent</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="nv">subtype</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="nv">head</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="p">}</span>
+</span></code></pre></div>
 <p>overlay_accent</p>
 <h3 id="accentnodefraction">AccentNode.fraction</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">fraction</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">AccentNode</span><span class="p">.</span><span class="py">fraction</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
 </span></code></pre></div>
 <p>larger step criterium (divided by 1000)</p>
 

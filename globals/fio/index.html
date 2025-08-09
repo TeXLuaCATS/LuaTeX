@@ -1703,7 +1703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/ImgBox/" class="md-nav__link">
+      <a href="../../types/luatex.img.ImgBox/" class="md-nav__link">
         
   
   
@@ -1726,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/ImgType/" class="md-nav__link">
+      <a href="../../types/luatex.img.ImgType/" class="md-nav__link">
         
   
   
@@ -5820,7 +5820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/Image/" class="md-nav__link">
+      <a href="../../types/luatex.img.Image/" class="md-nav__link">
         
   
   
@@ -5843,7 +5843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/ImageSpec/" class="md-nav__link">
+      <a href="../../types/luatex.img.ImageSpec/" class="md-nav__link">
         
   
   
@@ -9550,98 +9550,16 @@
 
 
 <h1 id="global-fio">global fio</h1>
-<p>Binary input from files with <code>fio</code></p>
-<p>There is a whole set of helpers for reading numbers and strings from a file:
-<code>fio.readcardinal1</code>, <code>fio.readcardinal2</code>, <code>fio.readcardinal3</code>, <code>fio.readcardinal4</code>, <code>fio.readcardinaltable</code>, <code>fio.readinteger1</code>, <code>fio.readinteger2</code>,
-<code>fio.readinteger3</code>, <code>fio.readinteger4</code>, <code>fio.readintegertable</code>, <code>fio.readfixed2</code>, <code>fio.readfixed4</code>,
-<code>fio.read2dot14</code>, <code>fio.setposition</code>, <code>fio.getposition</code>, <code>fio.skipposition</code>, <code>fio.readbytes</code>, <code>fio.readbytetable</code>. They work on normal <em>Lua</em> file handles.</p>
+<p>Binary input from files with <code>fio</code> (file input-output)</p>
 <p>This library provides a set of functions for reading numbers from a file and
 in addition to the regular <code>io</code> library functions.</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>readcardinal1(f)</code></td>
-<td>a 1 byte unsigned integer</td>
-</tr>
-<tr>
-<td><code>readcardinal2(f)</code></td>
-<td>a 2 byte unsigned integer</td>
-</tr>
-<tr>
-<td><code>readcardinal3(f)</code></td>
-<td>a 3 byte unsigned integer</td>
-</tr>
-<tr>
-<td><code>readcardinal4(f)</code></td>
-<td>a 4 byte unsigned integer</td>
-</tr>
-<tr>
-<td><code>readcardinaltable(f,n,b)</code></td>
-<td><code>n</code> cardinals of <code>b</code> bytes</td>
-</tr>
-<tr>
-<td><code>readinteger1(f)</code></td>
-<td>a 1 byte signed integer</td>
-</tr>
-<tr>
-<td><code>readinteger2(f)</code></td>
-<td>a 2 byte signed integer</td>
-</tr>
-<tr>
-<td><code>readinteger3(f)</code></td>
-<td>a 3 byte signed integer</td>
-</tr>
-<tr>
-<td><code>readinteger4(f)</code></td>
-<td>a 4 byte signed integer</td>
-</tr>
-<tr>
-<td><code>readintegertable(f,n,b)</code></td>
-<td><code>n</code> integers of <code>b</code> bytes</td>
-</tr>
-<tr>
-<td><code>readfixed2(f)</code></td>
-<td>a 2 byte float (used in font files)</td>
-</tr>
-<tr>
-<td><code>readfixed4(f)</code></td>
-<td>a 4 byte float (used in font files)</td>
-</tr>
-<tr>
-<td><code>read2dot14(f)</code></td>
-<td>a 2 byte float (used in font files)</td>
-</tr>
-<tr>
-<td><code>setposition(f,p)</code></td>
-<td>goto position <code>p</code></td>
-</tr>
-<tr>
-<td><code>getposition(f)</code></td>
-<td>get the current position</td>
-</tr>
-<tr>
-<td><code>skipposition(f,n)</code></td>
-<td>skip <code>n</code> positions</td>
-</tr>
-<tr>
-<td><code>readbytes(f,n)</code></td>
-<td><code>n</code> bytes</td>
-</tr>
-<tr>
-<td><code>readbytetable(f,n)</code></td>
-<td><code>n</code> bytes</td>
-</tr>
-</tbody>
-</table>
 <p>There are eight additional little endian variants for the <code>cardinal[1-4]</code>
 and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>integer[1-4]le</code>.</p>
-<p>https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/liolibext.c</p>
+<p><strong>Reference:</strong></p>
+<ul>
+<li>Corresponding C source code: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/lua/liolibext.c">liolibext.c</a></li>
+<li>Source file of the <code>LuaTeX</code> manual: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/4f2b914d365bab8a2747afe6e8c86d0f1c8475f7/manual/luatex-lua.tex#L655-697">luatex-lua.tex#L655-697</a></li>
+</ul>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/fio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
 <hr />
 <h2 id="methods">methods</h2>
@@ -9651,7 +9569,7 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 <p><div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">fio</span><span class="p">.</span><span class="nf">readcardinal1</span><span class="p">(</span><span class="nv">file</span><span class="p">:</span><span class="w"> </span><span class="py">file</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">integer</span>
 </span></code></pre></div>
 @param <code>file</code> - A file handle.</p>
-<p>@return  - A 1 byte unsigned integer</p>
+<p>@return  - A 1 byte unsigned integer.</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/fio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
 <p>Read a 1 byte unsigned integer (8-bit) from a file.</p>
 <p><strong>Example:</strong></p>
@@ -9758,6 +9676,7 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 @param <code>file</code> - A file handle.</p>
 <p>@param <code>number</code> - The number of integers in the resulting table.</p>
 <p>@param <code>bytes</code> - Specify 1 for 1 byte unsigned integer, 2 for a 2 byte unsigned integers, and so on.</p>
+<p>Read <code>number</code> unsigned integers of <code>bytes</code> as a table from a file.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w+&quot;</span><span class="p">)</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kr">if</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="kr">then</span>
@@ -9969,6 +9888,7 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 @param <code>file</code> - A file handle.</p>
 <p>@param <code>number</code> - The number of integers in the resulting table.</p>
 <p>@param <code>bytes</code> - Specify 1 for 1 byte signed integers, 2 for a 2 byte signed integers, and so on.</p>
+<p>Read <code>number</code> signed integers of <code>bytes</code> as a table from a file.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w+&quot;</span><span class="p">)</span>
 </span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="kr">if</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="kr">then</span>
@@ -9997,6 +9917,7 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 <p><div class="language-lua highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">fio</span><span class="p">.</span><span class="nf">readinteger1le</span><span class="p">(</span><span class="nv">file</span><span class="p">:</span><span class="w"> </span><span class="py">file</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">integer</span>
 </span></code></pre></div>
 @param <code>file</code> - A file handle.</p>
+<p>Read a 1 byte signed little endian integer (8-bit) from a file.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w+&quot;</span><span class="p">)</span>
 </span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="kr">if</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="kr">then</span>
@@ -10022,6 +9943,7 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 <p><div class="language-lua highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">fio</span><span class="p">.</span><span class="nf">readinteger2le</span><span class="p">(</span><span class="nv">file</span><span class="p">:</span><span class="w"> </span><span class="py">file</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">integer</span><span class="err">?</span>
 </span></code></pre></div>
 @param <code>file</code> - A file handle.</p>
+<p>Read a 2 byte signed little endian integer (16-bit) from a file.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w+&quot;</span><span class="p">)</span>
 </span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="kr">if</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="kr">then</span>
@@ -10043,6 +9965,7 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 <p><div class="language-lua highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">fio</span><span class="p">.</span><span class="nf">readinteger3le</span><span class="p">(</span><span class="nv">file</span><span class="p">:</span><span class="w"> </span><span class="py">file</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">integer</span><span class="err">?</span>
 </span></code></pre></div>
 @param <code>file</code> - A file handle.</p>
+<p>Read a 3 byte signed little endian integer (24-bit) from a file.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w+&quot;</span><span class="p">)</span>
 </span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="kr">if</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="kr">then</span>
@@ -10063,6 +9986,7 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 <p><div class="language-lua highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">fio</span><span class="p">.</span><span class="nf">readinteger4le</span><span class="p">(</span><span class="nv">file</span><span class="p">:</span><span class="w"> </span><span class="py">file</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">integer</span><span class="err">?</span>
 </span></code></pre></div>
 @param <code>file</code> - A file handle.</p>
+<p>Read a 4 byte signed little endian integer (32-bit) from a file.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w+&quot;</span><span class="p">)</span>
 </span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="kr">if</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="kr">then</span>
@@ -10085,7 +10009,7 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 @param <code>file</code> - A file handle.</p>
 <p>@return  - a 2 byte float (used in font files)</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/fio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
-<p>Read a 2 byte float (used in font files).</p>
+<p>Read a 2 byte float (used in font files) from a file.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w+&quot;</span><span class="p">)</span>
 </span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="kr">if</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="kr">then</span>
@@ -10108,7 +10032,7 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 @param <code>file</code> - A file handle.</p>
 <p>@return  - a 4 byte float (used in font files)</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/fio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
-<p>Read a 4 byte float (used in font files).</p>
+<p>Read a 4 byte float (used in font files) from a file.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w+&quot;</span><span class="p">)</span>
 </span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="kr">if</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="kr">then</span>
@@ -10130,7 +10054,7 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 @param <code>file</code> - A file handle.</p>
 <p>@return  - a 2 byte float (used in font files)</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/fio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
-<p>Read a 2 byte float (used in font files).</p>
+<p>Read a 2 byte float (used in font files) from a file.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w+&quot;</span><span class="p">)</span>
 </span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="kr">if</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="kr">then</span>
@@ -10182,6 +10106,8 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 <p><div class="language-lua highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">fio</span><span class="p">.</span><span class="nf">getposition</span><span class="p">(</span><span class="nv">file</span><span class="p">:</span><span class="w"> </span><span class="py">file</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">position</span><span class="w"> </span><span class="nv">integer</span>
 </span></code></pre></div>
 @param <code>file</code> - A file handle.</p>
+<p>@return <code>position</code> - The current position in bytes.</p>
+<p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/fio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
 <p>Get the current position.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w+&quot;</span><span class="p">)</span>
@@ -10243,7 +10169,7 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 </span></code></pre></div>
 @param <code>file</code> - A file handle.</p>
 <p>@param <code>number</code> - The number of bytes to be read.</p>
-<p>Read <code>number</code> bytes.</p>
+<p>Read <code>number</code> bytes from a file.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w+&quot;</span><span class="p">)</span>
 </span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="kr">if</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="kr">then</span>
@@ -10274,7 +10200,7 @@ and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>in
 </span></code></pre></div>
 @param <code>file</code> - A file handle.</p>
 <p>@param <code>number</code> - The number of bytes to be read.</p>
-<p>Read <code>number</code> bytes as a table.</p>
+<p>Read <code>number</code> bytes as a table from a file.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="s2">&quot;tmp.txt&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w+&quot;</span><span class="p">)</span>
 </span><span id="__span-51-2"><a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="kr">if</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="kr">then</span>

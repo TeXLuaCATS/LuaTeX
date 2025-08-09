@@ -1705,7 +1705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ImgBox/" class="md-nav__link">
+      <a href="../luatex.img.ImgBox/" class="md-nav__link">
         
   
   
@@ -1728,7 +1728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ImgType/" class="md-nav__link">
+      <a href="../luatex.img.ImgType/" class="md-nav__link">
         
   
   
@@ -5822,7 +5822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Image/" class="md-nav__link">
+      <a href="../luatex.img.Image/" class="md-nav__link">
         
   
   
@@ -5845,7 +5845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ImageSpec/" class="md-nav__link">
+      <a href="../luatex.img.ImageSpec/" class="md-nav__link">
         
   
   
@@ -9211,6 +9211,25 @@
 <ul>
 <li>supers: Node</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">node_type</span><span class="p">(</span><span class="s2">&quot;local_par&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nv">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;local_par (9)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nv">fields</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="s2">&quot;prev (-1)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="s2">&quot;next (0)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="s2">&quot;id (1)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="s2">&quot;subtype (2)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="s2">&quot;attr (3)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="s2">&quot;pen_inter (4)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="s2">&quot;pen_broken (5)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="s2">&quot;dir (6)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="s2">&quot;box_left (7)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="s2">&quot;box_left_width (8)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="s2">&quot;box_right (9)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="s2">&quot;box_right_width (10)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">})</span>
+</span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
 <li>Corresponding C source code: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/texnodes.c#L853-L861">texnodes.c#L853-L861</a></li>
@@ -9221,63 +9240,63 @@
 <hr />
 <h3 id="localparnodeattr">LocalParNode.attr</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">attr</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nv">subtype</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nv">head</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">attr</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nv">subtype</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nv">head</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>A list of attributes.</p>
 <h3 id="localparnodepen_inter">LocalParNode.pen_inter</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">pen_inter</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">pen_inter</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
 </span></code></pre></div>
 <p>local interline penalty (from <code>localinterlinepenalty</code>)</p>
 <h3 id="localparnodepen_broken">LocalParNode.pen_broken</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">pen_broken</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">pen_broken</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
 </span></code></pre></div>
 <p>local broken penalty (from <code>localbrokenpenalty</code>)</p>
 <h3 id="localparnodedir">LocalParNode.dir</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">dir</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">dir</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
 </span></code></pre></div>
 <p>the direction of this par. see \in [dirnodes]</p>
 <h3 id="localparnodebox_left">LocalParNode.box_left</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">box_left</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nv">subtype</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nv">head</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">}</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">box_left</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nv">subtype</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nv">head</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>the <code>localleftbox</code></p>
 <h3 id="localparnodebox_left_width">LocalParNode.box_left_width</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">box_left_width</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">box_left_width</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
 </span></code></pre></div>
 <p>width of the <code>localleftbox</code></p>
 <h3 id="localparnodebox_right">LocalParNode.box_right</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">box_right</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nv">subtype</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="nv">head</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">}</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">box_right</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nb">next</span><span class="p">:</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nv">prev</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nv">subtype</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span><span class="p">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nv">head</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="err">?</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nv">attr</span><span class="p">:</span><span class="w"> </span><span class="py">Node</span><span class="p">,</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>the <code>localrightbox</code></p>
 <h3 id="localparnodebox_right_width">LocalParNode.box_right_width</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">box_right_width</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">LocalParNode</span><span class="p">.</span><span class="py">box_right_width</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
 </span></code></pre></div>
 <p>width of the <code>localrightbox</code></p>
 

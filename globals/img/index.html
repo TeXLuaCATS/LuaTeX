@@ -1703,7 +1703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/ImgBox/" class="md-nav__link">
+      <a href="../../types/luatex.img.ImgBox/" class="md-nav__link">
         
   
   
@@ -1726,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/ImgType/" class="md-nav__link">
+      <a href="../../types/luatex.img.ImgType/" class="md-nav__link">
         
   
   
@@ -5820,7 +5820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/Image/" class="md-nav__link">
+      <a href="../../types/luatex.img.Image/" class="md-nav__link">
         
   
   
@@ -5843,7 +5843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/ImageSpec/" class="md-nav__link">
+      <a href="../../types/luatex.img.ImageSpec/" class="md-nav__link">
         
   
   
@@ -9268,7 +9268,7 @@
 <hr />
 <h3 id="imgnew">img.new</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="nv">image_spec</span><span class="p">:</span><span class="w"> </span><span class="py">ImageSpec</span><span class="err">?</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">Image</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="nv">image_spec</span><span class="p">:</span><span class="w"> </span><span class="py">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">ImageSpec</span><span class="err">?</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">Image</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nv">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nv">bbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">table</span><span class="p">,</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nv">colordepth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
@@ -9328,7 +9328,7 @@ not rely in such a catch but make sure that images are valid.</p>
 </ul>
 <h3 id="imgfields">img.fields</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">fields</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">keys</span><span class="w"> </span><span class="nv">ImageSpec</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">fields</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nv">keys</span><span class="w"> </span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">ImageSpec</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nv">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nv">bbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">table</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nv">colordepth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="err">?</span><span class="p">,</span>
@@ -9360,7 +9360,7 @@ not rely in such a catch but make sure that images are valid.</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/img.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
 <h3 id="imgscan">img.scan</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">scan</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">Image</span><span class="o">|</span><span class="nv">ImageSpec</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">Image</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">scan</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">Image</span><span class="o">|</span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">ImageSpec</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">Image</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nv">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nv">bbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">table</span><span class="p">,</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nv">colordepth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
@@ -9396,7 +9396,7 @@ the PDF, and the used memory will be cleaned up automatically.</p>
 </ul>
 <h3 id="imgcopy">img.copy</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">copy</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">Image</span><span class="o">|</span><span class="nv">ImageSpec</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">Image</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">copy</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">Image</span><span class="o">|</span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">ImageSpec</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">Image</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="nv">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="nv">bbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">table</span><span class="p">,</span>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="nv">colordepth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
@@ -9424,7 +9424,7 @@ initial values that were just copies from <code>a</code>.</p>
 </ul>
 <h3 id="imgwrite">img.write</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">Image</span><span class="o">|</span><span class="nv">ImageSpec</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">Image</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">Image</span><span class="o">|</span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">ImageSpec</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">Image</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="nv">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nv">bbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">table</span><span class="p">,</span>
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="nv">colordepth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
@@ -9456,7 +9456,7 @@ processing. You can also write an object.</p>
 </ul>
 <h3 id="imgimmediatewrite">img.immediatewrite</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">immediatewrite</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">Image</span><span class="o">|</span><span class="nv">ImageSpec</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">Image</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">immediatewrite</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">Image</span><span class="o">|</span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">ImageSpec</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">Image</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="nv">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nv">bbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">table</span><span class="p">,</span>
 </span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="nv">colordepth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
@@ -9492,9 +9492,9 @@ object in the <em>PDF</em> file.</p>
 <h3 id="imgimmediatewriteobject">img.immediatewriteobject</h3>
 <hr />
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">immediatewriteobject</span><span class="p">(</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nv">image</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">Image</span><span class="o">|</span><span class="nv">ImageSpec</span><span class="p">),</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nv">image</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">Image</span><span class="o">|</span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">ImageSpec</span><span class="p">),</span>
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nv">objnum</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">Image</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">Image</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="nv">attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">string</span><span class="p">,</span>
 </span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="nv">bbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">table</span><span class="p">,</span>
 </span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="nv">colordepth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number</span><span class="p">,</span>
@@ -9519,7 +9519,7 @@ file.</p>
 </ul>
 <h3 id="imgnode">img.node</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">node</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">Image</span><span class="o">|</span><span class="nv">ImageSpec</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">Node</span><span class="w"> </span><span class="p">{</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">node</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">Image</span><span class="o">|</span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">ImageSpec</span><span class="p">))</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">Node</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="nb">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="nv">prev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Node</span><span class="err">?</span><span class="p">,</span>
 </span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="nv">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">integer</span><span class="p">,</span>
@@ -9544,7 +9544,7 @@ call like:</p>
 </ul>
 <h3 id="imgtypes">img.types</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">types</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">ImgType</span><span class="p">[]</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">types</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">ImgType</span><span class="p">[]</span>
 </span></code></pre></div>
 <p>Return a list with the supported image file type names, currently
 these are <code>pdf</code>, <code>png</code>, <code>jpg</code>, <code>jp2</code> (JPEG 2000), and
@@ -9557,7 +9557,7 @@ these are <code>pdf</code>, <code>png</code>, <code>jpg</code>, <code>jp2</code>
 </ul>
 <h3 id="imgboxes">img.boxes</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">boxes</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">ImgBox</span><span class="p">[]</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kr">function</span><span class="w"> </span><span class="nc">img</span><span class="p">.</span><span class="nf">boxes</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">luatex</span><span class="p">.</span><span class="py">img</span><span class="p">.</span><span class="py">ImgBox</span><span class="p">[]</span>
 </span></code></pre></div>
 <p>Return a list with the supported <em>PDF</em> page box names, currently
 these are <code>media</code>, <code>crop</code>, <code>bleed</code>, <code>trim</code>, and <code>art</code>, all in lowercase.</p>

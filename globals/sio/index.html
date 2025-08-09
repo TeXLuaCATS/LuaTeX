@@ -1703,7 +1703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/ImgBox/" class="md-nav__link">
+      <a href="../../types/luatex.img.ImgBox/" class="md-nav__link">
         
   
   
@@ -1726,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/ImgType/" class="md-nav__link">
+      <a href="../../types/luatex.img.ImgType/" class="md-nav__link">
         
   
   
@@ -5820,7 +5820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/Image/" class="md-nav__link">
+      <a href="../../types/luatex.img.Image/" class="md-nav__link">
         
   
   
@@ -5843,7 +5843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/ImageSpec/" class="md-nav__link">
+      <a href="../../types/luatex.img.ImageSpec/" class="md-nav__link">
         
   
   
@@ -9478,95 +9478,16 @@
 
 
 <h1 id="global-sio">global sio</h1>
-<p>Binary input from strings with <code>sio</code></p>
-<p>A similar set of function as in the <code>fio</code> library is available in the <code>sio</code> library: <code>sio.readcardinal1</code>, <code>sio.readcardinal2</code>,
-<code>sio.readcardinal3</code>, <code>sio.readcardinal4</code>, <code>sio.readcardinaltable</code>, <code>sio.readinteger1</code>, <code>sio.readinteger2</code>,
-<code>sio.readinteger3</code>, <code>sio.readinteger4</code>, <code>sio.readintegertable</code>, <code>sio.readfixed2</code>, <code>sio.readfixed4</code>,
-<code>sio.read2dot14</code>, <code>sio.setposition</code>, <code>sio.getposition</code>, <code>sio.skipposition</code>, <code>sio.readbytes</code> and
-<code>sio.readbytetable</code>. Here the first argument is a string instead of a
-file handle. More details can be found in the previous section.</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>readcardinal1(s)</code></td>
-<td>a 1 byte unsigned integer</td>
-</tr>
-<tr>
-<td><code>readcardinal2(s)</code></td>
-<td>a 2 byte unsigned integer</td>
-</tr>
-<tr>
-<td><code>readcardinal3(s)</code></td>
-<td>a 3 byte unsigned integer</td>
-</tr>
-<tr>
-<td><code>readcardinal4(s)</code></td>
-<td>a 4 byte unsigned integer</td>
-</tr>
-<tr>
-<td><code>readcardinaltable(s,n,b)</code></td>
-<td><code>n</code> cardinals of <code>b</code> bytes</td>
-</tr>
-<tr>
-<td><code>readinteger1(s)</code></td>
-<td>a 1 byte signed integer</td>
-</tr>
-<tr>
-<td><code>readinteger2(s)</code></td>
-<td>a 2 byte signed integer</td>
-</tr>
-<tr>
-<td><code>readinteger3(s)</code></td>
-<td>a 3 byte signed integer</td>
-</tr>
-<tr>
-<td><code>readinteger4(s)</code></td>
-<td>a 4 byte signed integer</td>
-</tr>
-<tr>
-<td><code>readintegertable(s,n,b)</code></td>
-<td><code>n</code> integers of <code>b</code> bytes</td>
-</tr>
-<tr>
-<td><code>readfixed2(s)</code></td>
-<td>a 2 byte float (used in font files)</td>
-</tr>
-<tr>
-<td><code>readfixed4(s)</code></td>
-<td>a 4 byte float (used in font files)</td>
-</tr>
-<tr>
-<td><code>read2dot14(s)</code></td>
-<td>a 2 byte float (used in font files)</td>
-</tr>
-<tr>
-<td><code>setposition(s,p)</code></td>
-<td>goto position <code>p</code></td>
-</tr>
-<tr>
-<td><code>getposition(s)</code></td>
-<td>get the current position</td>
-</tr>
-<tr>
-<td><code>skipposition(s,n)</code></td>
-<td>skip <code>n</code> positions</td>
-</tr>
-<tr>
-<td><code>readbytes(s,n)</code></td>
-<td><code>n</code> bytes</td>
-</tr>
-<tr>
-<td><code>readbytetable(f,n)</code></td>
-<td><code>n</code> bytes</td>
-</tr>
-</tbody>
-</table>
+<p>Binary input from strings with <code>sio</code> (string input-output)</p>
+<p>This library provides a set of functions for reading numbers from a string and
+in addition to the regular <code>io</code> library functions.</p>
+<p>There are eight additional little endian variants for the <code>cardinal[1-4]</code>
+and <code>integer[1-4]</code> readers: <code>cardinal[1-4]le</code> and <code>integer[1-4]le</code>.</p>
+<p><strong>Reference:</strong></p>
+<ul>
+<li>Corresponding C source code: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/lua/liolibext.c">liolibext.c</a></li>
+<li>Source file of the <code>LuaTeX</code> manual: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/4f2b914d365bab8a2747afe6e8c86d0f1c8475f7/manual/luatex-lua.tex#L701-714">luatex-lua.tex#L701-714</a></li>
+</ul>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/sio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
 <hr />
 <h2 id="methods">methods</h2>
@@ -9580,8 +9501,9 @@ file handle. More details can be found in the previous section.</p>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
-<p>@return  - a 1 byte unsigned integer</p>
+<p>@return  - A 1 byte unsigned integer.</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/sio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
+<p>Read a 1 byte unsigned integer (8-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readcardinal1</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">-- t: decimal=116 hexadecimal=74 binary=01110100</span>
@@ -9608,8 +9530,9 @@ file handle. More details can be found in the previous section.</p>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
-<p>@return  - a 2 byte unsigned integer</p>
+<p>@return  - A 2 byte unsigned integer.</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/sio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
+<p>Read a 2 byte unsigned integer (16-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readcardinal2</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">116</span><span class="p">)</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">-- t.e: decimal=29797 hexadecimal=74.65 binary=01110100.01100101</span>
@@ -9632,8 +9555,9 @@ file handle. More details can be found in the previous section.</p>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
-<p>@return  - a 3 byte unsigned integer</p>
+<p>@return  - A 3 byte unsigned integer.</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/sio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
+<p>Read a 3 byte unsigned integer (24-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readcardinal3</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">29797</span><span class="p">)</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">-- l.u.a: decimal=7107937 hexadecimal=6C.75.61 binary=01101100.01110101.01100001</span>
@@ -9656,8 +9580,9 @@ file handle. More details can be found in the previous section.</p>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
-<p>@return  - a 4 byte unsigned integer</p>
+<p>@return  - A 4 byte unsigned integer.</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/sio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
+<p>Read a 4 byte unsigned integer (32-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readcardinal4</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">7628147</span><span class="p">)</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1">-- t.e.s.t:</span>
@@ -9685,6 +9610,7 @@ file handle. More details can be found in the previous section.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
 <p>@param <code>number</code> - The number of integers in the resulting table.</p>
 <p>@param <code>bytes</code> - Specify 1 for 1 byte unsigned integers, 2 for a 2 byte unsigned integers.</p>
+<p>Read <code>number</code> unsigned integers of <code>bytes</code> as a table from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sio</span><span class="p">.</span><span class="nf">readcardinaltable</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="c1">-- t: decimal=116 hexadecimal=74 binary=01110100</span>
@@ -9706,6 +9632,7 @@ file handle. More details can be found in the previous section.</p>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
+<p>Read a 1 byte unsigned little endian integer (8-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger1le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="c1">-- t: decimal=116 hexadecimal=74 binary=01110100</span>
@@ -9733,6 +9660,7 @@ file handle. More details can be found in the previous section.</p>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
+<p>Read a 2 byte unsigned little endian integer (16-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger2le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">29696</span><span class="p">)</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger2le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">25972</span><span class="p">)</span>
@@ -9755,6 +9683,7 @@ file handle. More details can be found in the previous section.</p>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
+<p>Read a 3 byte unsigned little endian integer (24-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger3le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">6648832</span><span class="p">)</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger3le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">7562612</span><span class="p">)</span>
@@ -9776,6 +9705,7 @@ file handle. More details can be found in the previous section.</p>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
+<p>Read a 4 byte unsigned little endian integer (32-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger4le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">1936028672</span><span class="p">)</span>
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger4le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">1953719668</span><span class="p">)</span>
@@ -9798,6 +9728,7 @@ file handle. More details can be found in the previous section.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
 <p>@return  - a 1 byte signed integer</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/sio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
+<p>Read a 1 byte signed integer (8-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger1</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span>
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="c1">-- t: decimal=116 hexadecimal=74 binary=01110100</span>
@@ -9826,6 +9757,7 @@ file handle. More details can be found in the previous section.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
 <p>@return  - a 2 byte signed integer</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/sio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
+<p>Read a 2 byte signed integer (16-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger2</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">116</span><span class="p">)</span>
 </span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger2</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">29797</span><span class="p">)</span>
@@ -9849,6 +9781,7 @@ file handle. More details can be found in the previous section.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
 <p>@return  - a 3 byte signed integer</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/sio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
+<p>Read a 3 byte signed integer (24-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger3</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">29797</span><span class="p">)</span>
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger3</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">7628147</span><span class="p">)</span>
@@ -9871,6 +9804,7 @@ file handle. More details can be found in the previous section.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
 <p>@return  - a 4 byte signed integer</p>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/sio.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
+<p>Read a 4 byte signed integer (32-bit) from a file.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger4</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">7628147</span><span class="p">)</span>
 </span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger4</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">1952805748</span><span class="p">)</span>
@@ -9894,6 +9828,7 @@ file handle. More details can be found in the previous section.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
 <p>@param <code>number</code> - The number of integers in the resulting table.</p>
 <p>@param <code>bytes</code> - Specify 1 for 1 byte signed integers, 2 for a 2 byte signed integers, and so on.</p>
+<p>Read <code>number</code> signed integers of <code>bytes</code> as a table from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sio</span><span class="p">.</span><span class="nf">readintegertable</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
 </span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="c1">-- t: decimal=116 hexadecimal=74 binary=01110100</span>
@@ -9917,7 +9852,9 @@ file handle. More details can be found in the previous section.</p>
 </span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">  </span><span class="nv">position</span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
 </span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="nv">integer</span>
 </span></code></pre></div>
-@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
+@param <code>text</code> - A string to read from.</p>
+<p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
+<p>Read a 1 byte signed little endian integer (8-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">is_nil</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger1le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span>
 </span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="c1">-- t: decimal=116 hexadecimal=74 binary=01110100</span>
@@ -9945,6 +9882,7 @@ little endian variant</li>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
+<p>Read a 2 byte signed little endian integer (16-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger2le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">29696</span><span class="p">)</span>
 </span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger2le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">25972</span><span class="p">)</span>
@@ -9967,6 +9905,7 @@ little endian variant</li>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
+<p>Read a 3 byte signed little endian integer (24-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger3le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">6648832</span><span class="p">)</span>
 </span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger3le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">7562612</span><span class="p">)</span>
@@ -9988,6 +9927,7 @@ little endian variant</li>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
+<p>Read a 4 byte signed little endian integer (32-bit) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger4le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">1936028672</span><span class="p">)</span>
 </span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">equals</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readinteger4le</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mi">1953719668</span><span class="p">)</span>
@@ -10008,7 +9948,7 @@ little endian variant</li>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
-<p>Read a 2 byte float (used in font files).</p>
+<p>Read a 2 byte float (used in font files) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">numbers</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readfixed2</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mf">0.453125</span><span class="p">)</span>
 </span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">numbers</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readfixed2</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mf">116.39453125</span><span class="p">)</span>
@@ -10029,7 +9969,7 @@ little endian variant</li>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
-<p>Read a 4 byte float (used in font files).</p>
+<p>Read a 4 byte float (used in font files) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">numbers</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readfixed4</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mf">116.39628601074</span><span class="p">)</span>
 </span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">numbers</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">readfixed4</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mf">29797.45098877</span><span class="p">)</span>
@@ -10049,7 +9989,7 @@ little endian variant</li>
 </span></code></pre></div>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
-<p>Read a 2 byte float (used in font files).</p>
+<p>Read a 2 byte float (used in font files) from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">numbers</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">read2dot14</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="mf">1.8186645507812</span><span class="p">)</span>
 </span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">numbers</span><span class="p">(</span><span class="nv">sio</span><span class="p">.</span><span class="nf">read2dot14</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="mf">1.5851440429688</span><span class="p">)</span>
@@ -10074,6 +10014,7 @@ little endian variant</li>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
 <p>@param <code>number</code> - The number of bytes to be read.</p>
+<p>Read <code>number</code> bytes from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">b1</span><span class="p">,</span><span class="w"> </span><span class="nv">b2</span><span class="p">,</span><span class="w"> </span><span class="nv">b3</span><span class="p">,</span><span class="w"> </span><span class="nv">b4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sio</span><span class="p">.</span><span class="nf">readbytes</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
 </span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="c1">-- t: decimal=116 hexadecimal=74 binary=01110100</span>
@@ -10101,6 +10042,7 @@ little endian variant</li>
 @param <code>text</code> - A string to read from.</p>
 <p>@param <code>position</code> - The position in bytes from which to read. <code>1</code> and not <code>0</code> reads from the first byte.</p>
 <p>@param <code>number</code> - The number of bytes to be read.</p>
+<p>Read <code>number</code> bytes as a table from a string.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sio</span><span class="p">.</span><span class="nf">readbytetable</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
 </span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="c1">-- t: decimal=116 hexadecimal=74 binary=01110100</span>

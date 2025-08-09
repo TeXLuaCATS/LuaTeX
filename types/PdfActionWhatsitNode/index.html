@@ -1705,7 +1705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ImgBox/" class="md-nav__link">
+      <a href="../luatex.img.ImgBox/" class="md-nav__link">
         
   
   
@@ -1728,7 +1728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ImgType/" class="md-nav__link">
+      <a href="../luatex.img.ImgType/" class="md-nav__link">
         
   
   
@@ -5822,7 +5822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Image/" class="md-nav__link">
+      <a href="../luatex.img.Image/" class="md-nav__link">
         
   
   
@@ -5845,7 +5845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ImageSpec/" class="md-nav__link">
+      <a href="../luatex.img.ImageSpec/" class="md-nav__link">
         
   
   
@@ -9193,6 +9193,25 @@
 <ul>
 <li>supers: WhatsitNode</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">node_type</span><span class="p">(</span><span class="s2">&quot;whatsit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pdf_action&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nv">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;whatsit (8)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nv">subtype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;pdf_action (23)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nv">fields</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="s2">&quot;prev (-1)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="s2">&quot;next (0)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="s2">&quot;id (1)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="s2">&quot;subtype (2)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="s2">&quot;action_type (3)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="s2">&quot;named_id (4)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="s2">&quot;action_id (5)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="s2">&quot;file (6)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="s2">&quot;new_window (7)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="s2">&quot;data (8)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="s2">&quot;struct_id (9)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">})</span>
+</span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
 <li>Corresponding C source code: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/texnodes.c#L1104-L1111">texnodes.c#L1104-L1111</a></li>
@@ -9203,37 +9222,37 @@
 <hr />
 <h3 id="pdfactionwhatsitnodeaction_type">PdfActionWhatsitNode.action_type</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">action_type</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">PdfActionTypes</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">action_type</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">PdfActionTypes</span>
 </span></code></pre></div>
 <p>the kind of action involved</p>
 <h3 id="pdfactionwhatsitnodenamed_id">PdfActionWhatsitNode.named_id</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">named_id</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">named_id</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
 </span></code></pre></div>
 <p>are <code>dest_id</code> and <code>struct_id</code> string values?</p>
 <h3 id="pdfactionwhatsitnodeaction_id">PdfActionWhatsitNode.action_id</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">action_id</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">integer</span><span class="o">|</span><span class="nv">string</span><span class="p">)</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">action_id</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">integer</span><span class="o">|</span><span class="nv">string</span><span class="p">)</span>
 </span></code></pre></div>
 <p>token list reference or string</p>
 <h3 id="pdfactionwhatsitnodefile">PdfActionWhatsitNode.file</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">file</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">file</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
 </span></code></pre></div>
 <p>the target filename</p>
 <h3 id="pdfactionwhatsitnodenew_window">PdfActionWhatsitNode.new_window</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">new_window</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">PdfWindowTypes</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">new_window</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">PdfWindowTypes</span>
 </span></code></pre></div>
 <p>the window state of the target</p>
 <h3 id="pdfactionwhatsitnodestruct_id">PdfActionWhatsitNode.struct_id</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">struct_id</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">integer</span><span class="o">|</span><span class="nv">string</span><span class="p">)</span><span class="err">?</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">struct_id</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">(</span><span class="py">integer</span><span class="o">|</span><span class="nv">string</span><span class="p">)</span><span class="err">?</span>
 </span></code></pre></div>
 <p><code>nil</code>: the action does not reference a structure; <code>integer</code>: id of the referenced structure; <code>string</code>: name of the referenced structure destination</p>
 <h3 id="pdfactionwhatsitnodedata">PdfActionWhatsitNode.data</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">data</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nv">PdfActionWhatsitNode</span><span class="p">.</span><span class="py">data</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
 </span></code></pre></div>
 <p>the name of the destination</p>
 
