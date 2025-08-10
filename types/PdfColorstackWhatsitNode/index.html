@@ -7010,6 +7010,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../PdfLinkDataWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfLinkDataWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfLinkStateWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfLinkStateWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../PdfLiteralWhatsitNode/" class="md-nav__link">
         
   
@@ -7154,6 +7200,29 @@
   
   <span class="md-ellipsis">
     class PdfStartThreadWhatsitNode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PdfThreadDataWhatsitNode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    class PdfThreadDataWhatsitNode
     
   </span>
   
@@ -9129,6 +9198,22 @@ the current stack value. If followed by <code>pop</code>, the top value is remov
 new top value becomes the current. <code>set</code> keyword replaces the current value with ⟨general text⟩
 without changing the stack size. <code>current</code> keyword instructs just to use the current stack value
 without modifying the stack at all.</p>
+<p><strong>Example:</strong></p>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">node_type</span><span class="p">(</span><span class="s2">&quot;whatsit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pdf_colorstack&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nv">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;whatsit (8)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nv">subtype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;pdf_colorstack (29)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nv">fields</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="s2">&quot;prev (-1)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="s2">&quot;next (0)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="s2">&quot;id (1)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="s2">&quot;subtype (2)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="s2">&quot;attr (3)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="s2">&quot;stack (4)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="s2">&quot;cmd (5)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="s2">&quot;data (6)&quot;</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">})</span>
+</span></code></pre></div>
 <p><strong>Reference:</strong></p>
 <ul>
 <li>Source file of the <code>LuaTeX</code> manual: <a href="https://github.com/tex-mirror/pdftex/blob/6fb2352aa70a23ad3830f1434613170be3f3cd74/doc/manual/pdftex-t.tex#L3954-L3980">pdftex-t.tex#L3954-L3980</a>
@@ -9140,17 +9225,17 @@ Source: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/e1cb50f34
 <hr />
 <h3 id="pdfcolorstackwhatsitnodestack">PdfColorstackWhatsitNode.stack</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">PdfColorstackWhatsitNode</span><span class="p">.</span><span class="py">stack</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">PdfColorstackWhatsitNode</span><span class="p">.</span><span class="py">stack</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
 </span></code></pre></div>
 <p>The colorstack id number.</p>
 <h3 id="pdfcolorstackwhatsitnodecommand">PdfColorstackWhatsitNode.command</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">PdfColorstackWhatsitNode</span><span class="p">.</span><span class="py">command</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">PdfColorstackWhatsitNode</span><span class="p">.</span><span class="py">command</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">integer</span>
 </span></code></pre></div>
 <p>The command to execute. ⟨stack action⟩ → set (0) | push (1) | pop (2) | current (3) <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/6472bd794fea67de09f01e1a89e9b12141be7474/source/texk/web2c/luatexdir/tex/texnodes.c#L3523-L3545">texnodes.c#L3523-L3545</a></p>
 <h3 id="pdfcolorstackwhatsitnodedata">PdfColorstackWhatsitNode.data</h3>
 <hr />
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">PdfColorstackWhatsitNode</span><span class="p">.</span><span class="py">data</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">PdfColorstackWhatsitNode</span><span class="p">.</span><span class="py">data</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="py">string</span>
 </span></code></pre></div>
 <p>General text that is placed on top of the stack, for example <code>1 0 0 rg 1 0 0 RG</code>. <code>rg</code> only colors filled outlines while the stroke color is set with <code>RG</code>. From the <a href="https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/pdfreference1.5_v6.pdf">PDF Reference, fourth edition</a>, 4.5.7 Color Operators Page 251: <code>gray G</code>: Set the stroking color space to DeviceGray. <code>gray</code> is a number between 0.0 (black) and 1.0 (white). <code>gray g</code>: Same as <code>G</code>, but for nonstroking operations. <code>r g b RG</code>: Set the stroking color space to DeviceRGB. Each operand must be a number between 0.0 (minimum intensity) and 1.0 (maximum intensity). <code>r g b rg</code>: same as <code>RG</code>, but for nonstroking operations. <code>c m y k K</code>: Set the stroking color space to DeviceCMYK. Each operand must be a number between 0.0 (zero concentration) and 1.0 (maximum concentration). <code>c m y k k</code>: Same as <code>K</code>, but for nonstroking operations.</p>
 
