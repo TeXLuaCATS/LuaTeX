@@ -9253,6 +9253,9 @@
 
 
 <h1 id="class-pdfthreadwhatsitnode">class PdfThreadWhatsitNode</h1>
+<p><code>\pdfthread [ ⟨rule spec⟩ ] [ ⟨attr spec⟩ ] ⟨id spec⟩ (h, v, m)</code></p>
+<p>Defines a bead within an article thread. Thread beads with same identifiers (spread across the
+document) will be joined together.</p>
 <p><strong>Example:</strong></p>
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">assert</span><span class="p">.</span><span class="nf">node_type</span><span class="p">(</span><span class="s2">&quot;whatsit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pdf_thread&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nv">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;whatsit (8)&quot;</span><span class="p">,</span>
@@ -9275,6 +9278,7 @@
 <p><strong>Reference:</strong></p>
 <ul>
 <li>Corresponding C source code: <a href="https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/texnodes.c#L1185-L1192">texnodes.c#L1185-L1192</a></li>
+<li>Hàn Thế  Thành and others. The pdfTEX user manual, pdfTEX 1.40.27, February 12, 2025, page 51 <a href="http://mirrors.ctan.org/systems/doc/pdftex/manual/pdftex-a.pdf">pdftex-a.pdf</a></li>
 </ul>
 <p>😱 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/node.lua">Types</a> incomplete or incorrect? 🙏 <a href="https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls">Please contribute!</a></p>
 <hr />
