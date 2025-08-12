@@ -30,7 +30,7 @@ _N._4_2_6_extra_os_library_functions = "page 64"
 ---This library contains variables and functions that are related to the *PDF*
 ---backend.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 pdf = {}
 
 _N._14_1_the_pdf_library = "page 281"
@@ -48,7 +48,7 @@ _N._14_1_1_mapfile_mapline = "page 281"
 --- * `'-'`  Remove entries, if they exist.
 --- * `''`   Flush map file first, then insert new entries.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.mapfile(map_file) end
 
 ---
@@ -63,7 +63,7 @@ function pdf.mapfile(map_file) end
 --- * `'-'`  Remove entry, if it exists.
 --- * `''`   Flush map file first, then insert new entry.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.mapline(map_line) end
 
 _N._14_1_2_set_get_catalog_info_names_trailer = "page 281"
@@ -83,7 +83,7 @@ _N._14_1_2_set_get_catalog_info_names_trailer = "page 281"
 ---
 ---@param catalog string # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setcatalog(catalog) end
 
 ---
@@ -97,7 +97,7 @@ function pdf.setcatalog(catalog) end
 ---
 ---@return string | nil catalog # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getcatalog() end
 
 ---
@@ -115,7 +115,7 @@ function pdf.getcatalog() end
 ---
 ---@param info string # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setinfo(info) end
 
 ---
@@ -129,7 +129,7 @@ function pdf.setinfo(info) end
 ---
 ---@return string | nil info # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getinfo() end
 
 ---
@@ -147,7 +147,7 @@ function pdf.getinfo() end
 ---
 ---@param names string # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setnames(names) end
 
 ---
@@ -161,7 +161,7 @@ function pdf.setnames(names) end
 ---
 ---@return string | nil names # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getnames() end
 
 ---
@@ -180,7 +180,7 @@ function pdf.getnames() end
 ---@param trailer string # String.
 ---FIXME: pdf.settrailer() not working. Bug?
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.settrailer(trailer) end
 
 ---
@@ -194,7 +194,7 @@ function pdf.settrailer(trailer) end
 ---
 ---@return string | nil trailer # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.gettrailer() end
 
 _N._14_1_3_set_get_pageattributes_pageresources_pagesattributes = "page 281"
@@ -213,7 +213,7 @@ _N._14_1_3_set_get_pageattributes_pageresources_pagesattributes = "page 281"
 ---
 ---@param attributes string # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setpageattributes(attributes) end
 
 ---
@@ -228,7 +228,7 @@ function pdf.setpageattributes(attributes) end
 ---
 ---@return string | nil attributes # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getpageattributes() end
 
 ---
@@ -247,7 +247,7 @@ function pdf.getpageattributes() end
 ---
 ---@param resources string # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setpageresources(resources) end
 
 ---
@@ -262,7 +262,7 @@ function pdf.setpageresources(resources) end
 ---
 ---@return string | nil resources # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getpageresources() end
 
 ---
@@ -281,7 +281,7 @@ function pdf.getpageresources() end
 ---
 ---@param attributes string # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setpagesattributes(attributes) end
 
 ---
@@ -296,7 +296,7 @@ function pdf.setpagesattributes(attributes) end
 ---
 ---@return string | nil attributes # String.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getpagesattributes() end
 
 _N._14_1_4_set_get_xformattributes_xformresources = "page 281"
@@ -313,7 +313,7 @@ _N._14_1_4_set_get_xformattributes_xformresources = "page 281"
 ---
 ---* Corresponding C source code: [lpdflib.c#L617](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lpdflib.c#L617)
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setxformattributes() end
 
 ---
@@ -324,7 +324,7 @@ function pdf.setxformattributes() end
 ---
 ---@see pdf.setxformattributes
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getxformattributes() end
 
 ---
@@ -339,7 +339,7 @@ function pdf.getxformattributes() end
 ---
 ---* Corresponding C source code: [lpdflib.c#L616](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lpdflib.c#L616)
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setxformresources() end
 
 ---
@@ -350,7 +350,7 @@ function pdf.setxformresources() end
 ---
 ---@see pdf.setxformresources
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getxformresources() end
 
 _N._14_1_5_set_get_major_minor_version = "page 281"
@@ -375,7 +375,7 @@ _N._14_1_5_set_get_major_minor_version = "page 281"
 ---
 ---@param n integer # Major version number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setmajorversion(n) end
 
 ---
@@ -385,7 +385,7 @@ function pdf.setmajorversion(n) end
 ---
 ---@return integer n # Major version number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getmajorversion() end
 
 ---
@@ -397,7 +397,7 @@ function pdf.getmajorversion() end
 ---
 ---@param n integer # Minor version number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setminorversion(n) end
 
 ---
@@ -407,7 +407,7 @@ function pdf.setminorversion(n) end
 ---
 ---@return integer n # Minor version number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getminorversion() end
 
 _N._14_1_6_getcreationdate = "page 282"
@@ -417,7 +417,7 @@ _N._14_1_6_getcreationdate = "page 282"
 ---
 ---@return string
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getcreationdate() end
 
 _N._14_1_7_set_get_inclusionerrorlevel_ignoreunknownimages = "page 282"
@@ -430,7 +430,7 @@ _N._14_1_7_set_get_inclusionerrorlevel_ignoreunknownimages = "page 282"
 --- * `level > 0`: Issue an error.
 ---@param level integer
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setinclusionerrorlevel(level) end
 
 ---
@@ -440,7 +440,7 @@ function pdf.setinclusionerrorlevel(level) end
 ---
 ---@see pdf.setinclusionerrorlevel
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getinclusionerrorlevel() end
 
 ---
@@ -450,7 +450,7 @@ function pdf.getinclusionerrorlevel() end
 ---LuaTeX can handle these file types: pdf, png, jpg, jbig2
 ---@param ignore integer # Ignore image.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setignoreunknownimages(ignore) end
 
 ---
@@ -460,7 +460,7 @@ function pdf.setignoreunknownimages(ignore) end
 ---
 ---@see pdf.setignoreunknownimages
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getignoreunknownimages() end
 
 _N._14_1_8_set_get_suppressoptionalinfo = "page 282"
@@ -485,7 +485,7 @@ _N._14_1_8_set_get_suppressoptionalinfo = "page 282"
 --- --------------------------------------------------------------
 --- (1) Seems to work only if '\pdfvariable imageaddfilename = 1'
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setsuppressoptionalinfo(flags) end
 
 ---
@@ -495,7 +495,7 @@ function pdf.setsuppressoptionalinfo(flags) end
 ---
 ---@see pdf.setsuppressoptionalinfo
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getsuppressoptionalinfo() end
 
 ---
@@ -503,7 +503,7 @@ function pdf.getsuppressoptionalinfo() end
 ---
 ---@param id string # Trailer ID.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.settrailerid(id) end
 
 ---
@@ -511,7 +511,7 @@ function pdf.settrailerid(id) end
 ---
 ---@return string id # Trailer ID.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.gettrailerid() end
 
 ---
@@ -521,7 +521,7 @@ function pdf.gettrailerid() end
 ---
 ---@param n integer
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setomitcidset(n) end
 
 ---
@@ -531,7 +531,7 @@ function pdf.setomitcidset(n) end
 ---
 ---@see pdf.setomitcidset
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getomitcidset() end
 
 ---
@@ -541,7 +541,7 @@ function pdf.getomitcidset() end
 ---
 ---@param n integer
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setomitcharset(n) end
 
 ---
@@ -551,7 +551,7 @@ function pdf.setomitcharset(n) end
 ---
 ---@see pdf.setomitcharset
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getomitcharset() end
 
 _N._14_1_9_set_get_obj_compresslevel_recompress = "page 282"
@@ -561,7 +561,7 @@ _N._14_1_9_set_get_obj_compresslevel_recompress = "page 282"
 ---
 ---@param level integer # Minimum: 0, Maximum: 9
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setcompresslevel(level) end
 
 ---
@@ -569,7 +569,7 @@ function pdf.setcompresslevel(level) end
 ---
 ---@return integer level # Compression level.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getcompresslevel() end
 
 ---
@@ -577,7 +577,7 @@ function pdf.getcompresslevel() end
 ---
 ---@param level integer # Minimum: 0, Maximum: 9
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setobjcompresslevel(level) end
 
 ---
@@ -585,7 +585,7 @@ function pdf.setobjcompresslevel(level) end
 ---
 ---@return integer level # Compression level.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getobjcompresslevel() end
 
 ---
@@ -594,7 +594,7 @@ function pdf.getobjcompresslevel() end
 ---@param switch integer # 0: don't recompress, 1: do recompress.
 ---FIXME: pdf.setrecompress() not working. Bug?
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setrecompress(switch) end
 
 ---
@@ -602,7 +602,7 @@ function pdf.setrecompress(switch) end
 ---
 ---@return integer switch # 0: don't recompress, 1: do recompress.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getrecompress() end
 
 _N._14_1_10_set_get_gentounicode = "page 282"
@@ -615,7 +615,7 @@ _N._14_1_10_set_get_gentounicode = "page 282"
 --- * `n == 0`: Remove `/ToUnicode` entry.
 --- Note: Use `\pdfextension glyphtounicode` to add a CMap mapping from character codes to Unicode values.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setgentounicode(n) end
 
 ---
@@ -624,7 +624,7 @@ function pdf.setgentounicode(n) end
 ---@return integer n
 ---@see pdf.setgentounicode
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getgentounicode() end
 
 _N._14_1_11_set_get_decimaldigits = "page 282"
@@ -634,7 +634,7 @@ _N._14_1_11_set_get_decimaldigits = "page 282"
 ---
 ---@param ndigits integer # Number of decimal digits.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setdecimaldigits(ndigits) end
 
 ---
@@ -644,7 +644,7 @@ function pdf.setdecimaldigits(ndigits) end
 ---
 ---@see pdf.setdecimaldigits
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getdecimaldigits() end
 
 _N._14_1_12_set_get_pkresolution = "page 283"
@@ -654,7 +654,7 @@ _N._14_1_12_set_get_pkresolution = "page 283"
 ---@param resolution integer
 ---@param fixed_dpi integer
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setpkresolution(resolution, fixed_dpi) end
 
 ---
@@ -663,7 +663,7 @@ function pdf.setpkresolution(resolution, fixed_dpi) end
 ---@return integer resolution
 ---@return integer fixed_dpi
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getpkresolution() end
 
 _N._14_1_13_getlast_obj_link_annot_and_getretval = "page 283"
@@ -673,7 +673,7 @@ _N._14_1_13_getlast_obj_link_annot_and_getretval = "page 283"
 ---
 ---@return integer objnum # Number of latest created object.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getlastobj() end
 
 ---
@@ -681,7 +681,7 @@ function pdf.getlastobj() end
 ---
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getlastlink() end
 
 ---
@@ -689,7 +689,7 @@ function pdf.getlastlink() end
 ---
 ---@return integer objnum # Number of latest created object.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getlastannot() end
 
 ---
@@ -697,7 +697,7 @@ function pdf.getlastannot() end
 ---TODO: Please contribute
 ---https://github.com/Josef-Friedrich/LuaTeX_Lua-API#how-to-contribute
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getretval() end
 
 _N._14_1_14_getmaxobjnum = "page 283"
@@ -707,7 +707,7 @@ _N._14_1_14_getmaxobjnum = "page 283"
 ---
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getmaxobjnum() end
 
 ---
@@ -715,7 +715,7 @@ function pdf.getmaxobjnum() end
 ---
 ---@param objnum integer # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getobjtype(objnum) end
 
 ---
@@ -728,7 +728,7 @@ function pdf.getobjtype(objnum) end
 ---
 ---@return integer
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getfontname(id) end
 
 ---
@@ -738,7 +738,7 @@ function pdf.getfontname(id) end
 ---
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getfontobjnum(id) end
 
 ---
@@ -748,7 +748,7 @@ function pdf.getfontobjnum(id) end
 ---
 ---@return integer # Font size.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getfontsize(id) end
 
 ---
@@ -756,7 +756,7 @@ function pdf.getfontsize(id) end
 ---TODO: Please contribute
 ---https://github.com/Josef-Friedrich/LuaTeX_Lua-API#how-to-contribute
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getxformname() end
 
 _N._14_1_15_set_get_origin = "page 283"
@@ -767,7 +767,7 @@ _N._14_1_15_set_get_origin = "page 283"
 ---@param h integer # Horizontal offset in scaled points.
 ---@param v integer # Vertical offset in scaled points.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setorigin(h, v) end
 
 ---
@@ -778,7 +778,7 @@ function pdf.setorigin(h, v) end
 ---
 ---@see pdf.setorigin
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getorigin() end
 
 _N._14_1_16_set_get_imageresolution = "page 283"
@@ -793,7 +793,7 @@ _N._14_1_16_set_get_imageresolution = "page 283"
 --- 3. If (2) is missing, it uses the resolution given by this function.
 --- 4. If (3) is missing, it uses a resolution of 72 dpi.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setimageresolution(dpi) end
 
 ---
@@ -803,7 +803,7 @@ function pdf.setimageresolution(dpi) end
 ---
 ---@see pdf.setimageresolution
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getimageresolution() end
 
 _N._14_1_17_set_get_link_dest_thread_xform_margin = "page 283"
@@ -813,7 +813,7 @@ _N._14_1_17_set_get_link_dest_thread_xform_margin = "page 283"
 ---
 ---@param margin integer # Margin in scaled points.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setlinkmargin(margin) end
 
 ---
@@ -822,7 +822,7 @@ function pdf.setlinkmargin(margin) end
 ---@return integer margin # Margin in scaled points.
 ---@see pdf.setlinkmargin
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getlinkmargin() end
 
 ---
@@ -831,7 +831,7 @@ function pdf.getlinkmargin() end
 ---@param margin integer # Margin in scaled points.
 ---FIXME pdf.setdestmargin() is not working. Bug?
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setdestmargin(margin) end
 
 ---
@@ -840,7 +840,7 @@ function pdf.setdestmargin(margin) end
 ---@return integer margin # Margin in scaled points.
 ---@see pdf.setdestmargin
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getdestmargin() end
 
 ---
@@ -848,7 +848,7 @@ function pdf.getdestmargin() end
 ---
 ---@param margin integer # Margin in scaled points.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setthreadmargin(margin) end
 
 ---
@@ -858,7 +858,7 @@ function pdf.setthreadmargin(margin) end
 ---
 ---@see pdf.setthreadmargin
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getthreadmargin() end
 
 ---
@@ -866,7 +866,7 @@ function pdf.getthreadmargin() end
 ---TODO: Please contribute
 ---https://github.com/Josef-Friedrich/LuaTeX_Lua-API#how-to-contribute
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setxformmargin() end
 
 ---
@@ -874,7 +874,7 @@ function pdf.setxformmargin() end
 ---TODO: Please contribute
 ---https://github.com/Josef-Friedrich/LuaTeX_Lua-API#how-to-contribute
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getxformmargin() end
 
 _N._14_1_18_get_pos_hpos_vpos = "page 283"
@@ -887,7 +887,7 @@ _N._14_1_18_get_pos_hpos_vpos = "page 283"
 ---
 ---Note: This function is mainly used inside `\latelua` calls.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getpos() end
 
 ---
@@ -896,7 +896,7 @@ function pdf.getpos() end
 ---@return integer h # Horizontal position in scaled points.
 ---Note: This function is mainly used inside `\latelua` calls.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.gethpos() end
 
 ---
@@ -906,7 +906,7 @@ function pdf.gethpos() end
 ---
 ---Note: This function is mainly used inside `\latelua` calls.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getvpos() end
 
 _N._14_1_19_has_get_matrix = "page 283"
@@ -918,7 +918,7 @@ _N._14_1_19_has_get_matrix = "page 283"
 ---
 ---Note: This function is mainly used inside `\latelua` calls.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.hasmatrix() end
 
 ---
@@ -936,7 +936,7 @@ function pdf.hasmatrix() end
 ---@return integer f
 ---Note: This function is mainly used inside `\latelua` calls.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getmatrix() end
 
 _N._14_1_20_print = "page 284"
@@ -948,7 +948,7 @@ _N._14_1_20_print = "page 284"
 ---
 ---Note: This function is mainly used inside `\latelua` calls.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.print(str) end
 
 ---
@@ -964,7 +964,7 @@ function pdf.print(str) end
 --- * `raw`: Like `direct`.
 ----Note: This function is mainly used inside `\latelua` calls.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.print(type, str) end
 
 _N._14_1_21_immediateobj = "page 283"
@@ -981,7 +981,7 @@ _N._14_1_21_immediateobj = "page 283"
 ---
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.immediateobj(str) end
 
 ---
@@ -996,7 +996,7 @@ function pdf.immediateobj(str) end
 ---
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.immediateobj(objnum, file, filename) end
 
 ---
@@ -1018,7 +1018,7 @@ function pdf.immediateobj(objnum, file, filename) end
 ---
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.immediateobj(stream, streamcontents, streamdict) end
 
 ---
@@ -1039,7 +1039,7 @@ function pdf.immediateobj(stream, streamcontents, streamdict) end
 ---@param streamdict string # Stream dictionary.
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.immediateobj(streamfile, filename, streamdict) end
 
 _N._14_1_22_obj = "page 285"
@@ -1057,7 +1057,7 @@ _N._14_1_22_obj = "page 285"
 ---
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.obj(str) end
 
 ---
@@ -1075,7 +1075,7 @@ function pdf.obj(str) end
 ---
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.obj(objnum, file, filename) end
 
 ---
@@ -1098,7 +1098,7 @@ function pdf.obj(objnum, file, filename) end
 ---
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.obj(stream, streamcontents, streamdict) end
 
 ---
@@ -1121,7 +1121,7 @@ function pdf.obj(stream, streamcontents, streamdict) end
 ---
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.obj(streamfile, filename, streamdict) end
 
 ---
@@ -1144,7 +1144,7 @@ function pdf.obj(streamfile, filename, streamdict) end
 ---
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.obj(keyvals) end
 
 _N._14_1_23_refobj = "page 286"
@@ -1154,7 +1154,7 @@ _N._14_1_23_refobj = "page 286"
 ---
 ---@param objnum integer # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.refobj(objnum) end
 
 _N._14_1_24_reserveobj = "page 286"
@@ -1169,7 +1169,7 @@ _N._14_1_24_reserveobj = "page 286"
 ---@see pdf.obj
 ---@see pdf.immediateobj
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.reserveobj() end
 
 ---
@@ -1182,7 +1182,7 @@ function pdf.reserveobj() end
 ---@return integer objnum # Object number.
 ---@see pdf.registerannot
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.reserveobj(annot) end
 
 _N._14_1_25_getpageref = "page 286"
@@ -1196,7 +1196,7 @@ _N._14_1_25_getpageref = "page 286"
 ---
 ---@return integer objnum # Object number.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getpageref(pagenum) end
 
 _N._14_1_26_registerannot = "page 286"
@@ -1206,7 +1206,7 @@ _N._14_1_26_registerannot = "page 286"
 ---
 ---@param objnum integer # Object number of `/Annot` object.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.registerannot(objnum) end
 
 _N._14_1_27_newcolorstack = "page 286"
@@ -1229,7 +1229,7 @@ _N._14_1_27_newcolorstack = "page 286"
 ---
 ---@return integer color_stack_id
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.newcolorstack(s, literal_mode, page_start) end
 
 _N._14_1_28_setfontattributes = "page 286"
@@ -1246,21 +1246,21 @@ _N._14_1_28_setfontattributes = "page 286"
 ---@param font_id integer
 ---@param pdf_code integer
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setfontattributes(font_id, pdf_code) end
 
 ---
 ---@deprecated
 ---@see pdf.getfontname
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.fontname() end
 
 ---
 ---@deprecated
 ---@see pdf.getpdffontsize
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.fontsize() end
 
 ---
@@ -1268,7 +1268,7 @@ function pdf.fontsize() end
 ---
 ---@return integer n # Number of objects.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.maxobjnum() end
 
 ---
@@ -1281,7 +1281,7 @@ function pdf.maxobjnum() end
 ---@return integer written_obj # Object written to file.
 ---@return integer not_written_obj # Object not yet written to file.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.getnofobjects() end
 
 ---
@@ -1289,7 +1289,7 @@ function pdf.getnofobjects() end
 ---
 ---* Corresponding C source code: [lpdflib.c#L1218-L1235](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lpdflib.c#L1218-L1235)
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.includechar() end
 
 ---
@@ -1297,7 +1297,7 @@ function pdf.includechar() end
 ---
 ---* Corresponding C source code: [lpdflib.c#L1237-L1242](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lpdflib.c#L1237-L1242)
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.includefont() end
 
 ---
@@ -1305,21 +1305,21 @@ function pdf.includefont() end
 ---
 ---* Corresponding C source code: [lpdflib.c#L1244-L1268](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lpdflib.c#L1244-L1268)
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.includeimage() end
 
 ---
 ---@deprecated
 ---@see pdf.getobjtype
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.objtype() end
 
 ---
 ---@deprecated
 ---@see pdf.getpageref
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.pageref() end
 
 ---
@@ -1329,7 +1329,7 @@ function pdf.pageref() end
 ---
 ---@param force boolean
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.setforcefile(force) end
 
 ---
@@ -1337,12 +1337,12 @@ function pdf.setforcefile(force) end
 ---
 ---* Corresponding C source code: [lpdflib.c#L1294-L1298](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lpdflib.c#L1294-L1298)
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.settypeonewidemode() end
 
 ---
 ---@deprecated
 ---@see pdf.getxformname
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/pdf.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function pdf.xformname() end

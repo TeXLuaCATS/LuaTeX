@@ -30,7 +30,7 @@ _N = {}
 ---interface that shares its kpathsea instance with *LuaTeX* itself, and an object
 ---oriented interface that is completely on its own.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 kpse = {}
 
 _N._10_7_the_kpse_library = "page 221"
@@ -47,7 +47,7 @@ _N._10_7_1_set_program_name_and_new = "page 221"
 ---
 ---@return string # returns the value of the C preprocessor macro DEFAULT_TEXMFCNF without initializing anything else from kpathsea, for example `{$SELFAUTOLOC,$SELFAUTOLOC/share/texmf-local/web2c,...}`
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.default_texmfcnf() end
 
 ---
@@ -73,7 +73,7 @@ function kpse.default_texmfcnf() end
 ---@param name string
 ---@param progname? string
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.set_program_name(name, progname) end
 
 ---
@@ -90,7 +90,7 @@ function kpse.set_program_name(name, progname) end
 ---
 ---@return userdata
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.new(name, progname) end
 
 _N._10_7_2_record_input_file_and_record_output_file = "page 222"
@@ -107,7 +107,7 @@ _N._10_7_2_record_input_file_and_record_output_file = "page 222"
 ---
 ---@param name string
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.record_input_file(name) end
 
 ---
@@ -122,7 +122,7 @@ function kpse.record_input_file(name) end
 ---
 ---@param name string
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.record_output_file(name) end
 
 _N._10_7_3_find_file = "page 222"
@@ -132,7 +132,7 @@ _N._10_7_3_find_file = "page 222"
 ---
 ---* Corresponding C source code: [lkpselib.c#L104-163](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lkpselib.c#L104-163)
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 ---@alias KpseFtype
 ---| 'afm'
 ---| 'base'
@@ -210,7 +210,7 @@ _N._10_7_3_find_file = "page 222"
 ---
 ---@return string
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.find_file(filename) end
 
 ---
@@ -232,7 +232,7 @@ function kpse.find_file(filename) end
 ---
 ---@return string
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.find_file(filename, ftype) end
 
 ---
@@ -255,7 +255,7 @@ function kpse.find_file(filename, ftype) end
 ---
 ---@return string
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.find_file(filename, ftype, mustexist) end
 
 ---
@@ -278,7 +278,7 @@ function kpse.find_file(filename, ftype, mustexist) end
 ---
 ---@return string
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.find_file(filename, ftype, dpi) end
 
 ---
@@ -288,7 +288,7 @@ function kpse.find_file(filename, ftype, dpi) end
 ---
 ---* Corresponding C source code: [lkpselib.c#L565-810](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lkpselib.c#L565-810)
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 ---@class KpseLookupOptions
 ---@field debug number # set debugging flags for this lookup     \NR
 ---@field format string # use specific file type (see list above)
@@ -322,7 +322,7 @@ _N._10_7_4_lookup = "page 223"
 ---
 ---@return string
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.lookup(filename, options) end
 
 _N._10_7_5_init_prog = "page 223"
@@ -341,7 +341,7 @@ _N._10_7_5_init_prog = "page 223"
 ---@param mfmode string
 ---@param fallback string
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.init_prog(prefix, base_dpi, mfmode, fallback) end
 
 _N._10_7_6_readable_file = "page 223"
@@ -359,7 +359,7 @@ _N._10_7_6_readable_file = "page 223"
 ---
 ---@return string|nil f The return value is the actual absolute filename you should use, because the disk name is not always the same as the requested name, due to aliases and system-specific handling under e.g. MS Dos Returns `nil` if the file does not exist or is not readable.
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.readable_file(name) end
 
 _N._10_7_7_expand_path = "page 224"
@@ -379,7 +379,7 @@ _N._10_7_7_expand_path = "page 224"
 ---
 ---@return string r
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.expand_path(s) end
 
 _N._10_7_8_expand_var = "page 224"
@@ -399,7 +399,7 @@ _N._10_7_8_expand_var = "page 224"
 ---
 ---@return string r
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.expand_var(s) end
 
 _N._10_7_9_expand_braces = "page 224"
@@ -418,7 +418,7 @@ _N._10_7_9_expand_braces = "page 224"
 ---
 ---@return string r
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.expand_braces(s) end
 
 _N._10_7_10_show_path = "page 224"
@@ -439,7 +439,7 @@ _N._10_7_10_show_path = "page 224"
 ---
 ---@return string search_path
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.show_path(file_type) end
 
 _N._10_7_11_var_value = "page 224"
@@ -460,7 +460,7 @@ _N._10_7_11_var_value = "page 224"
 ---
 ---@return string value
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.var_value(variable) end
 
 _N._10_7_12_version = "page 224"
@@ -474,7 +474,7 @@ _N._10_7_12_version = "page 224"
 ---
 ---@return string version # For example `kpathsea version 6.3.4`
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.version() end
 
 ---
@@ -494,5 +494,5 @@ function kpse.version() end
 ---@return boolean okay
 ---@return string found
 ---
----😱 [Types](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/blob/main/library/luatex/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/Josef-Friedrich/LuaTeX_Lua-API/pulls)
+---😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/kpse.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
 function kpse.check_permission(name) end
