@@ -1,18 +1,44 @@
--- A helper table to better navigate through the documentation using the
--- outline: https://github.com/Josef-Friedrich/LuaTeX_Lua-API#navigation-table-_n
-_N = {}
-
-_N._4_3_lua_modules = "page 67"
 
 ---
 ---https://github.com/TeX-Live/luatex/tree/master/source/texk/web2c/luatexdir/luasocket/src/socket.lua
 ---Changes to upstream: global socket table
 
 ---
----The definitions are developed in this repository: https://github.com/LuaCATS/luasocket
+-- A helper table to better navigate through the documentation using the
+-- outline: https://github.com/Josef-Friedrich/LuaTeX_Lua-API#navigation-table-_n
+_N = {}
+
+_N._4_3_lua_modules = "page 67"
+
+-- -----------------------------------------------------------------------------
+-- Copyright (c) 2023-2025 by Josef Friedrich <josef@friedrich.rocks>
+-- -----------------------------------------------------------------------------
+--
+-- MIT License
+--
+-- Permission is hereby granted, free of charge, to any person obtaining a copy
+-- of this software and associated documentation files (the "Software"), to deal
+-- in the Software without restriction, including without limitation the rights
+-- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-- copies of the Software, and to permit persons to whom the Software is
+-- furnished to do so, subject to the following conditions:
+--
+-- The above copyright notice and this permission notice shall be included in
+-- all copies or substantial portions of the Software.
+--
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-- SOFTWARE.
+--
+-- -----------------------------------------------------------------------------
 
 ---
 ---@meta
+---The definitions are developed in this repository: https://github.com/LuaCATS/luasocket
 
 ---
 ---https://lunarmodules.github.io/luasocket/socket.html
@@ -317,11 +343,6 @@ function socket.try(...) end
 ---😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
 socket._VERSION = ""
 
----
----{{{ Common Types
---#region Common Types
-
----
 ---A string representing a datagram
 ---
 ---😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
@@ -353,12 +374,6 @@ socket._VERSION = ""
 ---| "inet6" IPv6
 ---| "unspec" Unspecified
 ---| "unknown" Unknown
-
---#endregion Common Types
----}}}
-
---{{{ TCP
---#region TCP
 
 ---
 ---😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
@@ -454,7 +469,6 @@ function tcp_master:dirty() end
 ---😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
 function tcp_master:getfd() end
 
----
 ---😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
 ---@alias TCPOption
 ---| "keepalive" Setting this option to `true` enables the periodic transmission of messages on a connected socket. Should the connected party fail to respond to these messages, the connection is considered broken and processes using the socket are notified;
@@ -526,7 +540,6 @@ function tcp_master:gettimeout() end
 ---😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
 function tcp_master:listen(backlog) end
 
----
 ---@alias SocketError
 ---| "timeout" If there was a timeout during the operation.
 ---| "closed" If the connection was closed before the transmission was completed.
@@ -597,7 +610,6 @@ function tcp_server:setoption(option, value) end
 ---😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
 function tcp_master:setstats(received, sent, age) end
 
----
 ---@alias TCPTimeoutMode
 ---| "b" block timeout. Specifies the upper limit on the amount of time LuaSocket can be blocked by the operating system while waiting for completion of any single I/O operation.
 ---| "t" total timeout. Specifies the upper limit on the amount of time LuaSocket can block a Lua script before returning from a call.
@@ -615,7 +627,6 @@ function tcp_master:setstats(received, sent, age) end
 ---😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
 function tcp_master:settimeout(value, mode) end
 
----
 ---@alias TCPShutdownMode
 ---| "both" Disallow further sends and receives on the object.
 ---| "send" Disallow further sends on the object.
@@ -728,11 +739,6 @@ function socket.tcp4() end
 ---😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
 function socket.tcp6() end
 
---#endregion
---}}}
-
---{{{ UDP
---#region UDP
 
 --> Generic is my way to avoid stating the same thing twice.
 --> Means that both connected and unconnected have it.
@@ -843,7 +849,6 @@ function udp_generic:gettimeout() end
 ---😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
 function udp_generic:receive(size) end
 
----
 ---Works exactly as the `receive` method, except it returns the IP address and port as extra return values (and is therefore slightly less efficient)
 ---@param size number?
 ---
@@ -1030,6 +1035,3 @@ function socket.udp4() end
 ---
 ---😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
 function socket.udp6() end
-
---#endregion
---}}}
