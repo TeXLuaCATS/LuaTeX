@@ -30,7 +30,7 @@ _N = {}
 ---formats. Other font loading functionality is provided by the `fontloader`
 ---library that will be discussed in the next section.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 font = {}
 
 _N._6_1_font_tables = "page 87"
@@ -44,7 +44,7 @@ _N._class_Font = 87
 ---callback, or if they result from the normal *tfm*/*vf* reading routines if there
 ---is no `define_font` callback defined.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@class Font
 ---@field name string # metric (file) name
 ---@field area string # (directory) location, typically empty
@@ -87,7 +87,7 @@ _N._class_Font = 87
 _N._class_VfFont = 87
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@class VfFont
 ---@field name string # metric (file) name
 ---@field characters table<integer, FontCharacter> # the defined glyphs of this font
@@ -99,7 +99,7 @@ _N._class_VfFont = 87
 _N._class_TfmFont = 87
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@class TfmFont
 ---@field name string # metric (file) name
 ---@field area string # (directory) location, typically empty
@@ -125,7 +125,7 @@ _N._alias_FontDirection = 89
 ---*LuaTeX* has a bit different directional model so these values are not used for
 ---anything.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FontDirection
 ---|0 # LT
 ---|1 # LL
@@ -154,7 +154,7 @@ _N._alias_FontParameterKey = 89
 ---
 ---The names and their internal remapping are:
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FontParameterKey
 ---|`slant` # 1
 ---|`space` # 2
@@ -167,13 +167,13 @@ _N._alias_FontParameterKey = 89
 _N._alias_FontParameters = 89
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FontParameters table<FontParameterKey|integer, any>
 
 _N._alias_FontCharacter = 90
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@class FontCharacter
 ---@field width integer # The character's width, in sp (default 0)
 ---@field height integer # The character's height, in sp (default 0)
@@ -200,7 +200,7 @@ _N._alias_FontCharacter = 90
 _N._class_FontCharacterExtensible = 91
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@class FontCharacterExtensible
 ---@field top integer # The top character index.
 ---@field mid integer # The middle character index.
@@ -210,7 +210,7 @@ _N._class_FontCharacterExtensible = 91
 _N._class_FontCharacterComponent = 91
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@class FontCharacterComponent
 ---@field glyph integer # The character index. Note that this is an encoding number, not a name.
 ---@field extender integer # One (1) if this part is repeatable, zero (0) otherwise.
@@ -221,7 +221,7 @@ _N._class_FontCharacterComponent = 91
 _N._class_FontCharacterLigature = 92
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@class FontCharacterLigature
 ---@field type integer # the type of this ligature command, default 0
 ---@field char integer # the character index of the resultant ligature
@@ -231,7 +231,7 @@ _N._6_2_real_fonts = "page 92"
 _N._alias_FontType = 92
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FontType
 ---|`real` # this is a base font
 ---|`virtual` # this is a virtual font
@@ -239,7 +239,7 @@ _N._alias_FontType = 92
 _N._alias_FontFormat = 92
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FontFormat
 ---|`type1` # this is a *PostScript* *Type1* font
 ---|`type3` # this is a bitmapped (*pk*) font
@@ -249,7 +249,7 @@ _N._alias_FontFormat = 92
 _N._alias_FontEmbedding = 92
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FontEmbedding
 ---|`no` # don't embed the font at all
 ---|`subset` # include and atttempt to subset the font
@@ -299,7 +299,7 @@ _N._alias_FontCharacterCommands = 95
 ---}
 ---```
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FontCharacterCommands any[]
 
 ---
@@ -322,7 +322,7 @@ _N._alias_FontCharacterCommands = 95
 ---
 ---@return TfmFont
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.read_tfm(name, at_size) end
 
 ---
@@ -347,14 +347,14 @@ function font.read_tfm(name, at_size) end
 ---
 ---@return VfFont
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.read_vf(name, at_size) end
 
 ---
 ---The whole table of *TeX* fonts is accessible from *Lua* using a virtual array.
 ---Because this is a virtual array, you cannot call `pairs` on it
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 font.fonts = {}
 
 ---
@@ -367,7 +367,7 @@ font.fonts = {}
 ---@param font_id integer
 ---@param f Font
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.setfont(font_id, f) end
 
 ---
@@ -383,7 +383,7 @@ function font.setfont(font_id, f) end
 ---
 ---@return table Font
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.getfont(font_id) end
 
 ---
@@ -397,7 +397,7 @@ function font.getfont(font_id) end
 ---
 ---@return table Font
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.getcopy(font_id) end
 
 ---
@@ -412,7 +412,7 @@ function font.getcopy(font_id) end
 ---
 ---@return table p
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.getparameters(font_id) end
 
 ---
@@ -431,7 +431,7 @@ function font.getparameters(font_id) end
 ---
 ---@return boolean|nil
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.frozen(font_id) end
 
 ---
@@ -445,7 +445,7 @@ function font.frozen(font_id) end
 ---
 ---@return integer font_id
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.define(f) end
 
 ---
@@ -458,7 +458,7 @@ function font.define(f) end
 ---
 ---@return integer i
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.define(font_id, f) end
 
 ---
@@ -499,7 +499,7 @@ function font.define(font_id, f) end
 ---@param font_id integer
 ---@param f Font
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.addcharacters(font_id, f) end
 
 ---
@@ -519,7 +519,7 @@ function font.addcharacters(font_id, f) end
 ---
 ---@return integer font_id
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.nextid() end
 
 ---
@@ -535,7 +535,7 @@ function font.nextid() end
 ---
 ---@return integer font_id
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.id(csname) end
 
 ---
@@ -549,7 +549,7 @@ function font.id(csname) end
 ---
 ---@return integer max_font_id # The largest used index in `font.fonts`.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.max() end
 
 ---
@@ -561,7 +561,7 @@ function font.max() end
 ---
 ---@param font_id integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.current(font_id) end
 
 ---
@@ -573,7 +573,7 @@ function font.current(font_id) end
 ---
 ---@return integer font_id
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.current(font_id) end
 
 ---
@@ -599,7 +599,7 @@ function font.current(font_id) end
 ---
 ---@return fun(): font_id: integer, font: Font
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.each() end
 
 ---
@@ -623,5 +623,5 @@ function font.each() end
 ---@param shrink integer
 ---@param step integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/font.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function font.setexpansion(font_id, stretch, shrink, step) end

@@ -25,7 +25,7 @@ _N = {}
 ---@meta
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 lua = {}
 
 _N._10_1_the_lua_library = "page 187"
@@ -46,7 +46,7 @@ _N._10_1_1_version_information = "page 187"
 ---
 ---@type string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 lua.version = ""
 
 _N._10_1_2_bytecode_registers = "page 187"
@@ -61,7 +61,7 @@ _N._10_1_2_bytecode_registers = "page 187"
 ---function must not contain any upvalues.
 ---@type table<integer, function|nil>
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 lua.bytecode = {}
 
 ---
@@ -82,7 +82,7 @@ lua.bytecode = {}
 ---@param n integer
 ---@param f function|nil
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function lua.setbytecode(n, f) end
 
 ---
@@ -104,7 +104,7 @@ function lua.setbytecode(n, f) end
 ---
 ---@return function|nil f
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function lua.getbytecode(n) end
 
 ---
@@ -117,7 +117,7 @@ function lua.getbytecode(n) end
 ---@return integer # command handler
 ---@return integer # graphical user interface
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function lua.getcodepage() end
 
 _N._10_1_3_chunk_name_registers = "page 187"
@@ -135,7 +135,7 @@ _N._10_1_3_chunk_name_registers = "page 187"
 ---
 ---@type table<integer, string>
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 lua.name = {}
 
 ---
@@ -155,7 +155,7 @@ lua.name = {}
 ---@see lua.name
 ---@see lua.getluaname
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function lua.setluaname(chunk_name, index) end
 
 ---
@@ -172,7 +172,7 @@ function lua.setluaname(chunk_name, index) end
 ---@see lua.name
 ---@see lua.setluaname
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function lua.getluaname(index) end
 
 ---
@@ -190,7 +190,7 @@ function lua.getluaname(index) end
 ---
 ---@return table
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function lua.newtable(index, hash) end
 
 _N._10_1_4_introspection = "page 188"
@@ -209,7 +209,7 @@ _N._10_1_4_introspection = "page 188"
 ---
 ---@return integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function lua.getstacktop() end
 
 ---
@@ -226,7 +226,7 @@ function lua.getstacktop() end
 ---
 ---@return integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function lua.getcalllevel() end
 
 _N._2_4_4_luafunction_luafunctioncall_and_luadef = "page 25"
@@ -280,5 +280,5 @@ _N._2_4_4_luafunction_luafunctioncall_and_luadef = "page 25"
 ---
 ---@return {[integer]: fun(slot: integer)}
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/lua.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function lua.get_functions_table() end

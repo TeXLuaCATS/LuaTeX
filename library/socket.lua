@@ -54,12 +54,12 @@ _N._4_3_lua_modules = "page 67"
 ---local socket = require("socket")
 ---```
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 ---@class Socket
 socket = {}
 
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 socket.headers = {}
 
 ---
@@ -71,7 +71,7 @@ socket.headers = {}
 ---whenever the field name is sent out.
 ---```
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 socket.headers.canonic = {}
 
 ---
@@ -80,7 +80,7 @@ socket.headers.canonic = {}
 ---
 ---@type boolean
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 socket._DEBUG = true
 
 ---
@@ -91,7 +91,7 @@ socket._DEBUG = true
 ---
 ---@type integer
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 socket._DATAGRAMSIZE = 8192
 
 ---
@@ -114,7 +114,7 @@ socket._DATAGRAMSIZE = 8192
 ---
 ---@return number time # for example `1683526723.1653`
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.gettime() end
 
 ---
@@ -145,7 +145,7 @@ function socket.gettime() end
 ---
 ---@return function # The function returns your customized `try` function.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.newtry(finalizer) end
 
 ---
@@ -158,7 +158,7 @@ function socket.newtry(finalizer) end
 ---
 ---@return function # Returns an equivalent function that instead of throwing exceptions in case of a failed `try`call, returns `nil` followed by an error message.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.protect(func) end
 
 ---
@@ -207,7 +207,7 @@ function socket.protect(func) end
 ---`nil`, negative or omitted `timeout` value allows the
 ---function to block indefinitely.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.select(recvt, sendt, timeout) end
 
 ---
@@ -215,7 +215,7 @@ function socket.select(recvt, sendt, timeout) end
 ---
 ---@type integer
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 socket._SETSIZE = 0
 
 ---
@@ -240,7 +240,7 @@ socket._SETSIZE = 0
 ---@param mode 'http-chunked'|'close-when-done'|'keep-open'
 ---@param socket any
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.sink(mode, socket) end
 
 ---
@@ -261,7 +261,7 @@ function socket.sink(mode, socket) end
 ---@param d integer
 ---@param ... any
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.skip(d, ...) end
 
 ---
@@ -273,7 +273,7 @@ function socket.skip(d, ...) end
 ---
 ---@param time integer # `time` is the number of seconds to sleep for. If `time` is negative, the function returns immediately.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.sleep(time) end
 
 ---
@@ -299,7 +299,7 @@ function socket.sleep(time) end
 ---@param socket any
 ---@param timeout integer
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.source(mode, socket, timeout) end
 
 ---
@@ -307,7 +307,7 @@ function socket.source(mode, socket, timeout) end
 ---`tcp:getfd`and `tcp:setfd`methods.
 ---@type any
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 socket._SOCKETINVALID = nil
 
 ---
@@ -332,7 +332,7 @@ socket._SOCKETINVALID = nil
 ---
 ---@param ... any
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.try(...) end
 
 ---
@@ -340,12 +340,12 @@ function socket.try(...) end
 ---
 ---@type string
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 socket._VERSION = ""
 
 ---A string representing a datagram
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 ---@alias Datagram string
 
 --> Note: In some functions, there could be more results than just a 1,
@@ -356,19 +356,19 @@ socket._VERSION = ""
 ---
 ---A 1 in case of success
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 ---@alias SocketReturnResult 1?
 
 ---
 ---Error message in case of failure
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 ---@alias SocketReturnError string?
 
 ---
 ---A string with the family ("inet" or "inet6")
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 ---@alias SocketFamily
 ---| "inet" IPv4
 ---| "inet6" IPv6
@@ -376,17 +376,17 @@ socket._VERSION = ""
 ---| "unknown" Unknown
 
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 ---@class TCPSocketMaster
 local tcp_master = {}
 
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 ---@class TCPSocketServer : TCPSocketMaster
 local tcp_server = {}
 
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 ---@class TCPSocketClient : TCPSocketMaster
 local tcp_client = {}
 
@@ -399,7 +399,7 @@ local tcp_client = {}
 ---
 ---@return TCPSocketClient | nil, "timeout" | string
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_server:accept() end
 
 ---
@@ -418,7 +418,7 @@ function tcp_server:accept() end
 ---
 ---@return 1|nil, nil|string
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_master:bind(address, port) end
 
 ---
@@ -429,7 +429,7 @@ function tcp_master:bind(address, port) end
 ---Note: It is important to close all used sockets once they are not needed, since, in many systems,
 ---each socket uses a file descriptor, which are limited system resources.
 ---Garbage-collected objects are automatically closed before destruction, though.
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_master:close() end
 
 ---
@@ -446,7 +446,7 @@ function tcp_master:close() end
 ---@param port integer # TCP port, in the range [1..64K)
 ---
 ---@return nil | 1, nil | string # In case of error, the method returns nil followed by a string describing the error. In case of success, the method returns 1.
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_master:connect(address, port) end
 
 ---
@@ -456,7 +456,7 @@ function tcp_master:connect(address, port) end
 ---
 ---@return boolean # `true` if there is any data in the read buffer, `false` otherwise.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_master:dirty() end
 
 ---
@@ -466,10 +466,10 @@ function tcp_master:dirty() end
 ---
 ---@return integer # The descriptor or handle. `-1` if the object has been closed. `_SOCKETINVALID` if it is an invalid socket.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_master:getfd() end
 
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 ---@alias TCPOption
 ---| "keepalive" Setting this option to `true` enables the periodic transmission of messages on a connected socket. Should the connected party fail to respond to these messages, the connection is considered broken and processes using the socket are notified;
 ---| "linger" Controls the action taken when unsent data are queued on a socket and a close is performed. The value is a table with a boolean entry `on` and a numeric entry for the time interval `timeout` in seconds. If the `on` field is set to `true`, the system will block the process on the close attempt until it is able to transmit the data or until `timeout` has passed. If `on` is `false` and a `close` is issued, the system will process the `close` in a manner that allows the process to continue as quickly as possible. I do not advise you to set this to anything other than zero;
@@ -490,7 +490,7 @@ function tcp_master:getfd() end
 ---
 ---@return any | nil, nil | string # The option value in case of success, or nil followed by an error message otherwise.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_client:getoption(option) end
 
 ---
@@ -499,7 +499,7 @@ function tcp_client:getoption(option) end
 ---
 ---@return any | nil, nil | string # The option value in case of success, or nil followed by an error message otherwise.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_server:getoption(option) end
 
 ---
@@ -509,7 +509,7 @@ function tcp_server:getoption(option) end
 ---
 ---@return string | nil, integer | nil, SocketFamily | nil # The IP address of the peer, the port number that the peer is using for the connection, and the family. In case of error, returns `nil`.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_client:getpeername() end
 
 ---
@@ -517,7 +517,7 @@ function tcp_client:getpeername() end
 ---
 ---@return string | nil, integer | nil, SocketFamily | nil # The IP address of the peer, the port number that the peer is using for the connection, and the family. In case of error, returns `nil`.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_master:getsockname() end
 
 ---
@@ -525,7 +525,7 @@ function tcp_master:getsockname() end
 ---
 ---@return number, number # Current block timeout, current total timeout.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_master:gettimeout() end
 
 ---
@@ -537,7 +537,7 @@ function tcp_master:gettimeout() end
 ---
 ---@return 1 | nil, nil | string # Returns 1 on success, nil and an error on failure.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_master:listen(backlog) end
 
 ---@alias SocketError
@@ -562,7 +562,7 @@ function tcp_master:listen(backlog) end
 ---
 ---@return string | nil, SocketError | string | nil # Returns the received pattern when successful, otherwise nil and an error message.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_client:receive(pattern, prefix) end
 
 ---
@@ -578,7 +578,7 @@ function tcp_client:receive(pattern, prefix) end
 ---
 ---@return integer | nil, SocketError | string | nil, integer | nil # On success the number of bytes sent, otherwise nil followed by an error message, followed by the index of the last byte within `[i, j]` that has been sent. You might want to try again from the byte following that.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_client:send(data, i, j) end
 
 ---
@@ -597,7 +597,7 @@ function tcp_client:setoption(option, value) end
 ---
 ---@return 1 | nil, string | nil # 1 on success, nil and an error message otherwise.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_server:setoption(option, value) end
 
 ---
@@ -607,7 +607,7 @@ function tcp_server:setoption(option, value) end
 ---@param sent number Byte sent
 ---@param age number Age in seconds
 ---@return 1 | nil # 1 on success, nil otherwise.
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_master:setstats(received, sent, age) end
 
 ---@alias TCPTimeoutMode
@@ -624,7 +624,7 @@ function tcp_master:setstats(received, sent, age) end
 ---@param value number | nil Time to wait, in seconds. Use `nil` or negative to block indefinitely.
 ---@param mode? TCPTimeoutMode The default mode is "b"
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_master:settimeout(value, mode) end
 
 ---@alias TCPShutdownMode
@@ -638,7 +638,7 @@ function tcp_master:settimeout(value, mode) end
 ---
 ---@return 1 # Always returns 1.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_client:shutdown(mode) end
 
 ---
@@ -648,7 +648,7 @@ function tcp_client:shutdown(mode) end
 ---
 ---@param fd integer
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function tcp_master:setfd(fd) end
 
 -- The following are in the socket namespace --
@@ -664,7 +664,7 @@ function tcp_master:setfd(fd) end
 ---
 ---@return TCPSocketServer
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.bind(address, port, backlog) end
 
 ---
@@ -680,7 +680,7 @@ function socket.bind(address, port, backlog) end
 ---
 ---@return TCPSocketClient | nil, nil | string # Returns the client on success, or `nil` and an error message on failure.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.connect(address, port, locaddr, locport, family) end
 
 ---
@@ -693,7 +693,7 @@ function socket.connect(address, port, locaddr, locport, family) end
 ---
 ---@return TCPSocketClient | nil, nil | string # Returns the client on success, or `nil` and an error message on failure.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.connect4(address, port, locaddr, locport) end
 
 ---
@@ -706,7 +706,7 @@ function socket.connect4(address, port, locaddr, locport) end
 ---
 ---@return TCPSocketClient | nil, nil | string # Returns the client on success, or `nil` and an error message on failure.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.connect6(address, port, locaddr, locport) end
 
 ---
@@ -718,7 +718,7 @@ function socket.connect6(address, port, locaddr, locport) end
 ---
 ---@return TCPSocketMaster | nil, nil | string # New master object if successful, otherwise `nil` followed by an error message.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.tcp() end
 
 ---
@@ -726,7 +726,7 @@ function socket.tcp() end
 ---
 ---@return TCPSocketMaster | nil, nil | string # New master object if successful, otherwise `nil` followed by an error message.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.tcp4() end
 
 ---
@@ -736,7 +736,7 @@ function socket.tcp4() end
 ---
 ---@return TCPSocketMaster | nil, nil | string # New master object if successful, otherwise `nil` followed by an error message.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.tcp6() end
 
 
@@ -745,17 +745,17 @@ function socket.tcp6() end
 
 ---
 ---@class UDPSocketGeneric
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 local udp_generic = {}
 
 ---
 ---@class UDPSocketConnected : UDPSocketGeneric
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 local udp_connected = {}
 
 ---
 ---@class UDPSocketUnconnected : UDPSocketGeneric
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 local udp_unconnected = {}
 
 ---
@@ -763,7 +763,7 @@ local udp_unconnected = {}
 ---
 ---Note: It is important to close all used sockets once they are not needed, since, in many systems, each socket uses a file descriptor, which are limited system resources. Garbage-collected objects are automatically closed before destruction, though.
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_generic:close() end
 
 ---
@@ -791,7 +791,7 @@ function udp_generic:close() end
 ---
 ---@return any?, SocketReturnError
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_generic:getoption(option) end
 
 --> Note: This is not very satisfying, since one could check
@@ -806,7 +806,7 @@ function udp_generic:getoption(option) end
 ---Note: It makes no sense to call this method on unconnected objects.
 ---
 ---@return string?, number?, SocketFamily?
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_connected:getpeername() end
 
 ---
@@ -818,7 +818,7 @@ function udp_connected:getpeername() end
 ---
 ---@return string?, number?, SocketFamily?
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_generic:getsockname() end
 
 ---
@@ -826,7 +826,7 @@ function udp_generic:getsockname() end
 ---
 ---@return number timeout
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_generic:gettimeout() end
 
 ---
@@ -846,7 +846,7 @@ function udp_generic:gettimeout() end
 ---
 ---@return 'timeout'? err # `'timeout'` in case of timeout
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_generic:receive(size) end
 
 ---Works exactly as the `receive` method, except it returns the IP address and port as extra return values (and is therefore slightly less efficient)
@@ -856,7 +856,7 @@ function udp_generic:receive(size) end
 ---@return string | 'timeout' ip_or_err # IP address or `'timeout'` error string
 ---@return number port
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_unconnected:receivefrom(size) end
 
 ---
@@ -870,7 +870,7 @@ function udp_unconnected:receivefrom(size) end
 ---@param datagram Datagram
 ---
 ---@return SocketReturnResult, SocketReturnError
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_connected:send(datagram) end
 
 ---
@@ -887,7 +887,7 @@ function udp_connected:send(datagram) end
 ---@param port number
 ---
 ---@return SocketReturnResult, SocketReturnError
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_unconnected:sendto(datagram, ip, port) end
 
 ---
@@ -901,7 +901,7 @@ function udp_unconnected:sendto(datagram, ip, port) end
 ---@param value any?
 ---
 ---@return SocketReturnResult, SocketReturnError
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_generic:setoption(option, value) end
 
 --> `setpeername` sets the peer for an unconnected socket
@@ -924,7 +924,7 @@ function udp_generic:setoption(option, value) end
 ---@param port number
 ---
 ---@return SocketReturnResult, SocketReturnError
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_generic:setpeername(address, port) end
 
 ---
@@ -943,7 +943,7 @@ function udp_generic:setpeername(address, port) end
 ---@param address "*" # will turn it unconnected
 ---
 ---@return SocketReturnResult, SocketReturnError
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_generic:setpeername(address) end
 
 ---
@@ -956,7 +956,7 @@ function udp_generic:setpeername(address) end
 ---Note: This method can only be called before any datagram is sent through the UDP object, and only once. Otherwise, the system automatically binds the object to all local interfaces and chooses an ephemeral port as soon as the first datagram is sent. After the local address is set, either automatically by the system or explicitly by setsockname, it cannot be changed.
 ---
 ---@return SocketReturnResult, SocketReturnError
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_generic:setsockname(address, port) end
 
 ---
@@ -967,7 +967,7 @@ function udp_generic:setsockname(address, port) end
 ---
 ---@param timeout number
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function udp_generic:settimeout(timeout) end
 
 ---
@@ -991,7 +991,7 @@ function udp_generic:settimeout(timeout) end
 ---
 ---@return (UDPSocketConnected | UDPSocketUnconnected)?, SocketReturnError
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.udp() end
 
 ---
@@ -1011,7 +1011,7 @@ function socket.udp() end
 ---
 ---@return (UDPSocketConnected | UDPSocketUnconnected)?, SocketReturnError
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.udp4() end
 
 ---
@@ -1033,5 +1033,5 @@ function socket.udp4() end
 ---
 ---@return (UDPSocketConnected | UDPSocketUnconnected)?, SocketReturnError
 ---
----😱 [Types](https://github.com/LuaCATS/luasocket/blob/main/library/socket.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/luasocket/pulls)
+---{{ contribute }}
 function socket.udp6() end

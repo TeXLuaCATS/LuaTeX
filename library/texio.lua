@@ -28,7 +28,7 @@ _N = {}
 ---The `texio` library takes care of the low-level I/O interface: writing to the log file
 ---and/or console.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/texio.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 texio = {}
 
 _N._10_5_the_texio_library = "page 214"
@@ -51,7 +51,7 @@ _N._10_5_1_write = "page 214"
 ---@param target WriteTarget
 ---@param ... string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/texio.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function texio.write(target, ...) end
 
 ---
@@ -68,7 +68,7 @@ function texio.write(target, ...) end
 ---
 ---@param ... string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/texio.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function texio.write(...) end
 
 _N._10_5_2_write_nl = "page 214"
@@ -86,7 +86,7 @@ _N._10_5_2_write_nl = "page 214"
 ---@param target WriteTarget
 ---@param ... string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/texio.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function texio.write_nl(target, ...) end
 
 ---
@@ -104,7 +104,7 @@ function texio.write_nl(target, ...) end
 ---
 ---@param ... string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/texio.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function texio.write_nl(...) end
 
 _N._10_5_3_setescape = "page 215"
@@ -118,7 +118,7 @@ _N._10_5_3_setescape = "page 215"
 ---
 ---@param escape_controls boolean
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/texio.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function texio.setescape(escape_controls) end
 
 _N._10_5_4_closeinput = "page 215"
@@ -136,5 +136,5 @@ _N._10_5_4_closeinput = "page 215"
 ---
 ---* Corresponding C source code: [ltexiolib.c#L158-L171](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexiolib.c#L158-L171)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/texio.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function texio.closeinput() end

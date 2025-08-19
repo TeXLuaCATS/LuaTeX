@@ -49,7 +49,7 @@ _N._9_1_registering_callbacks = "page 169"
 ---
 ---* Source file of the `LuaTeX` manual: [luatex-callbacks.tex#L17-L26](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-callbacks.tex#L17-L26)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 callback = {}
 
 ---
@@ -59,7 +59,7 @@ callback = {}
 ---
 ---Source: `callback.list()`
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias CallbackName
 ---|"append_to_vlist_filter"
 ---|"build_page_insert"
@@ -176,7 +176,7 @@ callback = {}
 ---@return integer|nil id # The function returns the internal `id` of the callback or `nil`, if the callback could not be registered.
 ---@return string error # In the latter case, `error` contains an error message, otherwise it is `nil`. The function returns `No such callback exists.` if a wrong callback name was specified.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function callback.register(callback_name, func) end
 
 ---
@@ -192,7 +192,7 @@ function callback.register(callback_name, func) end
 ---
 ---@return table<string, boolean> info
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function callback.list() end
 
 ---
@@ -207,7 +207,7 @@ function callback.list() end
 ---
 ---@return function|nil f
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function callback.find(callback_name) end
 
 _N._9_2_file_discovery_callbacks = "page 169"
@@ -243,13 +243,13 @@ _N._9_2_1_find_write_file = "page 170"
 ---
 ---You have to return `nil` if the file cannot be found.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindReadFileCallback fun(id_number: integer, asked_name: string): actual_name: string|nil
 
 ---
 ---Find a file for writing to the log file (0) or with `write` (higher integers).
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindWriteFileCallback fun(id_number: integer, asked_name: string): actual_name: string|nil
 
 _N._9_2_2_find_font_file = "page 170"
@@ -261,7 +261,7 @@ _N._9_2_2_find_font_file = "page 170"
 ---
 ---Return `nil` if the file cannot be found.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindFontFileCallback fun(asked_name: string): actual_name: string|nil
 
 _N._9_2_3_find_output_file = "page 170"
@@ -269,7 +269,7 @@ _N._9_2_3_find_output_file = "page 170"
 ---
 ---The `asked_name` is the *PDF* or *DVI* file for writing.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindOutputFileCallback fun(asked_name: string): actual_name: string|nil
 
 _N._9_2_4_find_format_file = "page 170"
@@ -280,7 +280,7 @@ _N._9_2_4_find_format_file = "page 170"
 ---The `asked_name` is a format file for reading (the format file for writing
 ---is always opened in the current directory).
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindFormatFileCallback fun(asked_name: string): actual_name: string|nil
 
 _N._9_2_5_find_vf_file = "page 171"
@@ -291,7 +291,7 @@ _N._9_2_5_find_vf_file = "page 171"
 ---Like `find_font_file`, but for virtual fonts. This applies to both *ALEPH's
 ---*OVF* files and traditional Knuthian *VF* files.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindVfFileCallback fun(asked_name: string): actual_name: string|nil
 
 _N._9_2_6_find_map_file = "page 171"
@@ -299,7 +299,7 @@ _N._9_2_6_find_map_file = "page 171"
 ---
 ---Like `find_font_file`, but for map files.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindMapFileCallback fun(asked_name: string): actual_name: string|nil
 
 _N._9_2_7_find_enc_file = "page 171"
@@ -309,7 +309,7 @@ _N._9_2_7_find_enc_file = "page 171"
 ---
 ---Like `find_font_file`, but for enc files.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindEncFileCallback fun(asked_name: string): actual_name: string|nil
 
 _N._9_2_8_find_pk_file = "page 171"
@@ -328,7 +328,7 @@ _N._9_2_8_find_pk_file = "page 171"
 ---but other strategies are possible. It is up to you to find a “reasonable”
 ---bitmap file to go with that specification.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindPkFileCallback fun(asked_name: string, dpi: integer): actual_name: string|nil
 
 _N._9_2_9_find_data_file = "page 171"
@@ -338,7 +338,7 @@ _N._9_2_9_find_data_file = "page 171"
 ---
 ---Like `find_font_file`, but for embedded files (`\pdfobj file '...'`).
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindDataFileCallback fun(asked_name: string): actual_name: string|nil
 
 _N._9_2_0_find_opentype_file = "page 171"
@@ -348,7 +348,7 @@ _N._9_2_0_find_opentype_file = "page 171"
 ---
 ---Like `find_font_file`, but for *OpenType* font files.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindOpentypeFileCallback fun(asked_name: string): actual_name: string|nil
 
 _N._9_2_1_find_truetype_file = "page 171"
@@ -363,7 +363,7 @@ _N._9_2_1_find_truetype_file = "page 171"
 ---Strangely enough, `find_type1_file` is also used for *OpenType* (OTF)
 ---fonts.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindTruetypeFileCallback fun(asked_name: string): actual_name: string|nil
 
 _N._9_2_1_find_type1_file = "page 171"
@@ -378,7 +378,7 @@ _N._9_2_1_find_type1_file = "page 171"
 ---Strangely enough, `find_type1_file` is also used for *OpenType* (OTF)
 ---fonts.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindType1FileCallback fun(asked_name: string): actual_name: string|nil
 
 _N._9_2_2_find_image_file = "page 172"
@@ -390,7 +390,7 @@ _N._9_2_2_find_image_file = "page 172"
 ---from the hard disk, so make sure you return something that is considered the name
 ---of a valid file by your operating system.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FindImageFileCallback fun(asked_name: string): actual_name: string|nil
 
 _N._9_3 = "page 172"
@@ -523,7 +523,7 @@ _N._9_4_1_process_input_buffer = nil
 ---happened. You can gain a small amount of processing time from that. This callback
 ---does not replace any internal code.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias ProcessInputBufferCallback fun(buffer: string): string|nil
 
 _N._9_4_2_process_output_buffer = nil
@@ -539,7 +539,7 @@ _N._9_4_2_process_output_buffer = nil
 ---happened. You can gain a small amount of processing time from that. This callback
 ---does not replace any internal code.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias ProcessOutputBufferCallback fun(buffer: string): adjusted_buffer: string|nil
 
 _N._9_4_3_process_jobname = nil
@@ -558,7 +558,7 @@ _N._9_4_3_process_jobname = nil
 ---
 ---* Corresponding C source code: [textoken.c#L2511](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/textoken.c#L2511)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias ProcessJobnameCallback fun(jobname: string): string|nil
 
 _N._9_5 = nil
@@ -566,7 +566,7 @@ _N._9_5 = nil
 _N._9_5_1_contribute_filter = nil
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias ContributeFilterExtrainfo
 ---|'pre_box' # interline material is being added
 ---|'pre_adjust' # `vadjust` material is being added
@@ -583,13 +583,13 @@ _N._9_5_1_contribute_filter = nil
 ---
 ---* Corresponding C source code: [luatexcallbackids.h#L163](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/luatexcallbackids.h#L163)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias ContributeFilterCallback fun(extrainfo: ContributeFilterExtrainfo)
 
 _N._9_5_2_buildpage_filter = nil
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias BuildpageFilterExtrainfo
 ---|'alignment' # a (partial) alignment is being added
 ---|'after_output' # an output routine has just finished
@@ -616,7 +616,7 @@ _N._9_5_2_buildpage_filter = nil
 ---
 ---* Corresponding C source code: [align.c#L1281](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/align.c#L1281)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias BuildpageFilterCallback fun(extrainfo: ContributeFilterExtrainfo)
 
 _N._9_5_3_build_page_insert = nil
@@ -641,7 +641,7 @@ _N._9_5_3_build_page_insert = nil
 ---
 ---* Corresponding C source code: [buildpage.c#L507](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/buildpage.c#L507)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias BuildPageInsertCallback fun(n: integer, i: integer): integer
 
 _N._9_5_4_pre_linebreak_filter = nil
@@ -653,7 +653,7 @@ _N._9_5_4_pre_linebreak_filter = nil
 ---for the `hpack_filter` and `vpack_filter` callbacks that will be
 ---explained in the next two paragraphs.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias PreLinebreakFilterGroupCode
 ---|'' # main vertical list
 ---|'hbox' # hbox` in horizontal mode
@@ -682,7 +682,7 @@ _N._9_5_4_pre_linebreak_filter = nil
 ---* boolean `false` signals that the “head” node list should be
 ---  ignored and flushed from memory
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias NodeCallbackReturn true|false|Node
 
 ---
@@ -705,7 +705,7 @@ _N._9_5_4_pre_linebreak_filter = nil
 ---
 ---* Corresponding C source code: [linebreak.c#L124](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/linebreak.c#L124)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias PreLinebreakFilterCallback fun(head: Node, groupcode: PreLinebreakFilterGroupCode): NodeCallbackReturn
 
 _N._9_5_5_linebreak_filter = nil
@@ -733,11 +733,11 @@ _N._9_5_5_linebreak_filter = nil
 ---* Corresponding C source code: [luanode.c#L125](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/luanode.c#L125)
 ---* Corresponding C source code: [linebreak.c#L128](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/linebreak.c#L128)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias LinebreakFilterCallback fun(head: Node, is_display: boolean): NodeCallbackReturn
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias AppendToVlistFilterLocationcode
 ---| 'box'
 ---| 'alignment'
@@ -757,7 +757,7 @@ _N._9_5_5_append_to_vlist_filter = nil
 ---
 ---* Corresponding C source code: [luanode.c#L164](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/luanode.c#L164)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias AppendToVlistFilterCallback fun(box: Node, locationcode: AppendToVlistFilterLocationcode, prevdepth: integer, mirrored: boolean): list: Node, prevdepth: integer
 
 _N._9_5_7_post_linebreak_filter = nil
@@ -774,7 +774,7 @@ _N._9_5_7_post_linebreak_filter = nil
 ---
 ---* Corresponding C source code: [linebreak.c#L196](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/linebreak.c#L196)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias PostLinebreakFilterCallback fun(head: Node, groupcode: string): NodeCallbackReturn
 
 _N._9_5_8_hpack_filter = nil
@@ -800,7 +800,7 @@ _N._9_5_8_hpack_filter = nil
 ---
 ---* Corresponding C source code: [luanode.c#L205](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/luanode.c#L205)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias HpackFilterCallback fun(head: Node, groupcode: string, size: integer, packtype: 'additional'|'exactly', direction?: DirectionSpecifier, attributelist?: Node): NodeCallbackReturn
 
 _N._9_5_9_vpack_filter = nil
@@ -821,7 +821,7 @@ _N._9_5_9_vpack_filter = nil
 ---
 ---* Corresponding C source code: [luanode.c#L264](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/luanode.c#L264)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias VpackFilterCallback fun(head: Node, groupcode: string, size: integer, packtype: 'additional'|'exactly', maxdepth: integer, direction?: DirectionSpecifier, attributelist?: Node): NodeCallbackReturn
 
 _N._9_5_10_hpack_quality = nil
@@ -841,7 +841,7 @@ _N._9_5_10_hpack_quality = nil
 ---* Corresponding C source code: [packaging.c#L862](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/packaging.c#L862)
 ---* Corresponding C source code: [packaging.c#L932](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/packaging.c#L932)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias HpackQualityCallback fun(incident: 'overfull'|'underfull'|'loose'|'tight', detail: integer, head: Node, first: integer, last: integer): Node
 
 _N._9_5_11_vpack_quality = nil
@@ -858,7 +858,7 @@ _N._9_5_11_vpack_quality = nil
 ---* Corresponding C source code: [packaging.c#L1345](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/packaging.c#L1345)
 ---* Corresponding C source code: [packaging.c#L1405](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/packaging.c#L1405)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias VpackQualityCallback fun(incident: 'overfull'|'underfull'|'loose'|'tight', detail: integer, head: Node, first: integer, last: integer)
 
 _N._9_5_12_process_rule = nil
@@ -873,7 +873,7 @@ _N._9_5_12_process_rule = nil
 ---
 ---* Corresponding C source code: [pdfshipout.c#L246](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/pdf/pdfshipout.c#L246)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias ProcessRuleCallback fun(node: Node, width: integer, height: integer)
 
 _N._9_5_13_pre_output_filter = nil
@@ -889,7 +889,7 @@ _N._9_5_13_pre_output_filter = nil
 ---
 ---* Corresponding C source code: [luanode.c#L262](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/luanode.c#L262)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias PreOutputFilterCallback fun(head: Node, groupcode: string, size: integer, packtype: 'additional'|'exactly', maxdepth: integer, direction?: DirectionSpecifier): NodeCallbackReturn
 
 _N._9_5_14_hyphenate = nil
@@ -904,7 +904,7 @@ _N._9_5_14_hyphenate = nil
 ---
 ---* Corresponding C source code: [texlang.c#L1179](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lang/texlang.c#L1179)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias HyphenateCallback fun(head: Node, tail: Node): false|nil
 
 _N._9_5_15_ligaturing = "page 179"
@@ -936,7 +936,7 @@ _N._9_5_15_ligaturing = "page 179"
 ---
 ---* Corresponding C source code: [luafont.c#L2688](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/font/luafont.c#L2688)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias LigaturingCallback fun(head: Node, tail: Node): false|nil
 
 _N._9_5_16_kerning = nil
@@ -957,7 +957,7 @@ _N._9_5_16_kerning = nil
 ---
 ---* Corresponding C source code: [luafont.c#L2704](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/font/luafont.c#L2704)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias KerningCallback fun(head: Node, tail: Node): false|nil
 
 _N._9_5_17_insert_local_par = nil
@@ -973,7 +973,7 @@ _N._9_5_17_insert_local_par = nil
 ---
 ---* Corresponding C source code: [texnodes.c#L4812](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/texnodes.c#L4812)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias InsertLocalParCallback fun(local_par: Node, location: string)
 
 _N._9_5_18_mlist_to_hlist = nil
@@ -995,7 +995,7 @@ _N._9_5_18_mlist_to_hlist = nil
 ---
 ---* Corresponding C source code: [mlist.c#L1866](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/mlist.c#L1866)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias MlistToHlistCallback fun(head: Node, display_type: string, need_penalties: boolean): newhead: Node
 
 _N._9_6_information_reporting = "page 180"
@@ -1012,7 +1012,7 @@ _N._9_6_1_pre_dump = "page 180"
 ---
 ---* Corresponding C source code: [dumpdata.c#L95](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/dumpdata.c#L95)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias PreDumpCallback fun()
 
 _N._9_6_2_start_run = "page 181"
@@ -1029,7 +1029,7 @@ _N._9_6_2_start_run = "page 181"
 ---* Corresponding C source code: [printing.c#L557](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/printing.c#L557)
 ---* Corresponding C source code: [texfileio.c#L917](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/texfileio.c#L917)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias StartRunCallback fun()
 
 _N._9_6_3_stop_run = "page 181"
@@ -1046,7 +1046,7 @@ _N._9_6_3_stop_run = "page 181"
 ---* Corresponding C source code: [dvigen.c#L1447](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/dvi/dvigen.c#L1447)
 ---* Corresponding C source code: [pdfgen.c#L2243](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/pdf/pdfgen.c#L2243)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias StopRunCallback fun()
 
 _N._9_6_4_start_page_number = "page 181"
@@ -1062,7 +1062,7 @@ _N._9_6_4_start_page_number = "page 181"
 ---
 ---* Corresponding C source code: [pdfshipout.c#L61](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/pdf/pdfshipout.c#L61)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias StartPageNumberCallback fun()
 
 _N._9_6_5_stop_page_number = "page 181"
@@ -1076,7 +1076,7 @@ _N._9_6_5_stop_page_number = "page 181"
 ---
 ---* Corresponding C source code: [pdfshipout.c#L62](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/pdf/pdfshipout.c#L62)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias StopPageNumberCallback fun()
 
 _N._9_6_6_show_error_hook = "page 181"
@@ -1093,7 +1093,7 @@ _N._9_6_6_show_error_hook = "page 181"
 ---* Corresponding C source code: [filename.c#L282](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/filename.c#L282)
 ---* Corresponding C source code: [errors.c#L430](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/errors.c#L430)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias ShowErrorHookCallback fun()
 
 _N._9_6_7_show_error_message = "page 182"
@@ -1106,7 +1106,7 @@ _N._9_6_7_show_error_message = "page 182"
 ---
 ---* Corresponding C source code: [errors.c#L105](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/errors.c#L105)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias ShowErrorMessageCallback fun()
 
 _N._9_6_8_show_lua_error_hook = "page 182"
@@ -1118,13 +1118,13 @@ _N._9_6_8_show_lua_error_hook = "page 182"
 ---
 ---* Corresponding C source code: [errors.c#L995](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/errors.c#L995)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias ShowLuaErrorHookCallback fun()
 
 _N._9_6_9_start_file = "page 182"
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias StartFileCallbackCategory
 ---|1 # a normal data file, like a *TeX* source
 ---|2 # a font map coupling font names to resources
@@ -1140,7 +1140,7 @@ _N._9_6_9_start_file = "page 182"
 ---
 ---* Corresponding C source code: [luatexcallbackids.h#L127](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/luatexcallbackids.h#L127)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias StartFileCallback fun(category: StartFileCallbackCategory, filename: string)
 
 _N._9_6_10_stop_file = "page 182"
@@ -1153,7 +1153,7 @@ _N._9_6_10_stop_file = "page 182"
 ---
 ---* Corresponding C source code: [luatexcallbackids.h#L150](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/luatexcallbackids.h#L150)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias StopFileCallback fun(category: integer)
 
 _N._9_6_11_call_edit = "page 182"
@@ -1167,7 +1167,7 @@ _N._9_6_11_call_edit = "page 182"
 ---
 ---* Corresponding C source code: [errors.c#L531](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/errors.c#L531)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias CallEditCallback fun(filename: string, linenumber: integer)
 
 _N._9_6_12_finish_synctex = "page 183"
@@ -1181,7 +1181,7 @@ _N._9_6_12_finish_synctex = "page 183"
 ---
 ---* Corresponding C source code: [mainbody.c#L668](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/mainbody.c#L668)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FinishSynctexCallback fun()
 
 _N._9_6_13_wrapup_run = "page 183"
@@ -1194,7 +1194,7 @@ _N._9_6_13_wrapup_run = "page 183"
 ---
 ---* Corresponding C source code: [mainbody.c#L687](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/mainbody.c#L687)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias WrapupRunCallback fun()
 
 _N._9_7_pdf_related = "page 183"
@@ -1214,7 +1214,7 @@ _N._9_7_1_finish_pdffile = "page 183"
 ---
 ---* Corresponding C source code: [pdfgen.c#L2244](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/pdf/pdfgen.c#L2244)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FinishPdffileCallback fun()
 
 _N._9_7_2_finish_pdfpage = "page 183"
@@ -1230,7 +1230,7 @@ _N._9_7_2_finish_pdfpage = "page 183"
 ---
 ---* Corresponding C source code: [pdfgen.c#L1788](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/pdf/pdfgen.c#L1788)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias FinishPdfpageCallback fun(shippingout: string)
 
 _N._9_7_3_page_order_index = "page 183"
@@ -1260,7 +1260,7 @@ _N._9_7_3_page_order_index = "page 183"
 ---
 ---* Corresponding C source code: [pdfgen.c#L1793](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/pdf/pdfgen.c#L1793)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias PageOrderIndexCallback fun(pagenumber: integer): pagenumber: string
 
 _N._9_7_4_process_pdf_image_content = "page 184"
@@ -1288,7 +1288,7 @@ _N._9_7_4_process_pdf_image_content = "page 184"
 ---
 ---* Corresponding C source code: [pdftoepdf.c#L440](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/image/pdftoepdf.c#L440)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias ProcessPdfImageContentCallback fun(s: string): string
 
 _N._9_8_font_related = "page 184"
@@ -1324,7 +1324,7 @@ _N._9_8_1_define_font = "page 184"
 ---
 ---* Corresponding C source code: [dofont.c#L52](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/font/dofont.c#L52)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias DefineFontCallback fun(name: string, size: number, id: number): Font|integer
 
 _N._9_8_2_glyph_not_found = "page 184"
@@ -1337,7 +1337,7 @@ _N._9_8_2_glyph_not_found = "page 184"
 ---
 ---* Corresponding C source code: [texfont.c#L364](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/font/texfont.c#L364)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias GlyphNotFoundCallback fun(id: number, char: number)
 
 _N._9_8_2_glyph_info = "page 184"
@@ -1355,5 +1355,5 @@ _N._9_8_2_glyph_info = "page 184"
 ---
 ---* Corresponding C source code: [printing.c#L1036](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/printing.c#L1036)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/callback.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias GlyphInfoCallback fun(g: Node): string|nil

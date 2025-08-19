@@ -27,7 +27,7 @@ _N = {}
 ---
 ---The `string` library has a few extra functions.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/string.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 string = {}
 
 _N._4_2_5_multibyte_string_functions = "page 63"
@@ -82,7 +82,7 @@ _N._4_2_5_multibyte_string_functions = "page 63"
 ---
 ---@return string[]
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/string.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function string.explode(text, separator) end
 
 ---
@@ -111,7 +111,7 @@ function string.explode(text, separator) end
 ---
 ---@return integer, integer ...  # The Unicode codepoints of the characters in the given string.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/string.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function string.utfvalue(text) end
 
 ---
@@ -138,7 +138,7 @@ function string.utfvalue(text) end
 ---@param text string # The input string.
 ---
 ---@return fun(): integer code_point   # an integer value in the *Unicode* range
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/string.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function string.utfvalues(text) end
 
 ---
@@ -160,7 +160,7 @@ function string.utfvalues(text) end
 ---
 ---@return string # A string with the characters of the given code points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/string.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function string.utfcharacter(code_point, ...) end
 
 ---
@@ -187,7 +187,7 @@ function string.utfcharacter(code_point, ...) end
 ---
 ---@return fun(): string character # a string with a single *UTF-8* token in it
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/string.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function string.utfcharacters(text) end
 
 ---
@@ -209,7 +209,7 @@ function string.utfcharacters(text) end
 ---
 ---@return integer # The length of the given string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/string.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function string.utflength(text) end
 
 ---
@@ -248,7 +248,7 @@ function string.utflength(text) end
 ---
 ---@return fun(): string # A string containing __one byte__.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/string.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function string.characters(text) end
 
 ---
@@ -289,7 +289,7 @@ function string.characters(text) end
 ---
 ---@return fun(): string, string # Two strings of __one byte__ each, or an __empty__ second string if the string length was odd.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/string.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function string.characterpairs(text) end
 
 ---
@@ -328,7 +328,7 @@ function string.characterpairs(text) end
 ---
 ---@return fun(): integer # A single byte value.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/string.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function string.bytes(text) end
 
 ---
@@ -365,5 +365,5 @@ function string.bytes(text) end
 ---
 ---@return fun(): integer, integer|nil # Two byte values or `nil` as the second return value if the input string length was odd.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/string.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function string.bytepairs(text) end

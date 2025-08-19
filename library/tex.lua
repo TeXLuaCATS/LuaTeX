@@ -25,7 +25,7 @@ _N = {}
 ---@meta
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex = {}
 
 _N._10_3_2_internal_parameter_values_set_get = "page 190"
@@ -466,7 +466,7 @@ _N._10_3_2_1_integer_parameters_read_write = "page 190"
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.adjdemerits = 0
 
 ---
@@ -479,7 +479,7 @@ tex.adjdemerits = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.binoppenalty = 0
 
 ---
@@ -501,7 +501,7 @@ tex.brokenpenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.catcodetable = 0
 
 ---
@@ -518,7 +518,7 @@ tex.catcodetable = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.clubpenalty = 0
 
 ---
@@ -530,7 +530,7 @@ tex.clubpenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.day = 0
 
 ---
@@ -543,7 +543,7 @@ tex.day = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.defaulthyphenchar = 0
 
 ---
@@ -555,7 +555,7 @@ tex.defaulthyphenchar = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.defaultskewchar = 0
 
 ---
@@ -568,7 +568,7 @@ tex.defaultskewchar = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.delimiterfactor = 0
 
 ---
@@ -582,7 +582,7 @@ tex.delimiterfactor = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.displaywidowpenalty = 0
 
 ---
@@ -595,7 +595,7 @@ tex.displaywidowpenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.doublehyphendemerits = 0
 
 ---
@@ -604,7 +604,7 @@ tex.doublehyphendemerits = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.endlinechar = 0
 
 ---
@@ -617,7 +617,7 @@ tex.endlinechar = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.errorcontextlines = 0
 
 ---
@@ -631,7 +631,7 @@ tex.errorcontextlines = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.escapechar = 0
 
 ---
@@ -645,7 +645,7 @@ tex.escapechar = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.exhyphenpenalty = 0
 
 ---
@@ -657,7 +657,7 @@ tex.exhyphenpenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.fam = 0
 
 ---
@@ -670,7 +670,7 @@ tex.fam = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.finalhyphendemerits = 0
 
 ---
@@ -682,7 +682,7 @@ tex.finalhyphendemerits = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.floatingpenalty = 0
 
 ---
@@ -705,7 +705,7 @@ tex.floatingpenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.globaldefs = 0
 
 ---
@@ -720,7 +720,7 @@ tex.globaldefs = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.hangafter = 0
 
 ---
@@ -733,7 +733,7 @@ tex.hangafter = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.hbadness = 0
 
 ---
@@ -746,7 +746,7 @@ tex.hbadness = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.holdinginserts = 0
 
 ---
@@ -759,7 +759,7 @@ tex.holdinginserts = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.hyphenpenalty = 0
 
 ---
@@ -772,7 +772,7 @@ tex.hyphenpenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.interlinepenalty = 0
 
 ---
@@ -784,13 +784,13 @@ tex.interlinepenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.language = 0
 
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lastlinefit = 0
 
 ---
@@ -803,7 +803,7 @@ tex.lastlinefit = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lefthyphenmin = 0
 
 ---
@@ -816,7 +816,7 @@ tex.lefthyphenmin = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.linepenalty = 0
 
 ---
@@ -824,7 +824,7 @@ tex.linepenalty = 0
 ---
 ------@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.localbrokenpenalty = 0
 
 ---
@@ -832,7 +832,7 @@ tex.localbrokenpenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.localinterlinepenalty = 0
 
 ---
@@ -845,7 +845,7 @@ tex.localinterlinepenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.looseness = 0
 
 ---
@@ -857,7 +857,7 @@ tex.looseness = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.mag = 0
 
 ---
@@ -871,7 +871,7 @@ tex.mag = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.maxdeadcycles = 0
 
 ---
@@ -883,7 +883,7 @@ tex.maxdeadcycles = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.month = 0
 
 ---
@@ -896,7 +896,7 @@ tex.month = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.newlinechar = 0
 
 ---
@@ -909,7 +909,7 @@ tex.newlinechar = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.outputpenalty = 0
 
 ---
@@ -922,7 +922,7 @@ tex.outputpenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pausing = 0
 
 ---
@@ -935,7 +935,7 @@ tex.pausing = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.postdisplaypenalty = 0
 
 ---
@@ -951,7 +951,7 @@ tex.postdisplaypenalty = 0
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.predisplaydirection = 0
 
 ---
@@ -964,7 +964,7 @@ tex.predisplaydirection = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.predisplaypenalty = 0
 
 ---
@@ -977,7 +977,7 @@ tex.predisplaypenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pretolerance = 0
 
 ---
@@ -990,7 +990,7 @@ tex.pretolerance = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.relpenalty = 0
 
 ---
@@ -1003,7 +1003,7 @@ tex.relpenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.righthyphenmin = 0
 
 ---
@@ -1017,7 +1017,7 @@ tex.righthyphenmin = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.savinghyphcodes = 0
 
 ---
@@ -1033,7 +1033,7 @@ tex.savinghyphcodes = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.savingvdiscards = 0
 
 ---
@@ -1046,7 +1046,7 @@ tex.savingvdiscards = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.showboxbreadth = 0
 
 ---
@@ -1059,7 +1059,7 @@ tex.showboxbreadth = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.showboxdepth = 0
 
 ---
@@ -1072,7 +1072,7 @@ tex.showboxdepth = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.time = 0
 
 ---
@@ -1085,7 +1085,7 @@ tex.time = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tolerance = 0
 
 ---
@@ -1097,7 +1097,7 @@ tex.tolerance = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracingassigns = 0
 
 ---
@@ -1111,7 +1111,7 @@ tex.tracingassigns = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracingcommands = 0
 
 ---
@@ -1125,7 +1125,7 @@ tex.tracingcommands = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracinggroups = 0
 
 ---
@@ -1139,7 +1139,7 @@ tex.tracinggroups = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracingifs = 0
 
 ---
@@ -1153,7 +1153,7 @@ tex.tracingifs = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracinglostchars = 0
 
 ---
@@ -1168,7 +1168,7 @@ tex.tracinglostchars = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracingmacros = 0
 
 ---
@@ -1181,7 +1181,7 @@ tex.tracingmacros = 0
 ---* The ε-TEX manual Version 2, February 1998 (updated March 2024), page 5
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracingnesting = 0
 
 ---
@@ -1194,7 +1194,7 @@ tex.tracingnesting = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracingonline = 0
 
 ---
@@ -1207,7 +1207,7 @@ tex.tracingonline = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracingoutput = 0
 
 ---
@@ -1220,7 +1220,7 @@ tex.tracingoutput = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracingpages = 0
 
 ---
@@ -1233,7 +1233,7 @@ tex.tracingpages = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracingparagraphs = 0
 
 ---
@@ -1246,7 +1246,7 @@ tex.tracingparagraphs = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracingrestores = 0
 
 ---
@@ -1260,7 +1260,7 @@ tex.tracingrestores = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracingscantokens = 0
 
 ---
@@ -1274,7 +1274,7 @@ tex.tracingscantokens = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tracingstats = 0
 
 ---
@@ -1287,7 +1287,7 @@ tex.tracingstats = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.uchyph = 0
 
 ---
@@ -1300,7 +1300,7 @@ tex.uchyph = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.vbadness = 0
 
 ---
@@ -1313,7 +1313,7 @@ tex.vbadness = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.widowpenalty = 0
 
 ---
@@ -1325,7 +1325,7 @@ tex.widowpenalty = 0
 ---
 ---@type integer # A readable and writable integer parameter that accepts and returns Lua numbers.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.year = 0
 
 _N._10_3_2_1_integer_parameters_read_only = "page 191"
@@ -1340,7 +1340,7 @@ _N._10_3_2_1_integer_parameters_read_only = "page 191"
 ---
 ---@type integer # A read-only integer parameter that returns a Lua number.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.deadcycles = 0
 
 ---
@@ -1353,7 +1353,7 @@ tex.deadcycles = 0
 ---
 ---@type integer # A read-only integer parameter that returns a Lua number.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.insertpenalties = 0
 
 ---
@@ -1365,7 +1365,7 @@ tex.insertpenalties = 0
 ---
 ---@type integer # A read-only integer parameter that returns a Lua number.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.parshape = 0
 
 ---
@@ -1383,7 +1383,7 @@ tex.parshape = 0
 ---
 ---@type integer # A read-only integer parameter that returns a Lua number.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.interlinepenalties = 0
 
 ---
@@ -1401,7 +1401,7 @@ tex.interlinepenalties = 0
 ---
 ---@type integer # A read-only integer parameter that returns a Lua number.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.clubpenalties = 0
 
 ---
@@ -1420,7 +1420,7 @@ tex.clubpenalties = 0
 ---
 ---@type integer # A read-only integer parameter that returns a Lua number.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.widowpenalties = 0
 
 ---
@@ -1439,7 +1439,7 @@ tex.widowpenalties = 0
 ---
 ---@type integer # A read-only integer parameter that returns a Lua number.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.displaywidowpenalties = 0
 
 ---
@@ -1452,7 +1452,7 @@ tex.displaywidowpenalties = 0
 ---
 ---@type integer # A read-only integer parameter that returns a Lua number.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.prevgraf = 0
 
 ---
@@ -1465,7 +1465,7 @@ tex.prevgraf = 0
 ---
 ---@type integer # A read-only integer parameter that returns a Lua number.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.spacefactor = 0
 
 _N._10_3_2_2_dimension_parameters_read_write = "page 191"
@@ -1479,7 +1479,7 @@ _N._10_3_2_2_dimension_parameters_read_write = "page 191"
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.boxmaxdepth = 0
 
 ---
@@ -1492,7 +1492,7 @@ tex.boxmaxdepth = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.delimitershortfall = 0
 
 ---
@@ -1505,7 +1505,7 @@ tex.delimitershortfall = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.displayindent = 0
 
 ---
@@ -1517,7 +1517,7 @@ tex.displayindent = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.displaywidth = 0
 
 ---
@@ -1530,7 +1530,7 @@ tex.displaywidth = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.emergencystretch = 0
 
 ---
@@ -1544,7 +1544,7 @@ tex.emergencystretch = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.hangindent = 0
 
 ---
@@ -1557,7 +1557,7 @@ tex.hangindent = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.hfuzz = 0
 
 ---
@@ -1570,7 +1570,7 @@ tex.hfuzz = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.hoffset = 0
 
 ---
@@ -1583,7 +1583,7 @@ tex.hoffset = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.hsize = 0
 
 ---
@@ -1596,7 +1596,7 @@ tex.hsize = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lineskiplimit = 0
 
 ---
@@ -1609,7 +1609,7 @@ tex.lineskiplimit = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.mathsurround = 0
 
 ---
@@ -1621,7 +1621,7 @@ tex.mathsurround = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.maxdepth = 0
 
 ---
@@ -1634,7 +1634,7 @@ tex.maxdepth = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.nulldelimiterspace = 0
 
 ---
@@ -1647,7 +1647,7 @@ tex.nulldelimiterspace = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.overfullrule = 0
 
 ---
@@ -1659,7 +1659,7 @@ tex.overfullrule = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pagebottomoffset = 0
 
 ---
@@ -1672,7 +1672,7 @@ tex.pagebottomoffset = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pageheight = 0
 
 ---
@@ -1684,7 +1684,7 @@ tex.pageheight = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pageleftoffset = 0
 
 ---
@@ -1696,7 +1696,7 @@ tex.pageleftoffset = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pagerightoffset = 0
 
 ---
@@ -1708,7 +1708,7 @@ tex.pagerightoffset = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pagetopoffset = 0
 
 ---
@@ -1721,7 +1721,7 @@ tex.pagetopoffset = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pagewidth = 0
 
 ---
@@ -1734,7 +1734,7 @@ tex.pagewidth = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.parindent = 0
 
 ---
@@ -1746,7 +1746,7 @@ tex.parindent = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.predisplaysize = 0
 
 ---
@@ -1759,7 +1759,7 @@ tex.predisplaysize = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.scriptspace = 0
 
 ---
@@ -1772,7 +1772,7 @@ tex.scriptspace = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.splitmaxdepth = 0
 
 ---
@@ -1785,7 +1785,7 @@ tex.splitmaxdepth = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.vfuzz = 0
 
 ---
@@ -1798,7 +1798,7 @@ tex.vfuzz = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.voffset = 0
 
 ---
@@ -1810,7 +1810,7 @@ tex.voffset = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.vsize = 0
 
 ---
@@ -1823,7 +1823,7 @@ tex.vsize = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.prevdepth = 0
 
 ---
@@ -1836,7 +1836,7 @@ tex.prevdepth = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.prevgraf = 0
 
 ---
@@ -1850,7 +1850,7 @@ tex.prevgraf = 0
 ---
 ---@type integer # A readable and writable dimension parameter that accepts a Lua number (signifying scaled points) or a string (with included dimension). The result is always a number in scaled points.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.spacefactor = 0
 
 _N._10_3_2_2_dimension_parameters_read_only = "page 191"
@@ -1865,7 +1865,7 @@ _N._10_3_2_2_dimension_parameters_read_only = "page 191"
 ---A read only dimension parameter. The result is always a number in scaled points.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pagedepth = 0
 
 ---
@@ -1879,7 +1879,7 @@ tex.pagedepth = 0
 ---A read only dimension parameter. The result is always a number in scaled points.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pagefilllstretch = 0
 
 ---
@@ -1893,7 +1893,7 @@ tex.pagefilllstretch = 0
 ---A read only dimension parameter. The result is always a number in scaled points.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pagefillstretch = 0
 
 ---
@@ -1907,7 +1907,7 @@ tex.pagefillstretch = 0
 ---A read only dimension parameter. The result is always a number in scaled points.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pagefilstretch = 0
 
 ---
@@ -1921,7 +1921,7 @@ tex.pagefilstretch = 0
 ---A read only dimension parameter. The result is always a number in scaled points.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pagegoal = 0
 
 ---
@@ -1934,7 +1934,7 @@ tex.pagegoal = 0
 ---A read only dimension parameter. The result is always a number in scaled points.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pageshrink = 0
 
 ---
@@ -1947,7 +1947,7 @@ tex.pageshrink = 0
 ---A read only dimension parameter. The result is always a number in scaled points.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pagestretch = 0
 
 ---
@@ -1960,7 +1960,7 @@ tex.pagestretch = 0
 ---A read only dimension parameter. The result is always a number in scaled points.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pagetotal = 0
 
 _N._10_3_2_3_direction_parameters = "page 192"
@@ -1975,7 +1975,7 @@ _N._10_3_2_3_direction_parameters = "page 192"
 ---
 ---@type DirectionSpecifier A read-only direction parameter that returns a *Lua* string.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.bodydir = "TLT"
 
 ---
@@ -1987,7 +1987,7 @@ tex.bodydir = "TLT"
 ---
 ---@type DirectionSpecifier A read-only direction parameter that returns a *Lua* string.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.mathdir = "TLT"
 
 ---
@@ -1999,7 +1999,7 @@ tex.mathdir = "TLT"
 ---
 ---@type DirectionSpecifier A read-only direction parameter that returns a *Lua* string.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pagedir = "TLT"
 
 ---
@@ -2011,7 +2011,7 @@ tex.pagedir = "TLT"
 ---
 ---@type DirectionSpecifier A read-only direction parameter that returns a *Lua* string.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.pardir = "TLT"
 
 ---
@@ -2023,7 +2023,7 @@ tex.pardir = "TLT"
 ---
 ---@type DirectionSpecifier A read-only direction parameter that returns a *Lua* string.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.textdir = "TLT"
 
 _N._10_3_2_4_glue_parameters = "page 193"
@@ -2038,7 +2038,7 @@ _N._10_3_2_4_glue_parameters = "page 193"
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.abovedisplayshortskip = nil
 
 ---
@@ -2051,7 +2051,7 @@ tex.abovedisplayshortskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.abovedisplayskip = nil
 
 ---
@@ -2064,7 +2064,7 @@ tex.abovedisplayskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.baselineskip = nil
 
 ---
@@ -2078,7 +2078,7 @@ tex.baselineskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.belowdisplayshortskip = nil
 
 ---
@@ -2091,7 +2091,7 @@ tex.belowdisplayshortskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.belowdisplayskip = nil
 
 ---
@@ -2104,7 +2104,7 @@ tex.belowdisplayskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.leftskip = nil
 
 ---
@@ -2117,7 +2117,7 @@ tex.leftskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lineskip = nil
 
 ---
@@ -2130,7 +2130,7 @@ tex.lineskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.parfillskip = nil
 
 ---
@@ -2143,7 +2143,7 @@ tex.parfillskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.parskip = nil
 
 ---
@@ -2156,7 +2156,7 @@ tex.parskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.rightskip = nil
 
 ---
@@ -2168,7 +2168,7 @@ tex.rightskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.spaceskip = nil
 
 ---
@@ -2182,7 +2182,7 @@ tex.spaceskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.splittopskip = nil
 
 ---
@@ -2195,7 +2195,7 @@ tex.splittopskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.tabskip = nil
 
 ---
@@ -2208,7 +2208,7 @@ tex.tabskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.topskip = nil
 
 ---
@@ -2220,7 +2220,7 @@ tex.topskip = nil
 ---
 ---@type GlueSpecNode # A readable and writeable glue parameter that accepts and returns a userdata object which in turn represents a `glue_spec` node.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.xspaceskip = nil
 
 _N._10_3_2_5_muglue_parameters = "page 193"
@@ -2234,7 +2234,7 @@ _N._10_3_2_5_muglue_parameters = "page 193"
 ---
 ---@type string # A read-only `muglue` parameter that returns a *Lua* string.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.medmuskip = ""
 
 ---
@@ -2246,7 +2246,7 @@ tex.medmuskip = ""
 ---
 ---@type string # A read-only `muglue` parameter that returns a *Lua* string.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.thickmuskip = ""
 
 ---
@@ -2258,7 +2258,7 @@ tex.thickmuskip = ""
 ---
 ---@type string # A read-only `muglue` parameter that returns a *Lua* string.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.thinmuskip = ""
 
 _N._10_3_2_6_tokenlist_parameters = "page 193"
@@ -2279,7 +2279,7 @@ _N._10_3_2_6_tokenlist_parameters = "page 193"
 ---
 ---@type string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.errhelp = ""
 
 ---
@@ -2298,7 +2298,7 @@ tex.errhelp = ""
 -----
 ---@type string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.everycr = ""
 
 ---
@@ -2317,7 +2317,7 @@ tex.everycr = ""
 ---
 ---@type string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.everydisplay = ""
 
 ---
@@ -2336,7 +2336,7 @@ tex.everydisplay = ""
 ---
 ---@type string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.everyeof = ""
 
 ---
@@ -2354,7 +2354,7 @@ tex.everyeof = ""
 ---
 ---@type string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.everyhbox = ""
 
 ---
@@ -2373,7 +2373,7 @@ tex.everyhbox = ""
 ---
 ---@type string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.everyjob = ""
 
 ---
@@ -2391,7 +2391,7 @@ tex.everyjob = ""
 ---
 ---@type string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.everymath = ""
 
 ---
@@ -2409,7 +2409,7 @@ tex.everymath = ""
 ---
 ---@type string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.everypar = ""
 
 ---
@@ -2427,7 +2427,7 @@ tex.everypar = ""
 ---
 ---@type string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.everyvbox = ""
 
 ---
@@ -2445,7 +2445,7 @@ tex.everyvbox = ""
 ---
 ---@type string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.output = ""
 
 _N._10_3_3_convert_commands = "page 193"
@@ -2453,37 +2453,37 @@ _N._10_3_3_convert_commands = "page 193"
 ---
 ---@type string # for example `2.2`.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.eTeXVersion = ""
 
 ---
 ---@type string # for example `2.2`.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.eTeXrevision = ""
 
 ---
 ---@type string # for example `luatex`.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.formatname = ""
 
 ---
 ---@type string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.jobname = ""
 
 ---
 ---@type string # for example `This is LuaTeX, Version 1.15.1 (TeX Live 2023/dev)`.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.luatexbanner = ""
 
 ---
 ---@type string # for example `1`.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.luatexrevision = ""
 
 _N._10_3_4_last_item_commands = "page 194"
@@ -2492,112 +2492,112 @@ _N._10_3_4_last_item_commands = "page 194"
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lastpenalty = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lastkern = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lastskip = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lastnodetype = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.inputlineno = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lastxpos = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lastypos = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.randomseed = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.luatexversion = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.eTeXminorversion = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.eTeXversion = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.currentgrouplevel = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.currentgrouptype = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.currentiflevel = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.currentiftype = 0
 
 ---
 ---All “last item” commands are read-only and return a number.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.currentifbranch = 0
 
 _N._10_3_5_accessing_registers_set_get_and_is = "page 194"
@@ -2613,7 +2613,7 @@ _N._10_3_5_accessing_registers_set_get_and_is = "page 194"
 ---
 ---@type table
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.attribute = {}
 
 ---
@@ -2623,7 +2623,7 @@ tex.attribute = {}
 ---@param register string|integer # A register number or a predefined csname string from `\attributedef`.
 ---@param value integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setattribute(global, register, value) end
 
 ---
@@ -2632,7 +2632,7 @@ function tex.setattribute(global, register, value) end
 ---@param register string|integer # A register number or a predefined csname string from `\attributedef`.
 ---@param value integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setattribute(register, value) end
 
 ---
@@ -2642,7 +2642,7 @@ function tex.setattribute(register, value) end
 ---
 ---@return integer value
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getattribute(register) end
 
 ---
@@ -2652,7 +2652,7 @@ function tex.getattribute(register) end
 ---@param register string|integer # A register number or a predefined csname string from `\attributedef`.
 ---
 ---@return false|integer
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.isattribute(register) end
 
 ---
@@ -2666,7 +2666,7 @@ function tex.isattribute(register) end
 ---
 ---@type table
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.count = {}
 
 ---
@@ -2676,7 +2676,7 @@ tex.count = {}
 ---@param register string|integer # A register number or a predefined csname string from `\countdef`.
 ---@param value integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setcount(global, register, value) end
 
 ---
@@ -2685,7 +2685,7 @@ function tex.setcount(global, register, value) end
 ---@param register string|integer # A register number or a predefined csname string from `\countdef`.
 ---@param value integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setcount(register, value) end
 
 ---
@@ -2695,7 +2695,7 @@ function tex.setcount(register, value) end
 ---
 ---@return integer value
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getcount(register) end
 
 ---
@@ -2706,7 +2706,7 @@ function tex.getcount(register) end
 ---
 ---@return false|integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.iscount(register) end
 
 ---
@@ -2723,7 +2723,7 @@ function tex.iscount(register) end
 ---
 ---@type table
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.dimen = {}
 
 ---
@@ -2733,7 +2733,7 @@ tex.dimen = {}
 ---@param register string|integer # A register number or a predefined csname string from `\dimendef`.
 ---@param value integer|string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setdimen(global, register, value) end
 
 ---
@@ -2743,7 +2743,7 @@ function tex.setdimen(global, register, value) end
 ---
 ---@return integer value
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getdimen(register) end
 
 ---
@@ -2753,7 +2753,7 @@ function tex.getdimen(register) end
 ---@param register string|integer # A register number or a predefined csname string from `\dimendef`.
 ---
 ---@return false|integer
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.isdimen(register) end
 
 ---
@@ -2768,7 +2768,7 @@ function tex.isdimen(register) end
 ---
 ---@type table
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.glue = {}
 
 ---
@@ -2782,7 +2782,7 @@ tex.glue = {}
 ---@param stretch_order? integer
 ---@param shrink_order? integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setglue(
   global,
   register,
@@ -2804,7 +2804,7 @@ end
 ---@param stretch_order? integer
 ---@param shrink_order? integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setglue(
   register,
   width,
@@ -2826,7 +2826,7 @@ end
 ---@return integer stretch_order
 ---@return integer shrink_order
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getglue(register) end
 
 ---
@@ -2839,7 +2839,7 @@ function tex.getglue(register) end
 ---@param register string|integer # A register number or a predefined csname string from `\skipdef`.
 ---
 ---@return false|integer
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.isglue(register) end
 
 ---
@@ -2851,7 +2851,7 @@ function tex.isglue(register) end
 ---
 ---@type table
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.muglue = {}
 
 ---
@@ -2865,7 +2865,7 @@ tex.muglue = {}
 ---@param stretch_order? integer
 ---@param shrink_order? integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setmuglue(
   global,
   register,
@@ -2887,7 +2887,7 @@ end
 ---@param stretch_order? integer
 ---@param shrink_order? integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setmuglue(
   register,
   width,
@@ -2909,7 +2909,7 @@ end
 ---@return integer stretch_order
 ---@return integer shrink_order
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getmuglue(register) end
 
 ---
@@ -2921,7 +2921,7 @@ function tex.getmuglue(register) end
 ---@param register string|integer # A register number or a predefined csname string from `\muskipdef`.
 ---
 ---@return false|integer
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.ismuglue(register) end
 
 ---
@@ -2933,7 +2933,7 @@ function tex.ismuglue(register) end
 ---
 ---@type table
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.muskip = {}
 
 ---
@@ -2943,7 +2943,7 @@ tex.muskip = {}
 ---@param register string|integer # A register number or a predefined csname string from `\muskipdef`.
 ---@param value Node
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setmuskip(global, register, value) end
 
 ---
@@ -2952,7 +2952,7 @@ function tex.setmuskip(global, register, value) end
 ---@param register string|integer # A register number or a predefined csname string from `\muskipdef`.
 ---@param value Node
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setmuskip(register, value) end
 
 ---
@@ -2962,7 +2962,7 @@ function tex.setmuskip(register, value) end
 ---
 ---@return Node value
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getmuskip(register) end
 
 ---
@@ -2972,7 +2972,7 @@ function tex.getmuskip(register) end
 ---@param register string|integer # A register number or a predefined csname string from `\muskipdef`.
 ---
 ---@return false|integer
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.ismuskip(register) end
 
 ---
@@ -2987,7 +2987,7 @@ function tex.ismuskip(register) end
 ---
 ---@type table
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.skip = {}
 
 ---
@@ -2996,7 +2996,7 @@ tex.skip = {}
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
 ---@param register string|integer # A register number or a predefined csname string from `\skipdef`.
 ---@param skip GlueSpecNode
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setskip(global, register, skip) end
 
 ---
@@ -3004,7 +3004,7 @@ function tex.setskip(global, register, skip) end
 ---
 ---@param register string|integer # A register number or a predefined csname string from `\skipdef`.
 ---@param skip GlueSpecNode
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setskip(register, skip) end
 
 ---
@@ -3013,7 +3013,7 @@ function tex.setskip(register, skip) end
 ---@param register string|integer # A register number or a predefined csname string from `\skipdef`.
 ---
 ---@return GlueSpecNode
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getskip(register) end
 
 ---
@@ -3023,7 +3023,7 @@ function tex.getskip(register) end
 ---@param register string|integer # A register number or a predefined csname string from `\skipdef`.
 ---
 ---@return false|integer
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.isskip(register) end
 
 ---
@@ -3039,7 +3039,7 @@ function tex.isskip(register) end
 ---
 ---@type table
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.toks = {}
 
 ---
@@ -3051,7 +3051,7 @@ tex.toks = {}
 ---@param register string|integer # A register number or a predefined csname string from `\toksdef`.
 ---@param toks string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.settoks(global, register, toks) end
 
 ---
@@ -3063,7 +3063,7 @@ function tex.settoks(global, register, toks) end
 ---
 ---@return string toks
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.gettoks(register) end
 
 ---
@@ -3073,7 +3073,7 @@ function tex.gettoks(register) end
 ---@param register string|integer # A register number or a predefined csname string from `\toksdef`.
 ---
 ---@return false|integer
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.istoks(register) end
 
 ---
@@ -3091,7 +3091,7 @@ function tex.istoks(register) end
 ---@param catcodetable integer
 ---@param toks string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.scantoks(global, register, catcodetable, toks) end
 
 ---
@@ -3104,7 +3104,7 @@ function tex.scantoks(global, register, catcodetable, toks) end
 ---
 ---@return integer|string
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getmark(position, class) end
 
 _N._10_3_6_character_code_registers_get_set_code_s_ = "page 196"
@@ -3162,7 +3162,7 @@ tex.lccode = {}
 ---@param lower_case integer # The Unicode code point for the lowercase variant of the character.
 ---@param upper_case? integer # The Unicode code point for the uppercase variant of the character.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setlccode(global, char_code, lower_case, upper_case) end
 
 ---
@@ -3178,7 +3178,7 @@ function tex.setlccode(global, char_code, lower_case, upper_case) end
 ---@param lower_case integer # The Unicode code point for the lowercase variant of the character.
 ---@param upper_case? integer # The Unicode code point for the uppercase variant of the character.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setlccode(char_code, lower_case, upper_case) end
 
 ---
@@ -3190,7 +3190,7 @@ function tex.setlccode(char_code, lower_case, upper_case) end
 ---@param char_code integer # A Unicode code point for which a lowercase variant of the character should be returned, for example `65` stands for an uppercase `A` and `97` for a lowercase `a`.
 ---
 ---@return integer lower_case # The Unicode code point for the lowercase variant of the character.
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getlccode(char_code) end
 
 ---
@@ -3246,7 +3246,7 @@ tex.uccode = {}
 ---@param upper_case integer # The Unicode code point for the uppercase variant of the character.
 ---@param lower_case? integer # The Unicode code point for the lowercase variant of the character.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setuccode(global, char_code, upper_case, lower_case) end
 
 ---
@@ -3265,7 +3265,7 @@ function tex.setuccode(global, char_code, upper_case, lower_case) end
 ---@see tex.getuccode
 ---@see tex.setlccode
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setuccode(char_code, upper_case, lower_case) end
 
 ---
@@ -3279,7 +3279,7 @@ function tex.setuccode(char_code, upper_case, lower_case) end
 ---@param char_code integer # A Unicode code point for which a uppercase variant of the character should be returned, for example `65` stands for an uppercase `A` and `97` for a lowercase `a`.
 ---
 ---@return integer upper_case # The Unicode code point for the uppercase variant of the character.
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getuccode(char_code) end
 
 ---
@@ -3364,7 +3364,7 @@ tex.sfcode = {}
 ---@param char_code integer # A Unicode code point, for example `65` stands for an uppercase `A` and `97` for a lowercase `a`.
 ---@param space_factor integer # The code (between `0` and `32767`) to adjust the space factor in a horizontal list. The uppercase letters `A-Z` have space factor code `999`. Most other characters have code `1000`.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setsfcode(global, char_code, space_factor) end
 
 ---
@@ -3378,7 +3378,7 @@ function tex.setsfcode(global, char_code, space_factor) end
 ---@param char_code integer # A Unicode code point, for example `65` stands for an uppercase `A` and `97` for a lowercase `a`.
 ---@param space_factor integer # The code (between `0` and `32767`) to adjust the space factor in a horizontal list. The uppercase letters `A-Z` have space factor code `999`. Most other characters have code `1000`.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setsfcode(char_code, space_factor) end
 
 ---
@@ -3392,7 +3392,7 @@ function tex.setsfcode(char_code, space_factor) end
 ---@param char_code integer # A Unicode code point, for example `65` stands for an uppercase `A` and `97` for a lowercase `a`.
 ---
 ---@return integer space_factor # The code (between `0` and `32767`) to adjust the space factor in a horizontal list. The uppercase letters `A-Z` have space factor code `999`. Most other characters have code `1000`.
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getsfcode(char_code) end
 
 ---
@@ -3527,7 +3527,7 @@ function tex.getsfcode(char_code) end
 ---* Corresponding C source code: [ltexlib.c#L3710](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3710)
 ---
 ---@type table<integer, integer>
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.catcode = {}
 
 ---
@@ -3541,7 +3541,7 @@ tex.catcode = {}
 ---@param char_code integer # The character code, for example ASCII or UNICODE character code.
 ---@param cat_code integer # The category code (`0` stands for the escape character, normally `\`, `1` stands for begin grouping, normally `{` and so on).
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setcatcode(global, char_code, cat_code) end
 
 ---
@@ -3574,7 +3574,7 @@ function tex.setcatcode(global, char_code, cat_code) end
 ---
 ---@param char_code integer # The character code, for example ASCII or UNICODE character code.
 ---@param cat_code integer # The category code (`0` stands for the escape character, normally `\`, `1` stands for begin grouping, normally `{` and so on).
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setcatcode(char_code, cat_code) end
 
 ---
@@ -3609,7 +3609,7 @@ function tex.setcatcode(char_code, cat_code) end
 ---@param cat_table integer
 ---@param char_code integer # The character code, for example ASCII or UNICODE character code.
 ---@param cat_code integer # The category code (`0` stands for the escape character, normally `\`, `1` stands for begin grouping, normally `{` and so on).
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setcatcode(global, cat_table, char_code, cat_code) end
 
 ---
@@ -3643,7 +3643,7 @@ function tex.setcatcode(global, cat_table, char_code, cat_code) end
 ---@param cat_table integer
 ---@param char_code integer # The character code, for example ASCII or UNICODE character code.
 ---@param cat_code integer # The category code (`0` stands for the escape character, normally `\`, `1` stands for begin grouping, normally `{` and so on).
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setcatcode(global, cat_table, char_code, cat_code) end
 
 ---
@@ -3674,7 +3674,7 @@ function tex.setcatcode(global, cat_table, char_code, cat_code) end
 ---@param char_code integer # The character code, for example ASCII or UNICODE character code.
 ---
 ---@return integer cat_code # The category code (`0` stands for the escape character, normally `\`, `1` stands for begin grouping, normally `{` and so on).
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getcatcode(cat_table, char_code) end
 
 ---
@@ -3914,7 +3914,7 @@ function tex.getcatcode(cat_table, char_code) end
 ---* [tex.stackexchange.com](https://tex.stackexchange.com/a/109440)
 ---
 ---@type table<integer, MathCode>
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.mathcode = {}
 
 ---
@@ -4080,7 +4080,7 @@ tex.mathcode = {}
 ---@param class integer # The class to which a math character belongs (`0`: Ordinary, `1`: Large operator, `2`: Binary operation, `3`: Relation, `4`: Opening, `5`: Closing, `6`: Punctuation, `7`: Variable family).
 ---@param family integer # TeX uses fonts from one or more of the sixteen font families to typeset mathematical characters. Each font family consists of three fonts — textfont, scriptfont, and scriptscriptfont. (`0`: Roman, `1`: Math italic, `2`: Math symbol, `3`: Math extension, `4`: Italic text, `5`: Slanted text, `6`: Bold text, `7`: Typewriter)
 ---@param character integer # The character position
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setmathcode(global, char_code, class, family, character) end
 
 ---
@@ -4233,7 +4233,7 @@ function tex.setmathcode(global, char_code, class, family, character) end
 ---@param class integer # The class to which a math character belongs (`0`: Ordinary, `1`: Large operator, `2`: Binary operation, `3`: Relation, `4`: Opening, `5`: Closing, `6`: Punctuation, `7`: Variable family).
 ---@param family integer # TeX uses fonts from one or more of the sixteen font families to typeset mathematical characters. Each font family consists of three fonts — textfont, scriptfont, and scriptscriptfont. (`0`: Roman, `1`: Math italic, `2`: Math symbol, `3`: Math extension, `4`: Italic text, `5`: Slanted text, `6`: Bold text, `7`: Typewriter)
 ---@param character integer # The character position
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setmathcode(global, char_code, class, family, character) end
 
 ---
@@ -4245,7 +4245,7 @@ function tex.setmathcode(global, char_code, class, family, character) end
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
 ---@param char_code integer # The ASCII or UNICODE charcater code point.
 ---@param math_code MathCode # A table with three integers (class, family, character).
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setmathcode(global, char_code, math_code) end
 
 ---
@@ -4256,7 +4256,7 @@ function tex.setmathcode(global, char_code, math_code) end
 ---
 ---@param char_code integer  # The ASCII or UNICODE charcater code point.
 ---@param math_code MathCode # A table with three integers (class, family, character).
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setmathcode(char_code, math_code) end
 
 ---
@@ -4296,7 +4296,7 @@ function tex.setmathcode(char_code, math_code) end
 ---@param char_code integer
 ---
 ---@return MathCode math_code # A table with three integers (class, family, character).
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getmathcode(char_code) end
 
 ---
@@ -4475,7 +4475,7 @@ function tex.getmathcode(char_code) end
 ---@return integer class # The class to which a math character belongs (`0`: Ordinary, `1`: Large operator, `2`: Binary operation, `3`: Relation, `4`: Opening, `5`: Closing, `6`: Punctuation, `7`: Variable family).
 ---@return integer family # TeX uses fonts from one or more of the sixteen font families to typeset mathematical characters. Each font family consists of three fonts — textfont, scriptfont, and scriptscriptfont. (`0`: Roman, `1`: Math italic, `2`: Math symbol, `3`: Math extension, `4`: Italic text, `5`: Slanted text, `6`: Bold text, `7`: Typewriter)
 ---@return integer character # The character position
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getmathcodes(char_code) end
 
 ---
@@ -4537,7 +4537,7 @@ function tex.getmathcodes(char_code) end
 ---* Corresponding plain TeX control sequence: [\delcode](https://www.tug.org/utilities/plain/cseq.html#delcode-rp)
 ---
 ---@type table<integer, DelCode>
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.delcode = {}
 
 ---
@@ -4552,7 +4552,7 @@ tex.delcode = {}
 ---}
 ---```
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias DelCode integer[]
 
 ---
@@ -4567,7 +4567,7 @@ tex.delcode = {}
 ---@param small_character integer
 ---@param large_family integer
 ---@param large_character integer
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setdelcode(
   global,
   char_code,
@@ -4589,7 +4589,7 @@ end
 ---@param small_character integer
 ---@param large_family integer
 ---@param large_character integer
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setdelcode(
   char_code,
   small_family,
@@ -4606,7 +4606,7 @@ end
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
 ---@param char_code integer
 ---@param del_code DelCode
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setdelcode(global, char_code, del_code) end
 
 ---
@@ -4617,7 +4617,7 @@ function tex.setdelcode(global, char_code, del_code) end
 ---
 ---@param char_code integer
 ---@param del_code DelCode
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setdelcode(char_code, del_code) end
 
 ---
@@ -4630,7 +4630,7 @@ function tex.setdelcode(char_code, del_code) end
 ---@return integer small_character
 ---@return integer large_family
 ---@return integer large_character
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getdelcodes(char_code) end
 
 ---
@@ -4642,7 +4642,7 @@ function tex.getdelcodes(char_code) end
 ---@param char_code integer
 ---
 ---@return DelCode
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getdelcode(char_code) end
 
 _N._10_3_7_box_registers_get_set_box = "page 197"
@@ -4667,7 +4667,7 @@ tex.box = {}
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
 ---@param register integer # A box register number (0 to 65535).
 ---@param head Node # A `hlist` or `vlist` node.
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setbox(global, register, head) end
 
 ---
@@ -4680,7 +4680,7 @@ function tex.setbox(global, register, head) end
 ---
 ---@param register integer # A box register number (0 to 65535).
 ---@param head Node # A `hlist` or `vlist` node.
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setbox(register, head) end
 
 ---
@@ -4694,7 +4694,7 @@ function tex.setbox(register, head) end
 ---@param register integer|string # A box register number (0 to 65535) or a cs name (for example `\newbox\MyBox`: `MyBox`)
 ---
 ---@return Node|nil head
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getbox(register) end
 
 ---
@@ -4714,7 +4714,7 @@ function tex.getbox(register) end
 ---@param register integer|string # A box register number (0 to 65535) or a cs name (for example `\newbox\MyBox`: `MyBox`)
 ---
 ---@return boolean
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.isbox(register) end
 
 _N._10_3_8_reusing_boxes = "page 198"
@@ -4737,7 +4737,7 @@ _N._10_3_8_reusing_boxes = "page 198"
 ---
 ---@return integer index
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.saveboxresource(
   n,
   attributes,
@@ -4754,7 +4754,7 @@ end
 ---@param n integer
 ---
 ---@return Node
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getboxresourcebox(n) end
 
 ---
@@ -4775,7 +4775,7 @@ function tex.getboxresourcebox(n) end
 ---@return integer|nil width
 ---@return integer|nil height
 ---@return integer|nil depth
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.useboxresource(n, width, height, depth) end
 
 ---
@@ -4792,7 +4792,7 @@ function tex.useboxresource(n, width, height, depth) end
 ---@return integer|nil height
 ---@return integer|nil depth
 ---@return integer|nil margin
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getboxresourcedimensions(n) end
 
 _N._10_3_9_triggerbuildpage = "page 198"
@@ -4807,7 +4807,7 @@ _N._10_3_9_triggerbuildpage = "page 198"
 ---
 ---* Corresponding C source code: [ltexlib.c#L3357-L3361](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3357-L3361)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.triggerbuildpage() end
 
 _N._10_3_10_splitbox = "page 198"
@@ -4825,7 +4825,7 @@ _N._10_3_10_splitbox = "page 198"
 ---@param mode 'additional' | 'exactly'
 ---
 ---@return Node|nil vlist
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.splitbox(n, height, mode) end
 
 _N._10_3_11_accessing_math = "page 198"
@@ -4838,7 +4838,7 @@ _N._10_3_11_accessing_math = "page 198"
 ---@param math_param_name MathParamName
 ---@param math_style_name MathStyleName
 ---@param value integer
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setmath(math_param_name, math_style_name, value) end
 
 ---
@@ -4850,7 +4850,7 @@ function tex.setmath(math_param_name, math_style_name, value) end
 ---@param math_param_name MathParamName
 ---@param math_style_name MathStyleName
 ---@param value integer|Node # The value is either a number (representing a dimension or number) or a glue spec node representing a muskip for `ordordspacing` and similar spacing parameters.
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setmath(global, math_param_name, math_style_name, value) end
 
 ---
@@ -4863,7 +4863,7 @@ function tex.setmath(global, math_param_name, math_style_name, value) end
 ---
 ---@return integer|Node value # The value is either a number (representing a dimension or number) or a glue spec node representing a muskip for `ordordspacing` and similar spacing parameters.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getmath(math_param_name, math_style_name) end
 
 ---
@@ -4871,7 +4871,7 @@ function tex.getmath(math_param_name, math_style_name) end
 ---
 ---* Corresponding C source code: [texmath.c#L510-L516](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/texmath.c#L510-L516)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias MathStyleName
 ---|'display'
 ---|'crampeddisplay'
@@ -4887,7 +4887,7 @@ function tex.getmath(math_param_name, math_style_name) end
 ---
 ---* Corresponding C source code: [texmath.c#L518-L558](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/texmath.c#L518-L558)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias MathParamName
 ---|'quad'
 ---|'axis'
@@ -5013,55 +5013,55 @@ _N._10_3_12_special_list_heads_get_set_list = "page 200"
 ---
 ---* Corresponding C source code: [ltexlib.c#L3713](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3713)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lists = {}
 
 ---
 ---circular list of pending insertions
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lists.page_ins_head = nil
 
 ---
 ---the recent contributions
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lists.contrib_head = nil
 
 ---
 ---the current page content
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lists.page_head = nil
 
 ---
 ---used for held-over items for next page
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lists.hold_head = nil
 
 ---
 ---head of the current `vadjust` list
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lists.adjust_head = nil
 
 ---
 ---head of the current `\vadjust pre` list
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lists.pre_adjust_head = nil
 
 ---
 ---head of the discarded items of a page break
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lists.page_discards_head = nil
 
 ---
 ---head of the discarded items in a vsplit
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.lists.split_discards_head = nil
 
 ---
@@ -5071,13 +5071,13 @@ tex.lists.split_discards_head = nil
 ---
 ---* Corresponding C source code: [ltexlib.c#L2266-L2321](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2266-L2321)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setlist() end
 
 ---
 ---* Corresponding C source code: [ltexlib.c#L2202-L2264](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2202-L2264)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getlist() end
 
 _N._10_3_13_semantic_nest_levels_getnest_and_ptr = "page 200"
@@ -5099,7 +5099,7 @@ _N._10_3_13_semantic_nest_levels_getnest_and_ptr = "page 200"
 ---
 ---@type table<integer, Nest>
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.nest = {}
 
 ---
@@ -5107,7 +5107,7 @@ tex.nest = {}
 ---available index.
 ---@type integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 tex.nest.ptr = 0
 
 ---
@@ -5120,19 +5120,19 @@ tex.nest.ptr = 0
 ---
 ---@return Nest
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getnest() end
 
 ---
 ---* Corresponding C source code: [ltexlib.c#L2457-L2461](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2457-L2461)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.setnest() end
 
 ---
 ---* Corresponding C source code: [ltexlib.c#L2325-L2361](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2325-L2361)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@class Nest
 ---@field mode number # the meaning of these numbers depends on the engine and sometimes even the version; you can use `tex.getmodevalues()` to get the mapping: positive values signal vertical, horizontal and math mode, while negative values indicate inner and inline variants (all modes).
 ---@field modeline integer # source input line where this mode was entered in, negative inside the output routine (all modes).
@@ -5153,7 +5153,7 @@ function tex.setnest() end
 ---
 ---* Corresponding C source code: [ltexlib.c#L3549-L3565](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3549-L3565)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getmodevalues() end
 
 _N._10_3_14_print = "page 201"
@@ -5177,7 +5177,7 @@ _N._10_3_14_1_print = "page 201"
 ---@see tex.cprint
 ---@see tex.write
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.print(input_line, ...) end
 
 ---
@@ -5196,7 +5196,7 @@ function tex.print(input_line, ...) end
 ---@see tex.cprint
 ---@see tex.write
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.print(catcodetable_no, input_line, ...) end
 
 ---
@@ -5218,7 +5218,7 @@ function tex.print(catcodetable_no, input_line, ...) end
 ---@see tex.cprint
 ---@see tex.write
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.print(input_lines) end
 
 ---
@@ -5237,7 +5237,7 @@ function tex.print(input_lines) end
 ---@see tex.cprint
 ---@see tex.write
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.print(catcodetable_no, input_lines) end
 
 ---
@@ -5309,7 +5309,7 @@ function tex.print(catcodetable_no, input_lines) end
 ---@see tex.cprint
 ---@see tex.write
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.sprint(input, ...) end
 
 ---
@@ -5326,7 +5326,7 @@ function tex.sprint(input, ...) end
 ---@see tex.cprint
 ---@see tex.write
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.sprint(catcodetable_no, input, ...) end
 
 ---
@@ -5343,7 +5343,7 @@ function tex.sprint(catcodetable_no, input, ...) end
 ---@see tex.cprint
 ---@see tex.write
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.sprint(input) end
 
 ---
@@ -5359,7 +5359,7 @@ function tex.sprint(input) end
 ---@see tex.cprint
 ---@see tex.write
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.sprint(catcodetable_no, input) end
 
 ---
@@ -5393,7 +5393,7 @@ function tex.sprint(catcodetable_no, input) end
 ---@see tex.cprint
 ---@see tex.write
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.tprint(input, ...) end
 
 ---
@@ -5422,7 +5422,7 @@ function tex.tprint(input, ...) end
 ---@see tex.tprint
 ---@see tex.write
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.cprint(catcode, input, ...) end
 
 ---
@@ -5440,7 +5440,7 @@ function tex.cprint(catcode, input, ...) end
 ---@see tex.tprint
 ---@see tex.write
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.cprint(catcode, input) end
 
 ---
@@ -5465,7 +5465,7 @@ function tex.cprint(catcode, input) end
 ---@see tex.tprint
 ---@see tex.cprint
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.write(input, ...) end
 
 ---
@@ -5489,7 +5489,7 @@ function tex.write(input, ...) end
 ---@see tex.tprint
 ---@see tex.cprint
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.write(input) end
 
 _N._10_3_15 = "page 203"
@@ -5509,7 +5509,7 @@ _N._10_3_15_1 = "page 203"
 ---
 ---@return integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.round(o) end
 
 _N._10_3_15_2 = "page 203"
@@ -5534,7 +5534,7 @@ _N._10_3_15_2 = "page 203"
 ---
 ---@return number
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.scale(o, delta) end
 
 ---
@@ -5543,7 +5543,7 @@ function tex.scale(o, delta) end
 ---
 ---@return table
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.scale(o, delta) end
 
 _N._15_3 = "page 204"
@@ -5560,7 +5560,7 @@ _N._15_3 = "page 204"
 ---
 ---@return integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.number(n) end
 
 ---
@@ -5574,7 +5574,7 @@ function tex.number(n) end
 ---
 ---@return string # for example `mmxxv`
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.romannumeral(n) end
 
 _N._10_3_15_4 = "page 204"
@@ -5591,7 +5591,7 @@ _N._10_3_15_4 = "page 204"
 ---
 ---@return string # for example `\tenrm`.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.fontidentifier(font_id) end
 
 ---
@@ -5605,7 +5605,7 @@ function tex.fontidentifier(font_id) end
 ---
 ---@return string # for example `cmr10`.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.fontname(font_id) end
 
 _N._10_3_15_5_sp = "page 204"
@@ -5624,7 +5624,7 @@ _N._10_3_15_5_sp = "page 204"
 ---
 ---@return integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.sp(o) end
 
 ---
@@ -5656,7 +5656,7 @@ function tex.sp(o) end
 ---
 ---@return integer # The dimension in the scaled points format.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.sp(s) end
 
 _N._10_3_15_6 = "page 204"
@@ -5681,7 +5681,7 @@ _N._10_3_15_7_error_show_context = "page 204"
 ---@param message string # An error message like `\errmessage`.
 ---@param help? table # The array part of the `help` table has to contain strings, one for each line of error help.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.error(message, help) end
 
 ---
@@ -5692,7 +5692,7 @@ function tex.error(message, help) end
 ---
 ---* Corresponding C source code: [ltexlib.c#L3210-L3215](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3210-L3215)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.show_context() end
 
 _N._10_3_15_8_run_finish = "page 205"
@@ -5712,7 +5712,7 @@ _N._10_3_15_8_run_finish = "page 205"
 ---
 ---* Source file of the `LuaTeX` manual: [luatex-tex.tex#L1459-L1470](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-tex.tex#L1459-L1470)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.run() end
 
 ---
@@ -5722,7 +5722,7 @@ function tex.run() end
 ---
 ---* Source file of the `LuaTeX` manual: [luatex-tex.tex#L1464](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-tex.tex#L1464)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.finish() end
 
 _N._10_3_15_9_runtoks = "page 205"
@@ -5770,13 +5770,13 @@ _N._10_3_15_9_runtoks = "page 205"
 ---@param force? boolean # force the local main loop
 ---@param grouped? boolean # adds a level of grouping.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.runtoks(token_register, force, grouped) end
 
 ---
 ---@param func function
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.runtoks(func) end
 
 ---
@@ -5785,7 +5785,7 @@ function tex.runtoks(func) end
 ---end that can mean that you arrive at the main level in which case an extra end
 ---will trigger a redundancy warning (not an abort!).
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.quittoks() end
 
 _N._10_3_15_10_forcehmode = "page 205"
@@ -5800,7 +5800,7 @@ _N._10_3_15_10_forcehmode = "page 205"
 ---
 ---@param indented? boolean
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.forcehmode(indented) end
 
 _N._10_3_15_11_hashtokens = "page 205"
@@ -5821,7 +5821,7 @@ _N._10_3_15_11_hashtokens = "page 205"
 ---
 ---* Corresponding C source code: [ltexlib.c#L2662-L2690](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2662-L2690)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.hashtokens() end
 
 _N._10_3_15_12_definefont = "page 206"
@@ -5834,7 +5834,7 @@ _N._10_3_15_12_definefont = "page 206"
 ---@param csname string
 ---@param fontid integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.definefont(csname, fontid) end
 
 ---
@@ -5846,7 +5846,7 @@ function tex.definefont(csname, fontid) end
 ---@param csname string
 ---@param fontid integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.definefont(global, csname, fontid) end
 
 _N._10_3_16_primitives = "page 206"
@@ -5904,7 +5904,7 @@ _N._10_3_16_1_enableprimitives = "page 206"
 ---@param prefix string
 ---@param primitive_names string[]
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.enableprimitives(prefix, primitive_names) end
 
 _N._10_3_16_2_extraprimitives = "page 205"
@@ -5937,7 +5937,7 @@ _N._10_3_16_2_extraprimitives = "page 205"
 ---
 ---@return string[]
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.extraprimitives(...) end
 
 _N._10_3_16_3_primitives = "page 210"
@@ -5949,7 +5949,7 @@ _N._10_3_16_3_primitives = "page 210"
 ---
 ---@return string[]
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.primitives() end
 
 _N._10_3_17_core_functionality_interfaces = "page 210"
@@ -5970,7 +5970,7 @@ _N._10_3_17_1_badness = "page 210"
 ---@param sum integer # scaled values
 ---
 ---@return integer badness
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.badness(total, sum) end
 
 _N._10_3_17_2_resetparagraph = "page 210"
@@ -5981,13 +5981,13 @@ _N._10_3_17_2_resetparagraph = "page 210"
 ---
 ---* Corresponding C source code: [ltexlib.c#L3054-L3059](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3054-L3059)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.resetparagraph() end
 
 _N._10_3_17_3_linebreak = "page 210"
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@class LinebreakParameters
 ---@field pardir string
 ---@field pretolerance integer
@@ -6060,27 +6060,27 @@ _N._10_3_17_3_linebreak = "page 210"
 ---@return Node
 ---@return table
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.linebreak(listhead, parameters) end
 
 ---
 ---Ships out box number `n` to the output file, and clears the box register.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.shipout() end
 
 ---
 ---This helper reports the current page state: `empty`, `box_there` or
 ---`inserts_only` as integer value.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getpagestate() end
 
 ---
 ---This integer reports the current level of the local loop. It's only useful for
 ---debugging and the (relative state) numbers can change with the implementation.
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.getlocallevel() end
 
 _N._10_3_18_randomizers = "page 212"
@@ -6101,7 +6101,7 @@ _N._10_3_18_randomizers = "page 212"
 ---
 ---@param seed integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.init_rand(seed) end
 
 ---
@@ -6120,7 +6120,7 @@ function tex.init_rand(seed) end
 ---initialize with a new seed with `lua_math_randomseed` (`init_rand` is
 ---equivalent to this one.)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.lua_math_randomseed(seed) end
 
 ---
@@ -6133,7 +6133,7 @@ function tex.lua_math_randomseed(seed) end
 ---@param upper number
 ---
 ---@return number
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.lua_math_random(lower, upper) end
 
 ---
@@ -6145,7 +6145,7 @@ function tex.lua_math_random(lower, upper) end
 ---@param upper? number
 ---
 ---@return number
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.lua_math_random(upper) end
 
 ---
@@ -6153,7 +6153,7 @@ function tex.lua_math_random(upper) end
 ---
 ---* Corresponding C source code: [ltexlib.c#L3156-L3160](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3156-L3160)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.normal_rand() end
 
 ---
@@ -6161,7 +6161,7 @@ function tex.normal_rand() end
 ---
 ---* Corresponding C source code: [ltexlib.c#L3144-L3154](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3144-L3154)
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.uniform_rand() end
 
 ---
@@ -6177,13 +6177,13 @@ function tex.uniform_rand() end
 ---
 ---@param n integer a scaled integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.uniformdeviate(n) end
 
 _N._10_3_19_synctex = "page 212"
 
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 ---@alias SyntexMode
 ---|0 # is the default and used normal synctex logic
 ---|1 # uses the values set by the next helpers
@@ -6196,7 +6196,7 @@ _N._10_3_19_synctex = "page 212"
 ---
 ---@param mode SyntexMode
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.set_synctex_mode(mode) end
 
 ---
@@ -6206,7 +6206,7 @@ function tex.set_synctex_mode(mode) end
 ---
 ---@return SyntexMode mode
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.get_synctex_mode() end
 
 ---
@@ -6216,7 +6216,7 @@ function tex.get_synctex_mode() end
 ---
 ---@param tag integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.set_synctex_tag(tag) end
 
 ---
@@ -6226,7 +6226,7 @@ function tex.set_synctex_tag(tag) end
 ---
 ---@return integer tag
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.get_synctex_tag() end
 
 ---
@@ -6236,7 +6236,7 @@ function tex.get_synctex_tag() end
 ---
 ---@param tag integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.force_synctex_tag(tag) end
 
 ---
@@ -6246,7 +6246,7 @@ function tex.force_synctex_tag(tag) end
 ---
 ---@param line integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.set_synctex_line(line) end
 
 ---
@@ -6255,7 +6255,7 @@ function tex.set_synctex_line(line) end
 ---* Corresponding C source code: [ltexlib.c#L3423-L3427](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3423-L3427)
 ---
 ---@return integer line
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.get_synctex_line() end
 
 ---
@@ -6265,7 +6265,7 @@ function tex.get_synctex_line() end
 ---
 ---@param line integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.force_synctex_line(line) end
 
 ---
@@ -6275,5 +6275,5 @@ function tex.force_synctex_line(line) end
 ---
 ---@param flag integer
 ---
----😱 [Types](https://github.com/TeXLuaCATS/LuaTeX/blob/main/library/tex.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/TeXLuaCATS/LuaTeX/pulls)
+---{{ contribute }}
 function tex.set_synctex_no_files(flag) end
