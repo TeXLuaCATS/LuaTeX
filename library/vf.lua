@@ -27,17 +27,20 @@ _N._6_4_the_vf_library = "page 97"
 ---@meta
 
 ---
----The `vf` library can be used when *Lua* code, as defined in the `commands` of the font, is executed. The functions provided are similar as the
----commands: `char`, `down`, `fontid`, `image`, `node`, `nop`, `pop`, `push`, `right`, `rule`, `special` and `pdf`. This library has been present for a while but not been
----advertised and tested much, if only because it's easy to define an invalid font
----(or mess up the *PDF* stream). Keep in mind that the *Lua* snippets are executed
----each time when a character is output.
+---The `vf` library can be used when *Lua* code, as defined in the `commands` of
+---the font, is executed. The functions provided are similar as the commands:
+---`char`, `down`, `fontid`, `image`, `node`, `nop`, `pop`, `push`, `right`,
+---`rule`, `special` and `pdf`. This library has been present for a while but
+---not been advertised and tested much, if only because it's easy to define an
+---invalid font (or mess up the *PDF* stream). Keep in mind that the *Lua*
+---snippets are executed each time when a character is output.
 ---
 ---{{ contribute }}
 vf = {}
 
 ---
----Typeset a character from the current font, and move right by the character’s width.
+---Typeset a character from the current font, and move right by the character’s
+---width.
 ---
 ---__Reference:__
 ---
@@ -71,7 +74,8 @@ function vf.down(down) end
 function vf.fontid(fontid) end
 
 ---
----Output an image (the argument can be either an `image` variable or an `image_spec` table)
+---Output an image (the argument can be either an `image` variable or an
+---`image_spec` table)
 ---
 ---__Reference:__
 ---
@@ -83,8 +87,7 @@ function vf.fontid(fontid) end
 function vf.image(image) end
 
 ---
----Output this node (list), and move right by the width of
----this list.
+---Output this node (list), and move right by the width of this list.
 ---
 ---__Reference:__
 ---
@@ -165,8 +168,8 @@ function vf.special(special) end
 ---
 ---Output a pdf literal.
 ---
----The first string is one of `origin`,
----`page`, `text`, `font`, `direct` or `raw`
+---The first string is one of `origin`, `page`, `text`, `font`, `direct` or
+---`raw`
 ---
 ---__Reference:__
 ---
@@ -182,8 +185,7 @@ function vf.pdf(mode, general_text) end
 ---
 ---Output a pdf literal.
 ---
----If you have one string
----only `origin` is assumed.
+---If you have one string only `origin` is assumed.
 ---
 ---__Reference:__
 ---

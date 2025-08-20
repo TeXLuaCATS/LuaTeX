@@ -25,10 +25,10 @@ _N = {}
 ---@meta
 
 ---
----The font library provides the interface into the internals of the font system,
----and it also contains helper functions to load traditional *TeX* font metrics
----formats. Other font loading functionality is provided by the `fontloader`
----library that will be discussed in the next section.
+---The font library provides the interface into the internals of the font
+---system, and it also contains helper functions to load traditional *TeX* font
+---metrics formats. Other font loading functionality is provided by the
+---`fontloader` library that will be discussed in the next section.
 ---
 ---{{ contribute }}
 font = {}
@@ -38,11 +38,11 @@ _N._6_1_font_tables = "page 87"
 _N._class_Font = 87
 
 ---
----All *TeX* fonts are represented to *Lua* code as tables, and internally as
----*C code* structures. All keys in the table below are saved in the internal font
+---All *TeX* fonts are represented to *Lua* code as tables, and internally as *C
+---code* structures. All keys in the table below are saved in the internal font
 ---structure if they are present in the table returned by the `define_font`
----callback, or if they result from the normal *tfm*/*vf* reading routines if there
----is no `define_font` callback defined.
+---callback, or if they result from the normal *tfm*/*vf* reading routines if
+---there is no `define_font` callback defined.
 ---
 ---{{ contribute }}
 ---@class Font
@@ -115,15 +115,14 @@ _N._class_TfmFont = 87
 _N._alias_FontDirection = 89
 
 ---
----The `direction` is a number
----signalling the “normal” direction for this font. There are sixteen
----possibilities.
+---The `direction` is a number signalling the “normal” direction for this font.
+---There are sixteen possibilities.
 ---
----These are *Omega*-style direction abbreviations: the first character indicates
----the “first” edge of the character glyphs (the edge that is seen first in
----the writing direction), the second the “top” side. Keep in mind that
----*LuaTeX* has a bit different directional model so these values are not used for
----anything.
+---These are *Omega*-style direction abbreviations: the first character
+---indicates the “first” edge of the character glyphs (the edge that is seen
+---first in the writing direction), the second the “top” side. Keep in mind that
+---*LuaTeX* has a bit different directional model so these values are not used
+---for anything.
 ---
 ---{{ contribute }}
 ---@alias FontDirection
@@ -148,9 +147,9 @@ _N._alias_FontParameterKey = 89
 
 ---
 ---The `parameters` is a hash with mixed key types. There are seven possible
----string keys, as well as a number of integer indices (these start from 8 up). The
----seven strings are actually used instead of the bottom seven indices, because that
----gives a nicer user interface.
+---string keys, as well as a number of integer indices (these start from 8 up).
+---The seven strings are actually used instead of the bottom seven indices,
+---because that gives a nicer user interface.
 ---
 ---The names and their internal remapping are:
 ---
@@ -351,8 +350,8 @@ function font.read_tfm(name, at_size) end
 function font.read_vf(name, at_size) end
 
 ---
----The whole table of *TeX* fonts is accessible from *Lua* using a virtual array.
----Because this is a virtual array, you cannot call `pairs` on it
+---The whole table of *TeX* fonts is accessible from *Lua* using a virtual
+---array. Because this is a virtual array, you cannot call `pairs` on it
 ---
 ---{{ contribute }}
 font.fonts = {}
@@ -373,7 +372,8 @@ function font.setfont(font_id, f) end
 ---
 ---Fetch an internal font id as a Lua table.
 ---
----Note that at the moment, each access to the `font.fonts` or call to `font.getfont` creates a *Lua* table for the whole font unless you cached it.
+---Note that at the moment, each access to the `font.fonts` or call to
+---`font.getfont` creates a *Lua* table for the whole font unless you cached it.
 ---
 ---__Reference:__
 ---
@@ -401,8 +401,8 @@ function font.getfont(font_id) end
 function font.getcopy(font_id) end
 
 ---
----Return a table of the parameters as known to *TeX*. These can be
----different from the ones in the cached table.
+---Return a table of the parameters as known to *TeX*. These can be different
+---from the ones in the cached table.
 ---
 ---__Reference:__
 ---
@@ -420,8 +420,8 @@ function font.getparameters(font_id) end
 ---
 ---Return true if the font is frozen and can no longer be altered.
 ---
----The return value is one of `true` (unassignable), `false` (can be
----changed) or `nil` (not a valid font at all).
+---The return value is one of `true` (unassignable), `false` (can be changed) or
+---`nil` (not a valid font at all).
 ---
 ---__Reference:__
 ---
@@ -464,13 +464,13 @@ function font.define(font_id, f) end
 ---
 ---Add characters to a font.
 ---
----The table passed can have the fields `characters` which is a (sub)table
----like the one used in `font.define()`, and for virtual fonts a `fonts` table can be
+---The table passed can have the fields `characters` which is a (sub)table like
+---the one used in `font.define()`, and for virtual fonts a `fonts` table can be
 ---added. The characters defined in the `characters` table are added (when not
----yet present) or replace an existing entry. Keep in mind that replacing can have
----side effects because a character already can have been used. Instead of posing
----restrictions we expect the user to be careful. (The `setfont` helper is
----a more drastic replacer.)
+---yet present) or replace an existing entry. Keep in mind that replacing can
+---have side effects because a character already can have been used. Instead of
+---posing restrictions we expect the user to be careful. (The `setfont` helper
+---is a more drastic replacer.)
 ---
 ---__Example:__
 ---
@@ -505,13 +505,13 @@ function font.addcharacters(font_id, f) end
 ---
 ---Return the next free font id number.
 ---
----Return the font id number that would be returned by a `font.define`
----call if it was executed at this spot in the code flow.
+---Return the font id number that would be returned by a `font.define` call if
+---it was executed at this spot in the code flow.
 ---
----This is useful for virtual
----fonts that need to reference themselves. If you pass `true` as argument,
----the id gets reserved and you can pass to `font.define` as first argument.
----This can be handy when you create complex virtual fonts.
+---This is useful for virtual fonts that need to reference themselves. If you
+---pass `true` as argument, the id gets reserved and you can pass to
+---`font.define` as first argument. This can be handy when you create complex
+---virtual fonts.
 ---
 ---__Reference:__
 ---
@@ -525,7 +525,8 @@ function font.nextid() end
 ---
 ---Return the font id of the font accessed by the csname given.
 ---
----Return the font id associated with `csname`, or `-1` if `csname` is not defined.
+---Return the font id associated with `csname`, or `-1` if `csname` is not
+---defined.
 ---
 ---__Reference:__
 ---
@@ -581,8 +582,9 @@ function font.current(font_id) end
 ---
 ---This is an iterator over each of the defined *TeX* fonts. The first returned
 ---value is the index in `font.fonts`, the second the font itself, as a *Lua*
----table. The indices are listed incrementally, but they do not always form an array
----of consecutive numbers: in some cases there can be holes in the sequence.
+---table. The indices are listed incrementally, but they do not always form an
+---array of consecutive numbers: in some cases there can be holes in the
+---sequence.
 ---
 ---__Example:__
 ---
@@ -604,15 +606,15 @@ function font.each() end
 
 ---
 ---Because we store the actual state of expansion with each glyph and don't have
----special font instances, we can change some font related parameters before lines
----are constructed, like:
+---special font instances, we can change some font related parameters before
+---lines are constructed, like:
 ---
 ---```lua
 ---font.setexpansion(font.current(),100,100,20)
 ---```
 ---
----This is mostly meant for experiments (or an optimizing routing written in *Lua*)
----so there is no primitive.
+---This is mostly meant for experiments (or an optimizing routing written in
+---*Lua*) so there is no primitive.
 ---
 ---__Reference:__
 ---

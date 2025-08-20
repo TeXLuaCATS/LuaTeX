@@ -25,8 +25,8 @@ _N = {}
 ---@meta
 
 ---
----The `texio` library takes care of the low-level I/O interface: writing to the log file
----and/or console.
+---The `texio` library takes care of the low-level I/O interface: writing to the
+---log file and/or console.
 ---
 ---{{ contribute }}
 texio = {}
@@ -35,7 +35,8 @@ _N._10_5_the_texio_library = "page 214"
 _N._10_5_1_write = "page 214"
 
 ---
----The optional `target` can be one of three possibilities: `term`, `log` or `term and log`.
+---The optional `target` can be one of three possibilities: `term`, `log` or
+---`term and log`.
 ---@alias WriteTarget
 ---|'term'
 ---|'log'
@@ -55,12 +56,11 @@ _N._10_5_1_write = "page 214"
 function texio.write(target, ...) end
 
 ---
----Write all given strings to the same
----location(s) *TeX* writes messages to at this moment.
+---Write all given strings to the same location(s) *TeX* writes messages to at
+---this moment.
 ---
----If `batchmode` is in
----effect, it writes only to the log, otherwise it writes to the log and the
----terminal.
+---If `batchmode` is in effect, it writes only to the log, otherwise it writes
+---to the log and the terminal.
 ---
 ---__Reference:__
 ---
@@ -76,8 +76,8 @@ _N._10_5_2_write_nl = "page 214"
 ---
 ---Write all given strings to a target.
 ---
----It makes sure that the given
----strings will appear at the beginning of a new line.
+---It makes sure that the given strings will appear at the beginning of a new
+---line.
 ---
 ---__Reference:__
 ---
@@ -90,13 +90,13 @@ _N._10_5_2_write_nl = "page 214"
 function texio.write_nl(target, ...) end
 
 ---
----Write all given strings to the same
----location(s) *TeX* writes messages to at this moment. It makes sure that the given
----strings will appear at the beginning of a new line.
+---Write all given strings to the same location(s) *TeX* writes messages to at
+---this moment. It makes sure that the given strings will appear at the
+---beginning of a new line.
 ---
----Note: If several strings are given, and if the first of these strings is or might
----be one of the targets above, the `target` must be specified explicitly to
----prevent *Lua* from interpreting the first string as the target.
+---Note: If several strings are given, and if the first of these strings is or
+---might be one of the targets above, the `target` must be specified explicitly
+---to prevent *Lua* from interpreting the first string as the target.
 ---
 ---__Reference:__
 ---
@@ -126,11 +126,11 @@ _N._10_5_4_closeinput = "page 215"
 ---
 ---Force a jump back to *TeX*.
 ---
----This function should be used with care. It acts as `endinput` but at
----the *Lua* end. Normally
----*Lua* will just collect prints and at the end bump an input level and flush these
----prints. This function can help you stay at the current level but you need to know
----what you're doing (or more precise: what *TeX* is doing with input).
+---This function should be used with care. It acts as `endinput` but at the
+---*Lua* end. Normally *Lua* will just collect prints and at the end bump an
+---input level and flush these prints. This function can help you stay at the
+---current level but you need to know what you're doing (or more precise: what
+---*TeX* is doing with input).
 ---
 ---__Reference:__
 ---

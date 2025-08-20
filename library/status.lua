@@ -27,8 +27,9 @@ _N._10_2_the_status_library = "page 188"
 ---@meta
 
 ---
----This library contains a number of run-time configuration items that you may find useful in message
----reporting, as well as an iterator function that gets all of the names and values as a `table`.
+---This library contains a number of run-time configuration items that you may
+---find useful in message reporting, as well as an iterator function that gets
+---all of the names and values as a `table`.
 ---
 ---{{ contribute }}
 status = {}
@@ -130,12 +131,12 @@ status = {}
 ---@field lc_numeric string # the value of `LC_NUMERIC` at startup time, for example `de_DE.UTF-8`.
 
 ---
----The keys in the table are the known items, the value is the current value. Almost
----all of the values in `status` are fetched through a metatable at run-time
----whenever they are accessed, so you cannot use `pairs` on `status`,
----but you can use `pairs` on `info`, of course. If you do not
----need the full list, you can also ask for a single item by using its name as an
----index into `status`.
+---The keys in the table are the known items, the value is the current value.
+---Almost all of the values in `status` are fetched through a metatable at
+---run-time whenever they are accessed, so you cannot use `pairs` on `status`,
+---but you can use `pairs` on `info`, of course. If you do not need the full
+---list, you can also ask for a single item by using its name as an index into
+---`status`.
 ---
 ---__Example:__
 ---
