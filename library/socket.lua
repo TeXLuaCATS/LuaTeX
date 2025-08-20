@@ -1,4 +1,3 @@
-
 ---
 ---https://github.com/TeX-Live/luatex/tree/master/source/texk/web2c/luatexdir/luasocket/src/socket.lua
 ---Changes to upstream: global socket table
@@ -343,6 +342,7 @@ function socket.try(...) end
 ---{{ contribute }}
 socket._VERSION = ""
 
+---
 ---A string representing a datagram
 ---
 ---{{ contribute }}
@@ -469,6 +469,7 @@ function tcp_master:dirty() end
 ---{{ contribute }}
 function tcp_master:getfd() end
 
+---
 ---{{ contribute }}
 ---@alias TCPOption
 ---| "keepalive" Setting this option to `true` enables the periodic transmission of messages on a connected socket. Should the connected party fail to respond to these messages, the connection is considered broken and processes using the socket are notified;
@@ -540,6 +541,7 @@ function tcp_master:gettimeout() end
 ---{{ contribute }}
 function tcp_master:listen(backlog) end
 
+---
 ---@alias SocketError
 ---| "timeout" If there was a timeout during the operation.
 ---| "closed" If the connection was closed before the transmission was completed.
@@ -610,6 +612,7 @@ function tcp_server:setoption(option, value) end
 ---{{ contribute }}
 function tcp_master:setstats(received, sent, age) end
 
+---
 ---@alias TCPTimeoutMode
 ---| "b" block timeout. Specifies the upper limit on the amount of time LuaSocket can be blocked by the operating system while waiting for completion of any single I/O operation.
 ---| "t" total timeout. Specifies the upper limit on the amount of time LuaSocket can block a Lua script before returning from a call.
@@ -627,6 +630,7 @@ function tcp_master:setstats(received, sent, age) end
 ---{{ contribute }}
 function tcp_master:settimeout(value, mode) end
 
+---
 ---@alias TCPShutdownMode
 ---| "both" Disallow further sends and receives on the object.
 ---| "send" Disallow further sends on the object.
@@ -739,7 +743,6 @@ function socket.tcp4() end
 ---{{ contribute }}
 function socket.tcp6() end
 
-
 --> Generic is my way to avoid stating the same thing twice.
 --> Means that both connected and unconnected have it.
 
@@ -849,6 +852,7 @@ function udp_generic:gettimeout() end
 ---{{ contribute }}
 function udp_generic:receive(size) end
 
+---
 ---Works exactly as the `receive` method, except it returns the IP address and port as extra return values (and is therefore slightly less efficient)
 ---@param size number?
 ---
