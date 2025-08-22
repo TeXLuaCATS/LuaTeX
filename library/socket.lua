@@ -3,8 +3,9 @@
 ---Changes to upstream: global socket table
 
 ---
--- A helper table to better navigate through the documentation using the
--- outline: https://github.com/Josef-Friedrich/LuaTeX_Lua-API#navigation-table-_n
+-- The `_N` table makes it easier to navigate through the type definitions with
+-- the help of the outline:
+-- https://github.com/TeXLuaCATS/meta?tab=readme-ov-file#navigation-table-_n
 _N = {}
 
 _N._4_3_lua_modules = "page 67"
