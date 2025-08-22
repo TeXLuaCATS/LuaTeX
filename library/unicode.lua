@@ -4,8 +4,10 @@
 _N._4_3_lua_modules = "page 70"
 
 ---
----Corresponding directory in the LuaTeX repository: https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/tree/master/source/texk/web2c/luatexdir/slnunicode
----Corresponding file in the LuaTeX repository: https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/slnunicode/slnunico.c
+---Corresponding directory in the LuaTeX repository:
+---https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/tree/master/source/texk/web2c/luatexdir/slnunicode
+---Corresponding file in the LuaTeX repository:
+---https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/slnunicode/slnunico.c
 ---
 ---`slnunicode`, from the `selene` libraries, http://luaforge.net/projects/sln.
 ---This library has been slightly extended so that the `unicode.utf8.*`
@@ -47,15 +49,16 @@ _N._4_3_lua_modules = "page 70"
 ---The definitions are developed in this repository: https://github.com/LuaCATS/slnunicode
 
 ---
----There are four `string`-like tables of functions:
----`ascii`, `latin1`, `utf8` and `grapheme`.
+---There are four `string`-like tables of functions: `ascii`, `latin1`, `utf8`
+---and `grapheme`.
 ---
 ---😱 [Types](https://github.com/LuaCATS/slnunicode/blob/main/library/unicode.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/slnunicode/pulls)
 unicode = {}
 
 ---
----`ascii` is single-byte like `string`, but use the unicode table for upper/lower and character classes.
----`ascii` does not touch bytes > 127 on upper/lower.
+---`ascii` is single-byte like `string`, but use the unicode table for
+---upper/lower and character classes. `ascii` does not touch bytes > 127 on
+---upper/lower.
 ---
 ---`ascii` can be used as locale-independent `string` replacement.
 ---
@@ -63,7 +66,8 @@ unicode = {}
 unicode.ascii = {}
 
 ---
----Return the internal numeric codes of the characters `s[i], s[i+1], ..., s[j]`.
+---Return the internal numeric codes of the characters `s[i], s[i+1], ...,
+---s[j]`.
 ---
 ---__Example:__
 ---
@@ -86,7 +90,8 @@ unicode.ascii = {}
 function unicode.ascii.byte(s, i, j) end
 
 ---
----Return a string with length equal to the number of arguments, in which each character has the internal numeric code equal to its corresponding argument.
+---Return a string with length equal to the number of arguments, in which each
+---character has the internal numeric code equal to its corresponding argument.
 ---
 ---@see string.char
 ---
@@ -99,7 +104,8 @@ function unicode.ascii.byte(s, i, j) end
 function unicode.ascii.char(byte, ...) end
 
 ---
----Return a string containing a binary representation (a binary chunk) of the given function.
+---Return a string containing a binary representation (a binary chunk) of the
+---given function.
 ---
 ---@see string.dump
 ---
@@ -124,7 +130,8 @@ function unicode.ascii.dump(f) end
 function unicode.ascii.find(s, pattern, init) end
 
 ---
----Return a formatted version of its variable number of arguments following the description given in its first argument.
+---Return a formatted version of its variable number of arguments following the
+---description given in its first argument.
 ---
 ---@see string.format
 ---
@@ -137,7 +144,8 @@ function unicode.ascii.find(s, pattern, init) end
 function unicode.ascii.format(s, ...) end
 
 ---
----Return an iterator function that, each time it is called, returns the next captures from `pattern` over the string `s`.
+---Return an iterator function that, each time it is called, returns the next
+---captures from `pattern` over the string `s`.
 ---
 ---@see string.gmatch
 ---
@@ -150,7 +158,8 @@ function unicode.ascii.format(s, ...) end
 function unicode.ascii.gmatch(s, pattern) end
 
 ---
----Return a copy of `s` in which all (or the first `n`, if given) occurrences of the pattern have been replaced by a replacement string specified by `repl`.
+---Return a copy of `s` in which all (or the first `n`, if given) occurrences of
+---the pattern have been replaced by a replacement string specified by `repl`.
 ---
 ---@see string.gsub
 ---
@@ -244,7 +253,8 @@ function unicode.ascii.rep(s, n) end
 function unicode.ascii.reverse(s) end
 
 ---
----Return the substring of the string that starts at `i` and continues until `j`.
+---Return the substring of the string that starts at `i` and continues until
+---`j`.
 ---
 ---@see string.sub
 ---
@@ -277,7 +287,8 @@ function unicode.ascii.sub(s, i, j) end
 function unicode.ascii.upper(s) end
 
 ---
----`latin1` is single-byte like `string`, but uses the unicode table for upper/lower and character classes.
+---`latin1` is single-byte like `string`, but uses the unicode table for
+---upper/lower and character classes.
 ---
 ---`latin1` can be used as locale-independent `string` replacement.
 ---
@@ -285,7 +296,8 @@ function unicode.ascii.upper(s) end
 unicode.latin1 = {}
 
 ---
----Return the internal numeric codes of the characters `s[i], s[i+1], ..., s[j]`.
+---Return the internal numeric codes of the characters `s[i], s[i+1], ...,
+---s[j]`.
 ---
 ---__Example:__
 ---
@@ -308,7 +320,8 @@ unicode.latin1 = {}
 function unicode.latin1.byte(s, i, j) end
 
 ---
----Return a string with length equal to the number of arguments, in which each character has the internal numeric code equal to its corresponding argument.
+---Return a string with length equal to the number of arguments, in which each
+---character has the internal numeric code equal to its corresponding argument.
 ---
 ---@see string.char
 ---
@@ -321,7 +334,8 @@ function unicode.latin1.byte(s, i, j) end
 function unicode.latin1.char(byte, ...) end
 
 ---
----Return a string containing a binary representation (a binary chunk) of the given function.
+---Return a string containing a binary representation (a binary chunk) of the
+---given function.
 ---
 ---@param f fun(...: any):...unknown
 ---
@@ -344,7 +358,8 @@ function unicode.latin1.dump(f) end
 function unicode.latin1.find(s, pattern, init) end
 
 ---
----Return a formatted version of its variable number of arguments following the description given in its first argument.
+---Return a formatted version of its variable number of arguments following the
+---description given in its first argument.
 ---
 ---@see string.format
 ---
@@ -357,7 +372,8 @@ function unicode.latin1.find(s, pattern, init) end
 function unicode.latin1.format(s, ...) end
 
 ---
----Return an iterator function that, each time it is called, returns the next captures from `pattern` over the string `s`.
+---Return an iterator function that, each time it is called, returns the next
+---captures from `pattern` over the string `s`.
 ---
 ---@see string.gmatch
 ---
@@ -370,7 +386,8 @@ function unicode.latin1.format(s, ...) end
 function unicode.latin1.gmatch(s, pattern) end
 
 ---
----Return a copy of `s` in which all (or the first `n`, if given) occurrences of the pattern have been replaced by a replacement string specified by `repl`.
+---Return a copy of `s` in which all (or the first `n`, if given) occurrences of
+---the pattern have been replaced by a replacement string specified by `repl`.
 ---
 ---@see string.gsub
 ---
@@ -464,7 +481,8 @@ function unicode.latin1.rep(s, n) end
 function unicode.latin1.reverse(s) end
 
 ---
----Return the substring of the string that starts at `i` and continues until `j`.
+---Return the substring of the string that starts at `i` and continues until
+---`j`.
 ---
 ---@see string.sub
 ---
@@ -504,7 +522,8 @@ function unicode.latin1.upper(s) end
 unicode.grapheme = {}
 
 ---
----Return the internal numeric codes of the characters `s[i], s[i+1], ..., s[j]`.
+---Return the internal numeric codes of the characters `s[i], s[i+1], ...,
+---s[j]`.
 ---
 ---__Example:__
 ---
@@ -528,7 +547,8 @@ unicode.grapheme = {}
 function unicode.grapheme.byte(s, i, j) end
 
 ---
----Return a string with length equal to the number of arguments, in which each character has the internal numeric code equal to its corresponding argument.
+---Return a string with length equal to the number of arguments, in which each
+---character has the internal numeric code equal to its corresponding argument.
 ---
 ---@see string.char
 ---
@@ -541,7 +561,8 @@ function unicode.grapheme.byte(s, i, j) end
 function unicode.grapheme.char(byte, ...) end
 
 ---
----Return a string containing a binary representation (a binary chunk) of the given function.
+---Return a string containing a binary representation (a binary chunk) of the
+---given function.
 ---
 ---@see string.dump
 ---
@@ -566,7 +587,8 @@ function unicode.grapheme.dump(f) end
 function unicode.grapheme.find(s, pattern, init) end
 
 ---
----Return a formatted version of its variable number of arguments following the description given in its first argument.
+---Return a formatted version of its variable number of arguments following the
+---description given in its first argument.
 ---
 ---@see string.format
 ---
@@ -579,7 +601,8 @@ function unicode.grapheme.find(s, pattern, init) end
 function unicode.grapheme.format(s, ...) end
 
 ---
----Return an iterator function that, each time it is called, returns the next captures from `pattern` over the string `s`.
+---Return an iterator function that, each time it is called, returns the next
+---captures from `pattern` over the string `s`.
 ---
 ---@see string.gmatch
 ---
@@ -592,7 +615,8 @@ function unicode.grapheme.format(s, ...) end
 function unicode.grapheme.gmatch(s, pattern) end
 
 ---
----Return a copy of `s` in which all (or the first `n`, if given) occurrences of the pattern have been replaced by a replacement string specified by `repl`.
+---Return a copy of `s` in which all (or the first `n`, if given) occurrences of
+---the pattern have been replaced by a replacement string specified by `repl`.
 ---
 ---@see string.gsub
 ---
@@ -686,7 +710,8 @@ function unicode.grapheme.rep(s, n) end
 function unicode.grapheme.reverse(s) end
 
 ---
----Return the substring of the string that starts at `i` and continues until `j`.
+---Return the substring of the string that starts at `i` and continues until
+---`j`.
 ---
 ---@see string.sub
 ---
@@ -719,16 +744,17 @@ function unicode.grapheme.sub(s, i, j) end
 function unicode.grapheme.upper(s) end
 
 ---
----`utf8` operates on UTF-8 sequences as of RFC 3629:
----1 byte 0-7F, 2 byte 80-7FF, 3 byte 800-FFFF, 4 byte 1000-10FFFF
----(not exclusing UTF-16 surrogate characters)
----Any byte not part of such a sequence is treated as it's (Latin-1) value.
+---`utf8` operates on UTF-8 sequences as of RFC 3629: 1 byte 0-7F, 2 byte
+---80-7FF, 3 byte 800-FFFF, 4 byte 1000-10FFFF (not exclusing UTF-16 surrogate
+---characters) Any byte not part of such a sequence is treated as it's (Latin-1)
+---value.
 ---
 ---😱 [Types](https://github.com/LuaCATS/slnunicode/blob/main/library/unicode.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/slnunicode/pulls)
 unicode.utf8 = {}
 
 ---
----Return the internal numeric codes of the characters `s[i], s[i+1], ..., s[j]`.
+---Return the internal numeric codes of the characters `s[i], s[i+1], ...,
+---s[j]`.
 ---
 ---__Example:__
 ---
@@ -752,7 +778,8 @@ unicode.utf8 = {}
 function unicode.utf8.byte(s, i, j) end
 
 ---
----Return a string with length equal to the number of arguments, in which each character has the internal numeric code equal to its corresponding argument.
+---Return a string with length equal to the number of arguments, in which each
+---character has the internal numeric code equal to its corresponding argument.
 ---
 ---@see string.char
 ---
@@ -765,7 +792,8 @@ function unicode.utf8.byte(s, i, j) end
 function unicode.utf8.char(byte, ...) end
 
 ---
----Return a string containing a binary representation (a binary chunk) of the given function.
+---Return a string containing a binary representation (a binary chunk) of the
+---given function.
 ---
 ---@see string.dump
 ---
@@ -790,7 +818,8 @@ function unicode.utf8.dump(f) end
 function unicode.utf8.find(s, pattern, init) end
 
 ---
----Return a formatted version of its variable number of arguments following the description given in its first argument.
+---Return a formatted version of its variable number of arguments following the
+---description given in its first argument.
 ---
 ---@see string.format
 ---
@@ -803,7 +832,8 @@ function unicode.utf8.find(s, pattern, init) end
 function unicode.utf8.format(s, ...) end
 
 ---
----Return an iterator function that, each time it is called, returns the next captures from `pattern` over the string `s`.
+---Return an iterator function that, each time it is called, returns the next
+---captures from `pattern` over the string `s`.
 ---
 ---@see string.gmatch
 ---
@@ -816,7 +846,8 @@ function unicode.utf8.format(s, ...) end
 function unicode.utf8.gmatch(s, pattern) end
 
 ---
----Return a copy of `s` in which all (or the first `n`, if given) occurrences of the pattern have been replaced by a replacement string specified by `repl`.
+---Return a copy of `s` in which all (or the first `n`, if given) occurrences of
+---the pattern have been replaced by a replacement string specified by `repl`.
 ---
 ---@see string.gsub
 ---
@@ -908,7 +939,8 @@ function unicode.utf8.rep(s, n) end
 function unicode.utf8.reverse(s) end
 
 ---
----Return the substring of the string that starts at `i` and continues until `j`.
+---Return the substring of the string that starts at `i` and continues until
+---`j`.
 ---
 ---@see string.sub
 ---

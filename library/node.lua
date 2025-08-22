@@ -26,12 +26,13 @@ _N = {}
 ---@meta
 
 ---
----The node library contains functions that facilitate dealing with (lists of) nodes and their values.
----They allow you to create, alter, copy, delete, and insert LuaTEX node objects, the core objects
----within the typesetter.
+---The node library contains functions that facilitate dealing with (lists of)
+---nodes and their values. They allow you to create, alter, copy, delete, and
+---insert LuaTEX node objects, the core objects within the typesetter.
 ---
----LuaTEX nodes are represented in Lua as userdata with the metadata type `luatex.node.` The
----various parts within a node can be accessed using named fields.
+---LuaTEX nodes are represented in Lua as userdata with the metadata type
+---`luatex.node.` The various parts within a node can be accessed using named
+---fields.
 ---
 ---Each node has at least the three fields next, id, and subtype:
 ---
@@ -43,52 +44,59 @@ _N = {}
 ---  id, but it is most important when dealing with ‘whatsits’, because they are differentiated
 ---  solely based on their subtype.
 ---
----The other available fields depend on the id (and for ‘whatsits’, the subtype) of the node.
+---The other available fields depend on the id (and for ‘whatsits’, the subtype)
+---of the node.
 ---
----Support for unset (alignment) nodes is partial: they can be queried and modified from Lua code,
----but not created.
+---Support for unset (alignment) nodes is partial: they can be queried and
+---modified from Lua code, but not created.
 ---
----Nodes can be compared to each other, but: you are actually comparing indices into the node
----memory. This means that equality tests can only be trusted under very limited conditions. It will
----not work correctly in any situation where one of the two nodes has been freed and/or reallocated:
----in that case, there will be false positives.
+---Nodes can be compared to each other, but: you are actually comparing indices
+---into the node memory. This means that equality tests can only be trusted
+---under very limited conditions. It will not work correctly in any situation
+---where one of the two nodes has been freed and/or reallocated: in that case,
+---there will be false positives.
 ---
----At the moment, memory management of nodes should still be done explicitly by the user. Nodes
----are not ‘seen’ by the Lua garbage collector, so you have to call the node freeing functions yourself
----when you are no longer in need of a node (list). Nodes form linked lists without reference
----counting, so you have to be careful that when control returns back to LuaTEX itself, you have
----not deleted nodes that are still referenced from a next pointer elsewhere, and that you did not
----create nodes that are referenced more than once. Normally the setters and getters handle this
----for you.
+---At the moment, memory management of nodes should still be done explicitly by
+---the user. Nodes are not ‘seen’ by the Lua garbage collector, so you have to
+---call the node freeing functions yourself when you are no longer in need of a
+---node (list). Nodes form linked lists without reference counting, so you have
+---to be careful that when control returns back to LuaTEX itself, you have not
+---deleted nodes that are still referenced from a next pointer elsewhere, and
+---that you did not create nodes that are referenced more than once. Normally
+---the setters and getters handle this for you.
 ---
----There are statistics available with regards to the allocated node memory, which can be handy
----for tracing.
+---There are statistics available with regards to the allocated node memory,
+---which can be handy for tracing.
 ---
 ---{{ contribute }}
 node = {}
 
 ---
----Deep down in TEX a node has a number which is a numeric entry in a memory table. In fact, this
----model, where TEX manages memory is real fast and one of the reasons why plugging in callbacks
----that operate on nodes is quite fast too. Each node gets a number that is in fact an index in the
----memory table and that number often is reported when you print node related information. You
----go from userdata nodes and there numeric references and back with:
+---Deep down in TEX a node has a number which is a numeric entry in a memory
+---table. In fact, this model, where TEX manages memory is real fast and one of
+---the reasons why plugging in callbacks that operate on nodes is quite fast
+---too. Each node gets a number that is in fact an index in the memory table and
+---that number often is reported when you print node related information. You go
+---from userdata nodes and there numeric references and back with:
 ---
 ---```
 ---<integer> d = node.todirect(<node> n)
 ---<node> n = node.tonode(<integer> d)
 ---```
 ---
----The userdata model is rather robust as it is a virtual interface with some additional checking
----while the more direct access which uses the node numbers directly. However, even with userdata
----you can get into troubles when you free nodes that are no longer allocated or mess up lists. if
----you apply tostring to a node you see its internal (direct) number and id.
+---The userdata model is rather robust as it is a virtual interface with some
+---additional checking while the more direct access which uses the node numbers
+---directly. However, even with userdata you can get into troubles when you free
+---nodes that are no longer allocated or mess up lists. if you apply tostring to
+---a node you see its internal (direct) number and id.
 ---
 ---{{ contribute }}
 node.direct = {}
 
 ---
----*LuaTeX* only understands 4 of the 16 direction specifiers of aleph: `TLT` (latin), `TRT` (arabic), `RTT` (cjk), `LTL` (mongolian). All other direction specifiers generate an error.
+---*LuaTeX* only understands 4 of the 16 direction specifiers of aleph: `TLT`
+---(latin), `TRT` (arabic), `RTT` (cjk), `LTL` (mongolian). All other direction
+---specifiers generate an error.
 ---
 ---{{ contribute }}
 ---@alias DirectionSpecifier
@@ -362,8 +370,8 @@ _N._8_2_Main_text_nodes = "page 131"
 _N.Node = true
 
 ---
----A node that comprise actual typesetting commands. A few fields are
----present in all nodes regardless of their type, these are:
+---A node that comprise actual typesetting commands. A few fields are present in
+---all nodes regardless of their type, these are:
 ---
 --- __Reference:__
 ---
@@ -442,9 +450,8 @@ _N._8_2_1_hlist_nodes = "page 132"
 ---A warning: never assign a node list to the `head` field unless you are sure
 ---its internal link structure is correct, otherwise an error may result.
 ---
----Note: the field name `head` and `list` are both valid. Sometimes it
----makes more sense to refer to a list by `head`, sometimes `list` makes
----more sense.
+---Note: the field name `head` and `list` are both valid. Sometimes it makes
+---more sense to refer to a list by `head`, sometimes `list` makes more sense.
 ---
 ---__Example:__
 ---
@@ -521,7 +528,8 @@ _N._8_2_2_vlist_nodes = "page 132"
 ---|5 # cell
 
 ---
----A vlist node is like an hlist node in all respects except that it contains a vertical list.
+---A vlist node is like an hlist node in all respects except that it contains a
+---vertical list.
 ---
 ---__Example:__
 ---
@@ -611,20 +619,21 @@ _N._8_2_3_rule_nodes = "page 132"
 ---A rule node stands for a solid black rectangle.
 ---
 ---Contrary to traditional *TeX*, *LuaTeX* has more `rule` subtypes because we
----also use rules to store reuseable objects and images. User nodes are invisible
----and can be intercepted by a callback.
+---also use rules to store reuseable objects and images. User nodes are
+---invisible and can be intercepted by a callback.
 ---
----The `left` and `right` keys are somewhat special (and experimental).
----When rules are auto adapting to the surrounding box width you can enforce a shift
+---The `left` and `right` keys are somewhat special (and experimental). When
+---rules are auto adapting to the surrounding box width you can enforce a shift
 ---to the right by setting `left`. The value is also subtracted from the width
 ---which can be a value set by the engine itself and is not entirely under user
----control. The `right` is also subtracted from the width. It all happens in
----the backend so these are not affecting the calculations in the frontend (actually
+---control. The `right` is also subtracted from the width. It all happens in the
+---backend so these are not affecting the calculations in the frontend (actually
 ---the auto settings also happen in the backend). For a vertical rule `left`
 ---affects the height and `right` affects the depth. There is no matching
----interface at the *TeX* end (although we can have more keywords for rules it would
----complicate matters and introduce a speed penalty.) However, you can just
----construct a rule node with *Lua* and write it to the *TeX* input. The `outline` subtype is just a convenient variant and the `transform` field
+---interface at the *TeX* end (although we can have more keywords for rules it
+---would complicate matters and introduce a speed penalty.) However, you can
+---just construct a rule node with *Lua* and write it to the *TeX* input. The
+---`outline` subtype is just a convenient variant and the `transform` field
 ---specifies the width of the outline.
 ---
 ---__Example:__
@@ -684,7 +693,8 @@ _N.ins = 3
 _N._8_2_4_ins_nodes = "page 133"
 
 ---
----Insertions are represented by ins node records, where the subtype indicates the corresponding box number.
+---Insertions are represented by ins node records, where the subtype indicates
+---the corresponding box number.
 ---
 ---__Example:__
 ---
@@ -725,7 +735,8 @@ _N.mark = 4
 _N._8_2_5_mark_nodes = "page 133"
 
 ---
----A mark node has a mark field that points a token list that contains the user’s `\mark` text.
+---A mark node has a mark field that points a token list that contains the
+---user’s `\mark` text.
 ---
 ---__Example:__
 ---
@@ -770,7 +781,9 @@ _N._8_2_6_adjust_nodes = "page 134"
 ---|1 # pre
 
 ---
----An adjust node, which occurs only in horizontal lists, specifies material that will be moved out into the surrounding vertical list; i.e., it is used to implement TeX’s `\vadjust` operation.
+---An adjust node, which occurs only in horizontal lists, specifies material
+---that will be moved out into the surrounding vertical list; i.e., it is used
+---to implement TeX’s `\vadjust` operation.
 ---
 ---__Example:__
 ---
@@ -820,10 +833,9 @@ _N._8_2_7_disc_nodes = "page 134"
 
 ---
 ---A disc node, which occurs only in horizontal lists, specifies a
----“discretionary” line break. If such a break occurs at a node, the
----text that starts at `pre` will precede the break, the text
----that starts at `post` will follow the break, and text that
----appears in `replace` will be ignored.
+---“discretionary” line break. If such a break occurs at a node, the text that
+---starts at `pre` will precede the break, the text that starts at `post` will
+---follow the break, and text that appears in `replace` will be ignored.
 ---
 ---__Example:__
 ---
@@ -880,7 +892,10 @@ _N._8_2_8_math_nodes = "page 134"
 ---|1 # endmath
 
 ---
----A math node, which occurs only in horizontal lists, appears before and after mathematical formulas. The subtype field is `beginmath` before the formula and `endmath` after it. There is a `surround` field, which represents the amount of surrounding space inserted by `\mathsurround`.
+---A math node, which occurs only in horizontal lists, appears before and after
+---mathematical formulas. The subtype field is `beginmath` before the formula
+---and `endmath` after it. There is a `surround` field, which represents the
+---amount of surrounding space inserted by `\mathsurround`.
 ---
 ---__Example:__
 ---
@@ -919,39 +934,42 @@ _N.glue_spec = 39
 _N._8_2_9_glue_nodes = "page 135"
 
 ---
----Skips are about the only type of data objects in traditional *TeX* that are not a
----simple value. They are inserted when *TeX* sees a space in the text flow but also
----by `hskip` and `vskip`. The structure that represents the glue
+---Skips are about the only type of data objects in traditional *TeX* that are
+---not a simple value. They are inserted when *TeX* sees a space in the text
+---flow but also by `hskip` and `vskip`. The structure that represents the glue
 ---components of a skip is called a `glue_spec`.
 ---
----The effective width of some glue subtypes depends on the stretch or shrink needed
----to make the encapsulating box fit its dimensions. For instance, in a paragraph
----lines normally have glue representing spaces and these stretch or shrink to make
----the content fit in the available space. The `effective_glue` function that
----takes a glue node and a parent (hlist or vlist) returns the effective width of
----that glue item. When you pass `true` as third argument the value will be
----rounded.
+---The effective width of some glue subtypes depends on the stretch or shrink
+---needed to make the encapsulating box fit its dimensions. For instance, in a
+---paragraph lines normally have glue representing spaces and these stretch or
+---shrink to make the content fit in the available space. The `effective_glue`
+---function that takes a glue node and a parent (hlist or vlist) returns the
+---effective width of that glue item. When you pass `true` as third argument the
+---value will be rounded.
 ---
 ---A `glue_spec` node is a special kind of node that is used for storing a set
----of glue values in registers. Originally they were also used to store properties
----of glue nodes (using a system of reference counts) but we now keep these
----properties in the glue nodes themselves, which gives a cleaner interface to *Lua*.
+---of glue values in registers. Originally they were also used to store
+---properties of glue nodes (using a system of reference counts) but we now keep
+---these properties in the glue nodes themselves, which gives a cleaner
+---interface to *Lua*.
 ---
 ---The indirect spec approach was in fact an optimization in the original *TeX*
----code. First of all it can save quite some memory because all these spaces that
----become glue now share the same specification (only the reference count is
----incremented), and zero testing is also a bit faster because only the pointer has
----to be checked (this is no longer true for engines that implement for instance
----protrusion where we really need to ensure that zero is zero when we test for
----bounds). Another side effect is that glue specifications are read-only, so in
----the end copies need to be made when they are used from *Lua* (each assignment to
----a field can result in a new copy). So in the end the advantages of sharing are
----not that high (and nowadays memory is less an issue, also given that a glue node
----is only a few memory words larger than a spec).
+---code. First of all it can save quite some memory because all these spaces
+---that become glue now share the same specification (only the reference count
+---is incremented), and zero testing is also a bit faster because only the
+---pointer has to be checked (this is no longer true for engines that implement
+---for instance protrusion where we really need to ensure that zero is zero when
+---we test for bounds). Another side effect is that glue specifications are
+---read-only, so in the end copies need to be made when they are used from *Lua*
+---(each assignment to a field can result in a new copy). So in the end the
+---advantages of sharing are not that high (and nowadays memory is less an
+---issue, also given that a glue node is only a few memory words larger than a
+---spec).
 ---
----In addition there are the `width`, `stretch` `stretch_order`,
----`shrink`, and `shrink_order` fields. Note that we use the key `width` in both horizontal and vertical glue. This suits the *TeX* internals well
----so we decided to stick to that naming.
+---In addition there are the `width`, `stretch` `stretch_order`, `shrink`, and
+---`shrink_order` fields. Note that we use the key `width` in both horizontal
+---and vertical glue. This suits the *TeX* internals well so we decided to stick
+---to that naming.
 ---
 ---__Reference:__
 ---
@@ -998,8 +1016,8 @@ _N.glue = 12
 ---|103 # gleaders
 
 ---
----A regular word space also results in a `spaceskip` subtype (this used to be
----a `userskip` with subtype zero).
+---A regular word space also results in a `spaceskip` subtype (this used to be a
+---`userskip` with subtype zero).
 ---
 ---__Example:__
 ---
@@ -1062,8 +1080,7 @@ _N.glue = 12
 ---@field shrink_order integer # Factor applied to shrink amount.
 
 ---
----Return the
----effective width of a glue node.
+---Return the effective width of a glue node.
 ---
 ---__Reference:__
 ---
@@ -1079,8 +1096,7 @@ _N.glue = 12
 function node.effective_glue(glue, parent, round) end
 
 ---
----Return the
----effective width of a glue node.
+---Return the effective width of a glue node.
 ---
 ---__Reference:__
 ---
@@ -1399,17 +1415,18 @@ _N.dir = 10
 _N._8_2_15_dir_nodes = "page 138"
 
 ---
----Direction specifiers are three-letter combinations of `T`, `B`,
----`R`, and `L`. These are built up out of three separate items:
+---Direction specifiers are three-letter combinations of `T`, `B`, `R`, and `L`.
+---These are built up out of three separate items:
 ---
 ---* the first is the direction of the “top” of paragraphs
 ---* the second is the direction of the “start” of lines
 ---* the third is the direction of the “top” of glyphs
 ---
----However, only four combinations are accepted: `TLT`, `TRT`, `RTT`, and `LTL`. Inside actual `dir` nodes, the representation of
----`dir` is not a three-letter but a combination of numbers. When printed the
----direction is indicated by a `+` or `-`, indicating whether the value
----is pushed or popped from the direction stack.
+---However, only four combinations are accepted: `TLT`, `TRT`, `RTT`, and `LTL`.
+---Inside actual `dir` nodes, the representation of `dir` is not a three-letter
+---but a combination of numbers. When printed the direction is indicated by a
+---`+` or `-`, indicating whether the value is pushed or popped from the
+---direction stack.
 ---
 ---__Example:__
 ---
@@ -1490,8 +1507,8 @@ _N.math_char = 23
 _N._8_3_2_math_char_and_math_text_char_subnodes = "page 139"
 
 ---
----The `math_char` is the simplest subnode field, it contains the character
----and family for a single glyph object.
+---The `math_char` is the simplest subnode field, it contains the character and
+---family for a single glyph object.
 ---
 ---__Example:__
 ---
@@ -1523,9 +1540,9 @@ _N._8_3_2_math_char_and_math_text_char_subnodes = "page 139"
 _N.math_text_char = 26
 
 ---
----The `math_text_char` is a special
----case that you will not normally encounter, it arises temporarily during math list
----conversion (its sole function is to suppress a following italic correction).
+---The `math_text_char` is a special case that you will not normally encounter,
+---it arises temporarily during math list conversion (its sole function is to
+---suppress a following italic correction).
 ---
 ---__Example:__
 ---
@@ -1619,12 +1636,12 @@ _N.delim = 27
 _N._8_3_4_delim_subnodes = "page 140"
 
 ---
----There is a fifth subnode type that is used exclusively for delimiter fields. As
----before, the `next` and `prev` fields are unused.
+---There is a fifth subnode type that is used exclusively for delimiter fields.
+---As before, the `next` and `prev` fields are unused.
 ---
----The fields `large_char` and `large_fam` can be zero, in that case the
----font that is set for the `small_fam` is expected to provide the large
----version as an extension to the `small_char`.
+---The fields `large_char` and `large_fam` can be zero, in that case the font
+---that is set for the `small_fam` is expected to provide the large version as
+---an extension to the `small_char`.
 ---
 ---__Example:__
 ---
@@ -1685,26 +1702,27 @@ _N._8_3_6_simple_noad_nodes = "page 141"
 
 ---
 ---First, there are the objects (the *TeX* book calls them “atoms”) that are
----associated with the simple math objects: `ord`, `op`, `bin`, `rel`, `open`, `close`, `punct`,
----`inner`, `over`, `under`, `vcent`. These all have the same fields, and they are combined
----into a single node type with separate subtypes for differentiation.
+---associated with the simple math objects: `ord`, `op`, `bin`, `rel`, `open`,
+---`close`, `punct`, `inner`, `over`, `under`, `vcent`. These all have the same
+---fields, and they are combined into a single node type with separate subtypes
+---for differentiation.
 ---
 ---Some noads have an option field. The values in this bitset are common:
 ---
---- | meaning         |  bits           |
---- |-----------------|-----------------|
---- | set             |          `0x08` |
---- | internal        | `0x00` + `0x08` |
---- | internal        | `0x01` + `0x08` |
---- | axis            | `0x02` + `0x08` |
---- | no axis         | `0x04` + `0x08` |
---- | exact           | `0x10` + `0x08` |
---- | left            | `0x11` + `0x08` |
---- | middle          | `0x12` + `0x08` |
---- | right           | `0x14` + `0x08` |
---- | no sub script   | `0x21` + `0x08` |
---- | no super script | `0x22` + `0x08` |
---- | no script       | `0x23` + `0x08` |
+---| meaning         |  bits           |
+---|-----------------|-----------------|
+---| set             |          `0x08` |
+---| internal        | `0x00` + `0x08` |
+---| internal        | `0x01` + `0x08` |
+---| axis            | `0x02` + `0x08` |
+---| no axis         | `0x04` + `0x08` |
+---| exact           | `0x10` + `0x08` |
+---| left            | `0x11` + `0x08` |
+---| middle          | `0x12` + `0x08` |
+---| right           | `0x14` + `0x08` |
+---| no sub script   | `0x21` + `0x08` |
+---| no super script | `0x22` + `0x08` |
+---| no script       | `0x23` + `0x08` |
 ---
 ---__Example:__
 ---
@@ -1847,8 +1865,9 @@ _N.choice = 17
 _N._8_3_9_choice_nodes = "page 141"
 
 ---
----Warning: never assign a node list to the `display`, `text`, `script`, or `scriptscript` field unless you are sure its internal link
----structure is correct, otherwise an error can occur.
+---Warning: never assign a node list to the `display`, `text`, `script`, or
+---`scriptscript` field unless you are sure its internal link structure is
+---correct, otherwise an error can occur.
 ---
 ---__Example:__
 ---
@@ -1900,8 +1919,9 @@ _N._8_3_10_radical_nodes = "page 142"
 ---|6 # udelimiterover
 
 ---
----Warning: never assign a node list to the `nucleus`, `sub`, `sup`, `left`, or `degree` field unless you are sure its internal
----link structure is correct, otherwise an error can be triggered.
+---Warning: never assign a node list to the `nucleus`, `sub`, `sup`, `left`, or
+---`degree` field unless you are sure its internal link structure is correct,
+---otherwise an error can be triggered.
 ---
 ---__Example:__
 ---
@@ -1954,9 +1974,9 @@ _N.fraction = 20
 _N._8_3_11_fraction_nodes = "page 142"
 
 ---
----Warning: never assign a node list to the `num`, or `denom` field
----unless you are sure its internal link structure is correct, otherwise an error
----can result.
+---Warning: never assign a node list to the `num`, or `denom` field unless you
+---are sure its internal link structure is correct, otherwise an error can
+---result.
 ---
 ---__Example:__
 ---
@@ -2014,8 +2034,8 @@ _N._8_3_12_fence_nodes = "page 142"
 ---|4 # no
 
 ---
----Warning: some of these fields are used by the renderer and might get adapted in
----the process.
+---Warning: some of these fields are used by the renderer and might get adapted
+---in the process.
 ---
 ---__Example:__
 ---
@@ -2136,7 +2156,8 @@ _N._whatsit = {}
 ---specific to the chosen backend: *DVI* or *PDF*. Here we discuss the generic
 ---font-end nodes nodes.
 ---
----Source: [luatex-nodes.tex#L781-L797](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L781-L797)
+---Source:
+---[luatex-nodes.tex#L781-L797](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L781-L797)
 ---
 ---{{ contribute }}
 ---@class WhatsitNode: Node
@@ -2235,9 +2256,10 @@ _N._whatsit.user_defined = 8
 _N._8_4_4_user_defined = "page 143"
 
 ---
----User-defined whatsit nodes can only be created and handled from *Lua* code. In
----effect, they are an extension to the extension mechanism. The *LuaTeX* engine
----will simply step over such whatsits without ever looking at the contents.
+---User-defined whatsit nodes can only be created and handled from *Lua* code.
+---In effect, they are an extension to the extension mechanism. The *LuaTeX*
+---engine will simply step over such whatsits without ever looking at the
+---contents.
 ---
 ---__Example:__
 ---
@@ -2290,12 +2312,12 @@ _N._whatsit.late_lua = 8
 _N._8_4_6_late_lua = "page 144"
 
 ---
----The difference between `data` and `string` is that on assignment, the
----`data` field is converted to a token list, cf. use as `latelua`. The
----`string` version is treated as a literal string.
+---The difference between `data` and `string` is that on assignment, the `data`
+---field is converted to a token list, cf. use as `latelua`. The `string`
+---version is treated as a literal string.
 ---
----When a function is used, it gets called with as first argument the node that triggers
----the call.
+---When a function is used, it gets called with as first argument the node that
+---triggers the call.
 ---
 ---__Example:__
 ---
@@ -2379,9 +2401,9 @@ _N._8_6_1_pdf_literal_and_pdf_late_literal = "page 145"
 ---|6 `special`
 
 ---
----The higher the number, the less checking and the more you can run into trouble.
----Especially the `raw` variant can produce bad *PDF* so you can best check
----what you generate.
+---The higher the number, the less checking and the more you can run into
+---trouble. Especially the `raw` variant can produce bad *PDF* so you can best
+---check what you generate.
 ---
 ---__Example:__
 ---
@@ -2635,8 +2657,8 @@ _N._whatsit.pdf_thread = 23
 ---
 ---`\pdfthread [ ⟨rule spec⟩ ] [ ⟨attr spec⟩ ] ⟨id spec⟩ (h, v, m)`
 ---
----Defines a bead within an article thread. Thread beads with same identifiers (spread across the
----document) will be joined together.
+---Defines a bead within an article thread. Thread beads with same identifiers
+---(spread across the document) will be joined together.
 ---
 ---__Example:__
 ---
@@ -2681,13 +2703,15 @@ _N._whatsit.pdf_start_thread = 24
 ---
 ---`\pdftstartthread [ ⟨rule spec⟩ ] [ ⟨attr spec⟩ ] ⟨id spec⟩ (v, m)`
 ---
----This uses the same syntax as `\pdfthread`, apart that it must be followed by a `\pdfendthread`.
----`\pdfstartthread` and the corresponding `\pdfendthread` must end up in vboxes with the same
----nesting level; all vboxes between them will be added into the thread.
----In the output routine, if there are other newly created boxes which have the same nesting level
----as the vbox(es) containing `\pdfstartthread` and `\pdfendthread`, they will be also added into the
----thread, which is probably not what you want. To avoid such undesired behavior, it’s often enough
----to wrap boxes that shouldn’t belong to the thread by a box to change their box nesting level.
+---This uses the same syntax as `\pdfthread`, apart that it must be followed by
+---a `\pdfendthread`. `\pdfstartthread` and the corresponding `\pdfendthread`
+---must end up in vboxes with the same nesting level; all vboxes between them
+---will be added into the thread. In the output routine, if there are other
+---newly created boxes which have the same nesting level as the vbox(es)
+---containing `\pdfstartthread` and `\pdfendthread`, they will be also added
+---into the thread, which is probably not what you want. To avoid such undesired
+---behavior, it’s often enough to wrap boxes that shouldn’t belong to the thread
+---by a box to change their box nesting level.
 ---
 ---__Example:__
 ---
@@ -2761,12 +2785,13 @@ _N._8_6_11_pdf_colorstack = "page 147"
 ---
 ---`\pdfcolorstack ⟨stack number⟩ ⟨stack action⟩ ⟨general text⟩`
 ---
----The command operates on the stack of a given number. If ⟨stack action⟩ is `push` keyword, the
----new value provided as ⟨general text⟩ is inserted into the top of the graphic stack and becomes
----the current stack value. If followed by `pop`, the top value is removed from the stack and the
----new top value becomes the current. `set` keyword replaces the current value with ⟨general text⟩
----without changing the stack size. `current` keyword instructs just to use the current stack value
----without modifying the stack at all.
+---The command operates on the stack of a given number. If ⟨stack action⟩ is
+---`push` keyword, the new value provided as ⟨general text⟩ is inserted into the
+---top of the graphic stack and becomes the current stack value. If followed by
+---`pop`, the top value is removed from the stack and the new top value becomes
+---the current. `set` keyword replaces the current value with ⟨general text⟩
+---without changing the stack size. `current` keyword instructs just to use the
+---current stack value without modifying the stack at all.
 ---
 ---__Example:__
 ---
@@ -2790,7 +2815,7 @@ _N._8_6_11_pdf_colorstack = "page 147"
 ---__Reference:__
 ---
 ---* Source file of the `LuaTeX` manual: [pdftex-t.tex#L3954-L3980](https://github.com/tex-mirror/pdftex/blob/6fb2352aa70a23ad3830f1434613170be3f3cd74/doc/manual/pdftex-t.tex#L3954-L3980)
----Source: [luatex-nodes.tex#L1097-L1107](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/e1cb50f34dc1451c9c5319dc953305b52a7a96fd/manual/luatex-nodes.tex#L1097-L1107)
+---* Source: [luatex-nodes.tex#L1097-L1107](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/e1cb50f34dc1451c9c5319dc953305b52a7a96fd/manual/luatex-nodes.tex#L1097-L1107)
 ---
 ---{{ contribute }}
 ---@class PdfColorstackWhatsitNode: WhatsitNode
@@ -3374,8 +3399,8 @@ _N.shape = 49
 _N._8_2_is_node = "page 145"
 
 ---
----Return a number (the internal index of the node) if the argument is a userdata
----object of type `node` and `false` when no node is passed.
+---Return a number (the internal index of the node) if the argument is a
+---userdata object of type `node` and `false` when no node is passed.
 ---
 ---__Reference:__
 ---
@@ -3390,8 +3415,8 @@ _N._8_2_is_node = "page 145"
 function node.is_node(item) end
 
 ---
----Return a number (the internal index of the node) if the argument is a userdata
----object of type `node` and `false` when no node is passed.
+---Return a number (the internal index of the node) if the argument is a
+---userdata object of type `node` and `false` when no node is passed.
 ---
 ---__Reference:__
 ---
@@ -3483,7 +3508,8 @@ function node.types() end
 ---
 ---Provides a table of subtype mappings.
 ---
----TeX’s ‘whatsits’ all have the same id. The various subtypes are defined by their subtype fields.
+---TeX’s ‘whatsits’ all have the same id. The various subtypes are defined by
+---their subtype fields.
 ---
 ---__Example:__
 ---
@@ -3591,6 +3617,7 @@ _N._8_4_id = "page 145"
 ---equals("passive", 48)
 ---equals("shape", 49)
 ---```
+---
 ---__Reference:__
 ---
 ---* Source file of the `LuaTeX` manual: [luatex-nodes.tex#L1235-L1244](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1235-L1244)
@@ -3606,13 +3633,13 @@ function node.id(type) end
 _N._8_5_type_subtype = "page 145"
 
 ---
----Convert an internal numeric node type representation to an external
----node type string.
+---Convert an internal numeric node type representation to an external node type
+---string.
 ---
----If the argument is a number, then the type function converts an
----internal numeric representation to an external string representation.
----Otherwise, it will return the string `node` if the object
----represents a node, and `nil` otherwise.
+---If the argument is a number, then the type function converts an internal
+---numeric representation to an external string representation. Otherwise, it
+---will return the string `node` if the object represents a node, and `nil`
+---otherwise.
 ---
 ---```lua
 ---assert.equals(node.type(29), "glyph")
@@ -3632,7 +3659,8 @@ _N._8_5_type_subtype = "page 145"
 function node.type(n) end
 
 ---
----Convert a single `whatsit` name to its internal numeric representation (subtype).
+---Convert a single `whatsit` name to its internal numeric representation
+---(subtype).
 ---
 ---__Example:__
 ---
@@ -3683,9 +3711,8 @@ function node.subtype(whatsit_type_name) end
 _N._8_6_fields = "page 146"
 
 ---
----Return an array of valid field names for a particular type of
----node.
-------
+---Return an array of valid field names for a particular type of node.
+---
 ---__Example:__
 ---
 ---```lua
@@ -4092,9 +4119,9 @@ _N._8_6_fields = "page 146"
 ---})
 ---```
 ---
----If you want to get the valid fields for a “whatsit”, you have to
----supply the second argument also. In other cases, any given second argument will
----be silently ignored.
+---If you want to get the valid fields for a “whatsit”, you have to supply the
+---second argument also. In other cases, any given second argument will be
+---silently ignored.
 ---
 ---__Reference:__
 ---
@@ -4111,7 +4138,8 @@ function node.fields(id, subtype) end
 _N._8_7_has_field = "page 146"
 
 ---
----Return a boolean that is only `true` if `n` is actually a node, and it has the field.
+---Return a boolean that is only `true` if `n` is actually a node, and it has
+---the field.
 ---
 ---__Example:__
 ---
@@ -4160,7 +4188,8 @@ _N._8_7_has_field = "page 146"
 function node.has_field(n, field) end
 
 ---
----Return a boolean that is only `true` if `d` is actually a node, and it has the field.
+---Return a boolean that is only `true` if `d` is actually a node, and it has
+---the field.
 ---
 ---__Example:__
 ---
@@ -4212,11 +4241,10 @@ _N._8_8_new = "page 146"
 ---
 ---Create a new node.
 ---
----All its fields are initialized to
----either zero or `nil` except for `id` and `subtype`. Instead of
----numbers you can also use strings (names). If you create a new `whatsit` node
----the second argument is required. As with all node functions, this function
----creates a node at the *TeX* level.
+---All its fields are initialized to either zero or `nil` except for `id` and
+---`subtype`. Instead of numbers you can also use strings (names). If you create
+---a new `whatsit` node the second argument is required. As with all node
+---functions, this function creates a node at the *TeX* level.
 ---
 ---__Example:__
 ---
@@ -4253,11 +4281,10 @@ function node.new(id, subtype) end
 ---
 ---Create a new node.
 ---
----All its fields are initialized to
----either zero or `nil` except for `id` and `subtype`. Instead of
----numbers you can also use strings (names). If you create a new `whatsit` node
----the second argument is required. As with all node functions, this function
----creates a node at the *TeX* level.
+---All its fields are initialized to either zero or `nil` except for `id` and
+---`subtype`. Instead of numbers you can also use strings (names). If you create
+---a new `whatsit` node the second argument is required. As with all node
+---functions, this function creates a node at the *TeX* level.
 ---
 ---__Example:__
 ---
@@ -4379,10 +4406,9 @@ function node.direct.flush_node(d) end
 ---
 ---Free the *TeX* memory allocated for a list of nodes.
 ---
----Be
----careful: no checks are done on whether any of these nodes is still pointed to
----from a register or some `next` field: it is up to you to make sure that the
----internal data structures remain correct.
+---Be careful: no checks are done on whether any of these nodes is still pointed
+---to from a register or some `next` field: it is up to you to make sure that
+---the internal data structures remain correct.
 ---
 ---__Reference:__
 ---
@@ -4396,10 +4422,9 @@ function node.flush_list(n) end
 ---
 ---Free the *TeX* memory allocated for a list of nodes.
 ---
----Be
----careful: no checks are done on whether any of these nodes is still pointed to
----from a register or some `next` field: it is up to you to make sure that the
----internal data structures remain correct.
+---Be careful: no checks are done on whether any of these nodes is still pointed
+---to from a register or some `next` field: it is up to you to make sure that
+---the internal data structures remain correct.
 ---
 ---__Reference:__
 ---
@@ -4413,8 +4438,8 @@ function node.direct.flush_list(d) end
 _N._8_10_copy_copy_list = "page 147"
 
 ---
----Create a deep copy of node `n`, including all nested lists as in the case
----of a `hlist` or `vlist` node. Only the `next` field is not copied.
+---Create a deep copy of node `n`, including all nested lists as in the case of
+---a `hlist` or `vlist` node. Only the `next` field is not copied.
 ---
 ---__Reference:__
 ---
@@ -4428,8 +4453,8 @@ _N._8_10_copy_copy_list = "page 147"
 function node.copy(n) end
 
 ---
----Create a deep copy of node `n`, including all nested lists as in the case
----of a `hlist` or `vlist` node. Only the `next` field is not copied.
+---Create a deep copy of node `n`, including all nested lists as in the case of
+---a `hlist` or `vlist` node. Only the `next` field is not copied.
 ---
 ---__Reference:__
 ---
@@ -4445,13 +4470,12 @@ function node.direct.copy(d) end
 ---
 ---Create a deep copy of the node list that starts at node `n`.
 ---
----If
----`m` is also given, the copy stops just before node `m`.
+---If `m` is also given, the copy stops just before node `m`.
 ---
----Note that you cannot copy attribute lists this way. However, there is normally no
----need to copy attribute lists as when you do assignments to the `attr` field
----or make changes to specific attributes, the needed copying and freeing takes
----place automatically.
+---Note that you cannot copy attribute lists this way. However, there is
+---normally no need to copy attribute lists as when you do assignments to the
+---`attr` field or make changes to specific attributes, the needed copying and
+---freeing takes place automatically.
 ---
 ---__Reference:__
 ---
@@ -4468,13 +4492,12 @@ function node.copy_list(n, m) end
 ---
 ---Create a deep copy of the node list that starts at node `d`.
 ---
----If
----`e` is also given, the copy stops just before node `e`.
+---If `e` is also given, the copy stops just before node `e`.
 ---
----Note that you cannot copy attribute lists this way. However, there is normally no
----need to copy attribute lists as when you do assignments to the `attr` field
----or make changes to specific attributes, the needed copying and freeing takes
----place automatically.
+---Note that you cannot copy attribute lists this way. However, there is
+---normally no need to copy attribute lists as when you do assignments to the
+---`attr` field or make changes to specific attributes, the needed copying and
+---freeing takes place automatically.
 ---
 ---__Reference:__
 ---
@@ -4491,8 +4514,7 @@ function node.direct.copy_list(d, e) end
 _N._8_11_prev_next = "page 147"
 
 ---
----Return the node preceding the given node, or `nil` if
----there is no such node.
+---Return the node preceding the given node, or `nil` if there is no such node.
 ---
 ---__Reference:__
 ---
@@ -4506,8 +4528,7 @@ _N._8_11_prev_next = "page 147"
 function node.prev(n) end
 
 ---
----Return the node following the given node, or `nil` if
----there is no such node.
+---Return the node following the given node, or `nil` if there is no such node.
 ---
 ---__Reference:__
 ---
@@ -4544,15 +4565,15 @@ _N._8_12_current_attr = "page 147"
 ---x2.attr = ca
 ---```
 ---
----The attribute lists are ref counted and the assignment takes care of incrementing
----the refcount. You cannot expect the value `ca` to be valid any more when
----you assign attributes (using `tex.setattribute`) or when control has been
----passed back to *TeX*.
+---The attribute lists are ref counted and the assignment takes care of
+---incrementing the refcount. You cannot expect the value `ca` to be valid any
+---more when you assign attributes (using `tex.setattribute`) or when control
+---has been passed back to *TeX*.
 ---
 ---Note: this function is somewhat experimental, and it returns the *actual*
----attribute list, not a copy thereof. Therefore, changing any of the attributes in
----the list will change these values for all nodes that have the current attribute
----list assigned to them.
+---attribute list, not a copy thereof. Therefore, changing any of the attributes
+---in the list will change these values for all nodes that have the current
+---attribute list assigned to them.
 ---
 ---__Reference:__
 ---
@@ -4578,18 +4599,21 @@ function node.direct.current_attr() end
 _N._8_13_hpack = "page 148"
 
 ---
----Create a new `hlist` by packaging the list that begins at node `n` into a horizontal box.
+---Create a new `hlist` by packaging the list that begins at node `n` into a
+---horizontal box.
 ---
----With only a single argument, this box is created using
----the natural width of its components. In the three argument form, `info`
----must be either `additional` or `exactly`, and `width` is the
----additional (`\hbox spread`) or exact (`\hbox to`) width to be used.
----The second return value is the badness of the generated box.
+---With only a single argument, this box is created using the natural width of
+---its components. In the three argument form, `info` must be either
+---`additional` or `exactly`, and `width` is the additional (`\hbox spread`) or
+---exact (`\hbox to`) width to be used. The second return value is the badness
+---of the generated box.
 ---
 ---Caveat: there can be unexpected side-effects to this function, like updating
----some of the `marks` and `\inserts`. Also note that the content of
----`h` is the original node list `n`: if you call `node.free(h)`
----you will also free the node list itself, unless you explicitly set the `list` field to `nil` beforehand. And in a similar way, calling `node.free(n)` will invalidate `h` as well!
+---some of the `marks` and `\inserts`. Also note that the content of `h` is the
+---original node list `n`: if you call `node.free(h)` you will also free the
+---node list itself, unless you explicitly set the `list` field to `nil`
+---beforehand. And in a similar way, calling `node.free(n)` will invalidate `h`
+---as well!
 ---
 ---__Reference:__
 ---
@@ -4607,18 +4631,21 @@ _N._8_13_hpack = "page 148"
 function node.hpack(n, width, info, dir) end
 
 ---
----Create a new `hlist` by packaging the list that begins at node `d` into a horizontal box.
+---Create a new `hlist` by packaging the list that begins at node `d` into a
+---horizontal box.
 ---
----With only a single argument, this box is created using
----the natural width of its components. In the three argument form, `info`
----must be either `additional` or `exactly`, and `width` is the
----additional (`\hbox spread`) or exact (`\hbox to`) width to be used.
----The second return value is the badness of the generated box.
+---With only a single argument, this box is created using the natural width of
+---its components. In the three argument form, `info` must be either
+---`additional` or `exactly`, and `width` is the additional (`\hbox spread`) or
+---exact (`\hbox to`) width to be used. The second return value is the badness
+---of the generated box.
 ---
 ---Caveat: there can be unexpected side-effects to this function, like updating
----some of the `marks` and `\inserts`. Also note that the content of
----`h` is the original node list `n`: if you call `node.free(h)`
----you will also free the node list itself, unless you explicitly set the `list` field to `nil` beforehand. And in a similar way, calling `node.free(n)` will invalidate `h` as well!
+---some of the `marks` and `\inserts`. Also note that the content of `h` is the
+---original node list `n`: if you call `node.free(h)` you will also free the
+---node list itself, unless you explicitly set the `list` field to `nil`
+---beforehand. And in a similar way, calling `node.free(n)` will invalidate `h`
+---as well!
 ---
 ---__Reference:__
 ---
@@ -4638,15 +4665,18 @@ function node.direct.hpack(d, width, info, dir) end
 _N._8_14_vpack = "page 148"
 
 ---
----Create a new `vlist` by packaging the list that begins at node `head` into a vertical box.
+---Create a new `vlist` by packaging the list that begins at node `head` into a
+---vertical box.
 ---
----With only a single argument, this box is created using
----the natural height of its components.
+---With only a single argument, this box is created using the natural height of
+---its components.
 ---
 ---Caveat: there can be unexpected side-effects to this function, like updating
----some of the `marks` and `\inserts`. Also note that the content of
----`new_head` is the original node list `head`: if you call `node.free(new_head)`
----you will also free the node list itself, unless you explicitly set the `list` field to `nil` beforehand. And in a similar way, calling `node.free(head)` will invalidate `new_head` as well!
+---some of the `marks` and `\inserts`. Also note that the content of `new_head`
+---is the original node list `head`: if you call `node.free(new_head)` you will
+---also free the node list itself, unless you explicitly set the `list` field to
+---`nil` beforehand. And in a similar way, calling `node.free(head)` will
+---invalidate `new_head` as well!
 ---
 ---__Reference:__
 ---
@@ -4664,15 +4694,18 @@ _N._8_14_vpack = "page 148"
 function node.vpack(head, height, info, dir) end
 
 ---
----Create a new `vlist` by packaging the list that begins at node `head` into a vertical box.
+---Create a new `vlist` by packaging the list that begins at node `head` into a
+---vertical box.
 ---
----With only a single argument, this box is created using
----the natural height of its components.
+---With only a single argument, this box is created using the natural height of
+---its components.
 ---
 ---Caveat: there can be unexpected side-effects to this function, like updating
----some of the `marks` and `\inserts`. Also note that the content of
----`new_head` is the original node list `head`: if you call `node.free(new_head)`
----you will also free the node list itself, unless you explicitly set the `list` field to `nil` beforehand. And in a similar way, calling `node.free(head)` will invalidate `new_head` as well!
+---some of the `marks` and `\inserts`. Also note that the content of `new_head`
+---is the original node list `head`: if you call `node.free(new_head)` you will
+---also free the node list itself, unless you explicitly set the `list` field to
+---`nil` beforehand. And in a similar way, calling `node.free(head)` will
+---invalidate `new_head` as well!
 ---
 ---__Reference:__
 ---
@@ -4731,13 +4764,13 @@ _N._8_16_dimensions_rangedimensions = "page 149"
 ---
 ---The return values are scaled points.
 ---
----You need to keep in mind that this is one of the few places in *TeX* where floats
----are used, which means that you can get small differences in rounding when you
----compare the width reported by `hpack` with `dimensions`.
+---You need to keep in mind that this is one of the few places in *TeX* where
+---floats are used, which means that you can get small differences in rounding
+---when you compare the width reported by `hpack` with `dimensions`.
 ---
 ---__Reference:__
 ---
----[Source: luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
+---* Source: [luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
 ---* Corresponding C source code: [lnodelib.c#L2767-L2812](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2767-L2812)
 ---
 ---@param n Node
@@ -4756,13 +4789,13 @@ function node.dimensions(n, dir) end
 ---
 ---The return values are scaled points.
 ---
----You need to keep in mind that this is one of the few places in *TeX* where floats
----are used, which means that you can get small differences in rounding when you
----compare the width reported by `hpack` with `dimensions`.
+---You need to keep in mind that this is one of the few places in *TeX* where
+---floats are used, which means that you can get small differences in rounding
+---when you compare the width reported by `hpack` with `dimensions`.
 ---
 ---__Reference:__
 ---
----[Source: luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
+---* Source: [luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
 ---* Corresponding C source code: [lnodelib.c#L2838-L2880](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2838-L2880)
 ---
 ---@param d integer # The index number of the node in the memory table for direct access.
@@ -4776,12 +4809,12 @@ function node.dimensions(n, dir) end
 function node.direct.dimensions(d, dir) end
 
 ---
----Calculate the natural in-line dimensions of the node list starting
----at node `n` and terminating just before node `t`.
+---Calculate the natural in-line dimensions of the node list starting at node
+---`n` and terminating just before node `t`.
 ---
 ---__Reference:__
 ---
----[Source: luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
+---* Source: [luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
 ---* Corresponding C source code: [lnodelib.c#L2767-L2812](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2767-L2812)
 ---
 ---@param n Node
@@ -4796,12 +4829,12 @@ function node.direct.dimensions(d, dir) end
 function node.dimensions(n, t, dir) end
 
 ---
----Calculate the natural in-line dimensions of the node list starting
----at node `n` and terminating just before node `t`.
+---Calculate the natural in-line dimensions of the node list starting at node
+---`n` and terminating just before node `t`.
 ---
 ---__Reference:__
 ---
----[Source: luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
+---* Source: [luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
 ---* Corresponding C source code: [lnodelib.c#L2838-L2880](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2838-L2880)
 ---
 ---@param d integer # The index number of the node in the memory table for direct access.
@@ -4816,16 +4849,16 @@ function node.dimensions(n, t, dir) end
 function node.direct.dimensions(d, t, dir) end
 
 ---
----Calculates the natural in-line dimensions of the end of the node list starting
----at node `n`.
+---Calculates the natural in-line dimensions of the end of the node list
+---starting at node `n`.
 ---
----This is an
----alternative format that starts with glue parameters as the first three arguments.
+---This is an alternative format that starts with glue parameters as the first
+---three arguments.
 ---
----This calling method takes glue settings into account and is especially useful for
----finding the actual width of a sublist of nodes that are already boxed, for
----example in code like this, which prints the width of the space in between the
----`a` and `b` as it would be if `\box0` was used as-is:
+---This calling method takes glue settings into account and is especially useful
+---for finding the actual width of a sublist of nodes that are already boxed,
+---for example in code like this, which prints the width of the space in between
+---the `a` and `b` as it would be if `\box0` was used as-is:
 ---
 ---```
 ---\setbox0 = \hbox to 20pt {a b}
@@ -4841,7 +4874,7 @@ function node.direct.dimensions(d, t, dir) end
 ---
 ---__Reference:__
 ---
----[Source: luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
+---* Source: [luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
 ---* Corresponding C source code: [lnodelib.c#L2838-L2880](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2838-L2880)
 ---
 ---@param glue_set integer
@@ -4858,16 +4891,16 @@ function node.direct.dimensions(d, t, dir) end
 function node.dimensions(glue_set, glue_sign, glue_order, n, dir) end
 
 ---
----Calculates the natural in-line dimensions of the end of the node list starting
----at node `n`.
+---Calculates the natural in-line dimensions of the end of the node list
+---starting at node `n`.
 ---
----This is an
----alternative format that starts with glue parameters as the first three arguments.
+---This is an alternative format that starts with glue parameters as the first
+---three arguments.
 ---
----This calling method takes glue settings into account and is especially useful for
----finding the actual width of a sublist of nodes that are already boxed, for
----example in code like this, which prints the width of the space in between the
----`a` and `b` as it would be if `\box0` was used as-is:
+---This calling method takes glue settings into account and is especially useful
+---for finding the actual width of a sublist of nodes that are already boxed,
+---for example in code like this, which prints the width of the space in between
+---the `a` and `b` as it would be if `\box0` was used as-is:
 ---
 ---```
 ---\setbox0 = \hbox to 20pt {a b}
@@ -4883,7 +4916,7 @@ function node.dimensions(glue_set, glue_sign, glue_order, n, dir) end
 ---
 ---__Reference:__
 ---
----[Source: luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
+---* Source: [luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
 ---* Corresponding C source code: [lnodelib.c#L2838-L2880](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2838-L2880)
 ---
 ---@param glue_set integer
@@ -4900,15 +4933,15 @@ function node.dimensions(glue_set, glue_sign, glue_order, n, dir) end
 function node.direct.dimensions(glue_set, glue_sign, glue_order, d, dir) end
 
 ---
----Calculate the natural in-line dimensions of the node list starting
----at node `n` and terminating just before node `t`.
+---Calculate the natural in-line dimensions of the node list starting at node
+---`n` and terminating just before node `t`.
 ---
----This is an
----alternative format that starts with glue parameters as the first three arguments.
+---This is an alternative format that starts with glue parameters as the first
+---three arguments.
 ---
 ---__Reference:__
 ---
----[Source: luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
+---* Source: [luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
 ---* Corresponding C source code: [lnodelib.c#L2767-L2812](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2767-L2812)
 ---
 ---@param glue_set integer
@@ -4926,15 +4959,15 @@ function node.direct.dimensions(glue_set, glue_sign, glue_order, d, dir) end
 function node.dimensions(glue_set, glue_sign, glue_order, d, t, dir) end
 
 ---
----Calculate the natural in-line dimensions of the node list starting
----at node `n` and terminating just before node `t`.
+---Calculate the natural in-line dimensions of the node list starting at node
+---`n` and terminating just before node `t`.
 ---
----This is an
----alternative format that starts with glue parameters as the first three arguments.
+---This is an alternative format that starts with glue parameters as the first
+---three arguments.
 ---
 ---__Reference:__
 ---
----[Source: luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
+---* Source: [luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
 ---* Corresponding C source code: [lnodelib.c#L2838-L2880](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2838-L2880)
 ---
 ---@param glue_set integer
@@ -4955,8 +4988,8 @@ function node.direct.dimensions(glue_set, glue_sign, glue_order, n, t, dir) end
 ---Calculate the natural in-line dimensions of the node list `parent` starting
 ---at node `first` and terminating just before node `last`.
 ---
----This functions saves a few lookups in comparison to `node.dimensions()` and can be more convenient in some
----cases.
+---This functions saves a few lookups in comparison to `node.dimensions()` and
+---can be more convenient in some cases.
 ---
 ---__Reference:__
 ---
@@ -4977,8 +5010,8 @@ function node.rangedimensions(parent, first, last) end
 ---Calculate the natural in-line dimensions of the node list `parent` starting
 ---at node `first` and terminating just before node `last`.
 ---
----This functions saves a few lookups in comparison to `node.dimensions()` and can be more convenient in some
----cases.
+---This functions saves a few lookups in comparison to `node.dimensions()` and
+---can be more convenient in some cases.
 ---
 ---__Reference:__
 ---
@@ -5001,8 +5034,7 @@ _N._8_17_mlist_to_hlist = "page 150"
 ---Run the internal `mlist` to `hlist` conversion, converting the math list in
 ---`n` into the horizontal list `h`.
 ---
----The interface is exactly the same
----as for the callback `mlist_to_hlist`.
+---The interface is exactly the same as for the callback `mlist_to_hlist`.
 ---
 ---__Reference:__
 ---
@@ -5054,8 +5086,8 @@ _N._8_20_length_and_count = "page 151"
 ---
 ---Return the number of nodes contained in the node list that starts at `n`.
 ---
----If `m` is also supplied it stops at `m` instead of at the end of the
----list. The node `m` is not counted.
+---If `m` is also supplied it stops at `m` instead of at the end of the list.
+---The node `m` is not counted.
 ---
 ---__Reference:__
 ---
@@ -5072,8 +5104,8 @@ function node.length(n, m) end
 ---
 ---Return the number of nodes contained in the node list that starts at `d`.
 ---
----If `e` is also supplied it stops at `e` instead of at the end of the
----list. The node `d` is not counted.
+---If `e` is also supplied it stops at `e` instead of at the end of the list.
+---The node `d` is not counted.
 ---
 ---__Reference:__
 ---
@@ -5088,12 +5120,11 @@ function node.length(n, m) end
 function node.direct.length(d, e) end
 
 ---
----Return the number of nodes contained in the node list that starts at `n`
----that have a matching `id` field.
+---Return the number of nodes contained in the node list that starts at `n` that
+---have a matching `id` field.
 ---
----If `m` is also supplied, counting
----stops at `m` instead of at the end of the list. The node `m` is not
----counted. This function also accept string `id`’s.
+---If `m` is also supplied, counting stops at `m` instead of at the end of the
+---list. The node `m` is not counted. This function also accept string `id`’s.
 ---
 ---__Reference:__
 ---
@@ -5109,12 +5140,11 @@ function node.direct.length(d, e) end
 function node.count(id, n, m) end
 
 ---
----Return the number of nodes contained in the node list that starts at `d`
----that have a matching `id` field.
+---Return the number of nodes contained in the node list that starts at `d` that
+---have a matching `id` field.
 ---
----If `e` is also supplied, counting
----stops at `e` instead of at the end of the list. The node `d` is not
----counted. This function also accept string `id`’s.
+---If `e` is also supplied, counting stops at `e` instead of at the end of the
+---list. The node `d` is not counted. This function also accept string `id`’s.
 ---
 ---__Reference:__
 ---
@@ -5132,8 +5162,8 @@ function node.direct.count(id, d, e) end
 _N._8_21_is_char_and_is_glyph = "page 151"
 
 ---
----Signal if the glyph is already turned into a character reference
----or not by examining the subtype.
+---Signal if the glyph is already turned into a character reference or not by
+---examining the subtype.
 ---
 ---__Example:__
 ---
@@ -5156,8 +5186,8 @@ _N._8_21_is_char_and_is_glyph = "page 151"
 function node.is_char(n, font) end
 
 ---
----Signal if the glyph is already turned into a character reference
----or not by examining the subtype.
+---Signal if the glyph is already turned into a character reference or not by
+---examining the subtype.
 ---
 ---__Reference:__
 ---
@@ -5173,8 +5203,8 @@ function node.is_char(n, font) end
 function node.direct.is_char(d, font) end
 
 ---
----Signal if the glyph is already turned into a character reference
----or not by examining the subtype.
+---Signal if the glyph is already turned into a character reference or not by
+---examining the subtype.
 ---
 ---__Example:__
 ---
@@ -5198,8 +5228,8 @@ function node.direct.is_char(d, font) end
 function node.is_glyph(n) end
 
 ---
----Signal if the glyph is already turned into a character reference
----or not by examining the subtype.
+---Signal if the glyph is already turned into a character reference or not by
+---examining the subtype.
 ---
 ---__Example:__
 ---
@@ -5242,9 +5272,9 @@ _N._8_22_traverse = "page 153"
 ---```
 ---
 ---It should be clear from the definition of the function `f` that even though
----it is possible to add or remove nodes from the node list while traversing, you
----have to take great care to make sure all the `next` (and `prev`)
----pointers remain valid.
+---it is possible to add or remove nodes from the node list while traversing,
+---you have to take great care to make sure all the `next` (and `prev`) pointers
+---remain valid.
 ---
 ---__Reference:__
 ---
@@ -5269,9 +5299,9 @@ function node.traverse(n) end
 ---```
 ---
 ---It should be clear from the definition of the function `f` that even though
----it is possible to add or remove nodes from the node list while traversing, you
----have to take great care to make sure all the `next` (and `prev`)
----pointers remain valid.
+---it is possible to add or remove nodes from the node list while traversing,
+---you have to take great care to make sure all the `next` (and `prev`) pointers
+---remain valid.
 ---
 ---__Reference:__
 ---
@@ -5353,8 +5383,7 @@ function node.traverse_char(n) end
 function node.direct.traverse_char(d) end
 
 ---
----Loop over a list and return the list and
----filter all glyphs.
+---Loop over a list and return the list and filter all glyphs.
 ---
 ---__Reference:__
 ---
@@ -5368,8 +5397,7 @@ function node.direct.traverse_char(d) end
 function node.traverse_glyph(n) end
 
 ---
----Loop over a list and return the list and
----filter all glyphs.
+---Loop over a list and return the list and filter all glyphs.
 ---
 ---__Reference:__
 ---
@@ -5451,10 +5479,9 @@ _N._8_27_end_of_math = "page 153"
 ---
 ---Look for and return the next `math` node following the start node `n`.
 ---
----If
----the given node is a math end node this helper returns that node, else it follows
----the list and returns the next math endnote. If no such node is found `nil` is
----returned.
+---If the given node is a math end node this helper returns that node, else it
+---follows the list and returns the next math endnote. If no such node is found
+---`nil` is returned.
 ---
 ---__Reference:__
 ---
@@ -5470,10 +5497,9 @@ function node.end_of_math(n) end
 ---
 ---Look for and return the next `math` node following the start node `d`.
 ---
----If
----the given node is a math end node this helper returns that node, else it follows
----the list and returns the next math endnote. If no such node is found `nil` is
----returned.
+---If the given node is a math end node this helper returns that node, else it
+---follows the list and returns the next math endnote. If no such node is found
+---`nil` is returned.
 ---
 ---__Reference:__
 ---
@@ -5491,13 +5517,12 @@ _N._8_28_remove = "page 153"
 ---
 ---Remove the node `current` from the list following `head`.
 ---
----It is your responsibility to make sure it is really part of that list.
----The return values are the new `head` and `current` nodes. The
----returned `current` is the node following the `current` in the calling
----argument, and is only passed back as a convenience (or `nil`, if there is
----no such node). The returned `head` is more important, because if the
----function is called with `current` equal to `head`, it will be
----changed.
+---It is your responsibility to make sure it is really part of that list. The
+---return values are the new `head` and `current` nodes. The returned `current`
+---is the node following the `current` in the calling argument, and is only
+---passed back as a convenience (or `nil`, if there is no such node). The
+---returned `head` is more important, because if the function is called with
+---`current` equal to `head`, it will be changed.
 ---
 ---__Example:__
 ---
@@ -5534,13 +5559,12 @@ function node.remove(head, current) end
 ---
 ---Remove the node `current` from the list following `head`.
 ---
----It is your responsibility to make sure it is really part of that list.
----The return values are the new `head` and `current` nodes. The
----returned `current` is the node following the `current` in the calling
----argument, and is only passed back as a convenience (or `nil`, if there is
----no such node). The returned `head` is more important, because if the
----function is called with `current` equal to `head`, it will be
----changed.
+---It is your responsibility to make sure it is really part of that list. The
+---return values are the new `head` and `current` nodes. The returned `current`
+---is the node following the `current` in the calling argument, and is only
+---passed back as a convenience (or `nil`, if there is no such node). The
+---returned `head` is more important, because if the function is called with
+---`current` equal to `head`, it will be changed.
 ---
 ---@see node.direct.remove
 ---
@@ -5582,13 +5606,12 @@ function node.direct.remove(head, current) end
 _N._8_29_insert_before = "page 153"
 
 ---
----Insert the node `new` before `current` into the list
----following `head`.
+---Insert the node `new` before `current` into the list following `head`.
 ---
----It is your responsibility to make sure that `current` is really part of that list. The return values are the (potentially
----mutated) `head` and the node `new`, set up to be part of the list
----(with correct `next` field). If `head` is initially `nil`, it
----will become `new`.
+---It is your responsibility to make sure that `current` is really part of that
+---list. The return values are the (potentially mutated) `head` and the node
+---`new`, set up to be part of the list (with correct `next` field). If `head`
+---is initially `nil`, it will become `new`.
 ---
 ---__Reference:__
 ---
@@ -5606,13 +5629,12 @@ _N._8_29_insert_before = "page 153"
 function node.insert_before(head, current, new) end
 
 ---
----Insert the node `new` before `current` into the list
----following `head`.
+---Insert the node `new` before `current` into the list following `head`.
 ---
----It is your responsibility to make sure that `current` is really part of that list. The return values are the (potentially
----mutated) `head` and the node `new`, set up to be part of the list
----(with correct `next` field). If `head` is initially `nil`, it
----will become `new`.
+---It is your responsibility to make sure that `current` is really part of that
+---list. The return values are the (potentially mutated) `head` and the node
+---`new`, set up to be part of the list (with correct `next` field). If `head`
+---is initially `nil`, it will become `new`.
 ---
 ---__Reference:__
 ---
@@ -5632,12 +5654,12 @@ function node.direct.insert_before(head, current, new) end
 _N._8_30_insert_after = "page 153"
 
 ---
----Insert the node `new` after `current` into the list
----following `head`.
+---Insert the node `new` after `current` into the list following `head`.
 ---
----It is your responsibility to make sure that `current` is really part of that list. The return values are the `head` and
----the node `new`, set up to be part of the list (with correct `next`
----field). If `head` is initially `nil`, it will become `new`.
+---It is your responsibility to make sure that `current` is really part of that
+---list. The return values are the `head` and the node `new`, set up to be part
+---of the list (with correct `next` field). If `head` is initially `nil`, it
+---will become `new`.
 ---
 ---__Reference:__
 ---
@@ -5655,12 +5677,12 @@ _N._8_30_insert_after = "page 153"
 function node.insert_after(head, current, new) end
 
 ---
----Insert the node `new` after `current` into the list
----following `head`.
+---Insert the node `new` after `current` into the list following `head`.
 ---
----It is your responsibility to make sure that `current` is really part of that list. The return values are the `head` and
----the node `new`, set up to be part of the list (with correct `next`
----field). If `head` is initially `nil`, it will become `new`.
+---It is your responsibility to make sure that `current` is really part of that
+---list. The return values are the `head` and the node `new`, set up to be part
+---of the list (with correct `next` field). If `head` is initially `nil`, it
+---will become `new`.
 ---
 ---__Reference:__
 ---
@@ -5680,12 +5702,11 @@ function node.direct.insert_after(head, current, new) end
 _N._8_31_first_glyph = "page 154"
 
 ---
----Return the first node in the list starting at `n` that is a glyph node
----with a subtype indicating it is a glyph, or `nil`.
+---Return the first node in the list starting at `n` that is a glyph node with a
+---subtype indicating it is a glyph, or `nil`.
 ---
----If `m` is given,
----processing stops at (but including) that node, otherwise processing stops at the
----end of the list.
+---If `m` is given, processing stops at (but including) that node, otherwise
+---processing stops at the end of the list.
 ---
 ---__Reference:__
 ---
@@ -5701,12 +5722,11 @@ _N._8_31_first_glyph = "page 154"
 function node.first_glyph(n, m) end
 
 ---
----Return the first node in the list starting at `d` that is a glyph node
----with a subtype indicating it is a glyph, or `nil`.
+---Return the first node in the list starting at `d` that is a glyph node with a
+---subtype indicating it is a glyph, or `nil`.
 ---
----If `e` is given,
----processing stops at (but including) that node, otherwise processing stops at the
----end of the list.
+---If `e` is given, processing stops at (but including) that node, otherwise
+---processing stops at the end of the list.
 ---
 ---__Reference:__
 ---
@@ -5795,8 +5815,8 @@ function node.direct.kerning(head, tail) end
 _N._8_34_unprotect_glyphs = "page 155"
 
 ---
----Convert from `characters` to `glyphs` during node
----processing by subtracting `256` from all glyph node subtypes.
+---Convert from `characters` to `glyphs` during node processing by subtracting
+---`256` from all glyph node subtypes.
 ---
 ---__Reference:__
 ---
@@ -5808,8 +5828,8 @@ _N._8_34_unprotect_glyphs = "page 155"
 function node.unprotect_glyph(n) end
 
 ---
----Convert from `characters` to `glyphs` during node
----processing by subtracting `256` from the glyph node subtype.
+---Convert from `characters` to `glyphs` during node processing by subtracting
+---`256` from the glyph node subtype.
 ---
 ---__Reference:__
 ---
@@ -5821,8 +5841,8 @@ function node.unprotect_glyph(n) end
 function node.direct.unprotect_glyph(d) end
 
 ---
----Convert from `characters` to `glyphs` during node
----processing by subtracting `256` from the glyph node subtype.
+---Convert from `characters` to `glyphs` during node processing by subtracting
+---`256` from the glyph node subtype.
 ---
 ---__Reference:__
 ---
@@ -5835,8 +5855,8 @@ function node.direct.unprotect_glyph(d) end
 function node.unprotect_glyphs(head, tail) end
 
 ---
----Convert from `characters` to `glyphs` during node
----processing by subtracting `256` from all glyph node subtypes.
+---Convert from `characters` to `glyphs` during node processing by subtracting
+---`256` from all glyph node subtypes.
 ---
 ---__Reference:__
 ---
@@ -5851,11 +5871,11 @@ function node.direct.unprotect_glyphs(head, tail) end
 _N._8_35_protect_glyphs = "page 155"
 
 ---
----Add `256` to the `glyph` node subtype
----except that if the value is `1`, add only `255`.
+---Add `256` to the `glyph` node subtype except that if the value is `1`, add
+---only `255`.
 ---
----The special handling of `1` means
----that `characters` will become `glyphs` after subtraction of `256`.
+---The special handling of `1` means that `characters` will become `glyphs`
+---after subtraction of `256`.
 ---
 ---__Reference:__
 ---
@@ -5867,11 +5887,11 @@ _N._8_35_protect_glyphs = "page 155"
 function node.protect_glyph(n) end
 
 ---
----Add `256` to the `glyph` node subtype
----except that if the value is `1`, add only `255`.
+---Add `256` to the `glyph` node subtype except that if the value is `1`, add
+---only `255`.
 ---
----The special handling of `1` means
----that `characters` will become `glyphs` after subtraction of `256`.
+---The special handling of `1` means that `characters` will become `glyphs`
+---after subtraction of `256`.
 ---
 ---__Reference:__
 ---
@@ -5886,8 +5906,8 @@ function node.direct.protect_glyph(d) end
 ---Add `256` to all `glyph` node subtypes in the node list starting at `head`,
 ---except that if the value is `1`, add only `255`.
 ---
----The special handling of `1` means
----that `characters` will become `glyphs` after subtraction of `256`.
+---The special handling of `1` means that `characters` will become `glyphs`
+---after subtraction of `256`.
 ---
 ---__Reference:__
 ---
@@ -5903,8 +5923,8 @@ function node.protect_glyphs(head, tail) end
 ---Add `256` to all `glyph` node subtypes in the node list starting at `head`,
 ---except that if the value is `1`, add only `255`.
 ---
----The special handling of `1` means
----that `characters` will become `glyphs` after subtraction of `256`.
+---The special handling of `1` means that `characters` will become `glyphs`
+---after subtraction of `256`.
 ---
 ---__Reference:__
 ---
@@ -5947,9 +5967,8 @@ _N._8_37_write = "page 155"
 ---
 ---Append a node list to *TeX*'s “current list”.
 ---
----The
----node list is not deep-copied! There is no error checking either! You mignt need
----to enforce horizontal mode in order for this to work as expected.
+---The node list is not deep-copied! There is no error checking either! You
+---mignt need to enforce horizontal mode in order for this to work as expected.
 ---
 ---__Reference:__
 ---
@@ -5964,9 +5983,8 @@ function node.write(n) end
 ---
 ---Append a node list to *TeX*'s “current list”.
 ---
----The
----node list is not deep-copied! There is no error checking either! You mignt need
----to enforce horizontal mode in order for this to work as expected.
+---The node list is not deep-copied! There is no error checking either! You
+---mignt need to enforce horizontal mode in order for this to work as expected.
 ---
 ---__Reference:__
 ---
@@ -5981,8 +5999,8 @@ function node.direct.write(d) end
 _N._8_38_protrusion_skippable = "page 155"
 
 ---
----Return `true` if, for the purpose of line boundary discovery when
----character protrusion is active, this node can be skipped.
+---Return `true` if, for the purpose of line boundary discovery when character
+---protrusion is active, this node can be skipped.
 ---
 ---__Reference:__
 ---
@@ -5996,8 +6014,8 @@ _N._8_38_protrusion_skippable = "page 155"
 function node.protrusion_skippable(n) end
 
 ---
----Return `true` if, for the purpose of line boundary discovery when
----character protrusion is active, this node can be skipped.
+---Return `true` if, for the purpose of line boundary discovery when character
+---protrusion is active, this node can be skipped.
 ---
 ---__Reference:__
 ---
@@ -6017,8 +6035,7 @@ _N._8_1_setglue = "page 155"
 ---
 ---Set the five properties of a `glue` node in one go.
 ---
----Non-numeric values are
----equivalent to zero and reset a property.
+---Non-numeric values are equivalent to zero and reset a property.
 ---
 ---When you pass values, only arguments that are numbers are assigned so
 ---
@@ -6042,21 +6059,12 @@ _N._8_1_setglue = "page 155"
 ---@param shrink_order integer|any
 ---
 ---{{ contribute }}
-function node.setglue(
-  n,
-  width,
-  stretch,
-  shrink,
-  stretch_order,
-  shrink_order
-)
-end
+function node.setglue(n, width, stretch, shrink, stretch_order, shrink_order) end
 
 ---
 ---Set the five properties of a `glue` node in one go.
 ---
----Non-numeric values are
----equivalent to zero and reset a property.
+---Non-numeric values are equivalent to zero and reset a property.
 ---
 ---When you pass values, only arguments that are numbers are assigned so
 ---
@@ -6080,23 +6088,15 @@ end
 ---@param shrink_order integer|any
 ---
 ---{{ contribute }}
-function node.direct.setglue(
-  d,
-  width,
-  stretch,
-  shrink,
-  stretch_order,
-  shrink_order
-)
-end
+function node.direct.setglue(d, width, stretch, shrink, stretch_order, shrink_order) end
 
 _N._8_2_getglue = "page 155"
 
 ---
 ---Return 5 values or nothing when no glue is passed.
 ---
----When the second argument is false, only the width is returned (this is consistent
----with `tex.get`).
+---When the second argument is false, only the width is returned (this is
+---consistent with `tex.get`).
 ---
 ---__Reference:__
 ---
@@ -6116,8 +6116,8 @@ function node.getglue(n) end
 ---
 ---Return 5 values or nothing when no glue is passed.
 ---
----When the second argument is false, only the width is returned (this is consistent
----with `tex.get`).
+---When the second argument is false, only the width is returned (this is
+---consistent with `tex.get`).
 ---
 ---__Reference:__
 ---
@@ -6137,8 +6137,7 @@ function node.direct.getglue(d) end
 _N._8_3_is_zero_glue = "page 156"
 
 ---
----Return `true` when the width, stretch and shrink properties
----are zero.
+---Return `true` when the width, stretch and shrink properties are zero.
 ---
 ---__Reference:__
 ---
@@ -6152,8 +6151,7 @@ _N._8_3_is_zero_glue = "page 156"
 function node.is_zero_glue(n) end
 
 ---
----Return `true` when the width, stretch and shrink properties
----are zero.
+---Return `true` when the width, stretch and shrink properties are zero.
 ---
 ---__Reference:__
 ---
@@ -6175,9 +6173,8 @@ _N._9_4_has_attribute = "page 157"
 ---
 ---Test if a node has the attribute with number `id` set.
 ---
----If `value` is
----also supplied, also tests if the value matches `value`. It returns the value,
----or, if no match is found, `nil`.
+---If `value` is also supplied, also tests if the value matches `value`. It
+---returns the value, or, if no match is found, `nil`.
 ---
 ---__Reference:__
 ---
@@ -6195,9 +6192,8 @@ function node.has_attribute(n, id, value) end
 ---
 ---Test if a node has the attribute with number `id` set.
 ---
----If `value` is
----also supplied, also tests if the value matches `value`. It returns the value,
----or, if no match is found, `nil`.
+---If `value` is also supplied, also tests if the value matches `value`. It
+---returns the value, or, if no match is found, `nil`.
 ---
 ---__Reference:__
 ---
@@ -6217,9 +6213,8 @@ _N._9_5_get_attribute = "page 157"
 ---
 ---Test if a node has an attribute with number `id` set.
 ---
----It returns the
----value, or, if no match is found, `nil`. If no `id` is given then the
----zero attributes is assumed.
+---It returns the value, or, if no match is found, `nil`. If no `id` is given
+---then the zero attributes is assumed.
 ---
 ---__Reference:__
 ---
@@ -6236,9 +6231,8 @@ function node.get_attribute(n, id) end
 ---
 ---Test if a node has an attribute with number `id` set.
 ---
----It returns the
----value, or, if no match is found, `nil`. If no `id` is given then the
----zero attributes is assumed.
+---It returns the value, or, if no match is found, `nil`. If no `id` is given
+---then the zero attributes is assumed.
 ---
 ---__Reference:__
 ---
@@ -6257,8 +6251,7 @@ _N._9_6_find_attribute = "page 157"
 ---
 ---Find the first node that has attribute with number `id` set.
 ---
----It returns
----the value and the node if there is a match and otherwise nothing.
+---It returns the value and the node if there is a match and otherwise nothing.
 ---
 ---__Reference:__
 ---
@@ -6276,8 +6269,7 @@ function node.find_attribute(n, id) end
 ---
 ---Find the first node that has attribute with number `id` set.
 ---
----It returns
----the value and the node if there is a match and otherwise nothing.
+---It returns the value and the node if there is a match and otherwise nothing.
 ---
 ---__Reference:__
 ---
@@ -6297,8 +6289,7 @@ _N._9_7_set_attribute = "page 157"
 ---
 ---Set the attribute with number `id` to the value `value`.
 ---
----Duplicate
----assignments are ignored.
+---Duplicate assignments are ignored.
 ---
 ---__Reference:__
 ---
@@ -6314,8 +6305,7 @@ function node.set_attribute(n, id, value) end
 ---
 ---Set the attribute with number `id` to the value `value`.
 ---
----Duplicate
----assignments are ignored.
+---Duplicate assignments are ignored.
 ---
 ---__Reference:__
 ---
@@ -6333,12 +6323,11 @@ _N._9_8_unset_attribute = "page 158"
 ---
 ---Unset the attribute with the number `id`.
 ---
----If `value` is also supplied, it
----will only perform this operation if the value matches `value`. Missing
----attributes or attribute-value pairs are ignored.
+---If `value` is also supplied, it will only perform this operation if the value
+---matches `value`. Missing attributes or attribute-value pairs are ignored.
 ---
----If the attribute was actually deleted, returns its old value. Otherwise, returns
----`nil`.
+---If the attribute was actually deleted, returns its old value. Otherwise,
+---returns `nil`.
 ---
 ---__Reference:__
 ---
@@ -6356,12 +6345,11 @@ function node.unset_attribute(n, id, value) end
 ---
 ---Unset the attribute with the number `id`.
 ---
----If `value` is also supplied, it
----will only perform this operation if the value matches `value`. Missing
----attributes or attribute-value pairs are ignored.
+---If `value` is also supplied, it will only perform this operation if the value
+---matches `value`. Missing attributes or attribute-value pairs are ignored.
 ---
----If the attribute was actually deleted, returns its old value. Otherwise, returns
----`nil`.
+---If the attribute was actually deleted, returns its old value. Otherwise,
+---returns `nil`.
 ---
 ---__Reference:__
 ---
@@ -6379,12 +6367,12 @@ function node.direct.unset_attribute(n, id, value) end
 _N._9_9_slide = "page 158"
 
 ---
----Return the found
----tail node and make sure that the node lists is double linked.
+---Return the found tail node and make sure that the node lists is double
+---linked.
 ---
----After some callbacks automatic sliding takes place. This feature can be turned
----off with `node.fix_node_lists(false)` but you better make sure then that
----you don't mess up lists. In most cases *TeX* itself only uses `next`
+---After some callbacks automatic sliding takes place. This feature can be
+---turned off with `node.fix_node_lists(false)` but you better make sure then
+---that you don't mess up lists. In most cases *TeX* itself only uses `next`
 ---pointers but your other callbacks might expect proper `prev` pointers too.
 ---Future versions of *LuaTeX* can add more checking but this will not influence
 ---usage.
@@ -6401,12 +6389,12 @@ _N._9_9_slide = "page 158"
 function node.slide(n) end
 
 ---
----Return the found
----tail node and make sure that the node lists is double linked.
+---Return the found tail node and make sure that the node lists is double
+---linked.
 ---
----After some callbacks automatic sliding takes place. This feature can be turned
----off with `node.fix_node_lists(false)` but you better make sure then that
----you don't mess up lists. In most cases *TeX* itself only uses `next`
+---After some callbacks automatic sliding takes place. This feature can be
+---turned off with `node.fix_node_lists(false)` but you better make sure then
+---that you don't mess up lists. In most cases *TeX* itself only uses `next`
 ---pointers but your other callbacks might expect proper `prev` pointers too.
 ---Future versions of *LuaTeX* can add more checking but this will not influence
 ---usage.
@@ -6427,11 +6415,11 @@ _N._9_10_check_discretionaries = "page 158"
 ---
 ---Check all `disc` nodes in the node list.
 ---
----When you fool around with disc nodes you need to be aware of the fact that they
----have a special internal data structure. As long as you reassign the fields when
----you have extended the lists it’s ok because then the tail pointers get updated,
----but when you add to list without reassigning you might end up in trouble when
----the linebreak routine kicks in.
+---When you fool around with disc nodes you need to be aware of the fact that
+---they have a special internal data structure. As long as you reassign the
+---fields when you have extended the lists it’s ok because then the tail
+---pointers get updated, but when you add to list without reassigning you might
+---end up in trouble when the linebreak routine kicks in.
 ---
 ---__Reference:__
 ---
@@ -6445,11 +6433,11 @@ function node.check_discretionaries(head) end
 ---
 ---Check all `disc` nodes in the node list.
 ---
----When you fool around with disc nodes you need to be aware of the fact that they
----have a special internal data structure. As long as you reassign the fields when
----you have extended the lists it’s ok because then the tail pointers get updated,
----but when you add to list without reassigning you might end up in trouble when
----the linebreak routine kicks in.
+---When you fool around with disc nodes you need to be aware of the fact that
+---they have a special internal data structure. As long as you reassign the
+---fields when you have extended the lists it’s ok because then the tail
+---pointers get updated, but when you add to list without reassigning you might
+---end up in trouble when the linebreak routine kicks in.
 ---
 ---__Reference:__
 ---
@@ -6463,11 +6451,11 @@ function node.direct.check_discretionaries(d) end
 ---
 ---Check one `disc` node only and also check if the node is a `disc` node.
 ---
----When you fool around with disc nodes you need to be aware of the fact that they
----have a special internal data structure. As long as you reassign the fields when
----you have extended the lists it’s ok because then the tail pointers get updated,
----but when you add to list without reassigning you might end up in trouble when
----the linebreak routine kicks in.
+---When you fool around with disc nodes you need to be aware of the fact that
+---they have a special internal data structure. As long as you reassign the
+---fields when you have extended the lists it’s ok because then the tail
+---pointers get updated, but when you add to list without reassigning you might
+---end up in trouble when the linebreak routine kicks in.
 ---
 ---__Reference:__
 ---
@@ -6481,11 +6469,11 @@ function node.check_discretionary(n) end
 ---
 ---Check one `disc` node only and also check if the node is a `disc` node.
 ---
----When you fool around with disc nodes you need to be aware of the fact that they
----have a special internal data structure. As long as you reassign the fields when
----you have extended the lists it’s ok because then the tail pointers get updated,
----but when you add to list without reassigning you might end up in trouble when
----the linebreak routine kicks in.
+---When you fool around with disc nodes you need to be aware of the fact that
+---they have a special internal data structure. As long as you reassign the
+---fields when you have extended the lists it’s ok because then the tail
+---pointers get updated, but when you add to list without reassigning you might
+---end up in trouble when the linebreak routine kicks in.
 ---
 ---__Reference:__
 ---
@@ -6499,8 +6487,7 @@ function node.direct.check_discretionary(d) end
 _N._9_11_flatten_discretionaries = "page 158"
 
 ---
----Remove the discretionaries in the list and inject the replace
----field when set.
+---Remove the discretionaries in the list and inject the replace field when set.
 ---
 ---__Reference:__
 ---
@@ -6515,8 +6502,7 @@ _N._9_11_flatten_discretionaries = "page 158"
 function node.flatten_discretionaries(n) end
 
 ---
----Remove the discretionaries in the list and inject the replace
----field when set.
+---Remove the discretionaries in the list and inject the replace field when set.
 ---
 ---__Reference:__
 ---
@@ -6533,12 +6519,10 @@ function node.direct.flatten_discretionaries(d) end
 _N._9_12_family_font = "page 158"
 
 ---
----Return the font
----currently associated with the node.
+---Return the font currently associated with the node.
 ---
----You can normally also access the font with the
----normal font field or getter because it will resolve the family automatically for
----noads.
+---You can normally also access the font with the normal font field or getter
+---because it will resolve the family automatically for noads.
 ---
 ---__Reference:__
 ---
@@ -6961,7 +6945,8 @@ function node.direct.getsubtype(d) end
 function node.direct.setfont(d, font) end
 
 ---
----Return the font identifier of a `glyph`, `math_char`, `math_text_char` or `delim` node.
+---Return the font identifier of a `glyph`, `math_char`, `math_text_char` or
+---`delim` node.
 ---
 ---__Example:__
 ---
@@ -6983,7 +6968,8 @@ function node.direct.setfont(d, font) end
 function node.getfont(n) end
 
 ---
----Return the font identifier of a `glyph`, `math_char`, `math_text_char` or `delim` node.
+---Return the font identifier of a `glyph`, `math_char`, `math_text_char` or
+---`delim` node.
 ---
 ---__Example:__
 ---
@@ -7005,7 +6991,8 @@ function node.getfont(n) end
 function node.direct.getfont(d) end
 
 ---
----Set the character index (`char`) in the font on `glyph`, `math_char`, `math_text_char` or `delim` nodes.
+---Set the character index (`char`) in the font on `glyph`, `math_char`,
+---`math_text_char` or `delim` nodes.
 ---
 ---__Example:__
 ---
@@ -7026,7 +7013,8 @@ function node.direct.getfont(d) end
 function node.direct.setchar(d, char) end
 
 ---
----Return the character index (`char`) in the font of `glyph`, `math_char`, `math_text_char` or `delim` nodes.
+---Return the character index (`char`) in the font of `glyph`, `math_char`,
+---`math_text_char` or `delim` nodes.
 ---
 ---__Example:__
 ---
@@ -7051,7 +7039,8 @@ function node.direct.setchar(d, char) end
 function node.getchar(n) end
 
 ---
----Return the character index (`char`) in the font of `glyph`, `math_char`, `math_text_char` or `delim` nodes.
+---Return the character index (`char`) in the font of `glyph`, `math_char`,
+---`math_text_char` or `delim` nodes.
 ---
 ---__Example:__
 ---
@@ -7073,7 +7062,8 @@ function node.getchar(n) end
 function node.direct.getchar(d) end
 
 ---
----Set the `width`, `height` and `depth` fields of `hlist`, `vlist`, `rule` or `unset` nodes.
+---Set the `width`, `height` and `depth` fields of `hlist`, `vlist`, `rule` or
+---`unset` nodes.
 ---
 ---__Example:__
 ---
@@ -7099,7 +7089,8 @@ function node.direct.getchar(d) end
 function node.direct.setwhd(d, width, height, depth) end
 
 ---
----Return the `width`, `height` and `depth` of a list, rule or (unexpanded) `glyph` as well as `glue` (its spec is looked at) and `unset` node.
+---Return the `width`, `height` and `depth` of a list, rule or (unexpanded)
+---`glyph` as well as `glue` (its spec is looked at) and `unset` node.
 ---
 ---__Reference:__
 ---
@@ -7117,7 +7108,8 @@ function node.direct.setwhd(d, width, height, depth) end
 function node.getwhd(n, get_expansion_factor) end
 
 ---
----Return the `width`, `height` and `depth` of a list, rule or (unexpanded) `glyph` as well as `glue` (its spec is looked at) and `unset` node.
+---Return the `width`, `height` and `depth` of a list, rule or (unexpanded)
+---`glyph` as well as `glue` (its spec is looked at) and `unset` node.
 ---
 ---__Example:__
 ---
@@ -7172,7 +7164,8 @@ function node.direct.getwhd(d, get_expansion_factor) end
 function node.direct.setdisc(d, pre, post, replace, subtype, penalty) end
 
 ---
----Return the `pre`, `post` and `replace` fields and optionally when true is passed also the tail fields.
+---Return the `pre`, `post` and `replace` fields and optionally when true is
+---passed also the tail fields.
 ---
 ---__Reference:__
 ---
@@ -7192,7 +7185,8 @@ function node.direct.setdisc(d, pre, post, replace, subtype, penalty) end
 function node.getdisc(n, get_tail) end
 
 ---
----Return the `pre`, `post` and `replace` fields and optionally when true is passed also the tail fields.
+---Return the `pre`, `post` and `replace` fields and optionally when true is
+---passed also the tail fields.
 ---
 ---__Reference:__
 ---
@@ -7212,7 +7206,8 @@ function node.getdisc(n, get_tail) end
 function node.direct.getdisc(d, get_tail) end
 
 ---
----Set child node lists to parent `hlist`, `vlist`, `sub_box`, `sub_mlist`, `ins` or `adjust` nodes.
+---Set child node lists to parent `hlist`, `vlist`, `sub_box`, `sub_mlist`,
+---`ins` or `adjust` nodes.
 ---
 ---__Example:__
 ---
@@ -7240,7 +7235,8 @@ function node.direct.getdisc(d, get_tail) end
 function node.direct.setlist(d, list) end
 
 ---
----Get child node lists of parent `hlist`, `vlist`, `sub_box`, `sub_mlist`, `ins`, or `adjust` nodes.
+---Get child node lists of parent `hlist`, `vlist`, `sub_box`, `sub_mlist`,
+---`ins`, or `adjust` nodes.
 ---
 ---__Example:__
 ---
@@ -7269,7 +7265,8 @@ function node.direct.setlist(d, list) end
 function node.getlist(n) end
 
 ---
----Get child node lists of parent `hlist`, `vlist`, `sub_box`, `sub_mlist`, `ins`, or `adjust` nodes.
+---Get child node lists of parent `hlist`, `vlist`, `sub_box`, `sub_mlist`,
+---`ins`, or `adjust` nodes.
 ---
 ---__Example:__
 ---
@@ -7437,13 +7434,13 @@ function node.getfield(n, field) end
 function node.direct.getfield(d, field) end
 
 ---
----Set the SyncTeX fields, a file number aka tag and a line
----number, for a glue, kern, hlist, vlist, rule and math nodes as well as glyph
----nodes (although this last one is not used in native SyncTeX).
+---Set the SyncTeX fields, a file number aka tag and a line number, for a glue,
+---kern, hlist, vlist, rule and math nodes as well as glyph nodes (although this
+---last one is not used in native SyncTeX).
 ---
----Of course you need to know what you're doing as no checking on sane values takes
----place. Also, the SyncTeX interpreter used in editors is rather peculiar and has
----some assumptions (heuristics).
+---Of course you need to know what you're doing as no checking on sane values
+---takes place. Also, the SyncTeX interpreter used in editors is rather peculiar
+---and has some assumptions (heuristics).
 ---
 ---__Reference:__
 ---
@@ -7457,13 +7454,13 @@ function node.direct.getfield(d, field) end
 function node.direct.set_synctex_fields(d, tag, line) end
 
 ---
----Query the SyncTeX fields, a file number aka tag and a line
----number, for a glue, kern, hlist, vlist, rule and math nodes as well as glyph
----nodes (although this last one is not used in native SyncTeX).
+---Query the SyncTeX fields, a file number aka tag and a line number, for a
+---glue, kern, hlist, vlist, rule and math nodes as well as glyph nodes
+---(although this last one is not used in native SyncTeX).
 ---
----Of course you need to know what you're doing as no checking on sane values takes
----place. Also, the SyncTeX interpreter used in editors is rather peculiar and has
----some assumptions (heuristics).
+---Of course you need to know what you're doing as no checking on sane values
+---takes place. Also, the SyncTeX interpreter used in editors is rather peculiar
+---and has some assumptions (heuristics).
 ---
 ---__Reference:__
 ---
@@ -7480,8 +7477,8 @@ function node.direct.get_synctex_fields(d) end
 ---
 ---Set the attribute list on a node.
 ---
----When the second argument of setattributelist is
----`true` the current attribute list is assumed.
+---When the second argument of setattributelist is `true` the current attribute
+---list is assumed.
 ---
 ---__Reference:__
 ---
@@ -7549,7 +7546,9 @@ function node.direct.setcomponents(d, components) end
 function node.direct.getcomponents(d) end
 
 ---
----Set the `data` field on `glyph`, `boundary`, `user_defined`, `pdf_literal`, `pdf_late_literal`, `late_lua`, `pdf_setmatrix`, `special`, `late_special` and `write` nodes.
+---Set the `data` field on `glyph`, `boundary`, `user_defined`, `pdf_literal`,
+---`pdf_late_literal`, `late_lua`, `pdf_setmatrix`, `special`, `late_special`
+---and `write` nodes.
 ---
 ---__Reference:__
 ---
@@ -7561,7 +7560,9 @@ function node.direct.getcomponents(d) end
 function node.direct.setdata(d) end
 
 ---
----Return the `data` field off `glyph`, `boundary`, `user_defined`, `pdf_literal`, `pdf_late_literal`, `late_lua`, `pdf_setmatrix`, `special`, `late_special` and `write` nodes.
+---Return the `data` field off `glyph`, `boundary`, `user_defined`,
+---`pdf_literal`, `pdf_late_literal`, `late_lua`, `pdf_setmatrix`, `special`,
+---`late_special` and `write` nodes.
 ---
 ---__Reference:__
 ---
@@ -7575,7 +7576,8 @@ function node.direct.setdata(d) end
 function node.direct.getdata(d) end
 
 ---
----Set the direction of `dir`, `hlist`, `vlist`, `rule` and `local_par` nodes as a string.
+---Set the direction of `dir`, `hlist`, `vlist`, `rule` and `local_par` nodes as
+---a string.
 ---
 ---__Reference:__
 ---
@@ -7588,7 +7590,8 @@ function node.direct.getdata(d) end
 function node.direct.setdir(d, dir) end
 
 ---
----Get the direction  of `dir`, `hlist`, `vlist`, `rule` and `local_par` nodes as a string.
+---Get the direction  of `dir`, `hlist`, `vlist`, `rule` and `local_par` nodes
+---as a string.
 ---
 ---__Example:__
 ---
@@ -7611,7 +7614,8 @@ function node.direct.setdir(d, dir) end
 function node.direct.getdir(d) end
 
 ---
----Set the direction of `dir`, `hlist`, `vlist`, `rule` and `local_par` nodes as an integer.
+---Set the direction of `dir`, `hlist`, `vlist`, `rule` and `local_par` nodes as
+---an integer.
 ---
 ---__Reference:__
 ---
@@ -7624,7 +7628,8 @@ function node.direct.getdir(d) end
 function node.direct.setdirection(d, dir) end
 
 ---
----Get the direction of `dir`, `hlist`, `vlist`, `rule` and `local_par` nodes as an integer.
+---Get the direction of `dir`, `hlist`, `vlist`, `rule` and `local_par` nodes as
+---an integer.
 ---
 ---__Example:__
 ---
@@ -7779,7 +7784,8 @@ function node.direct.getwidth(d) end
 function node.direct.setheight(d) end
 
 ---
----Return the height off `hlist`, `vlist`, `rule`,  `glyph`, `unset`, `ins` and `fence` nodes.
+---Return the height off `hlist`, `vlist`, `rule`,  `glyph`, `unset`, `ins` and
+---`fence` nodes.
 ---
 ---__Reference:__
 ---
@@ -7806,7 +7812,8 @@ function node.direct.getheight(d) end
 function node.direct.setdepth(d, depth) end
 
 ---
----Return the depth of `hlist`, `vlist`, `rule`, `glyph`, `unset`, `ins` and `fence` nodes.
+---Return the depth of `hlist`, `vlist`, `rule`, `glyph`, `unset`, `ins` and
+---`fence` nodes.
 ---
 ---__Reference:__
 ---
@@ -7820,7 +7827,8 @@ function node.direct.setdepth(d, depth) end
 function node.direct.getdepth(d) end
 
 ---
----Set the kerning on `kern` (kern), `margin_kern` (width) and `math` (surround) nodes.
+---Set the kerning on `kern` (kern), `margin_kern` (width) and `math` (surround)
+---nodes.
 ---
 ---__Reference:__
 ---
@@ -7833,7 +7841,8 @@ function node.direct.getdepth(d) end
 function node.direct.setkern(d, kern) end
 
 ---
----Return the kerning of `kern` (kern), `margin_kern` (width) and `math` (surround) nodes.
+---Return the kerning of `kern` (kern), `margin_kern` (width) and `math`
+---(surround) nodes.
 ---
 ---__Reference:__
 ---
@@ -7902,8 +7911,10 @@ function node.direct.setnucleus(d, nucleus) end
 function node.direct.getnucleus(d) end
 
 ---
----Set offsets on `glyph` (`xoffset`: a virtual displacement in horizontal direction and
----`yoffset`: a virtual displacement in vertical direction) and `rule` (`left`: shift at the left end (also subtracted from width) and `right`: subtracted from width) nodes.
+---Set offsets on `glyph` (`xoffset`: a virtual displacement in horizontal
+---direction and `yoffset`: a virtual displacement in vertical direction) and
+---`rule` (`left`: shift at the left end (also subtracted from width) and
+---`right`: subtracted from width) nodes.
 ---
 ---__Reference:__
 ---
@@ -7956,8 +7967,8 @@ function node.direct.setpenalty(d) end
 function node.direct.getpenalty(d) end
 
 ---
----Set the `shift` (a displacement perpendicular to the character progression direction) field on `vlist` and `hlist` nodes.
----__Reference:__
+---Set the `shift` (a displacement perpendicular to the character progression
+---direction) field on `vlist` and `hlist` nodes. __Reference:__
 ---
 ---* Corresponding C source code: [lnodelib.c#L3756-L3770](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L3756-L3770)
 ---
@@ -7968,7 +7979,8 @@ function node.direct.getpenalty(d) end
 function node.direct.setshift(d, shift) end
 
 ---
----Return the `shift` (a displacement perpendicular to the character progression direction) field off `vlist` and `hlist` nodes.
+---Return the `shift` (a displacement perpendicular to the character progression
+---direction) field off `vlist` and `hlist` nodes.
 ---
 ---__Reference:__
 ---
@@ -7982,7 +7994,8 @@ function node.direct.setshift(d, shift) end
 function node.direct.getshift(d) end
 
 ---
----Set the `sub` (subscript) field on `simple_noad`, `accent_noad` and `radical_noad` nodes.
+---Set the `sub` (subscript) field on `simple_noad`, `accent_noad` and
+---`radical_noad` nodes.
 ---
 ---__Reference:__
 ---
@@ -7995,7 +8008,8 @@ function node.direct.getshift(d) end
 function node.direct.setsub(d, sub) end
 
 ---
----Return the `sub` (subscript) field of `simple_noad`, `accent_noad` and `radical_noad` nodes.
+---Return the `sub` (subscript) field of `simple_noad`, `accent_noad` and
+---`radical_noad` nodes.
 ---
 ---__Reference:__
 ---
@@ -8009,7 +8023,8 @@ function node.direct.setsub(d, sub) end
 function node.direct.getsub(d) end
 
 ---
----Set the `sup` (superscript) field on `simple_noad`, `accent_noad` and `radical_noad` nodes.
+---Set the `sup` (superscript) field on `simple_noad`, `accent_noad` and
+---`radical_noad` nodes.
 ---
 ---__Reference:__
 ---
@@ -8022,7 +8037,8 @@ function node.direct.getsub(d) end
 function node.direct.setsup(d, sup) end
 
 ---
----Return the `sup` (superscript) field of `simple_noad`, `accent_noad` and `radical_noad` nodes.
+---Return the `sup` (superscript) field of `simple_noad`, `accent_noad` and
+---`radical_noad` nodes.
 ---
 ---__Reference:__
 ---
@@ -8115,7 +8131,8 @@ function node.setproperty(n, value) end
 function node.direct.setproperty(d, value) end
 
 ---
----Each node also can have a properties table and you can get properties using the `getproperty` function.
+---Each node also can have a properties table and you can get properties using
+---the `getproperty` function.
 ---
 ---__Example:__
 ---
@@ -8138,7 +8155,8 @@ function node.direct.setproperty(d, value) end
 function node.getproperty(node) end
 
 ---
----Each node also can have a properties table and you can get properties using the `getproperty` function.
+---Each node also can have a properties table and you can get properties using
+---the `getproperty` function.
 ---
 ---__Example:__
 ---
@@ -8163,7 +8181,8 @@ function node.direct.getproperty(d) end
 ---
 ---Enable managing properties in the node (de)allocator functions.
 ---
----Managing properties in the node (de)allocator functions is disabled by default.
+---Managing properties in the node (de)allocator functions is disabled by
+---default.
 ---
 ---__Reference:__
 ---
@@ -8179,7 +8198,8 @@ function node.set_properties_mode(enable, use_metatable) end
 ---
 ---Enable managing properties in the node (de)allocator functions.
 ---
----Managing properties in the node (de)allocator functions is disabled by default.
+---Managing properties in the node (de)allocator functions is disabled by
+---default.
 ---
 ---__Reference:__
 ---
@@ -8614,10 +8634,10 @@ function node.direct.usedlist() end
 ---
 ---Report some used values.
 ---
----Valid arguments are `dir`, `direction`, `glue`, `pdf_literal`, `pdf_action`, `pdf_window` and `color_stack`. Keep
----in mind that the setters normally expect a number, but this helper gives you a
----list of what numbers matter. For practical reason the `pagestate` values
----are also reported with this helper.
+---Valid arguments are `dir`, `direction`, `glue`, `pdf_literal`, `pdf_action`,
+---`pdf_window` and `color_stack`. Keep in mind that the setters normally expect
+---a number, but this helper gives you a list of what numbers matter. For
+---practical reason the `pagestate` values are also reported with this helper.
 ---
 ---__Example:__
 ---

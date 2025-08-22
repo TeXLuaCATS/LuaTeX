@@ -579,12 +579,12 @@ _N._11_2_6_2_Colors = "page 236"
 ---
 ---A color is an integer array with 0, 1, 3 or 4 values:
 ---
---- field   type  explanation
----
---- `0`  marking only  no values
---- `1`  greyscale     one value in the range `(0,1)`, “black” is `0`
---- `3`  \RGB          three values in the range `(0,1)`, “black” is `0,0,0`
---- `4`  \CMYK         four values in the range `(0,1)`, “black” is `0,0,0,1`
+---| field | type         | explanation                                            |
+---|-------|--------------|--------------------------------------------------------|
+---|`0`    | marking only | no values                                              |
+---|`1`    | greyscale    | one value in the range `(0,1)`, “black” is `0`         |
+---|`3`    | \RGB         | three values in the range `(0,1)`, “black” is `0,0,0`  |
+---|`4`    | \CMYK        | four values in the range `(0,1)`, “black” is `0,0,0,1` |
 ---
 ---If the color model of the internal object was `uninitialized`, then it was
 ---initialized to the values representing “black” in the colorspace

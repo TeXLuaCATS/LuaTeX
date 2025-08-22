@@ -490,6 +490,8 @@ function fio.readintegertable(file, number, bytes) end
 ---end
 ---```
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [liolibext.c#L432-L442](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/liolibext.c#L432-L442)
 ---
 ---little endian variant

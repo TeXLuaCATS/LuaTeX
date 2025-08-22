@@ -3,7 +3,6 @@
 -- https://github.com/TeXLuaCATS/meta?tab=readme-ov-file#navigation-table-_n
 _N = {}
 
-
 _N._4_3_lua_modules = "page 67"
 
 ---
@@ -50,10 +49,11 @@ function zlib.version() end
 ---
 ---Return the initial `adler32` value.
 ---
----Call to update the `adler32` value, `adler32` is the current value, `buffer` is passed
----to `adler32` zlib function and the updated value is returned.
+---Call to update the `adler32` value, `adler32` is the current value, `buffer`
+---is passed to `adler32` zlib function and the updated value is returned.
 ---
----This function is not related to compression but is exported anyway because it might be useful in applications using the compression library.
+---This function is not related to compression but is exported anyway because it
+---might be useful in applications using the compression library.
 ---
 ---__Example:__
 ---
@@ -84,10 +84,11 @@ function zlib.adler32(adler32, buffer) end
 ---
 ---Return the initial `crc32` (Cyclic Redundancy Check) value.
 ---
----Call to update the `crc32` value, `crc32` is the current value, `buffer` is passed
----to `crc32` zlib function and the updated value is returned.
+---Call to update the `crc32` value, `crc32` is the current value, `buffer` is
+---passed to `crc32` zlib function and the updated value is returned.
 ---
----This function is not related to compression but is exported anyway because it might be useful in applications using the compression library.
+---This function is not related to compression but is exported anyway because it
+---might be useful in applications using the compression library.
 ---
 ---__Example:__
 ---
@@ -116,7 +117,8 @@ function zlib.adler32(adler32, buffer) end
 function zlib.crc32(crc32, buffer) end
 
 ---
----Return a string containing the compressed buffer according to the given parameters.
+---Return a string containing the compressed buffer according to the given
+---parameters.
 ---
 ---__Example:__
 ---
@@ -144,15 +146,7 @@ function zlib.crc32(crc32, buffer) end
 ---@return string buffer
 ---
 ---😱 [Types](https://github.com/LuaCATS/lzlib/blob/main/library/lzlib.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/lzlib/pulls)
-function zlib.compress(
-  buffer,
-  level,
-  method,
-  window_bits,
-  mem_level,
-  strategy
-)
-end
+function zlib.compress(buffer, level, method, window_bits, mem_level, strategy) end
 
 ---
 ---Return the decompressed stream after processing the given buffer.

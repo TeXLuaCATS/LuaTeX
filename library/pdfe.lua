@@ -470,9 +470,11 @@ function pdfe.getarray(dict_or_array, key_or_index) end
 function pdfe.getstream(dict_or_array, key_or_index) end
 
 ---
----Return a value of a pdf stream dictionary, including low level details about this value.
+---Return a value of a pdf stream dictionary, including low level details about
+---this value.
 ---
----Like `pdfe.getfromdictionary()` except that this functions works on a 'dictionary of a stream'.
+---Like `pdfe.getfromdictionary()` except that this functions works on a
+---'dictionary of a stream'.
 ---
 ---| Type | PDF type     | Lua type         | Details             |
 ---| ---- | ------------ | ---------------- | ------------------- |
@@ -549,8 +551,8 @@ function pdfe.closestream(stream) end
 function pdfe.readfromstream(stream) end
 
 ---
----Read stream object as a whole.
----Opening and closing the stream with `pdfe.openstream()` and `pdfe.closestream()` is not necessary.
+---Read stream object as a whole. Opening and closing the stream with
+---`pdfe.openstream()` and `pdfe.closestream()` is not necessary.
 ---
 ---@param stream PdfeStream # Pdfe stream object.
 ---@param decode boolean # `True`, if stream should be decompressed.
@@ -587,7 +589,8 @@ function pdfe.pagestotable(doc) end
 _N._14_2_9_getfrom_dictionary_array = "page 290"
 
 ---
----Return a value of a pdf dictionary, including low level details about this value.
+---Return a value of a pdf dictionary, including low level details about this
+---value.
 ---
 ---| Type | PDF type     | Lua type         | Details             |
 ---| ---- | ------------ | ---------------- | ------------------- |
@@ -620,7 +623,8 @@ _N._14_2_9_getfrom_dictionary_array = "page 290"
 function pdfe.getfromdictionary(dict, key) end
 
 ---
----Return a value of a pdf dictionary, including low level details about this value.
+---Return a value of a pdf dictionary, including low level details about this
+---value.
 ---
 ---| Type | PDF type     | Lua type         | Details             |
 ---| ---- | ------------ | ---------------- | ------------------- |
@@ -687,7 +691,8 @@ function pdfe.arraytotable(array) end
 _N._14_2_11_getfromreference = "page 290"
 
 ---
----Return the value of a reference, including low level details about this value.
+---Return the value of a reference, including low level details about this
+---value.
 ---
 ---| Type | PDF type     | Lua type         | Details             |
 ---| ---- | ------------ | ---------------- | ------------------- |

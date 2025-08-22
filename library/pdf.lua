@@ -43,11 +43,11 @@ _N._14_1_1_mapfile_mapline = "page 281"
 ---This function modifies the map-file by adding, replacing, or removing all entries (lines) of <map_file>.
 ---
 ---@param map_file string # File name of map-file.
----The first character of <map_file> has a special meaning:
---- * `'+'`  Add new entries, if they do not exist already.
---- * `'='`  Replace existing entries.
---- * `'-'`  Remove entries, if they exist.
---- * `''`   Flush map file first, then insert new entries.
+---The first character of <map_line> has a special meaning:
+---* `'+'`: Insert new entry, if it doesn't exist already.
+---* `'='`: Replace existing entry.
+---* `'-'`: Remove entry, if it exists.
+---* `''`: Flush map file first, then insert new entry.
 ---
 ---{{ contribute }}
 function pdf.mapfile(map_file) end
@@ -55,14 +55,15 @@ function pdf.mapfile(map_file) end
 ---
 ---Modify the map-file.
 ---
----This function modifies the map-file by adding, replacing, or removing exactly one entry (line).
+---This function modifies the map-file by adding, replacing, or removing exactly
+---one entry (line).
 ---
 ---@param map_line string # Entry (line) to be added, replace, or removed.
 ---The first character of <map_line> has a special meaning:
---- * `'+'`  Insert new entry, if it doesn't exist already.
---- * `'='`  Replace existing entry.
---- * `'-'`  Remove entry, if it exists.
---- * `''`   Flush map file first, then insert new entry.
+---* `'+'`: Insert new entry, if it doesn't exist already.
+---* `'='`: Replace existing entry.
+---* `'-'`: Remove entry, if it exists.
+---* `''`: Flush map file first, then insert new entry.
 ---
 ---{{ contribute }}
 function pdf.mapline(map_line) end
@@ -73,8 +74,8 @@ _N._14_1_2_set_get_catalog_info_names_trailer = "page 281"
 ---Insert string <catalog> into the `/Catalog` dictionary.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with metadata. The value is written to the *PDF*
----file directly after the token registers set at the *TeX* end are written.
+---with metadata. The value is written to the *PDF* file directly after the
+---token registers set at the *TeX* end are written.
 ---
 ---__Reference:__
 ---
@@ -91,8 +92,8 @@ function pdf.setcatalog(catalog) end
 ---Return string <catalog> that was set by `pdf.setcatalog()`.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with metadata. The value is written to the *PDF*
----file directly after the token registers set at the *TeX* end are written.
+---with metadata. The value is written to the *PDF* file directly after the
+---token registers set at the *TeX* end are written.
 ---
 ---@see pdf.setcatalog
 ---
@@ -105,8 +106,8 @@ function pdf.getcatalog() end
 ---Insert string <info> into the `/Info` dictionary.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with metadata. The value is written to the *PDF*
----file directly after the token registers set at the *TeX* end are written.
+---with metadata. The value is written to the *PDF* file directly after the
+---token registers set at the *TeX* end are written.
 ---
 ---__Reference:__
 ---
@@ -123,8 +124,8 @@ function pdf.setinfo(info) end
 ---Return string <info> that was set by `pdf.setinfo()`.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with metadata. The value is written to the *PDF*
----file directly after the token registers set at the *TeX* end are written.
+---with metadata. The value is written to the *PDF* file directly after the
+---token registers set at the *TeX* end are written.
 ---
 ---@see pdf.setinfo
 ---
@@ -137,8 +138,8 @@ function pdf.getinfo() end
 ---Insert string <names> into the `/Names` dictionary of the `/Catalog`.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with metadata. The value is written to the *PDF*
----file directly after the token registers set at the *TeX* end are written.
+---with metadata. The value is written to the *PDF* file directly after the
+---token registers set at the *TeX* end are written.
 ---
 ---__Reference:__
 ---
@@ -155,8 +156,8 @@ function pdf.setnames(names) end
 ---Return string <names> that was set by `pdf.setnames()`.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with metadata. The value is written to the *PDF*
----file directly after the token registers set at the *TeX* end are written.
+---with metadata. The value is written to the *PDF* file directly after the
+---token registers set at the *TeX* end are written.
 ---
 ---@see pdf.setnames
 ---
@@ -169,8 +170,8 @@ function pdf.getnames() end
 ---Insert string <trailer> into the `trailer` dictionary.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with metadata. The value is written to the *PDF*
----file directly after the token registers set at the *TeX* end are written.
+---with metadata. The value is written to the *PDF* file directly after the
+---token registers set at the *TeX* end are written.
 ---
 ---__Reference:__
 ---
@@ -188,8 +189,8 @@ function pdf.settrailer(trailer) end
 ---Return string <trailer> that was set by `pdf.settrailer()`.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with metadata. The value is written to the *PDF*
----file directly after the token registers set at the *TeX* end are written.
+---with metadata. The value is written to the *PDF* file directly after the
+---token registers set at the *TeX* end are written.
 ---
 ---@see pdf.settrailer
 ---
@@ -204,11 +205,12 @@ _N._14_1_3_set_get_pageattributes_pageresources_pagesattributes = "page 281"
 ---Insert string <attributes> into the current `/Page` dictionary.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with page resources. The variables have no interaction with the corresponding *PDF*
----backend token register. They are written to the *PDF* file directly after the
----token registers set at the *TeX* end are written.
+---with page resources. The variables have no interaction with the corresponding
+---*PDF* backend token register. They are written to the *PDF* file directly
+---after the token registers set at the *TeX* end are written.
 ---
-------* Corresponding C source code: [lpdflib.c#L610](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lpdflib.c#L610)
+------* Corresponding C source code:
+---[lpdflib.c#L610](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lpdflib.c#L610)
 ---
 ---@see pdf.getpageattributes
 ---
@@ -221,9 +223,9 @@ function pdf.setpageattributes(attributes) end
 ---Return string <attributes> that was set by `pdf.setpageattributes()`.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with page resources. The variables have no interaction with the corresponding *PDF*
----backend token register. They are written to the *PDF* file directly after the
----token registers set at the *TeX* end are written.
+---with page resources. The variables have no interaction with the corresponding
+---*PDF* backend token register. They are written to the *PDF* file directly
+---after the token registers set at the *TeX* end are written.
 ---
 ---@see pdf.setpageattributes
 ---
@@ -233,12 +235,13 @@ function pdf.setpageattributes(attributes) end
 function pdf.getpageattributes() end
 
 ---
----Insert string <resources> into the `/Resources` dictionary of the current page.
+---Insert string <resources> into the `/Resources` dictionary of the current
+---page.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with page resources. The variables have no interaction with the corresponding *PDF*
----backend token register. They are written to the *PDF* file directly after the
----token registers set at the *TeX* end are written.
+---with page resources. The variables have no interaction with the corresponding
+---*PDF* backend token register. They are written to the *PDF* file directly
+---after the token registers set at the *TeX* end are written.
 ---
 ---__Reference:__
 ---
@@ -255,9 +258,9 @@ function pdf.setpageresources(resources) end
 ---Return string <resources> that was set by `pdf.setpageresources()`.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with page resources. The variables have no interaction with the corresponding *PDF*
----backend token register. They are written to the *PDF* file directly after the
----token registers set at the *TeX* end are written.
+---with page resources. The variables have no interaction with the corresponding
+---*PDF* backend token register. They are written to the *PDF* file directly
+---after the token registers set at the *TeX* end are written.
 ---
 ---@see pdf.setpageresources
 ---
@@ -270,9 +273,9 @@ function pdf.getpageresources() end
 ---Insert string <attributes> into the `/Pages` dictionary of the `/Catalog`.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with page resources. The variables have no interaction with the corresponding *PDF*
----backend token register. They are written to the *PDF* file directly after the
----token registers set at the *TeX* end are written.
+---with page resources. The variables have no interaction with the corresponding
+---*PDF* backend token register. They are written to the *PDF* file directly
+---after the token registers set at the *TeX* end are written.
 ---
 ---__Reference:__
 ---
@@ -289,9 +292,9 @@ function pdf.setpagesattributes(attributes) end
 ---Return string <attributes> that was set by `pdf.setpageattributes()`.
 ---
 ---This function complements the corresponding *PDF* backend token lists dealing
----with page resources. The variables have no interaction with the corresponding *PDF*
----backend token register. They are written to the *PDF* file directly after the
----token registers set at the *TeX* end are written.
+---with page resources. The variables have no interaction with the corresponding
+---*PDF* backend token register. They are written to the *PDF* file directly
+---after the token registers set at the *TeX* end are written.
 ---
 ---@see pdf.setpageattributes
 ---
@@ -359,18 +362,20 @@ _N._14_1_5_set_get_major_minor_version = "page 281"
 ---
 ---Set major version number of the PDF file format.
 ---
----Note: This function sets the version number of the file header. It does not set the `/Version` key of the `/Catalog` as recommended for PDF-1.4 and later.
+---Note: This function sets the version number of the file header. It does not
+---set the `/Version` key of the `/Catalog` as recommended for PDF-1.4 and
+---later.
 ---
----The major version is
----normally 1 but when set to 2 some data will not be written to the file in order
----to comply with the standard. What minor version you set depends on what *PDF*
----features you use. This is out of control of *LuaTeX*.
+---The major version is normally 1 but when set to 2 some data will not be
+---written to the file in order to comply with the standard. What minor version
+---you set depends on what *PDF* features you use. This is out of control of
+---*LuaTeX*.
 ---
----One can set the major version number to 2 but we cannot guarantee that the engine
----adapts itself correctly, because there is no public and free specification that
----we know of. Also, user constructed annotations are not checked and just passed
----to the file. On the other hand, the *PDF* that the engine generated is rather
----simple and not that version depending.
+---One can set the major version number to 2 but we cannot guarantee that the
+---engine adapts itself correctly, because there is no public and free
+---specification that we know of. Also, user constructed annotations are not
+---checked and just passed to the file. On the other hand, the *PDF* that the
+---engine generated is rather simple and not that version depending.
 ---
 ---@see pdf.getmajorversion
 ---
@@ -392,7 +397,9 @@ function pdf.getmajorversion() end
 ---
 ---Set minor version number of the PDF file format.
 ---
----Note: This function sets the version number of the file header. It does not set the `/Version` key of the `/Catalog` as recommended for PDF-1.4 and later.
+---Note: This function sets the version number of the file header. It does not
+---set the `/Version` key of the `/Catalog` as recommended for PDF-1.4 and
+---later.
 ---
 ---@see pdf.getmajorversion
 ---
@@ -631,7 +638,8 @@ function pdf.getgentounicode() end
 _N._14_1_11_set_get_decimaldigits = "page 282"
 
 ---
----Set number of decimal digits used for writing numbers (floats) in the *PDF* file.
+---Set number of decimal digits used for writing numbers (floats) in the *PDF*
+---file.
 ---
 ---@param ndigits integer # Number of decimal digits.
 ---
@@ -678,7 +686,8 @@ _N._14_1_13_getlast_obj_link_annot_and_getretval = "page 283"
 function pdf.getlastobj() end
 
 ---
----Return object number of latest created `/Annot` object (subtype `/Link`) that was created by `/pdfextension startlink`.
+---Return object number of latest created `/Annot` object (subtype `/Link`) that
+---was created by `/pdfextension startlink`.
 ---
 ---@return integer objnum # Object number.
 ---
@@ -686,7 +695,8 @@ function pdf.getlastobj() end
 function pdf.getlastlink() end
 
 ---
----Return object number of latest created `/Annot` object that was created by `pdf.reserveobj('annot')`.
+---Return object number of latest created `/Annot` object that was created by
+---`pdf.reserveobj('annot')`.
 ---
 ---@return integer objnum # Number of latest created object.
 ---
@@ -694,8 +704,7 @@ function pdf.getlastlink() end
 function pdf.getlastannot() end
 
 ---
----Warning! Undocumented code!<p>
----TODO: Please contribute
+---Warning! Undocumented code!<p> TODO: Please contribute
 ---https://github.com/Josef-Friedrich/LuaTeX_Lua-API#how-to-contribute
 ---
 ---{{ contribute }}
@@ -720,10 +729,10 @@ function pdf.getmaxobjnum() end
 function pdf.getobjtype(objnum) end
 
 ---
----Return the number of the font resource name.
----The `/Font` entry of a `/Resource` dictionary maps resource names to font dictionaries.
----LuaTeX uses resource names like `/F36` or `/F52`, where the number corresponds to
----the font ID.
+---Return the number of the font resource name. The `/Font` entry of a
+---`/Resource` dictionary maps resource names to font dictionaries. LuaTeX uses
+---resource names like `/F36` or `/F52`, where the number corresponds to the
+---font ID.
 ---
 ---@param id integer # Font ID.
 ---
@@ -753,8 +762,7 @@ function pdf.getfontobjnum(id) end
 function pdf.getfontsize(id) end
 
 ---
----Warning! Undocumented code!<p>
----TODO: Please contribute
+---Warning! Undocumented code!<p> TODO: Please contribute
 ---https://github.com/Josef-Friedrich/LuaTeX_Lua-API#how-to-contribute
 ---
 ---{{ contribute }}
@@ -863,16 +871,14 @@ function pdf.setthreadmargin(margin) end
 function pdf.getthreadmargin() end
 
 ---
----Warning! Undocumented code!<p>
----TODO: Please contribute
+---Warning! Undocumented code!<p> TODO: Please contribute
 ---https://github.com/Josef-Friedrich/LuaTeX_Lua-API#how-to-contribute
 ---
 ---{{ contribute }}
 function pdf.setxformmargin() end
 
 ---
----Warning! Undocumented code!<p>
----TODO: Please contribute
+---Warning! Undocumented code!<p> TODO: Please contribute
 ---https://github.com/Josef-Friedrich/LuaTeX_Lua-API#how-to-contribute
 ---
 ---{{ contribute }}
@@ -881,7 +887,8 @@ function pdf.getxformmargin() end
 _N._14_1_18_get_pos_hpos_vpos = "page 283"
 
 ---
----Return coordinates of the current position. The origin of the coordinate system is at the lower left corner of the page.
+---Return coordinates of the current position. The origin of the coordinate
+---system is at the lower left corner of the page.
 ---
 ---@return integer h # Horizontal position in scaled points.
 ---@return integer v # Vertical position in scaled points.
@@ -892,7 +899,8 @@ _N._14_1_18_get_pos_hpos_vpos = "page 283"
 function pdf.getpos() end
 
 ---
----Return horizontal coordinate of the current position. The origin of the coordinate system is at the lower left corner of the page.
+---Return horizontal coordinate of the current position. The origin of the
+---coordinate system is at the lower left corner of the page.
 ---
 ---@return integer h # Horizontal position in scaled points.
 ---Note: This function is mainly used inside `\latelua` calls.
@@ -901,7 +909,8 @@ function pdf.getpos() end
 function pdf.gethpos() end
 
 ---
----Return vertical coordinate of the current position. The origin of the coordinate system is at the lower left corner of the page.
+---Return vertical coordinate of the current position. The origin of the
+---coordinate system is at the lower left corner of the page.
 ---
 ---@return integer v # Vertical position in scaled points.
 ---
@@ -943,7 +952,8 @@ function pdf.getmatrix() end
 _N._14_1_20_print = "page 284"
 
 ---
----Write a string into the contents stream of the current page. If LuaTeX is currently inside a text block (**BT**...**ET**), close the text block first.
+---Write a string into the contents stream of the current page. If LuaTeX is
+---currently inside a text block (**BT**...**ET**), close the text block first.
 ---
 ---@param str string # String.
 ---
@@ -1176,7 +1186,8 @@ function pdf.reserveobj() end
 ---
 ---Create a annotation object.
 ---
----Annotation object are not written to file directly but must be registered with `pdf.registerannot()`.
+---Annotation object are not written to file directly but must be registered
+---with `pdf.registerannot()`.
 ---
 ---@param annot string # Literal string `'annot'`.
 ---
@@ -1191,7 +1202,8 @@ _N._14_1_25_getpageref = "page 286"
 ---
 ---Return object number of page <pagenum>.
 ---
----This can be a forwar reference, i.e. page <pagenum> doesn't have to be created yet.
+---This can be a forwar reference, i.e. page <pagenum> doesn't have to be
+---created yet.
 ---
 ---@param pagenum integer # Page number.
 ---
@@ -1213,8 +1225,8 @@ function pdf.registerannot(objnum) end
 _N._14_1_27_newcolorstack = "page 286"
 
 ---
----Allocate a new color stack and returns it's id. The arguments
----are the same as for the similar backend extension primitive.
+---Allocate a new color stack and returns it's id. The arguments are the same as
+---for the similar backend extension primitive.
 ---
 ---```
 ---pdf.newcolorstack("0 g","page",true) --
@@ -1238,8 +1250,8 @@ _N._14_1_28_setfontattributes = "page 286"
 ---
 ---Force some additional code into the font resource.
 ---
----It can for
----instance be used to add a custom `ToUnicode` vector to a bitmap file.
+---It can for instance be used to add a custom `ToUnicode` vector to a bitmap
+---file.
 ---
 ---__Reference:__
 ---
