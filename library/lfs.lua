@@ -4,17 +4,22 @@
 _N._4_3_lua_modules = "page 70"
 
 ---
----Corresponding directory in the LuaTeX repository: https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/luafilesystem
----Corresponding file in the LuaTeX repository: https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/luafilesystem/src/lfs.c
+---Corresponding directory in the LuaTeX repository:
+---https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/luafilesystem
+---Corresponding file in the LuaTeX repository:
+---https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/luafilesystem/src/lfs.c
 ---
 ---Changes to the upstream project: global lfs table
 
+---
 ---@meta
 
+---
 ---@class LuaFileSystem.Attributes
 ---@field [LuaFileSystem.AttributeName] any
 ---@field ['mode'] LuaFileSystem.AttributeMode
 
+---
 ---@alias LuaFileSystem.AttributeMode
 ---|'file'
 ---|'directory'
@@ -24,6 +29,7 @@ _N._4_3_lua_modules = "page 70"
 ---|"block device"
 ---|"named pipe"
 
+---
 ---@alias LuaFileSystem.AttributeName
 ---|'dev' -- on Unix systems, this represents the device that the inode resides on. On Windows systems, represents the drive number of the disk containing the file
 ---|'ino' -- on Unix systems, this represents the inode number. On Windows systems this has no meaning
@@ -40,6 +46,7 @@ _N._4_3_lua_modules = "page 70"
 ---|'blocks' -- block allocated for file; (Unix only)
 ---|'blksize' -- optimal file system I/O blocksize; (Unix only)
 
+---
 ---@class LuaFileSystem
 lfs = {}
 
@@ -70,7 +77,9 @@ In case of any errors it returns nil and the error message. In particular, if th
 ---@return boolean, string
 function lfs.lock_dir(path, seconds_stale) end
 
----Returns a string with the current working directory or nil plus an error string.
+---
+---Returns a string with the current working directory or nil plus an error
+---string.
 ---@return string
 function lfs.currentdir() end
 

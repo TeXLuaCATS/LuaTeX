@@ -35,7 +35,8 @@ _N._5_8_the_lang_library = "page 83"
 lang = {}
 
 ---
----The language object is the first argument to most of the other functions in the `lang` library.
+---The language object is the first argument to most of the other functions in
+---the `lang` library.
 ---
 ---__Reference:__
 ---
@@ -357,8 +358,7 @@ function lang.clear_patterns(language) end
 _N._5_8_5_hyphenationmin = "page 84"
 
 ---
----Set the value of the *TeX* parameter
----`\hyphenationmin`.
+---Set the value of the *TeX* parameter `\hyphenationmin`.
 ---
 ---__Reference:__
 ---
@@ -369,8 +369,7 @@ _N._5_8_5_hyphenationmin = "page 84"
 function lang.hyphenationmin(language, min) end
 
 ---
----Get the value of the *TeX* parameter
----`\hyphenationmin`.
+---Get the value of the *TeX* parameter `\hyphenationmin`.
 ---
 ---__Reference:__
 ---
@@ -386,10 +385,11 @@ function lang.hyphenationmin(language) end
 _N._5_8_6_pre_post_ex_hyphenchar = "page 84"
 
 ---
----Set the “pre-break” hyphen characters for implicit hyphenation in this language.
+---Set the “pre-break” hyphen characters for implicit hyphenation in this
+---language.
 ---
----The
----intial values are decimal 45 (hyphen) and decimal 0 (indicating emptiness).
+---The intial values are decimal 45 (hyphen) and decimal 0 (indicating
+---emptiness).
 ---
 ---__Reference:__
 ---
@@ -402,10 +402,11 @@ _N._5_8_6_pre_post_ex_hyphenchar = "page 84"
 function lang.prehyphenchar(language, char) end
 
 ---
----Get the “pre-break” hyphen characters for implicit hyphenation in this language.
+---Get the “pre-break” hyphen characters for implicit hyphenation in this
+---language.
 ---
----The
----intial values are decimal 45 (hyphen) and decimal 0 (indicating emptiness).
+---The intial values are decimal 45 (hyphen) and decimal 0 (indicating
+---emptiness).
 ---
 ---__Reference:__
 ---
@@ -419,10 +420,11 @@ function lang.prehyphenchar(language, char) end
 function lang.prehyphenchar(language) end
 
 ---
----Set the “post-break” hyphen characters for implicit hyphenation in this language.
+---Set the “post-break” hyphen characters for implicit hyphenation in this
+---language.
 ---
----The
----intial values are decimal 45 (hyphen) and decimal 0 (indicating emptiness).
+---The intial values are decimal 45 (hyphen) and decimal 0 (indicating
+---emptiness).
 ---
 ---__Reference:__
 ---
@@ -435,10 +437,11 @@ function lang.prehyphenchar(language) end
 function lang.posthyphenchar(language, char) end
 
 ---
----Get the “post-break” hyphen characters for implicit hyphenation in this language.
+---Get the “post-break” hyphen characters for implicit hyphenation in this
+---language.
 ---
----The
----intial values are decimal 45 (hyphen) and decimal 0 (indicating emptiness).
+---The intial values are decimal 45 (hyphen) and decimal 0 (indicating
+---emptiness).
 ---
 ---__Reference:__
 ---
@@ -452,12 +455,10 @@ function lang.posthyphenchar(language, char) end
 function lang.posthyphenchar(language) end
 
 ---
----Set the “pre-break” hyphen
----characters for explicit hyphenation in this language.
+---Set the “pre-break” hyphen characters for explicit hyphenation in this
+---language.
 ---
----The hyphen
----character is initially
----decimal `0` (indicating emptiness).
+---The hyphen character is initially decimal `0` (indicating emptiness).
 ---
 ---__Reference:__
 ---
@@ -470,12 +471,10 @@ function lang.posthyphenchar(language) end
 function lang.preexhyphenchar(language, char) end
 
 ---
----Get the “pre-break” hyphen
----characters for explicit hyphenation in this language.
+---Get the “pre-break” hyphen characters for explicit hyphenation in this
+---language.
 ---
----The hyphen
----character is initially
----decimal `0` (indicating emptiness).
+---The hyphen character is initially decimal `0` (indicating emptiness).
 ---
 ---__Reference:__
 ---
@@ -489,12 +488,10 @@ function lang.preexhyphenchar(language, char) end
 function lang.preexhyphenchar(language) end
 
 ---
----Set the “post-break” hyphen
----characters for explicit hyphenation in this language.
+---Set the “post-break” hyphen characters for explicit hyphenation in this
+---language.
 ---
----The hyphen
----character is initially
----decimal `0` (indicating emptiness).
+---The hyphen character is initially decimal `0` (indicating emptiness).
 ---
 ---__Reference:__
 ---
@@ -507,12 +504,10 @@ function lang.preexhyphenchar(language) end
 function lang.postexhyphenchar(language, char) end
 
 ---
----Get the “post-break” hyphen
----characters for explicit hyphenation in this language.
+---Get the “post-break” hyphen characters for explicit hyphenation in this
+---language.
 ---
----The hyphen
----character is initially
----decimal `0` (indicating emptiness).
+---The hyphen character is initially decimal `0` (indicating emptiness).
 ---
 ---__Reference:__
 ---
@@ -532,14 +527,13 @@ _N._5_8_7_hyphenate = "page 85"
 ---
 ---Insert hyphenation points (discretionary nodes) in a node list.
 ---
----If
----`tail` is given as argument, processing stops on that node. Currently,
----`success` is always true if `head` (and `tail`, if specified)
----are proper nodes, regardless of possible other errors.
+---If `tail` is given as argument, processing stops on that node. Currently,
+---`success` is always true if `head` (and `tail`, if specified) are proper
+---nodes, regardless of possible other errors.
 ---
 ---Hyphenation works only on “characters”, a special subtype of all the glyph
----nodes with the node subtype having the value `1`. Glyph modes with
----different subtypes are not processed.
+---nodes with the node subtype having the value `1`. Glyph modes with different
+---subtypes are not processed.
 ---
 ---__Reference:__
 ---
@@ -558,8 +552,8 @@ _N._5_8_8_set_get_hjcode = "page 85"
 ---
 ---Set hj codes.
 ---
----When you set a hjcode the current sets get initialized unless the set was already
----initialized due to `\savinghyphcodes` being larger than zero.
+---When you set a hjcode the current sets get initialized unless the set was
+---already initialized due to `\savinghyphcodes` being larger than zero.
 ---
 ---__Reference:__
 ---

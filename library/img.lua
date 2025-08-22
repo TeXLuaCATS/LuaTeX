@@ -74,9 +74,10 @@ _N._11_1_1_new = "page 225"
 ---<image> var = img.new(<table> image_spec)
 ---```
 ---
----This function creates a userdata object of type “image”. The `image_spec` argument is optional. If it is given, it must be a table, and that
----table must contain a `filename` key. A number of other keys can also be
----useful, these are explained below.
+---This function creates a userdata object of type “image”. The `image_spec`
+---argument is optional. If it is given, it must be a table, and that table must
+---contain a `filename` key. A number of other keys can also be useful, these
+---are explained below.
 ---
 ---You can either say
 ---
@@ -99,29 +100,30 @@ _N._11_1_1_new = "page 225"
 ---
 ---The generated `<image>` userdata object allows access to a set of
 ---user-specified values as well as a set of values that are normally filled in
----and updated automatically by *LuaTeX* itself. Some of those are derived from the
----actual image file, others are updated to reflect the *PDF* output status of the
----object.
+---and updated automatically by *LuaTeX* itself. Some of those are derived from
+---the actual image file, others are updated to reflect the *PDF* output status
+---of the object.
 ---
 ---There is one required user-specified field: the file name (`filename`). It
 ---can optionally be augmented by the requested image dimensions (`width`,
----`depth`, `height`), user-specified image attributes (`attr`),
----the requested *PDF* page identifier (`page`), the requested boundingbox
----(`pagebox`) for *PDF* inclusion, the requested color space object (`colorspace`).
+---`depth`, `height`), user-specified image attributes (`attr`), the requested
+---*PDF* page identifier (`page`), the requested boundingbox (`pagebox`) for
+---*PDF* inclusion, the requested color space object (`colorspace`).
 ---
----The function `img.new` does not access the actual image file, it just
----creates the `<image>` userdata object and initializes some memory
----structures. The `<image>` object and its internal structures are
----automatically garbage collected.
+---The function `img.new` does not access the actual image file, it just creates
+---the `<image>` userdata object and initializes some memory structures. The
+---`<image>` object and its internal structures are automatically garbage
+---collected.
 ---
----Once the image is scanned, all the values in the `<image>` except `width`, `height` and `depth`, become frozen, and you cannot change
----them any more.
+---Once the image is scanned, all the values in the `<image>` except `width`,
+---`height` and `depth`, become frozen, and you cannot change them any more.
 ---
----You can use `pdf.setignoreunknownimages(1)` (or at the *TeX* end the `pdfvariable` `ignoreunknownimages`) to get around a quit when no known
----image type is found (based on name or preamble). Beware: this will not catch
----invalid images and we cannot guarantee side effects. A zero dimension image is
----still included when requested. No special flags are set. A proper workflow will
----not rely in such a catch but make sure that images are valid.
+---You can use `pdf.setignoreunknownimages(1)` (or at the *TeX* end the
+---`pdfvariable` `ignoreunknownimages`) to get around a quit when no known image
+---type is found (based on name or preamble). Beware: this will not catch
+---invalid images and we cannot guarantee side effects. A zero dimension image
+---is still included when requested. No special flags are set. A proper workflow
+---will not rely in such a catch but make sure that images are valid.
 ---
 ---__Reference:__
 ---
@@ -199,11 +201,12 @@ _N._11_1_3_scan = "page 227"
 
 ---
 ---When you say `img.scan(a)` for a new image, the file is scanned, and
----variables such as `xsize`, `ysize`, image `type`, number of
----`pages`, and the resolution are extracted. Each of the `width`, `height`, `depth` fields are set up according to the image dimensions, if
----they were not given an explicit value already. An image file will never be
----scanned more than once for a given image variable. With all subsequent `img.scan(a)` calls only the dimensions are again set up (if they have been
----changed by the user in the meantime).
+---variables such as `xsize`, `ysize`, image `type`, number of `pages`, and the
+---resolution are extracted. Each of the `width`, `height`, `depth` fields are
+---set up according to the image dimensions, if they were not given an explicit
+---value already. An image file will never be scanned more than once for a given
+---image variable. With all subsequent `img.scan(a)` calls only the dimensions
+---are again set up (if they have been changed by the user in the meantime).
 ---
 ---For ease of use, you can do right-away a
 ---
@@ -214,9 +217,9 @@ _N._11_1_3_scan = "page 227"
 ---without a prior `img.new`.
 ---
 ---Nothing is written yet at this point, so you can do `a=img.scan`, retrieve
----the available info like image width and height, and then throw away `a`
----again by saying `a=nil`. In that case no image object will be reserved in
----the PDF, and the used memory will be cleaned up automatically.
+---the available info like image width and height, and then throw away `a` again
+---by saying `a=nil`. In that case no image object will be reserved in the PDF,
+---and the used memory will be cleaned up automatically.
 ---
 ---__Reference:__
 ---
@@ -232,13 +235,13 @@ function img.scan(image) end
 _N._11_1_4_copy = "page 230"
 
 ---
----If you say `a = b`, then both variables point to the same `<image>`
----object. if you want to write out an image with different sizes, you can do
----`b = img.copy(a)`.
+---If you say `a = b`, then both variables point to the same `<image>` object.
+---if you want to write out an image with different sizes, you can do `b =
+---img.copy(a)`.
 ---
----Afterwards, `a` and `b` still reference the same actual image
----dictionary, but the dimensions for `b` can now be changed from their
----initial values that were just copies from `a`.
+---Afterwards, `a` and `b` still reference the same actual image dictionary, but
+---the dimensions for `b` can now be changed from their initial values that were
+---just copies from `a`.
 ---
 ---__Reference:__
 ---
@@ -254,12 +257,12 @@ function img.copy(image) end
 _N._11_1_5_write_immediatewrite_immediatewriteobject = "page 228"
 
 ---
----Allocate a *PDF* object number and generate a rule node of
----subtype `image` and put it into the output list.
+---Allocate a *PDF* object number and generate a rule node of subtype `image`
+---and put it into the output list.
 ---
----By this the
----image `a` is placed into the page stream, and the image file is written out
----into an image stream object after the shipping of the current page is finished.
+---By this the image `a` is placed into the page stream, and the image file is
+---written out into an image stream object after the shipping of the current
+---page is finished.
 ---
 ---Again you can do a terse call like
 ---
@@ -267,8 +270,8 @@ _N._11_1_5_write_immediatewrite_immediatewriteobject = "page 228"
 ---img.write { filename = "foo.png" }
 ---```
 ---
----The `<image>` variable is returned in case you want it for later
----processing. You can also write an object.
+---The `<image>` variable is returned in case you want it for later processing.
+---You can also write an object.
 ---
 ---__Reference:__
 ---
@@ -282,16 +285,15 @@ _N._11_1_5_write_immediatewrite_immediatewriteobject = "page 228"
 function img.write(image) end
 
 ---
----Allocate a *PDF* object number and write the
----image file for image `a` out immediately into the *PDF* file as
----an image stream object (like with `immediate` `\pdfximage`).
+---Allocate a *PDF* object number and write the image file for image `a` out
+---immediately into the *PDF* file as an image stream object (like with
+---`immediate` `\pdfximage`).
 ---
----The object
----number of the image stream dictionary is then available by the `objnum`
----key. No `pdf_refximage` whatsit node is generated. You will need an
----`img.write(a)` or `img.node(a)` call to let the image appear on the
----page, or reference it by another trick; else you will have a dangling image
----object in the *PDF* file.
+---The object number of the image stream dictionary is then available by the
+---`objnum` key. No `pdf_refximage` whatsit node is generated. You will need an
+---`img.write(a)` or `img.node(a)` call to let the image appear on the page, or
+---reference it by another trick; else you will have a dangling image object in
+---the *PDF* file.
 ---
 ---Also here you can do a terse call like
 ---
@@ -313,8 +315,7 @@ function img.write(image) end
 function img.immediatewrite(image) end
 
 ---
----Copie an object from a (*PDF*) image
----file.
+---Copie an object from a (*PDF*) image file.
 ---
 ---This features is experimental and might disappear.
 ---
@@ -333,12 +334,11 @@ function img.immediatewriteobject(image, objnum) end
 _N._11_1_6_node = "page 229"
 
 ---
----Allocate a *PDF* object number and return a whatsit node of
----subtype `pdf_refximage`, filled with the image parameters `width`,
----`height`, `depth`, and `objnum`.
+---Allocate a *PDF* object number and return a whatsit node of subtype
+---`pdf_refximage`, filled with the image parameters `width`, `height`, `depth`,
+---and `objnum`.
 ---
----Also here you can do a terse
----call like:
+---Also here you can do a terse call like:
 ---
 ---```
 ---n = img.node ({ filename = "foo.png" })
@@ -368,9 +368,8 @@ _N._11_1_7_types = "page 229"
 ---@alias luatex.img.ImgType `pdf` | `png` | `jpg` | `jp2` | `jbig2`
 
 ---
----Return a list with the supported image file type names, currently
----these are `pdf`, `png`, `jpg`, `jp2` (JPEG 2000), and
----`jbig2`.
+---Return a list with the supported image file type names, currently these are
+---`pdf`, `png`, `jpg`, `jp2` (JPEG 2000), and `jbig2`.
 ---
 ---```lua
 ---types = img.types()
@@ -396,8 +395,8 @@ _N._11_1_8_boxes = "page 229"
 ---@alias luatex.img.ImgBox `media` | `crop` | `bleed` | `trim` | `art`
 
 ---
----Return a list with the supported *PDF* page box names, currently
----these are `media`, `crop`, `bleed`, `trim`, and `art`, all in lowercase.
+---Return a list with the supported *PDF* page box names, currently these are
+---`media`, `crop`, `bleed`, `trim`, and `art`, all in lowercase.
 ---
 ---```lua
 ---boxes = img.boxes()

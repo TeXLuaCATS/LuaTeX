@@ -26,10 +26,11 @@ _N = {}
 ---@meta
 
 ---
----The fontloader library is sort of independent of the rest in the sense that it
----can load font into a *Lua* table that then can be converted into a table suitable
----for *TeX*. The library is an adapted subset of *FontForge* and as such gives a
----similar view on a font (which has advantages when you want to debug).
+---The fontloader library is sort of independent of the rest in the sense that
+---it can load font into a *Lua* table that then can be converted into a table
+---suitable for *TeX*. The library is an adapted subset of *FontForge* and as
+---such gives a similar view on a font (which has advantages when you want to
+---debug).
 ---
 ---{{ contribute }}
 fontloader = {}
@@ -58,14 +59,14 @@ _N._12_1_getting_quick_information_on_a_font = "page 237"
 ---
 ---Get various information fields from an font file.
 ---
----This function returns either `nil`, or a `table`, or an array of
----small tables (in the case of a *TrueType* collection). The returned table(s) will
----contain some fairly interesting information items from the font(s) defined by the
+---This function returns either `nil`, or a `table`, or an array of small tables
+---(in the case of a *TrueType* collection). The returned table(s) will contain
+---some fairly interesting information items from the font(s) defined by the
 ---file.
 ---
----Getting information through this function is (sometimes much) more efficient than
----loading the font properly, and is therefore handy when you want to create a
----dictionary of available fonts based on a directory contents.
+---Getting information through this function is (sometimes much) more efficient
+---than loading the font properly, and is therefore handy when you want to
+---create a dictionary of available fonts based on a directory contents.
 ---
 ---__Reference:__
 ---
@@ -81,13 +82,15 @@ function fontloader.info(filename) end
 _N._12_2_loading_an_opentype_or_truetype_file = "page 237"
 
 ---
----Parse a font file and return a table representing its contents. The optional argument is the name of the desired font in case of font collection files. The optional return value contains any parser error strings.
+---Parse a font file and return a table representing its contents. The optional
+---argument is the name of the desired font in case of font collection files.
+---The optional return value contains any parser error strings.
 ---
 ---Open an *OpenType* font.
 ---
 ---If you want to use an *OpenType* font, you have to get the metric information
----from somewhere. Using the `fontloader` library, the simplest way to get
----that information is thus:
+---from somewhere. Using the `fontloader` library, the simplest way to get that
+---information is thus:
 ---
 ---```lua
 ---function load_font (filename)
@@ -118,8 +121,8 @@ function fontloader.open(filename, fontname) end
 
 ---
 ---If you want to use an \OPENTYPE\ font, you have to get the metric information
----from somewhere. Using the fontloader library, the simplest way to get
----that information is thus:
+---from somewhere. Using the fontloader library, the simplest way to get that
+---information is thus:
 ---
 ---__Example:__
 ---
@@ -620,8 +623,8 @@ _N._12_6_3_map = "page 247"
 _N._12_6_4_private = "page 248"
 
 ---
----This is the font's private *PostScript* dictionary, if any. Keys and values are
----both strings.
+---This is the font's private *PostScript* dictionary, if any. Keys and values
+---are both strings.
 ---
 ---__Reference:__
 ---
@@ -633,11 +636,11 @@ _N._12_6_4_private = "page 248"
 _N._12_6_5_cidinfo = "page 248"
 
 ---
----CID fonts (Character Identifier Fonts) were developed by Adobe to
----display Asian font formats with many different symbols. In CID fonts,
----CIDs (Character Identifiers) are used to address glyph descriptions
----within the font. A so-called CMap (Character Map) is used to
----establish correspondences between the CIDs and the character codes.
+---CID fonts (Character Identifier Fonts) were developed by Adobe to display
+---Asian font formats with many different symbols. In CID fonts, CIDs (Character
+---Identifiers) are used to address glyph descriptions within the font. A
+---so-called CMap (Character Map) is used to establish correspondences between
+---the CIDs and the character codes.
 ---
 ---__Reference:__
 ---
@@ -656,9 +659,9 @@ _N._12_6_6_pfminfo = "page 248"
 ---
 ---The `pfminfo` table contains most of the OS/2 information.
 ---
----PFM stands for PostScript Font Metrics and is the suffix of a file
----associated with a PostScript Type 1 font. The PFM file contains
----metric data such as kerning values.
+---PFM stands for PostScript Font Metrics and is the suffix of a file associated
+---with a PostScript Type 1 font. The PFM file contains metric data such as
+---kerning values.
 ---
 ---__Reference:__
 ---
@@ -810,8 +813,8 @@ _N._12_6_9_gpos = "page 250"
 ---@field subtables FontloaderGposSubtables
 
 ---
----The `gpos` table has one array entry for each lookup. (The `gpos_`
----prefix is somewhat redundant.)
+---The `gpos` table has one array entry for each lookup. (The `gpos_` prefix is
+---somewhat redundant.)
 ---
 ---__Reference:__
 ---
@@ -822,8 +825,8 @@ _N._12_6_9_gpos = "page 250"
 ---@field type `gpos_single`|`gpos_pair`|`gpos_cursive`|`gpos_mark2base`|`gpos_mark2ligature`|`gpos_mark2mark`|`gpos_context`|`gpos_contextchain`
 
 ---
----The flags table has a true value for each of the lookup flags that is actually
----set:
+---The flags table has a true value for each of the lookup flags that is
+---actually set:
 ---
 ---__Reference:__
 ---
@@ -880,9 +883,9 @@ _N._12_6_9_gpos = "page 250"
 ---
 
 ---
----Note: the kernclass (as far as we can see) always has one entry so it could be one level
----deep instead. Also the seconds start at `[2]` which is close to the fontforge
----internals so we keep that too.
+---Note: the kernclass (as far as we can see) always has one entry so it could
+---be one level deep instead. Also the seconds start at `[2]` which is close to
+---the fontforge internals so we keep that too.
 ---
 ---__Reference:__
 ---
@@ -898,8 +901,7 @@ _N._12_6_9_gpos = "page 250"
 _N._12_6_10_gsub = "page 251"
 
 ---
----This has identical layout to the `gpos` table, except for the
----type:
+---This has identical layout to the `gpos` table, except for the type:
 ---
 ---__Reference:__
 ---
@@ -1187,8 +1189,8 @@ _N._12_6_22_texdata = "page 254"
 _N._12_6_23_lookups = "page 254"
 
 --
----Top-level `lookups` is quite different from the ones at character level.
----The keys in this hash are strings, the values the actual lookups, represented as
+---Top-level `lookups` is quite different from the ones at character level. The
+---keys in this hash are strings, the values the actual lookups, represented as
 ---dictionary tables.
 ---
 ---__Reference:__

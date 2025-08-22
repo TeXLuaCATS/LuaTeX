@@ -4,8 +4,10 @@
 _N._4_3_lua_modules = "page 70"
 
 ---
----Corresponding directory in the LuaTeX repository: https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/luasocket
----Corresponding file in the LuaTeX repository: https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/luasocket/src/mbox.lua
+---Corresponding directory in the LuaTeX repository:
+---https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/luasocket
+---Corresponding file in the LuaTeX repository:
+---https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/luasocket/src/mbox.lua
 ---
 ---Changes to the upstream project: global mbox table
 
