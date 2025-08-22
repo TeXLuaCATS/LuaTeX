@@ -1,16 +1,41 @@
 -- The `_N` table makes it easier to navigate through the type definitions with
 -- the help of the outline:
 -- https://github.com/TeXLuaCATS/meta?tab=readme-ov-file#navigation-table-_n
-_N = {}
-
-_N._4_3_lua_modules = "page 67"
+_N._4_3_lua_modules = "page 70"
 
 ---
----https://github.com/TeX-Live/luatex/tree/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/luamd5
----https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/517487384d3b0b4b003fb3180ea415f52eeb5f5f/source/texk/web2c/luatexdir/lua/luatex-core.lua#L220-L241
----Changes to upstream:
+---Corresponding directory in the LuaTeX repository: https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/luamd5
+---Corresponding file in the LuaTeX repository: https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/master/source/texk/web2c/luatexdir/luamd5/md5lib.c
+---
+---Changes to the upstream project:
 ---* local md5 table
 ---* additional function md5.sumHEXA()
+
+-- -----------------------------------------------------------------------------
+-- Copyright (c) 2023-2025 by Josef Friedrich <josef@friedrich.rocks>
+-- -----------------------------------------------------------------------------
+--
+-- MIT License
+--
+-- Permission is hereby granted, free of charge, to any person obtaining a copy
+-- of this software and associated documentation files (the "Software"), to deal
+-- in the Software without restriction, including without limitation the rights
+-- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-- copies of the Software, and to permit persons to whom the Software is
+-- furnished to do so, subject to the following conditions:
+--
+-- The above copyright notice and this permission notice shall be included in
+-- all copies or substantial portions of the Software.
+--
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-- SOFTWARE.
+--
+-- -----------------------------------------------------------------------------
 
 ---
 ---@meta
@@ -78,24 +103,6 @@ function md5.sum(message) end
 ---
 ---😱 [Types](https://github.com/LuaCATS/md5/blob/main/library/md5.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/md5/pulls)
 function md5.sumhexa(message) end
-
----
----Compute the MD5 upper case hexadecimal message-digest of the string `message`.
----
----Similar to `md5.sum()`
----but returns its value as a string of 32 hexadecimal digits (upper case letters).
----
----__Example:__
----
----```lua
----local hash = md5.sumHEXA('test')
----assert(hash == '098F6BCD4621D373CADE4E832627B4F6')
----```
----
----@param message string
----
----@return string # for example `098F6BCD4621D373CADE4E832627B4F6`
-function md5.sumHEXA(message) end
 
 ---
 ---Encrypt a string, using MD5 in CFB (Cipher-feedback mode).
@@ -178,3 +185,21 @@ function md5.decrypt(message, key) end
 ---
 ---😱 [Types](https://github.com/LuaCATS/md5/blob/main/library/md5.lua) incomplete or incorrect? 🙏 [Please contribute!](https://github.com/LuaCATS/md5/pulls)
 function md5.exor(s1, s2) end
+
+---
+---Compute the MD5 upper case hexadecimal message-digest of the string `message`.
+---
+---Similar to `md5.sum()`
+---but returns its value as a string of 32 hexadecimal digits (upper case letters).
+---
+---__Example:__
+---
+---```lua
+---local hash = md5.sumHEXA('test')
+---assert(hash == '098F6BCD4621D373CADE4E832627B4F6')
+---```
+---
+---@param message string
+---
+---@return string # for example `098F6BCD4621D373CADE4E832627B4F6`
+function md5.sumHEXA(message) end
