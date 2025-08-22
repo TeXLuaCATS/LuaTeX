@@ -22,11 +22,6 @@
 -- https://github.com/TeXLuaCATS/meta?tab=readme-ov-file#navigation-table-_n
 _N = {}
 
--- The `_N` table makes it easier to navigate through the type definitions with
--- the help of the outline:
--- https://github.com/TeXLuaCATS/meta?tab=readme-ov-file#navigation-table-_n
-_N = {}
-
 ---
 ---@meta
 
