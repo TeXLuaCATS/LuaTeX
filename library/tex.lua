@@ -4413,7 +4413,7 @@ function tex.getmathcode(char_code) end
 ---\scriptfont\ttfam=\seventt
 ---\scriptscriptfont\ttfam=\fivett
 ---\def\tt{\fam=\ttfam \tentt}
----```sevensy
+---sevensy
 ---\scriptscriptfont2=\fivesy
 ---\def\cal{\fam=2}
 ---%
