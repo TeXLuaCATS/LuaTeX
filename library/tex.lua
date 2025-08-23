@@ -4018,7 +4018,7 @@ tex.mathcode = {}
 ---\scriptfont\ttfam=\seventt
 ---\scriptscriptfont\ttfam=\fivett
 ---\def\tt{\fam=\ttfam \tentt}
----```sevensy
+---sevensy
 ---\scriptscriptfont2=\fivesy
 ---\def\cal{\fam=2}
 ---%
@@ -4171,7 +4171,7 @@ function tex.setmathcode(global, char_code, class, family, character) end
 ---\scriptfont\ttfam=\seventt
 ---\scriptscriptfont\ttfam=\fivett
 ---\def\tt{\fam=\ttfam \tentt}
----```sevensy
+---sevensy
 ---\scriptscriptfont2=\fivesy
 ---\def\cal{\fam=2}
 ---%
