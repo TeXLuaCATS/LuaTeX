@@ -44,6 +44,7 @@ _N._14_1_1_mapfile_mapline = "page 281"
 ---
 ---@param map_file string # File name of map-file.
 ---The first character of <map_line> has a special meaning:
+---
 ---* `'+'`: Insert new entry, if it doesn't exist already.
 ---* `'='`: Replace existing entry.
 ---* `'-'`: Remove entry, if it exists.
@@ -60,6 +61,7 @@ function pdf.mapfile(map_file) end
 ---
 ---@param map_line string # Entry (line) to be added, replace, or removed.
 ---The first character of <map_line> has a special meaning:
+---
 ---* `'+'`: Insert new entry, if it doesn't exist already.
 ---* `'='`: Replace existing entry.
 ---* `'-'`: Remove entry, if it exists.
@@ -434,8 +436,10 @@ _N._14_1_7_set_get_inclusionerrorlevel_ignoreunknownimages = "page 282"
 ---Set error level for inserting *PDF* files.
 ---
 ---A warning/error is issued if the inserted *PDF* file has a newer version number than the main *PDF* file.
---- * `level <= 0`: Issue a warning.
---- * `level > 0`: Issue an error.
+---
+---* `level <= 0`: Issue a warning.
+---* `level > 0`: Issue an error.
+---
 ---@param level integer
 ---
 ---{{ contribute }}
@@ -453,9 +457,12 @@ function pdf.getinclusionerrorlevel() end
 
 ---
 ---Set <ignore> status for inserting images.
---- * `ignore ~= 0`: Issue a warning if image file type is unknown.
---- * `ignore == 0`: Issue an error if image file type is unknown.
+---
+---* `ignore ~= 0`: Issue a warning if image file type is unknown.
+---* `ignore == 0`: Issue an error if image file type is unknown.
+---
 ---LuaTeX can handle these file types: pdf, png, jpg, jbig2
+---
 ---@param ignore integer # Ignore image.
 ---
 ---{{ contribute }}
@@ -477,20 +484,20 @@ _N._14_1_8_set_get_suppressoptionalinfo = "page 282"
 ---Set bit field suppressing certain informational keys in the *PDF* file.
 ---
 ---@param flags integer # Bit field.
---- --------------------------------------------------------------
---- Bit  Meaning
---- ---  ---------------------------------------------------------
----   1  `/PTEX.FullBanner` in `/Info` dictionary of the trailer.
----   2  `/PTEX.FileName` in `/XObject` dictionary of an image. (1)
----   4  `/PTEX.PageNumber` in `/XObject` dictionary of an image.
----   8  `/PTEX.InfoDict` in `/XObject` dictionary of an image.
----  16  `/Creator` in `/Info` dictionary of the trailer.
----  32  `/CreationDate` in `/Info` dictionary of the trailer.
----  64  `/ModDate` in `/Info` dictionary of the trailer.
---- 128  `/Producer` in `/Info` dictionary of the trailer.
---- 256  `/Trapped` in `/Info` dictionary of the trailer.
---- 512  `/ID` of the trailer.
---- --------------------------------------------------------------
+---
+---| Bit | Meaning                                                    |
+---|-----| -----------------------------------------------------------|
+---|  1  | `/PTEX.FullBanner` in `/Info` dictionary of the trailer.   |
+---|  2  | `/PTEX.FileName` in `/XObject` dictionary of an image. (1) |
+---|  4  | `/PTEX.PageNumber` in `/XObject` dictionary of an image.   |
+---|  8  | `/PTEX.InfoDict` in `/XObject` dictionary of an image.     |
+---| 16  | `/Creator` in `/Info` dictionary of the trailer.           |
+---| 32  | `/CreationDate` in `/Info` dictionary of the trailer.      |
+---| 64  | `/ModDate` in `/Info` dictionary of the trailer.           |
+---| 128 | `/Producer` in `/Info` dictionary of the trailer.          |
+---| 256 | `/Trapped` in `/Info` dictionary of the trailer.           |
+---| 512 | `/ID` of the trailer.                                      |
+---
 --- (1) Seems to work only if '\pdfvariable imageaddfilename = 1'
 ---
 ---{{ contribute }}
@@ -524,8 +531,9 @@ function pdf.gettrailerid() end
 
 ---
 ---Add or remove `/CIDSet` entry in `/FontDescriptor`.
---- * `n ~= 0`: Remove `/CIDSet` entry.
---- * `n == 0`: Add `/CIDSet` entry.
+---
+---* `n ~= 0`: Remove `/CIDSet` entry.
+---* `n == 0`: Add `/CIDSet` entry.
 ---
 ---@param n integer
 ---
@@ -544,8 +552,9 @@ function pdf.getomitcidset() end
 
 ---
 ---Add or remove `/CharSet` entry in `/FontDescriptor`.
---- * `n ~= 0`: Remove `/CharSet` entry.
---- * `n == 0`: Add `/CharSet` entry.
+---
+---* `n ~= 0`: Remove `/CharSet` entry.
+---* `n == 0`: Add `/CharSet` entry.
 ---
 ---@param n integer
 ---
@@ -600,6 +609,7 @@ function pdf.getobjcompresslevel() end
 ---Switch for recompressing streams of `/XObject`s.
 ---
 ---@param switch integer # 0: don't recompress, 1: do recompress.
+---
 ---FIXME: pdf.setrecompress() not working. Bug?
 ---
 ---{{ contribute }}
@@ -619,9 +629,11 @@ _N._14_1_10_set_get_gentounicode = "page 282"
 ---Add or remove `/ToUnicode` entry in a font dictionary.
 ---
 ---@param n integer
---- * `n ~= 0`: Add `/ToUnicode` entry.
---- * `n == 0`: Remove `/ToUnicode` entry.
---- Note: Use `\pdfextension glyphtounicode` to add a CMap mapping from character codes to Unicode values.
+---
+---* `n ~= 0`: Add `/ToUnicode` entry.
+---* `n == 0`: Remove `/ToUnicode` entry.
+---
+---Note: Use `\pdfextension glyphtounicode` to add a CMap mapping from character codes to Unicode values.
 ---
 ---{{ contribute }}
 function pdf.setgentounicode(n) end
@@ -796,11 +808,12 @@ _N._14_1_16_set_get_imageresolution = "page 283"
 ---Set default resolution of a bitmap image.
 ---
 ---@param dpi integer # Resolution.
---- LuaTeX determines the size of an image as follows:
---- 1. It uses <width> and <height> parameter of `\useimageresource`.
---- 2. If (1) is missing, it uses the resolution given in the metadata of the image.
---- 3. If (2) is missing, it uses the resolution given by this function.
---- 4. If (3) is missing, it uses a resolution of 72 dpi.
+---LuaTeX determines the size of an image as follows:
+---
+---1. It uses <width> and <height> parameter of `\useimageresource`.
+---2. If (1) is missing, it uses the resolution given in the metadata of the image.
+---3. If (2) is missing, it uses the resolution given by this function.
+---4. If (3) is missing, it uses a resolution of 72 dpi.
 ---
 ---{{ contribute }}
 function pdf.setimageresolution(dpi) end
@@ -933,17 +946,22 @@ function pdf.hasmatrix() end
 
 ---
 ---Return the CTM (current transformation matrix) at the current position.
+---
+---```
 --- ┌         ┐
 --- │ a  b  0 │
 --- │ c  d  0 │
 --- │ e  f  1 │
 --- └         ┘
+---```
+---
 ---@return integer a
 ---@return integer b
 ---@return integer c
 ---@return integer d
 ---@return integer e
 ---@return integer f
+---
 ---Note: This function is mainly used inside `\latelua` calls.
 ---
 ---{{ contribute }}
@@ -967,12 +985,15 @@ function pdf.print(str) end
 ---
 ---@param type string # Type.
 ---@param str string # String.
+---
 ---Parameter <type> determines how the string is written:
---- * `text`: String <str> is written inside a text block (**BT**...**ET**).
---- * `page`: String <str> is written outside a text block (**BT**...**ET**).
---- * `origin`: Like `page` but the CTM is inserted just before the string <str>.
---- * `direct`: String <str> is written directly, independ of whether this is inside or outside a text block.
---- * `raw`: Like `direct`.
+---
+---* `text`: String <str> is written inside a text block (**BT**...**ET**).
+---* `page`: String <str> is written outside a text block (**BT**...**ET**).
+---* `origin`: Like `page` but the CTM is inserted just before the string <str>.
+---* `direct`: String <str> is written directly, independ of whether this is inside or outside a text block.
+---* `raw`: Like `direct`.
+---
 ----Note: This function is mainly used inside `\latelua` calls.
 ---
 ---{{ contribute }}
@@ -984,9 +1005,13 @@ _N._14_1_21_immediateobj = "page 283"
 ---Create an object and write it immediately to the pdf file.
 ---
 ---The created object looks like this:
+---
+---```
 --->  <objnum> 0 obj
 --->    <str>
 --->  endobj
+---```
+---
 ---@param objnum? integer # Object number (optional argument).
 ---@param str string # Contents of the object.
 ---
@@ -998,9 +1023,13 @@ function pdf.immediateobj(str) end
 ---
 ---Create an object and write it immediately to the pdf file.
 ---The created object looks like this:
+---
+---```
 --->  <objnum> 0 obj
 --->    <contents of file <filename>>
 --->  endobj
+---```
+---
 ---@param objnum? integer # Object number (optional argument).
 ---@param file string # Literal string `"file"`.
 ---@param filename string # File name.
@@ -1014,6 +1043,8 @@ function pdf.immediateobj(objnum, file, filename) end
 ---Create an object and write it immediately to the pdf file.
 ---
 ---The created object looks like this:
+---
+---```
 --->   <objnum> 0 obj
 --->   <<
 --->   <streamdict>
@@ -1022,6 +1053,8 @@ function pdf.immediateobj(objnum, file, filename) end
 --->   <streamcontents>
 --->   endstream
 --->   endobj
+---```
+---
 ---@param objnum? integer # Object number (optional argument).
 ---@param stream string # Literal string `"stream"`.
 ---@param streamcontents string # Contents of the stream.
@@ -1036,6 +1069,8 @@ function pdf.immediateobj(stream, streamcontents, streamdict) end
 ---Create an object and write it immediately to the pdf file.
 ---
 ---The created object looks like this:
+---
+---```
 --->   <objnum> 0 obj
 --->   <<
 --->   <contents of `file` <filename>>
@@ -1044,6 +1079,8 @@ function pdf.immediateobj(stream, streamcontents, streamdict) end
 --->   <streamcontents>
 --->   endstream
 --->   endobj
+---```
+---
 ---@param objnum? integer # Object number (optional argument).
 ---@param streamfile string # Literal string `"streamfile"`.
 ---@param filename string # File name.
@@ -1060,9 +1097,13 @@ _N._14_1_22_obj = "page 285"
 ---
 ---This object is written to the pdf file only if it is referenced later by `pdf.refobj()`
 ---The created object looks like this:
+---
+---```
 --->  <objnum> 0 obj
 --->    <str>
 --->  endobj
+---```
+---
 ---@param objnum? integer # Object number (optional argument).
 ---@param str string # Contents of the object.
 ---
@@ -1076,9 +1117,12 @@ function pdf.obj(str) end
 ---
 ---This object is written to the pdf file only if it is referenced later by `pdf.refobj()`
 ---The created object looks like this:
+---
+---```
 --->  <objnum> 0 obj
 --->    <contents of file <filename>>
 --->  endobj
+---```
 ---
 ---@param objnum? integer # Object number (optional argument).
 ---@param file string # Literal string `"file"`.
@@ -1094,6 +1138,8 @@ function pdf.obj(objnum, file, filename) end
 ---
 ---This object is written to the pdf file only if it is referenced later by `pdf.refobj()`
 ---The created object looks like this:
+---
+---```
 --->   <objnum> 0 obj
 --->   <<
 --->   <streamdict>
@@ -1102,6 +1148,8 @@ function pdf.obj(objnum, file, filename) end
 --->   <streamcontents>
 --->   endstream
 --->   endobj
+---```
+---
 ---@param objnum? integer # Object number (optional argument).
 ---@param stream string # Literal string `"stream"`.
 ---@param streamcontents string # Contents of the stream.
@@ -1117,6 +1165,8 @@ function pdf.obj(stream, streamcontents, streamdict) end
 ---
 ---This object is written to the pdf file only if it is referenced later by `pdf.refobj()`
 ---The created object looks like this:
+---
+---```
 --->   <objnum> 0 obj
 --->   <<
 --->   <contents of `file` <filename>>
@@ -1125,6 +1175,7 @@ function pdf.obj(stream, streamcontents, streamdict) end
 --->   <streamcontents>
 --->   endstream
 --->   endobj
+---```
 ---@param objnum? integer # Object number (optional argument).
 ---@param streamfile string # Literal string `"streamfile"`.
 ---@param filename string # File name.
@@ -1139,6 +1190,8 @@ function pdf.obj(streamfile, filename, streamdict) end
 ---Create an object.
 ---
 ---@param keyvals table # Object specification.
+---
+---```
 ---> keyvals = {
 --->    type           = <string>, -- `'stream'` (stream object), `'raw'` (non-stream object)
 --->    immediate      = <boolean>,
@@ -1150,8 +1203,10 @@ function pdf.obj(streamfile, filename, streamdict) end
 --->    string         = <string>, -- contents of object/stream
 --->    nolength       = <boolean>, -- omit `/Length` entry of stream dictionary
 ---> }
---- Keys `string` and `file` are mutual exclusive.
---- Key `nolength` omits `/Length` entry of the stream dictionary only if a `/Length` entry is given in the `attr` key.
+---```
+---
+---Keys `string` and `file` are mutual exclusive.
+---Key `nolength` omits `/Length` entry of the stream dictionary only if a `/Length` entry is given in the `attr` key.
 ---
 ---@return integer objnum # Object number.
 ---
