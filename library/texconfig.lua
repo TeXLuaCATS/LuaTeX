@@ -181,8 +181,8 @@ texconfig.dvi_buf_size = 16384
 ---* `30 < half_error_line < error_line - 15`;
 ---* `60 <= max_print_line`;
 ---
----These apply to TeX, Metafont, and MetaPost.
----"max_print_line" applies to BibTeX family
+---These apply to TeX, Metafont, and MetaPost. "max_print_line" applies to
+---BibTeX family
 ---
 ---__Reference:__
 ---
@@ -200,8 +200,8 @@ texconfig.error_line = 79
 ---* `30 < half_error_line < error_line - 15`;
 ---* `60 <= max_print_line`;
 ---
----These apply to TeX, Metafont, and MetaPost.
----"max_print_line" applies to BibTeX family
+---These apply to TeX, Metafont, and MetaPost. "max_print_line" applies to
+---BibTeX family
 ---
 ---__Reference:__
 ---
@@ -219,8 +219,8 @@ texconfig.half_error_line = 50
 ---* `30 < half_error_line < error_line - 15`;
 ---* `60 <= max_print_line`;
 ---
----These apply to TeX, Metafont, and MetaPost.
----"max_print_line" applies to BibTeX family
+---These apply to TeX, Metafont, and MetaPost. "max_print_line" applies to
+---BibTeX family
 ---
 ---__Reference:__
 ---

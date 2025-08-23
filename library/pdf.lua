@@ -40,7 +40,8 @@ _N._14_1_1_mapfile_mapline = "page 281"
 ---
 ---Modify the map-file.
 ---
----This function modifies the map-file by adding, replacing, or removing all entries (lines) of <map_file>.
+---This function modifies the map-file by adding, replacing, or removing all
+---entries (lines) of <map_file>.
 ---
 ---@param map_file string # File name of map-file.
 ---The first character of <map_line> has a special meaning:
@@ -435,7 +436,8 @@ _N._14_1_7_set_get_inclusionerrorlevel_ignoreunknownimages = "page 282"
 ---
 ---Set error level for inserting *PDF* files.
 ---
----A warning/error is issued if the inserted *PDF* file has a newer version number than the main *PDF* file.
+---A warning/error is issued if the inserted *PDF* file has a newer version
+---number than the main *PDF* file.
 ---
 ---* `level <= 0`: Issue a warning.
 ---* `level > 0`: Issue an error.
@@ -633,7 +635,8 @@ _N._14_1_10_set_get_gentounicode = "page 282"
 ---* `n ~= 0`: Add `/ToUnicode` entry.
 ---* `n == 0`: Remove `/ToUnicode` entry.
 ---
----Note: Use `\pdfextension glyphtounicode` to add a CMap mapping from character codes to Unicode values.
+---Note: Use `\pdfextension glyphtounicode` to add a CMap mapping from character
+---codes to Unicode values.
 ---
 ---{{ contribute }}
 function pdf.setgentounicode(n) end
@@ -1021,8 +1024,8 @@ _N._14_1_21_immediateobj = "page 283"
 function pdf.immediateobj(str) end
 
 ---
----Create an object and write it immediately to the pdf file.
----The created object looks like this:
+---Create an object and write it immediately to the pdf file. The created object
+---looks like this:
 ---
 ---```
 --->  <objnum> 0 obj
@@ -1095,8 +1098,8 @@ _N._14_1_22_obj = "page 285"
 ---
 ---Create an object.
 ---
----This object is written to the pdf file only if it is referenced later by `pdf.refobj()`
----The created object looks like this:
+---This object is written to the pdf file only if it is referenced later by
+---`pdf.refobj()` The created object looks like this:
 ---
 ---```
 --->  <objnum> 0 obj
@@ -1115,8 +1118,8 @@ function pdf.obj(str) end
 ---
 ---Create an object.
 ---
----This object is written to the pdf file only if it is referenced later by `pdf.refobj()`
----The created object looks like this:
+---This object is written to the pdf file only if it is referenced later by
+---`pdf.refobj()` The created object looks like this:
 ---
 ---```
 --->  <objnum> 0 obj
@@ -1136,8 +1139,8 @@ function pdf.obj(objnum, file, filename) end
 ---
 ---Create an object.
 ---
----This object is written to the pdf file only if it is referenced later by `pdf.refobj()`
----The created object looks like this:
+---This object is written to the pdf file only if it is referenced later by
+---`pdf.refobj()` The created object looks like this:
 ---
 ---```
 --->   <objnum> 0 obj
@@ -1163,8 +1166,8 @@ function pdf.obj(stream, streamcontents, streamdict) end
 ---
 ---Create an object.
 ---
----This object is written to the pdf file only if it is referenced later by `pdf.refobj()`
----The created object looks like this:
+---This object is written to the pdf file only if it is referenced later by
+---`pdf.refobj()` The created object looks like this:
 ---
 ---```
 --->   <objnum> 0 obj
@@ -1205,8 +1208,9 @@ function pdf.obj(streamfile, filename, streamdict) end
 ---> }
 ---```
 ---
----Keys `string` and `file` are mutual exclusive.
----Key `nolength` omits `/Length` entry of the stream dictionary only if a `/Length` entry is given in the `attr` key.
+---Keys `string` and `file` are mutual exclusive. Key `nolength` omits `/Length`
+---entry of the stream dictionary only if a `/Length` entry is given in the
+---`attr` key.
 ---
 ---@return integer objnum # Object number.
 ---
