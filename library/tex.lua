@@ -4396,7 +4396,6 @@ function tex.getmathcodes(char_code) end
 ---The *TeX*'s character code tables `delcode` (delimiter code) can be accessed
 ---and written to using a virtual subtable of the `tex` table.
 ---
----
 ---```lua
 ---for i=1,128 do
 ---  local delcode = tex.delcode[i]
