@@ -1,10 +1,9 @@
 #! luahbtex --luaonly
 
-local face = luaharfbuzz.Face.new("xxx")
-print(face) -- nil
+local assert = require("utils").assert
 
-face =
-  luaharfbuzz.Face.new("/usr/share/fonts/truetype/noto/NotoSans-Regular.ttf")
-if face ~= nil then
-  print(face) -- harfbuzz.Face: 0x12426a8
-end
+local face = luaharfbuzz.Face.new("xxx")
+assert.is_nil(face)
+
+face = luaharfbuzz.Face.new("/usr/share/fonts/truetype/noto/NotoSans-Regular.ttf")
+assert.is_truthy(face)

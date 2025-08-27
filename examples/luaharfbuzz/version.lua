@@ -1,5 +1,5 @@
 #! luahbtex --luaonly
 
--- Harfbuzz API Version
-print("Harfbuzz API version", luaharfbuzz.version())
---Harfbuzz API version	7.0.1
+local assert = require("utils").assert
+
+assert.equals(luaharfbuzz.version(), "10.2.0")

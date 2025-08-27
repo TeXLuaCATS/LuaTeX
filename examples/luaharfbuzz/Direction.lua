@@ -2,4 +2,4 @@
 
 local assert = require("utils").assert
 
-assert.equals(luaharfbuzz.shapers(), "graphite2")
+assert.equals(luaharfbuzz.Direction.RTL, nil)
