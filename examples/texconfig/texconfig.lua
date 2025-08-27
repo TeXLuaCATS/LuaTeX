@@ -1,2 +1,2 @@
-local utils = require("resources/utils")
+local utils = require("utils")
 utils.pinspect(texconfig)

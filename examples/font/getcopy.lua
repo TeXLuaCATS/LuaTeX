@@ -1,4 +1,4 @@
-local utils = require("resources/utils")
+local utils = require("utils")
 
 utils.pinspect(font.getcopy(1))
 
