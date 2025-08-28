@@ -1,4 +1,19 @@
-local utils = require("utils")
+
+local assert = require("utils").assert
 local mp = mplib.new()
-utils.pinspect(mplib.statistics(mp))
-utils.pinspect(mp:statistics())
+
+assert.same(mp:statistics(), {
+  hash = 301,
+  memory = 1168,
+  open = 0,
+  params = 0
+}
+)
+
+assert.same(mplib.statistics(mp), {
+  hash = 301,
+  memory = 1168,
+  open = 0,
+  params = 0
+}
+)

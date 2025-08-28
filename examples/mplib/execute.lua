@@ -1,5 +1,8 @@
 -- https://tex.stackexchange.com/questions/23984/how-to-use-mplib-directly-from-lua
 
+local utils = require("utils")
+
+
 local function finder(name, mode, ftype)
   if mode == "w" then
     return name
@@ -8,9 +11,7 @@ local function finder(name, mode, ftype)
   end
 end
 
-local inspect = require("inspect")
 
-return function()
   local mp = mplib.new({ find_file = finder, ini_version = true })
   local result = mp:execute("input plain;")
   result =
@@ -20,8 +21,7 @@ return function()
     tex.print([[Result of mplib execute is unsuccessfull.]])
   else
     if result.fig then
-      print(result.fig)
-      print(inspect(result.fig.charcode))
+      utils.pinspect(result.fig[1])
       tex.sprint("Converted something: \\vrule\\vbox{\\hrule")
       tex.sprint("\\hrule}\\vrule")
     else
@@ -31,4 +31,3 @@ return function()
     end
   end
   mp:finish()
-end

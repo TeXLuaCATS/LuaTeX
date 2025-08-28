@@ -1,6 +1,6 @@
 local utils = require("utils")
 
-for path in utils.list_files_recursively("/usr/share/fonts") do
+for path in utils.list_files_recursively("/usr/share/fonts/opentype/noto") do
   local info = fontloader.info(path)
   if info then
     print(path)
