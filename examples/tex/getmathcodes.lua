@@ -1,15 +1,17 @@
+local assert = require("utils").assert
+
 -- Examples from The TeXBook, page 154
 
 -- \mathcode‘<="313C
 -- ASCII `<`: 60 (decimal) 3C (hexadecimal)
--- class: 3
--- family: 1
--- character: 60
-print(tex.getmathcodes(60)) -- 3 1 60
+local class, family, character = tex.getmathcodes(60)
+assert.equals(class, 3)
+assert.equals(family, 1)
+assert.equals(character, 60)
 
 -- \mathcode‘*="2203
 -- ASCII `*`: 42 (decimal) 2A (hexadecimal)
--- class: 2
--- family: 2
--- character: 3
-print(tex.getmathcodes(42)) -- 2 2 3
+class, family, character = tex.getmathcodes(42)
+assert.equals(class, 2)
+assert.equals(family, 2)
+assert.equals(character, 3)
