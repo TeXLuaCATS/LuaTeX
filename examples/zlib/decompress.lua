@@ -46,4 +46,4 @@ print(
     .. tostring(string.len(uncompressed) / string.len(compressed))
 )
 
-assert(result == uncompressed)
+assert.equals(result, uncompressed)

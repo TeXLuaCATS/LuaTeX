@@ -1,5 +1,7 @@
 #! luatex --luaonly
 
+local assert = require("utils").assert
+
 print(gzip)
 
 local dataToDeflate = {}
@@ -28,4 +30,4 @@ print(#deflatedData)
 
 local streamIn = zlib.inflate(deflatedData)
 local inflatedData = streamIn:read()
-assert(dataToDeflate == inflatedData)
+assert.equals(dataToDeflate, inflatedData)

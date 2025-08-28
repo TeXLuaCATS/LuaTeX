@@ -1,5 +1,7 @@
 #! luatex --luaonly
 
+local assert = require("utils").assert
+
 local function convert_to_hex(str)
   return (
     str:gsub(".", function(c)

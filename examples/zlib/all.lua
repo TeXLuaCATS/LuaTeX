@@ -1,5 +1,7 @@
 #! luatex --luaonly
 
+local assert = require("utils").assert
+
 -- line(' deflate/inflate')
 local us
 local f = io.open("all.lua") -- f = io.open('../all.tar')
