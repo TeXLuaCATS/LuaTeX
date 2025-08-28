@@ -3560,6 +3560,34 @@ function tex.setcatcode(global, cat_table, char_code, cat_code) end
 function tex.setcatcode(global, cat_table, char_code, cat_code) end
 
 ---
+---## Category codes:
+---
+---* `0`: Escape character, normally `\`
+---* `1`: Begin grouping, normally `{`
+---* `2`: End grouping, normally `}`
+---* `3`: Math shift, normally `$`
+---* `4`: Alignment tab, normally `&`
+---* `5`: End of line, normally `<return>`
+---* `6`: Parameter, normally `#`
+---* `7`: Superscript, normally `^`
+---* `8`: Subscript, normally `_`
+---* `9`: Ignored character, normally `<null>`
+---* `10`: Space, normally `<space>` and `<tab>`
+---* `11`: Letter, normally only contains the letters `a,...,z` and `A,...,Z`. These characters can be used in command names
+---* `12`: Other, normally everything else not listed in the other categories
+---* `13`: Active character, for example `~`
+---* `14`: Comment character, normally `%`
+---* `15`: Invalid character, normally `<delete>`
+---
+---https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1466-1476
+---
+---@param char_code integer # The character code, for example ASCII or UNICODE character code.
+---
+---@return integer cat_code # The category code (`0` stands for the escape character, normally `\`, `1` stands for begin grouping, normally `{` and so on).
+---{{ contribute }}
+function tex.getcatcode(char_code) end
+
+---
 ---The function call interface for `catcode` (category code) also allows you to
 ---specify a category table to use on assignment or on query (default in both
 ---cases is the current one):
@@ -3582,6 +3610,9 @@ function tex.setcatcode(global, cat_table, char_code, cat_code) end
 ---* `13`: Active character, for example `~`
 ---* `14`: Comment character, normally `%`
 ---* `15`: Invalid character, normally `<delete>`
+---
+---
+---https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1466-1476
 ---
 ---@param cat_table integer
 ---@param char_code integer # The character code, for example ASCII or UNICODE character code.
@@ -5167,8 +5198,7 @@ function tex.print(catcodetable_no, input_lines) end
 ---* When you inject a token, you need to pass a valid token userdata object. This
 ---  object will be collected by *Lua* when it no longer is referenced. When it gets
 ---  printed to *TeX* the token itself gets copied so there is no interference with the
----  *Lua* garbage collection. You manage the object yourself. Because tokens
----are
+---  *Lua* garbage collection. You manage the object yourself. Because token are
 ---  actually just numbers, there is no real extra overhead at the *TeX* end.
 ---* When you inject a node, you need to pass a valid node userdata object. The
 ---  node related to the object will not be collected by *Lua* when it no longer
