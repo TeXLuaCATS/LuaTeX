@@ -3713,7 +3713,6 @@ function tex.getcatcode(char_code) end
 ---* `14`: Comment character, normally `%`
 ---* `15`: Invalid character, normally `<delete>`
 ---
----
 ---__Reference:__
 ---
 ---* https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1466-1476
@@ -5200,7 +5199,6 @@ function tex.getnest() end
 ---{{ contribute }}
 function tex.setnest() end
 
----
 ---
 ---__Reference:__
 ---
