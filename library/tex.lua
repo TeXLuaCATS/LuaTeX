@@ -2254,7 +2254,7 @@ tex.errhelp = ""
 ---__Reference:__
 ---
 ---* [TeX by Topic, page 215](http://mirrors.ctan.org/info/texbytopic/TeXbyTopic.pdf)
------
+---
 ---@type string
 ---
 ---{{ contribute }}
@@ -2566,6 +2566,8 @@ _N._10_3_5_accessing_registers_set_get_and_is = "page 194"
 tex.attribute = {}
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L1087-L1102](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1087-L1102)
 ---
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
@@ -2576,6 +2578,8 @@ tex.attribute = {}
 function tex.setattribute(global, register, value) end
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L1087-L1102](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1087-L1102)
 ---
 ---@param register string|integer # A register number or a predefined csname string from `\attributedef`.
@@ -2584,6 +2588,8 @@ function tex.setattribute(global, register, value) end
 ---{{ contribute }}
 function tex.setattribute(register, value) end
 
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L1104-L1114](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1104-L1114)
 ---
@@ -2594,6 +2600,8 @@ function tex.setattribute(register, value) end
 ---{{ contribute }}
 function tex.getattribute(register) end
 
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L1080-L1083](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1080-L1083)
 ---* Corresponding C source code: [ltexlib.c#L350-L358](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L350-L358)
@@ -2629,6 +2637,8 @@ tex.count = {}
 function tex.setcount(global, register, value) end
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L1051-L1066](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1051-L1066)
 ---
 ---@param register string|integer # A register number or a predefined csname string from `\countdef`.
@@ -2637,6 +2647,8 @@ function tex.setcount(global, register, value) end
 ---{{ contribute }}
 function tex.setcount(register, value) end
 
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L1068-L1078](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1068-L1078)
 ---
@@ -2647,6 +2659,8 @@ function tex.setcount(register, value) end
 ---{{ contribute }}
 function tex.getcount(register) end
 
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L1046-L1049](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1046-L1049)
 ---* Corresponding C source code: [ltexlib.c#L350-L358](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L350-L358)
@@ -2675,6 +2689,8 @@ function tex.iscount(register) end
 tex.dimen = {}
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L818-L834](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L818-L834)
 ---
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
@@ -2685,6 +2701,8 @@ tex.dimen = {}
 function tex.setdimen(global, register, value) end
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L836-L846](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L836-L846)
 ---
 ---@param register string|integer # A register number or a predefined csname string from `\dimendef`.
@@ -2694,6 +2712,8 @@ function tex.setdimen(global, register, value) end
 ---{{ contribute }}
 function tex.getdimen(register) end
 
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L813-L816](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L813-L816)
 ---* Corresponding C source code: [ltexlib.c#L350-L358](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L350-L358)
@@ -2720,6 +2740,8 @@ function tex.isdimen(register) end
 tex.glue = {}
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L884-L903](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L884-L903)
 ---
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
@@ -2734,6 +2756,8 @@ tex.glue = {}
 function tex.setglue(global, register, width, stretch, shrink, stretch_order, shrink_order) end
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L884-L903](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L884-L903)
 ---
 ---@param register string|integer # A register number or a predefined csname string from `\skipdef`.
@@ -2746,6 +2770,8 @@ function tex.setglue(global, register, width, stretch, shrink, stretch_order, sh
 ---{{ contribute }}
 function tex.setglue(register, width, stretch, shrink, stretch_order, shrink_order) end
 
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L905-L949](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L905-L949)
 ---
@@ -2770,6 +2796,7 @@ function tex.getglue(register) end
 ---@param register string|integer # A register number or a predefined csname string from `\skipdef`.
 ---
 ---@return false|integer
+---
 ---{{ contribute }}
 function tex.isglue(register) end
 
@@ -2786,6 +2813,8 @@ function tex.isglue(register) end
 tex.muglue = {}
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L979-L998](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L979-L998)
 ---
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
@@ -2800,6 +2829,8 @@ tex.muglue = {}
 function tex.setmuglue(global, register, width, stretch, shrink, stretch_order, shrink_order) end
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L979-L998](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L979-L998)
 ---
 ---@param register string|integer # A register number or a predefined csname string from `\muskipdef`.
@@ -2812,6 +2843,8 @@ function tex.setmuglue(global, register, width, stretch, shrink, stretch_order, 
 ---{{ contribute }}
 function tex.setmuglue(register, width, stretch, shrink, stretch_order, shrink_order) end
 
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L1000-L1044](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1000-L1044)
 ---
@@ -2828,6 +2861,8 @@ function tex.getmuglue(register) end
 
 ---
 ---Alias of tex.ismuskip()
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L951-L954](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L951-L954)
 ---* Corresponding C source code: [ltexlib.c#L350-L358](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L350-L358)
@@ -2851,6 +2886,8 @@ function tex.ismuglue(register) end
 tex.muskip = {}
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L956-L965](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L956-L965)
 ---
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
@@ -2861,6 +2898,8 @@ tex.muskip = {}
 function tex.setmuskip(global, register, value) end
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L956-L965](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L956-L965)
 ---
 ---@param register string|integer # A register number or a predefined csname string from `\muskipdef`.
@@ -2869,6 +2908,8 @@ function tex.setmuskip(global, register, value) end
 ---{{ contribute }}
 function tex.setmuskip(register, value) end
 
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L967-L977](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L967-L977)
 ---
@@ -2880,12 +2921,15 @@ function tex.setmuskip(register, value) end
 function tex.getmuskip(register) end
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L951-L954](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L951-L954)
 ---* Corresponding C source code: [ltexlib.c#L350-L358](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L350-L358)
 ---
 ---@param register string|integer # A register number or a predefined csname string from `\muskipdef`.
 ---
 ---@return false|integer
+---
 ---{{ contribute }}
 function tex.ismuskip(register) end
 
@@ -2904,6 +2948,8 @@ function tex.ismuskip(register) end
 tex.skip = {}
 
 ---
+---__Reference__:
+---
 ---* Corresponding C source code: [ltexlib.c#L853-L866](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L853-L866)
 ---
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
@@ -2912,6 +2958,8 @@ tex.skip = {}
 ---{{ contribute }}
 function tex.setskip(global, register, skip) end
 
+---
+---__Reference__:
 ---
 ---* Corresponding C source code: [ltexlib.c#L853-L866](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L853-L866)
 ---
@@ -2929,6 +2977,8 @@ function tex.setskip(register, skip) end
 ---{{ contribute }}
 function tex.getskip(register) end
 
+---
+---__Reference__:
 ---
 ---* Corresponding C source code: [ltexlib.c#L848-L851](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L848-L851)
 ---* Corresponding C source code: [ltexlib.c#L350-L358](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L350-L358)
@@ -2958,6 +3008,8 @@ tex.toks = {}
 ---
 ---Set a toks register. Also accepts a predefined csname string.
 ---
+---__Reference__:
+---
 ---* Corresponding C source code: [ltexlib.c#L1125-L1158](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1125-L1158)
 ---
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
@@ -2968,7 +3020,22 @@ tex.toks = {}
 function tex.settoks(global, register, toks) end
 
 ---
+---Set a toks register. Also accepts a predefined csname string.
+---
+---__Reference__:
+---
+---* Corresponding C source code: [ltexlib.c#L1125-L1158](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1125-L1158)
+---
+---@param register string|integer # A register number or a predefined csname string from `\toksdef`.
+---@param toks string
+---
+---{{ contribute }}
+function tex.settoks(register, toks) end
+
+---
 ---Get a toks register. Also accepts a predefined csname string.
+---
+---__Reference__:
 ---
 ---* Corresponding C source code: [ltexlib.c#L1197-L1209](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1197-L1209)
 ---
@@ -2979,6 +3046,8 @@ function tex.settoks(global, register, toks) end
 ---{{ contribute }}
 function tex.gettoks(register) end
 
+---
+---__Reference__:
 ---
 ---* Corresponding C source code: [ltexlib.c#L1120-L1123](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1120-L1123)
 ---* Corresponding C source code: [ltexlib.c#L350-L358](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L350-L358)
@@ -2998,6 +3067,8 @@ function tex.istoks(register) end
 ---tex.scantoks("global",0,"$\\int\\limits^1_2$")
 ---```
 ---
+---__Reference__:
+---
 ---* Corresponding C source code: [ltexlib.c#L1160-L1195](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1160-L1195)
 ---
 ---@param global 'global'
@@ -3009,8 +3080,30 @@ function tex.istoks(register) end
 function tex.scantoks(global, register, catcodetable, toks) end
 
 ---
+---For tokens registers we have an alternative where a catcode table is
+---specified:
+---
+---```lua
+---tex.scantoks(0,3,"$e=mc^2$")
+---tex.scantoks("global",0,"$\\int\\limits^1_2$")
+---```
+---
+---__Reference__:
+---
+---* Corresponding C source code: [ltexlib.c#L1160-L1195](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1160-L1195)
+---
+---@param register integer
+---@param catcodetable integer
+---@param toks string
+---
+---{{ contribute }}
+function tex.scantoks(register, catcodetable, toks) end
+
+---
 ---When no arguments are given the current maximum number of classes is
 ---returned.
+---
+---__Reference__:
 ---
 ---* Corresponding C source code: [ltexlib.c#L1211-L1242](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1211-L1242)
 ---
@@ -3105,6 +3198,7 @@ function tex.setlccode(char_code, lower_case, upper_case) end
 ---@param char_code integer # A Unicode code point for which a lowercase variant of the character should be returned, for example `65` stands for an uppercase `A` and `97` for a lowercase `a`.
 ---
 ---@return integer lower_case # The Unicode code point for the lowercase variant of the character.
+---
 ---{{ contribute }}
 function tex.getlccode(char_code) end
 
@@ -3195,6 +3289,7 @@ function tex.setuccode(char_code, upper_case, lower_case) end
 ---@param char_code integer # A Unicode code point for which a uppercase variant of the character should be returned, for example `65` stands for an uppercase `A` and `97` for a lowercase `a`.
 ---
 ---@return integer upper_case # The Unicode code point for the uppercase variant of the character.
+---
 ---{{ contribute }}
 function tex.getuccode(char_code) end
 
@@ -3441,6 +3536,8 @@ function tex.getsfcode(char_code) end
 ---* `14`: Comment character, normally `%`
 ---* `15`: Invalid character, normally `<delete>`
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L3710](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3710)
 ---
 ---@type table<integer, integer>
@@ -3450,6 +3547,8 @@ tex.catcode = {}
 ---
 ---Specify a category table to use on assignment or on query (default in both
 ---cases is the current one).
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L1438-L1464](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1438-L1464)
 ---
@@ -3523,6 +3622,7 @@ function tex.setcatcode(char_code, cat_code) end
 ---@param cat_table integer
 ---@param char_code integer # The character code, for example ASCII or UNICODE character code.
 ---@param cat_code integer # The category code (`0` stands for the escape character, normally `\`, `1` stands for begin grouping, normally `{` and so on).
+---
 ---{{ contribute }}
 function tex.setcatcode(global, cat_table, char_code, cat_code) end
 
@@ -3579,7 +3679,9 @@ function tex.setcatcode(global, cat_table, char_code, cat_code) end
 ---* `14`: Comment character, normally `%`
 ---* `15`: Invalid character, normally `<delete>`
 ---
----https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1466-1476
+---__Reference:__
+---
+---* https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1466-1476
 ---
 ---@param char_code integer # The character code, for example ASCII or UNICODE character code.
 ---
@@ -3612,12 +3714,15 @@ function tex.getcatcode(char_code) end
 ---* `15`: Invalid character, normally `<delete>`
 ---
 ---
----https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1466-1476
+---__Reference:__
+---
+---* https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1466-1476
 ---
 ---@param cat_table integer
 ---@param char_code integer # The character code, for example ASCII or UNICODE character code.
 ---
 ---@return integer cat_code # The category code (`0` stands for the escape character, normally `\`, `1` stands for begin grouping, normally `{` and so on).
+---
 ---{{ contribute }}
 function tex.getcatcode(cat_table, char_code) end
 
@@ -4023,6 +4128,7 @@ tex.mathcode = {}
 ---@param class integer # The class to which a math character belongs (`0`: Ordinary, `1`: Large operator, `2`: Binary operation, `3`: Relation, `4`: Opening, `5`: Closing, `6`: Punctuation, `7`: Variable family).
 ---@param family integer # TeX uses fonts from one or more of the sixteen font families to typeset mathematical characters. Each font family consists of three fonts — textfont, scriptfont, and scriptscriptfont. (`0`: Roman, `1`: Math italic, `2`: Math symbol, `3`: Math extension, `4`: Italic text, `5`: Slanted text, `6`: Bold text, `7`: Typewriter)
 ---@param character integer # The character position
+---
 ---{{ contribute }}
 function tex.setmathcode(global, char_code, class, family, character) end
 
@@ -4176,6 +4282,7 @@ function tex.setmathcode(global, char_code, class, family, character) end
 ---@param class integer # The class to which a math character belongs (`0`: Ordinary, `1`: Large operator, `2`: Binary operation, `3`: Relation, `4`: Opening, `5`: Closing, `6`: Punctuation, `7`: Variable family).
 ---@param family integer # TeX uses fonts from one or more of the sixteen font families to typeset mathematical characters. Each font family consists of three fonts — textfont, scriptfont, and scriptscriptfont. (`0`: Roman, `1`: Math italic, `2`: Math symbol, `3`: Math extension, `4`: Italic text, `5`: Slanted text, `6`: Bold text, `7`: Typewriter)
 ---@param character integer # The character position
+---
 ---{{ contribute }}
 function tex.setmathcode(global, char_code, class, family, character) end
 
@@ -4188,6 +4295,7 @@ function tex.setmathcode(global, char_code, class, family, character) end
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
 ---@param char_code integer # The ASCII or UNICODE charcater code point.
 ---@param math_code MathCode # A table with three integers (class, family, character).
+---
 ---{{ contribute }}
 function tex.setmathcode(global, char_code, math_code) end
 
@@ -4199,6 +4307,7 @@ function tex.setmathcode(global, char_code, math_code) end
 ---
 ---@param char_code integer  # The ASCII or UNICODE charcater code point.
 ---@param math_code MathCode # A table with three integers (class, family, character).
+---
 ---{{ contribute }}
 function tex.setmathcode(char_code, math_code) end
 
@@ -4525,9 +4634,12 @@ function tex.setdelcode(global, char_code, small_family, small_character, large_
 ---@param small_character integer
 ---@param large_family integer
 ---@param large_character integer
+---
 ---{{ contribute }}
 function tex.setdelcode(char_code, small_family, small_character, large_family, large_character) end
 
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L1640-L1681](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1640-L1681)
 ---* Corresponding plain TeX control sequence: [\delcode](https://www.tug.org/utilities/plain/cseq.html#delcode-rp)
@@ -4535,6 +4647,7 @@ function tex.setdelcode(char_code, small_family, small_character, large_family, 
 ---@param global 'global' # It is possible to define values globally by using the string `global` as the first function argument.
 ---@param char_code integer
 ---@param del_code DelCode
+---
 ---{{ contribute }}
 function tex.setdelcode(global, char_code, del_code) end
 
@@ -4546,9 +4659,12 @@ function tex.setdelcode(global, char_code, del_code) end
 ---
 ---@param char_code integer
 ---@param del_code DelCode
+---
 ---{{ contribute }}
 function tex.setdelcode(char_code, del_code) end
 
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L1701-L1712](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1701-L1712)
 ---* Corresponding plain TeX control sequence: [\delcode](https://www.tug.org/utilities/plain/cseq.html#delcode-rp)
@@ -4559,6 +4675,7 @@ function tex.setdelcode(char_code, del_code) end
 ---@return integer small_character
 ---@return integer large_family
 ---@return integer large_character
+---
 ---{{ contribute }}
 function tex.getdelcodes(char_code) end
 
@@ -4571,6 +4688,7 @@ function tex.getdelcodes(char_code) end
 ---@param char_code integer
 ---
 ---@return DelCode
+---
 ---{{ contribute }}
 function tex.getdelcode(char_code) end
 
@@ -4653,6 +4771,8 @@ _N._10_3_8_reusing_boxes = "page 198"
 ---You can (re)use the box with `useboxresource` or by creating a rule node with
 ---subtype 2.
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L3217-L3278](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3217-L3278)
 ---
 ---@see tex.useboxresource
@@ -4670,6 +4790,8 @@ _N._10_3_8_reusing_boxes = "page 198"
 function tex.saveboxresource(n, attributes, resources, immediate, type, margin) end
 
 ---
+---__Reference:__
+---
 ---* Corresponding Lua source code: [ltexlib.c#L3346-L3355](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3346-L3355)
 ---
 ---@param n integer
@@ -4682,6 +4804,8 @@ function tex.getboxresourcebox(n) end
 ---Generate the reference (a rule type).
 ---
 ---The dimensions are optional and the final ones are returned as extra values.
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L3280-L3325](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3280-L3325)
 ---
@@ -4704,6 +4828,8 @@ function tex.useboxresource(n, width, height, depth) end
 ---
 ---No dimensions returned means that the resource is unknown.
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L3327-L3344](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3327-L3344)
 ---
 ---@param n Node
@@ -4712,6 +4838,7 @@ function tex.useboxresource(n, width, height, depth) end
 ---@return integer|nil height
 ---@return integer|nil depth
 ---@return integer|nil margin
+---
 ---{{ contribute }}
 function tex.getboxresourcedimensions(n) end
 
@@ -4724,6 +4851,8 @@ _N._10_3_9_triggerbuildpage = "page 198"
 ---You should not expect to much from the `triggerbuildpage` helpers because
 ---often *TeX* doesn't do much if it thinks nothing has to be done, but it might
 ---be useful for some applications.
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L3357-L3361](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3357-L3361)
 ---
@@ -4739,6 +4868,8 @@ _N._10_3_10_splitbox = "page 198"
 ---This operation is comparable to the `vsplit` operation. The mode can be
 ---`additional` or `exactly` and concerns the split off box.
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L1282-L1308](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1282-L1308)
 ---
 ---@param n Node
@@ -4746,6 +4877,7 @@ _N._10_3_10_splitbox = "page 198"
 ---@param mode 'additional' | 'exactly'
 ---
 ---@return Node|nil vlist
+---
 ---{{ contribute }}
 function tex.splitbox(n, height, mode) end
 
@@ -4754,16 +4886,21 @@ _N._10_3_11_accessing_math = "page 198"
 ---
 ---Set the internal math parameters.
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L1986-L2015](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1986-L2015)
 ---
 ---@param math_param_name MathParamName
 ---@param math_style_name MathStyleName
 ---@param value integer
+---
 ---{{ contribute }}
 function tex.setmath(math_param_name, math_style_name, value) end
 
 ---
 ---Set the internal math parameters.
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L1986-L2015](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L1986-L2015)
 ---
@@ -4771,11 +4908,14 @@ function tex.setmath(math_param_name, math_style_name, value) end
 ---@param math_param_name MathParamName
 ---@param math_style_name MathStyleName
 ---@param value integer|Node # The value is either a number (representing a dimension or number) or a glue spec node representing a muskip for `ordordspacing` and similar spacing parameters.
+---
 ---{{ contribute }}
 function tex.setmath(global, math_param_name, math_style_name, value) end
 
 ---
 ---Query the internal math parameters.
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L2017-L2039](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2017-L2039)
 ---
@@ -4789,6 +4929,8 @@ function tex.getmath(math_param_name, math_style_name) end
 
 ---
 ---The style name minus the trailing “style”.
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [texmath.c#L510-L516](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/texmath.c#L510-L516)
 ---
@@ -4805,6 +4947,8 @@ function tex.getmath(math_param_name, math_style_name) end
 
 ---
 ---The parameter name minus the leading “Umath”.
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [texmath.c#L518-L558](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/texmath.c#L518-L558)
 ---
@@ -4989,11 +5133,15 @@ tex.lists.split_discards_head = nil
 ---You have to be careful with what you set as *TeX* can have expectations with
 ---regards to how a list is constructed or in what state it is.
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L2266-L2321](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2266-L2321)
 ---
 ---{{ contribute }}
 function tex.setlist() end
 
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L2202-L2264](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2202-L2264)
 ---
@@ -5035,6 +5183,8 @@ tex.nest.ptr = 0
 ---list), nothing or `top`, which returns the topmost list, or the string `ptr`
 ---which gives you the index of the topmost list.
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L2422-L2455](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2422-L2455)
 ---
 ---@return Nest
@@ -5043,11 +5193,16 @@ tex.nest.ptr = 0
 function tex.getnest() end
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L2457-L2461](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2457-L2461)
 ---
 ---{{ contribute }}
 function tex.setnest() end
 
+---
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L2325-L2361](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2325-L2361)
 ---
@@ -5071,6 +5226,8 @@ function tex.setnest() end
 ---`tex.getmodevalues()` to get the mapping: positive values signal vertical,
 ---horizontal and math mode, while negative values indicate inner and inline
 ---variants (all modes).
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L3549-L3565](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3549-L3565)
 ---
@@ -5824,7 +5981,7 @@ _N._10_3_16_1_enableprimitives = "page 206"
 ---*Lua* code but not do much else. The defined csnames are (of course) saved in
 ---the format and will be available at runtime.
 ---
----*
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L2752-L2809](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2752-L2809)
 ---
@@ -5873,6 +6030,8 @@ _N._10_3_16_3_primitives = "page 210"
 ---
 ---Return a list of all primitives that *LuaTeX* knows about.
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L2691-L2708](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2691-L2708)
 ---
 ---@return string[]
@@ -5892,6 +6051,8 @@ _N._10_3_17_1_badness = "page 210"
 ---amounts that sum to `sum`. The returned number is a reasonable approximation
 ---of `100(total/sum)^3`.
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L3069-L3075](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3069-L3075)
 ---* Corresponding C source code: [arithmetic.c#L275-L300](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/tex/arithmetic.c#L275-L300)
 ---
@@ -5899,6 +6060,7 @@ _N._10_3_17_1_badness = "page 210"
 ---@param sum integer # scaled values
 ---
 ---@return integer badness
+---
 ---{{ contribute }}
 function tex.badness(total, sum) end
 
@@ -5906,6 +6068,8 @@ _N._10_3_17_2_resetparagraph = "page 210"
 
 ---
 ---Reset the parameters that *TeX* normally resets when a new paragraph is seen.
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L3054-L3059](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3054-L3059)
 ---
@@ -6014,14 +6178,12 @@ function tex.getlocallevel() end
 
 _N._10_3_18_randomizers = "page 212"
 
--- { "uniform_rand",tex_unif_rand },
--- { "normal_rand", tex_norm_rand },
--- { "lua_math_randomseed", tex_init_rand }, /* syntactic sugar  */
-
 ---
 ---Initialize a new seed.
 ---
 ---`lua_math_randomseed` is equivalent to this function.
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L3132-L3142](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3132-L3142)
 ---
@@ -6036,6 +6198,8 @@ function tex.init_rand(seed) end
 ---Initialize a new seed.
 ---
 ---`init_rand` is equivalent to this function.
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L3132-L3142](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3132-L3142)
 ---
@@ -6053,6 +6217,8 @@ function tex.lua_math_randomseed(seed) end
 ---For practical reasons *LuaTeX* has its own random number generator. This is
 ---the original *Lua* random function.
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L3164-L3192](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3164-L3192)
 ---
 ---@param lower number
@@ -6066,6 +6232,8 @@ function tex.lua_math_random(lower, upper) end
 ---For practical reasons *LuaTeX* has its own random number generator. This is
 ---the original *Lua* random function.
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L3164-L3192](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3164-L3192)
 ---
 ---@param upper? number
@@ -6077,6 +6245,8 @@ function tex.lua_math_random(upper) end
 ---
 ---no argument is used
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L3156-L3160](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3156-L3160)
 ---
 ---{{ contribute }}
@@ -6084,6 +6254,8 @@ function tex.normal_rand() end
 
 ---
 ---takes a number that will get rounded before being used
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L3144-L3154](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3144-L3154)
 ---
@@ -6098,6 +6270,8 @@ function tex.uniform_rand() end
 ---```
 ---
 ---will give a random number between zero and one.
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L2051-L2054](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L2051-L2054)
 ---
@@ -6118,6 +6292,8 @@ _N._10_3_19_synctex = "page 212"
 ---|4 # sets only glyph modes
 
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L3377-L3382](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3377-L3382)
 ---
 ---@param mode SyntexMode
@@ -6127,6 +6303,8 @@ function tex.set_synctex_mode(mode) end
 
 ---
 ---Return the current mode.
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L3383-L3387](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3383-L3387)
 ---
@@ -6138,6 +6316,8 @@ function tex.get_synctex_mode() end
 ---
 ---Set the current tag (file) value (obeys save stack).
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L3389-L3394](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3389-L3394)
 ---
 ---@param tag integer
@@ -6147,6 +6327,8 @@ function tex.set_synctex_tag(tag) end
 
 ---
 ---Get the currently set value of a tag (file).
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L3396-L3400](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3396-L3400)
 ---
@@ -6158,6 +6340,8 @@ function tex.get_synctex_tag() end
 ---
 ---Overload the tag (file) value  (`0` resets).
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L3402-L3407](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3402-L3407)
 ---
 ---@param tag integer
@@ -6167,6 +6351,8 @@ function tex.force_synctex_tag(tag) end
 
 ---
 ---Set the current line value (obeys save stack).
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L3416-L3421](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3416-L3421)
 ---
@@ -6178,14 +6364,19 @@ function tex.set_synctex_line(line) end
 ---
 ---Get the currently set value of a line.
 ---
+---__Reference:__
+---
 ---* Corresponding C source code: [ltexlib.c#L3423-L3427](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3423-L3427)
 ---
 ---@return integer line
+---
 ---{{ contribute }}
 function tex.get_synctex_line() end
 
 ---
 ---Overload the line value (`0` resets)
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [L3409-L3414](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3409-L3414)
 ---
@@ -6196,6 +6387,8 @@ function tex.force_synctex_line(line) end
 
 ---
 ---Disable synctex file logging.
+---
+---__Reference:__
 ---
 ---* Corresponding C source code: [ltexlib.c#L3429-L3434](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/ltexlib.c#L3429-L3434)
 ---

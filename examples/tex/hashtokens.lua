@@ -1,0 +1,3 @@
+for i, v in pairs(tex.hashtokens()) do
+  print(v, i)
+end
