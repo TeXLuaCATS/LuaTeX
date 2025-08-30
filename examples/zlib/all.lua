@@ -10,7 +10,7 @@ us = f:read("*a")
 f:close()
 
 do -- local block
-  local f, cs, zd, zi, aux_res, res, ret, count
+  local cs, zd, zi, res
 
   print("file length              : " .. string.len(us))
 

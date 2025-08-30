@@ -1,8 +1,8 @@
 #! luatex --luaonly
 
-local assert = require("utils").assert
+local utils = require("utils")
 
-local z_file = zip.open("../test.zip")
+local z_file = zip.open("./resources/test.zip")
 assert(z_file)
 local success = z_file:close()
-assert.equals(success, true, success)
+utils.assert.is_true(success)

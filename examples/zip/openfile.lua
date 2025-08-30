@@ -1,9 +1,9 @@
 #! luatex --luaonly
 
-local assert = require("utils").assert
+local utils = require("utils")
 
 -- test.zip: Hello-World.txt
-local z_internal_file = zip.openfile("test/Hello-world.txt")
+local z_internal_file = zip.openfile("./resources/test/Hello-world.txt")
 assert(z_internal_file)
 local content = z_internal_file:read("*a")
-assert.equals(content, "Hello, World!\n", content)
+utils.assert.equals(content, "Hello, World!\n")

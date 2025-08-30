@@ -1,7 +1,9 @@
 #! luatex --luaonly
 
-local z_file = zip.open("test.zip")
+local utils = require("utils")
+
+local z_file = zip.open("./resources/test.zip")
 assert(z_file)
-assert.equals(zip.type(z_file), "zip file")
+utils.assert.equals(zip.type(z_file), "zip file")
 z_file:close()
-assert.equals(zip.type(z_file), "closed zip file")
+utils.assert.equals(zip.type(z_file), "closed zip file")
