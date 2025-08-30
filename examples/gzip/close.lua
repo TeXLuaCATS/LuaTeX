@@ -1,9 +1,9 @@
 #! luatex --luaonly
 
-local assert = require("utils").assert
+local utils = require("utils")
 
-local g_file = gzip.open("test.gz", "rb")
+local g_file = gzip.open("./resources/test.gz", "rb")
 assert(g_file)
 local success = gzip.close(g_file)
-assert.is_true(success)
+utils.assert.is_true(success)
 -- gzip.close(g_file) -> attempt to use a closed file

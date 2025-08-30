@@ -1,4 +1,4 @@
----@type boolean
+---@type integer|nil
 local rotate
 local image = img.copy({ height = 12, filename = "sdsd" })
 if rotate then
@@ -13,7 +13,7 @@ if rotate then
   elseif rotate == 0 or rotate == 360 or rotate == 360 then
     image.transform = 0
   else
-    err(
+    error(
       "Image/rotate: rotation must be between -360 and 360 and given in multiple of 90"
     )
   end

@@ -1,9 +1,3 @@
-for id, box in ipairs(img.boxes()) do
-  print(id, box)
-end
--- 1	none
--- 2	media
--- 3	crop
--- 4	bleed
--- 5	trim
--- 6	art
+local assert = require("utils").assert
+
+assert.same(img.boxes(), { "none", "media", "crop", "bleed", "trim", "art" })
