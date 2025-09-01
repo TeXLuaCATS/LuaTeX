@@ -38,15 +38,15 @@ _N._11_2_1_new = "page 230"
 ---* Corresponding C source code: [lmplib.c#L330-L374](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L330-L374)
 ---
 ---{{ contribute }}
----@alias MpFindFileFunc fun(name: string, mode: MpFileFileMode, type: MpFindFileType): string
+---@alias mplib.MpFindFileFunc fun(name: string, mode: mplib.MpFileFileMode, type: mplib.MpFindFileType): string
 
 ---
 ---{{ contribute }}
----@alias MpFileFileMode `r`|`w` the file mode
+---@alias mplib.MpFileFileMode `r`|`w` the file mode
 
 ---
 ---{{ contribute }}
----@alias MpFindFileType `mp`|`tfm`|`map`|`pfb`|`enc` the kind of file
+---@alias mplib.MpFindFileType `mp`|`tfm`|`map`|`pfb`|`enc` the kind of file
 
 ---
 ---__Reference:__
@@ -54,7 +54,7 @@ _N._11_2_1_new = "page 230"
 ---* Corresponding C source code: [lmplib.c#L408-L442](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L408-L442)
 ---
 ---{{ contribute }}
----@alias MpRunScriptFunc fun(name: string): string
+---@alias mplib.MpRunScriptFunc fun(name: string): string
 
 ---
 ---__Reference:__
@@ -62,7 +62,7 @@ _N._11_2_1_new = "page 230"
 ---* Corresponding C source code: [lmplib.c#L444-L480](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L444-L480)
 ---
 ---{{ contribute }}
----@alias MpMakeTextFunc fun(name: string, what: integer): string
+---@alias mplib.MpMakeTextFunc fun(name: string, what: integer): string
 
 ---
 ---__Reference:__
@@ -70,7 +70,7 @@ _N._11_2_1_new = "page 230"
 ---* Corresponding C source code: [lmplib.c#L381-L406C2](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L381-L406C2)
 ---
 ---{{ contribute }}
----@alias MpScriptErrorFunc fun(name: string)
+---@alias mplib.MpScriptErrorFunc fun(name: string)
 
 ---
 ---__Reference:__
@@ -79,23 +79,23 @@ _N._11_2_1_new = "page 230"
 ---* Corresponding C source code: [lmplib.c#L308-L322](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L308-L322)
 ---
 ---{{ contribute }}
----@class MpArguments
+---@class mplib.MpArguments
 ---@field error_line? integer # error line width, default 79
 ---@field print_line? integer # line length in ps output 100
 ---@field random_seed? integer # the initial random seed variable
 ---@field interaction? `batch`|`nonstop`|`scroll`|`errorstop` # the interaction mode, default `errorstop`
 ---@field job_name? string # `--jobname`, default `mpout`
----@field find_file? MpFindFileFunc # a function to find files only local files
----@field run_script? MpRunScriptFunc
----@field make_text? MpMakeTextFunc
----@field script_error? MpScriptErrorFunc
+---@field find_file? mplib.MpFindFileFunc # a function to find files only local files
+---@field run_script? mplib.MpRunScriptFunc
+---@field make_text? mplib.MpMakeTextFunc
+---@field script_error? mplib.MpScriptErrorFunc
 ---@field extensions? integer
 ---@field math_mode? `scaled`|`double`|`binary`|`decimal` # the number system to use, default `scaled`
 ---@field utf8_mode? boolean
 
 ---
 ---{{ contribute }}
----@class MpInstance
+---@class mplib.MpInstance
 local MpInstance = {}
 
 ---
@@ -106,9 +106,9 @@ local MpInstance = {}
 ---* Source file of the `LuaTeX` manual: [luatex-graphics.tex#L381-L385](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-graphics.tex#L381-L385)
 ---* Corresponding C source code: [lmplib.c#L532-L627](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L532-L627)
 ---
----@param args? MpArguments
+---@param args? mplib.MpArguments
 ---
----@return MpInstance
+---@return mplib.MpInstance
 ---
 ---{{ contribute }}
 function mplib.new(args) end
@@ -147,7 +147,7 @@ _N._11_2_2_statistics = "page 233"
 ---* Source file of the `LuaTeX` manual: [luatex-graphics.tex#L470-L482](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-graphics.tex#L470-L482)
 ---* Corresponding C source code: [lmplib.c#L771-L792](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/4c23aaf64ecfe23ae4132d52c2112ef37c362ce9/source/texk/web2c/mplibdir/lmplib.c#L771-L792)
 ---
----@param mp MpInstance
+---@param mp mplib.MpInstance
 ---
 ---@return mplib.MpStats
 ---
@@ -197,10 +197,10 @@ _N._11_2_3_execute = "page 233"
 ---* Source file of the `LuaTeX` manual: [luatex-graphics.tex#L488-L507](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-graphics.tex#L488-L507)
 ---* Corresponding C source code: [lmplib.c#L692-L711](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L692-L711)
 ---
----@param mp MpInstance
+---@param mp mplib.MpInstance
 ---@param code string
 ---
----@return MpResult
+---@return mplib.MpResult
 ---
 ---{{ contribute }}
 function mplib.execute(mp, code) end
@@ -229,7 +229,7 @@ function mplib.execute(mp, code) end
 ---
 ---@param code string
 ---
----@return MpResult
+---@return mplib.MpResult
 ---
 ---{{ contribute }}
 function MpInstance:execute(code) end
@@ -249,9 +249,9 @@ _N._11_2_4_finish = "page 233"
 ---
 ---* Corresponding C source code: [lmplib.c#L713-L728](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L713-L728)
 ---
----@param mp MpInstance
+---@param mp mplib.MpInstance
 ---
----@return MpResult
+---@return mplib.MpResult
 ---
 ---{{ contribute }}
 function mplib.finish(mp) end
@@ -269,7 +269,7 @@ function mplib.finish(mp) end
 ---
 ---* Corresponding C source code: [lmplib.c#L713-L728](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L713-L728)
 ---
----@return MpResult
+---@return mplib.MpResult
 ---
 ---{{ contribute }}
 function MpInstance:finish() end
@@ -277,7 +277,7 @@ function MpInstance:finish() end
 _N._11_2_5_result_table = "page 233"
 
 ---
----@alias MpResultStatus
+---@alias mplib.MpResultStatus
 ---|0 # good
 ---|1 # warning
 ---|2 # errors
@@ -292,12 +292,12 @@ _N._11_2_5_result_table = "page 233"
 ---* Corresponding C source code: [lmplib.c#L649-L690](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L649-L690)
 ---
 ---{{ contribute }}
----@class MpResult
+---@class mplib.MpResult
 ---@field log? string # The output to the “log” stream.
 ---@field term? string # The output to the “term” stream.
 ---@field error? string # The output to the “error” stream (only used for “out of memory”).
----@field status MpResultStatus # The return value: `0` = good, `1` = warning, `2` = errors, `3` = fatal error.
----@field fig? MpFig[] # An array of generated figures (if any).
+---@field status mplib.MpResultStatus # The return value: `0` = good, `1` = warning, `2` = errors, `3` = fatal error.
+---@field fig? mplib.MpFig[] # An array of generated figures (if any).
 ---
 ---When `status` equals 3, you should stop using this *MPlib* instance
 ---immediately, it is no longer capable of processing input.
@@ -308,7 +308,7 @@ _N._11_2_5_result_table = "page 233"
 
 ---
 ---{{ contribute }}
----@class MpFig
+---@class mplib.MpFig
 local MpFig = {}
 
 ---
@@ -455,7 +455,7 @@ _N._11_2_5_1_fill = "page 234"
 ---
 ---* Corresponding C source code: [psout.w#L5308-L5310](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/psout.w#L5308-L5310)
 ---
----@class MpGraphicObject
+---@class mplib.MpGraphicObject
 ---@field type string
 
 ---
@@ -465,7 +465,7 @@ _N._11_2_5_1_fill = "page 234"
 ---
 ---* Corresponding C source code: [lmplib.c#L1548-L1591](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L1548-L1591)
 ---
----@param obj MpGraphicObject
+---@param obj mplib.MpGraphicObject
 ---
 ---@return string[]
 ---
@@ -478,7 +478,7 @@ function mplib.fields(obj) end
 ---* Corresponding C source code: [psout.w#L5335-L5346](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/psout.w#L5335-L5346)
 ---
 ---{{ contribute }}
----@class MpFill
+---@class mplib.MpFill
 ---@field path table # the list of knots
 ---@field htap table # the list of knots for the reversed trajectory
 ---@field pen table # knots of the pen
@@ -492,7 +492,7 @@ _N._11_2_5_2_outline = "page 234"
 
 ---
 ---{{ contribute }}
----@class MpOutline
+---@class mplib.MpOutline
 ---@field path table # the list of knots
 ---@field pen table # knots of the pen
 ---@field color table # the object's color
@@ -511,7 +511,7 @@ _N._11_2_5_3_text = "page 234"
 ---* Corresponding C source code: [psout.w#L5312-L5333](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/psout.w#L5312-L5333)
 ---
 ---{{ contribute }}
----@class MpText
+---@class mplib.MpText
 ---@field text string # the text
 ---@field font string # font tfm name
 ---@field dsize integer # font size
@@ -531,7 +531,7 @@ _N._11_2_5_4_special = "page 236"
 ---* Corresponding C source code: [psout.w#L5372-L5375](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/psout.w#L5372-L5375)
 ---
 ---{{ contribute }}
----@class MpSpecial
+---@class mplib.MpSpecial
 ---@field prescript string # special text
 
 _N._11_2_5_5_start_bounds_start_clip = "page 236"
@@ -542,7 +542,7 @@ _N._11_2_5_5_start_bounds_start_clip = "page 236"
 ---* Corresponding C source code: [psout.w#L5362-L5370](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/psout.w#L5362-L5370)
 ---
 ---{{ contribute }}
----@class MpStartBoundsClip
+---@class mplib.MpStartBoundsClip
 ---@field path table # the list of knots
 
 _N._11_2_5_6_stop_bounds_stop_clip = "page 236"
@@ -556,7 +556,7 @@ _N._11_2_6_1_paths_pens = "page 236"
 ---represents a knot.
 ---
 ---{{ contribute }}
----@class MpKnot
+---@class mplib.MpKnot
 ---@field left_type string # when present: endpoint, but usually absent
 ---@field right_type string # like `left_type`
 ---@field x_coord number # X coordinate of this knot
@@ -573,7 +573,7 @@ _N._11_2_6_1_paths_pens = "page 236"
 
 ---
 ---{{ contribute }}
----@alias MpPathPen MpKnot[]
+---@alias mplib.MpPathPen mplib.MpKnot[]
 
 _N._11_2_6_2_Colors = "page 236"
 
@@ -592,7 +592,7 @@ _N._11_2_6_2_Colors = "page 236"
 ---`defaultcolormodel` that was in effect at the time of the `shipout`.
 ---
 ---{{ contribute }}
----@alias MpColor integer[]
+---@alias mplib.MpColor integer[]
 
 _N._11_2_6_3_Transforms = "page 237"
 
@@ -607,7 +607,7 @@ _N._11_2_6_3_Transforms = "page 237"
 ---```
 ---
 ---{{ contribute }}
----@alias MPTransform number[]
+---@alias mplib.MPTransform number[]
 
 _N._11_2_6_4_Dashes = "page 237"
 
@@ -617,7 +617,7 @@ _N._11_2_6_4_Dashes = "page 237"
 ---values, and `offset` is the phase of the pattern.
 ---
 ---{{ contribute }}
----@class MpDash
+---@class mplib.MpDash
 ---@field dashes table # an array of on-off numbers
 ---@field offset integer # the starting offset value
 
@@ -628,7 +628,7 @@ _N._11_2_7_Pens_and_pen_info = "page 237"
 ---bunch of vital characteristics of the used pen (all values are floats):
 ---
 ---{{ contribute }}
----@class PenInfo
+---@class mplib.PenInfo
 ---@field width number # width of the pen
 ---@field sx number # `x` scale
 ---@field rx number # `xy` multiplier
@@ -643,9 +643,9 @@ _N._11_2_7_Pens_and_pen_info = "page 237"
 ---
 ---* Corresponding C source code: [lmplib.c#L1474-L1539](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L1474-L1539)
 ---
----@param obj MpGraphicObject
+---@param obj mplib.MpGraphicObject
 ---
----@return PenInfo|nil
+---@return mplib.PenInfo|nil
 ---
 ---{{ contribute }}
 function mplib.pen_info(obj) end
@@ -664,7 +664,7 @@ _N._11_2_8_1_char_width = "page 238"
 ---
 ---* Corresponding C source code: [lmplib.c#L748-L751](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L748-L751)
 ---
----@param mp MpInstance
+---@param mp mplib.MpInstance
 ---@param fontname string
 ---@param char integer
 ---
@@ -705,7 +705,7 @@ _N._11_2_8_2_char_height = "page 238"
 ---
 ---* Corresponding C source code: [lmplib.c#L758-L761](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L758-L761)
 ---
----@param mp MpInstance
+---@param mp mplib.MpInstance
 ---@param fontname string
 ---@param char integer
 ---
@@ -746,7 +746,7 @@ _N._11_2_8_3_char_depth = "page 238"
 ---
 ---* Corresponding C source code: [lmplib.c#L753-L756](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L753-L756)
 ---
----@param mp MpInstance
+---@param mp mplib.MpInstance
 ---@param fontname string
 ---@param char integer
 ---
@@ -781,7 +781,7 @@ _N._11_2_8_4_get_boolean_numeric_string_path = "page 238"
 ---
 ---* Corresponding C source code: [lmplib.c#L497-L510](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L497-L510)
 ---
----@param mp MpInstance
+---@param mp mplib.MpInstance
 ---@param name string
 ---
 ---@return boolean value
@@ -810,7 +810,7 @@ function MpInstance:get_boolean(name) end
 ---
 ---* Corresponding C source code: [lmplib.c#L482-L495](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L482-L495)
 ---
----@param mp MpInstance
+---@param mp mplib.MpInstance
 ---@param name string
 ---
 ---@return integer value
@@ -835,7 +835,7 @@ function MpInstance:get_numeric(name) end
 ---
 ---* Corresponding C source code: [lmplib.c#L512-L528](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L512-L528)
 ---
----@param mp MpInstance
+---@param mp mplib.MpInstance
 ---@param name string
 ---
 ---@return string value
@@ -860,7 +860,7 @@ function MpInstance:get_string(name) end
 ---
 ---* Corresponding C source code: [lmplib.c#L1649-L1693](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L1649-L1693)
 ---
----@param mp MpInstance
+---@param mp mplib.MpInstance
 ---@param name string
 ---
 ---@return table value
@@ -899,7 +899,7 @@ function mplib.version() end
 ---
 ---{{ contribute }}
 --
----@param mp MpInstance
+---@param mp mplib.MpInstance
 ---@param coordinates table
 ---@param cyclic boolean
 function mplib.solve_path(mp, coordinates, cyclic) end
