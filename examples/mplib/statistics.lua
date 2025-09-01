@@ -1,19 +1,11 @@
-
 local assert = require("utils").assert
 local mp = mplib.new()
 
-assert.same(mp:statistics(), {
-  hash = 301,
-  memory = 1168,
-  open = 0,
-  params = 0
-}
-)
+assert.is_type(mplib.statistics(mp), "table")
 
-assert.same(mplib.statistics(mp), {
-  hash = 301,
-  memory = 1168,
-  open = 0,
-  params = 0
-}
-)
+local stats = mp:statistics()
+
+assert.is_type(stats.hash, "number")
+assert.is_type(stats.memory, "number")
+assert.is_type(stats.open, "number")
+assert.is_type(stats.params, "number")

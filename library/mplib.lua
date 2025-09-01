@@ -123,14 +123,15 @@ _N._11_2_2_statistics = "page 233"
 ---
 ---__Reference:__
 ---
----* Source file of the `LuaTeX` manual: [luatex-graphics.tex#L460-L470](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-graphics.tex#L460-L470)
+---* Source file of the `LuaTeX` manual: [luatex-graphics.tex#L460-486](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/4c23aaf64ecfe23ae4132d52c2112ef37c362ce9/manual/luatex-graphics.tex#L460-486)
+---* Corresponding C source code: [lmplib.c#L771-L792](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/4c23aaf64ecfe23ae4132d52c2112ef37c362ce9/source/texk/web2c/mplibdir/lmplib.c#L771-L792)
 ---
 ---{{ contribute }}
----@class MpStats
----@field main_memory integer # The memory size.
----@field hash_size integer # The hash size.
----@field param_size integer # The simultaneous macro parameters.
----@field max_in_open integer # The input file nesting levels.
+---@class mplib.MpStats
+---@field memory integer # The memory size.
+---@field hash integer # The hash size.
+---@field params integer # The simultaneous macro parameters.
+---@field open integer # The input file nesting levels.
 
 ---
 ---Return some statistics for this metapost instance.
@@ -144,11 +145,11 @@ _N._11_2_2_statistics = "page 233"
 ---__Reference:__
 ---
 ---* Source file of the `LuaTeX` manual: [luatex-graphics.tex#L470-L482](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-graphics.tex#L470-L482)
----* Corresponding C source code: [lmplib.c#L771-L792](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L771-L792)
+---* Corresponding C source code: [lmplib.c#L771-L792](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/4c23aaf64ecfe23ae4132d52c2112ef37c362ce9/source/texk/web2c/mplibdir/lmplib.c#L771-L792)
 ---
 ---@param mp MpInstance
 ---
----@return MpStats
+---@return mplib.MpStats
 ---
 ---{{ contribute }}
 function mplib.statistics(mp) end
@@ -167,7 +168,7 @@ function mplib.statistics(mp) end
 ---* Source file of the `LuaTeX` manual: [luatex-graphics.tex#L470-L482](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-graphics.tex#L470-L482)
 ---* Corresponding C source code: [lmplib.c#L771-L792](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/mplibdir/lmplib.c#L771-L792)
 ---
----@return MpStats
+---@return mplib.MpStats
 ---
 ---{{ contribute }}
 function MpInstance:statistics() end
