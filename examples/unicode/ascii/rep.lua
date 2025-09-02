@@ -2,4 +2,4 @@
 
 local assert = require("utils").assert
 
-assert.equals(unicode.ascii.lower("Ä"), "Ä")
+assert.equals(unicode.ascii.rep("a", 3), "aaa")

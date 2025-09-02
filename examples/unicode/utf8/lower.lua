@@ -1,4 +1,5 @@
 #! luatex --luaonly
 
-local lower = unicode.utf8.lower("Ä")
-assert.equals(lower, "ä")
+local assert = require("utils").assert
+
+assert.equals(unicode.utf8.lower("Ä"), "ä")
