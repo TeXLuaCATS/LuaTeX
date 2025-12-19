@@ -2,5 +2,4 @@
 
 local assert = require("utils").assert
 
-local upper = unicode.grapheme.upper("ä")
-assert.equals(upper, "Ä")
+assert.equals(unicode.grapheme.upper("ä"), "Ä")

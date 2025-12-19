@@ -2,5 +2,4 @@
 
 local assert = require("utils").assert
 
-local lower = unicode.ascii.lower("Ä")
-assert.equals(lower, "Ä")
+assert.equals(unicode.ascii.lower("Ä"), "Ä")
