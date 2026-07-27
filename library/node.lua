@@ -5627,7 +5627,7 @@ _N._8_29_insert_before = "page 153"
 ---* Corresponding C source code: [lnodelib.c#L2271-L2315](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2271-L2315)
 ---
 ---@param head Node? # May be `nil`; the returned `head` is then `new`.
----@param current Node? # May be `nil`; `new` is then linked to the end of the list.
+---@param current Node? # May be `nil`; `new` is then inserted before the last node of the list.
 ---@param new Node
 ---
 ---@return Node head
@@ -5650,7 +5650,7 @@ function node.insert_before(head, current, new) end
 ---* Corresponding C source code: [lnodelib.c#L2319-L2357](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2319-L2357)
 ---
 ---@param head integer? # May be `nil`; the returned `head` is then `new`.
----@param current integer? # May be `nil`; `new` is then linked to the end of the list.
+---@param current integer? # May be `nil`; `new` is then inserted before the last node of the list.
 ---@param new integer
 ---
 ---@return integer head
