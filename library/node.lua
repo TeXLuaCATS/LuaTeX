@@ -4624,7 +4624,7 @@ _N._8_13_hpack = "page 148"
 ---@param info? string
 ---@param dir? string
 ---
----@return Node n
+---@return HlistNode n
 ---@return integer badness
 ---
 ---{{ contribute }}
@@ -4687,7 +4687,7 @@ _N._8_14_vpack = "page 148"
 ---@param info? 'additional'|'exactly' # Must be either `additional` (`\vbox spread`) or `exactly` (`\vbox to`).
 ---@param dir? DirectionSpecifier|DirectionSpecifierId
 ---
----@return Node new_head
+---@return VlistNode new_head
 ---@return integer badness # The second return value is the badness of the generated box.
 ---
 ---{{ contribute }}
