@@ -4877,7 +4877,7 @@ function node.direct.dimensions(d, t, dir) end
 ---* Source: [luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
 ---* Corresponding C source code: [lnodelib.c#L2838-L2880](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2838-L2880)
 ---
----@param glue_set integer
+---@param glue_set number # Glue set ratio, for example `tex.box[0].glue_set`.
 ---@param glue_sign integer
 ---@param glue_order integer
 ---@param n Node
@@ -4919,7 +4919,7 @@ function node.dimensions(glue_set, glue_sign, glue_order, n, dir) end
 ---* Source: [luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
 ---* Corresponding C source code: [lnodelib.c#L2838-L2880](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2838-L2880)
 ---
----@param glue_set integer
+---@param glue_set number # Glue set ratio, for example `tex.box[0].glue_set`.
 ---@param glue_sign integer
 ---@param glue_order integer
 ---@param d integer # The index number of the node in the memory table for direct access.
@@ -4944,11 +4944,11 @@ function node.direct.dimensions(glue_set, glue_sign, glue_order, d, dir) end
 ---* Source: [luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
 ---* Corresponding C source code: [lnodelib.c#L2767-L2812](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2767-L2812)
 ---
----@param glue_set integer
+---@param glue_set number # Glue set ratio, for example `tex.box[0].glue_set`.
 ---@param glue_sign integer
 ---@param glue_order integer
----@param d integer # The index number of the node in the memory table for direct access.
----@param t integer # terminating node
+---@param n Node
+---@param t Node # terminating node
 ---@param dir? DirectionSpecifier
 ---
 ---@return integer width # scaled points
@@ -4956,7 +4956,7 @@ function node.direct.dimensions(glue_set, glue_sign, glue_order, d, dir) end
 ---@return integer depth # scaled points
 ---
 ---{{ contribute }}
-function node.dimensions(glue_set, glue_sign, glue_order, d, t, dir) end
+function node.dimensions(glue_set, glue_sign, glue_order, n, t, dir) end
 
 ---
 ---Calculate the natural in-line dimensions of the node list starting at node
@@ -4970,11 +4970,11 @@ function node.dimensions(glue_set, glue_sign, glue_order, d, t, dir) end
 ---* Source: [luatex-nodes.tex#L1490-L1546](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1490-L1546)
 ---* Corresponding C source code: [lnodelib.c#L2838-L2880](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2838-L2880)
 ---
----@param glue_set integer
+---@param glue_set number # Glue set ratio, for example `tex.box[0].glue_set`.
 ---@param glue_sign integer
 ---@param glue_order integer
----@param n Node
----@param t Node # terminating node
+---@param d integer # The index number of the node in the memory table for direct access.
+---@param t integer # terminating node
 ---@param dir? DirectionSpecifier
 ---
 ---@return integer width # scaled points
@@ -4982,7 +4982,7 @@ function node.dimensions(glue_set, glue_sign, glue_order, d, t, dir) end
 ---@return integer depth # scaled points
 ---
 ---{{ contribute }}
-function node.direct.dimensions(glue_set, glue_sign, glue_order, n, t, dir) end
+function node.direct.dimensions(glue_set, glue_sign, glue_order, d, t, dir) end
 
 ---
 ---Calculate the natural in-line dimensions of the node list `parent` starting
@@ -5056,6 +5056,8 @@ _N._8_19_tail = "page 150"
 ---
 ---Return the last node of the node list that starts at `n`.
 ---
+---Passing `nil` is allowed and returns `nil`.
+---
 ---__Reference:__
 ---
 ---* Corresponding C source code: [lnodelib.c#L3262-L3274](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L3262-L3274)
@@ -5064,11 +5066,15 @@ _N._8_19_tail = "page 150"
 ---
 ---@return Node m
 ---
+---@overload fun(n: nil): nil
+---
 ---{{ contribute }}
 function node.tail(n) end
 
 ---
 ---Return the last node of the node list that starts at `d`.
+---
+---Passing `nil` is allowed and returns `nil`.
 ---
 ---__Reference:__
 ---
@@ -5077,6 +5083,8 @@ function node.tail(n) end
 ---@param d integer # The index number of the node in the memory table for direct access.
 ---
 ---@return integer e
+---
+---@overload fun(d: nil): nil
 ---
 ---{{ contribute }}
 function node.direct.tail(d) end
@@ -5618,8 +5626,8 @@ _N._8_29_insert_before = "page 153"
 ---* Source file of the `LuaTeX` manual: [luatex-nodes.tex#L1793-L1807](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1793-L1807)
 ---* Corresponding C source code: [lnodelib.c#L2271-L2315](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2271-L2315)
 ---
----@param head Node
----@param current Node
+---@param head Node? # May be `nil`; the returned `head` is then `new`.
+---@param current Node? # May be `nil`; `new` is then linked to the end of the list.
 ---@param new Node
 ---
 ---@return Node head
@@ -5641,8 +5649,8 @@ function node.insert_before(head, current, new) end
 ---* Source file of the `LuaTeX` manual: [luatex-nodes.tex#L1793-L1807](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1793-L1807)
 ---* Corresponding C source code: [lnodelib.c#L2319-L2357](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2319-L2357)
 ---
----@param head integer
----@param current integer
+---@param head integer? # May be `nil`; the returned `head` is then `new`.
+---@param current integer? # May be `nil`; `new` is then linked to the end of the list.
 ---@param new integer
 ---
 ---@return integer head
@@ -5666,8 +5674,8 @@ _N._8_30_insert_after = "page 153"
 ---* Source file of the `LuaTeX` manual: [luatex-nodes.tex#L1809-L1822](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1809-L1822)
 ---* Corresponding C source code: [lnodelib.c#L2361-L2395](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2361-L2395)
 ---
----@param head Node
----@param current Node
+---@param head Node? # May be `nil`; the returned `head` is then `new`.
+---@param current Node? # May be `nil`; `new` becomes the tail of the list.
 ---@param new Node
 ---
 ---@return Node head
@@ -5689,8 +5697,8 @@ function node.insert_after(head, current, new) end
 ---* Source file of the `LuaTeX` manual: [luatex-nodes.tex#L1809-L1822](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/manual/luatex-nodes.tex#L1809-L1822)
 ---* Corresponding C source code: [lnodelib.c#L2399-L2430](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L2399-L2430)
 ---
----@param head integer
----@param current integer
+---@param head integer? # May be `nil`; the returned `head` is then `new`.
+---@param current integer? # May be `nil`; `new` becomes the tail of the list.
 ---@param new integer
 ---
 ---@return integer head
@@ -6606,7 +6614,7 @@ _N._10_two_access_models_page_2 = "page 160"
 ---* Corresponding C source code: [lnodelib.c#L1767-L1778](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L1767-L1778)
 ---
 ---@param d integer # The index number of the node in the memory table for direct access.
----@param next integer
+---@param next integer? # Pass `nil` to unlink.
 ---
 ---{{ contribute }}
 function node.direct.setnext(d, next) end
@@ -6681,7 +6689,7 @@ function node.direct.getnext(d) end
 ---@see node.direct.getprev
 ---
 ---@param d integer # The index number of the node in the memory table for direct access.
----@param prev integer
+---@param prev integer? # Pass `nil` to unlink.
 ---
 ---{{ contribute }}
 function node.direct.setprev(d, prev) end
@@ -6725,12 +6733,12 @@ function node.getprev(n) end
 ---
 ---* Corresponding C source code: [lnodelib.c#L1805-L1814](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L1805-L1814)
 ---
----@param n Node
+---@param d integer # The index number of the node in the memory table for direct access.
 ---
----@return Node|nil prev
+---@return integer|nil prev
 ---
 ---{{ contribute }}
-function node.direct.getprev(n) end
+function node.direct.getprev(d) end
 
 ---
 ---Set the previous and next pointers at once.
@@ -8064,14 +8072,21 @@ function node.direct.getsup(d) end
 function node.direct.is_direct(d) end
 
 ---
+---Link the given list of nodes: the `prev` and `next` pointers of each pair of
+---successive arguments are set. `nil` entries are ignored. The first valid
+---node is returned.
+---
 ---__Reference:__
 ---
 ---* Corresponding C source code: [lnodelib.c#L1912-L1957](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lnodelib.c#L1912-L1957)
 ---
 ---@param d integer # The index number of the node in the memory table for direct access.
+---@param ... integer|nil # Further nodes to be linked; `nil` entries are ignored.
+---
+---@return integer head # The first valid node.
 ---
 ---{{ contribute }}
-function node.direct.setlink(d) end
+function node.direct.setlink(d, ...) end
 
 ---
 ---__Reference:__

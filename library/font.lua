@@ -518,10 +518,12 @@ function font.addcharacters(font_id, f) end
 ---
 ---* Corresponding C source code: [lfontlib.c#L240-L249](https://gitlab.lisn.upsaclay.fr/texlive/luatex/-/blob/f52b099f3e01d53dc03b315e1909245c3d5418d3/source/texk/web2c/luatexdir/lua/lfontlib.c#L240-L249)
 ---
+---@param reserve? boolean # With `true` the id is reserved and can be passed to `font.define` as first argument.
+---
 ---@return integer font_id
 ---
 ---{{ contribute }}
-function font.nextid() end
+function font.nextid(reserve) end
 
 ---
 ---Return the font id of the font accessed by the csname given.
