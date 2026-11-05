@@ -161,3 +161,17 @@ Returns true if the operation was successful; in case of error, it returns nil p
 ---@param length? integer
 ---@return boolean, string
 function lfs.unlock(filehandle, start, length) end
+
+--[[
+LuaTeX addition. Returns true if the given path exists and is a directory, false otherwise. A speedy and better variant of what could be done with lfs.attributes.
+]]
+---@param filename string
+---@return boolean
+function lfs.isdir(filename) end
+
+--[[
+LuaTeX addition. Returns true if the given path exists and is a file, false otherwise. A speedy and better variant of what could be done with lfs.attributes.
+]]
+---@param filename string
+---@return boolean
+function lfs.isfile(filename) end

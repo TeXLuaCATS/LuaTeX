@@ -4777,11 +4777,11 @@ _N._10_3_8_reusing_boxes = "page 198"
 ---@see tex.useboxresource
 ---
 ---@param n Node|integer # Instead of a box number one can also pass a `[h|v]list` node.
----@param attributes string
----@param resources string
----@param immediate boolean
----@param type integer # When set to non-zero the `/Type` entry is omitted. A value of 1 or 3 still writes a `/BBox`, while 2 or 3 will write a `/Matrix`.
----@param margin integer # The (virtual) margin that extends beyond the effective boundingbox as seen by *TeX*.
+---@param attributes? string
+---@param resources? string
+---@param immediate? boolean
+---@param type? integer # When set to non-zero the `/Type` entry is omitted. A value of 1 or 3 still writes a `/BBox`, while 2 or 3 will write a `/Matrix`.
+---@param margin? integer # The (virtual) margin that extends beyond the effective boundingbox as seen by *TeX*.
 ---
 ---@return integer index
 ---
@@ -6156,8 +6156,10 @@ function tex.linebreak(listhead, parameters) end
 ---
 ---Ships out box number `n` to the output file, and clears the box register.
 ---
+---@param n integer # Box register number.
+---
 ---{{ contribute }}
-function tex.shipout() end
+function tex.shipout(n) end
 
 ---
 ---This helper reports the current page state: `empty`, `box_there` or

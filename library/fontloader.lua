@@ -113,8 +113,8 @@ _N._12_2_loading_an_opentype_or_truetype_file = "page 237"
 ---@param filename string
 ---@param fontname? string
 ---
----@return FontloaderFont font # The first return value is a userdata representation of the font.
----@return table warnings # The second return value is a table containing any warnings and errors reported by fontloader while opening the font. In normal typesetting, you would probably ignore the second argument, but it can be useful for debugging purposes.
+---@return FontloaderFont|nil font # The first return value is a userdata representation of the font, or `nil` if the font cannot be opened or parsed.
+---@return table|string|nil warnings_or_error # The second return value is a table containing any warnings and errors reported by fontloader while opening the font, or an error message string when the first return value is `nil`. In normal typesetting, you would probably ignore the second argument, but it can be useful for debugging purposes.
 ---
 ---{{ contribute }}
 function fontloader.open(filename, fontname) end
